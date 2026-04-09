@@ -251,6 +251,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 80px;
+  cursor: pointer;
 }
 
 .today-img-box {
@@ -376,6 +377,7 @@ body {
   align-items: center;
   position: relative;
   border: 1px solid #eee;
+  cursor: pointer;
 }
 
 .pokemon-card:hover {
@@ -609,6 +611,177 @@ body {
   gap: 10px;
 }
 
+/* Detailed Modal Styling */
+.detail-modal {
+  background: white;
+  border-radius: 25px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  animation: modalPop 0.3s ease-out;
+}
+
+.close-detail-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #f0f0f0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+
+.close-detail-btn:hover {
+  background: #ddd;
+}
+
+.detail-layout {
+  display: flex;
+  gap: 40px;
+}
+
+.detail-left {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-img-box {
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f9f9f9;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.detail-img-box img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.detail-form-info {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.detail-right {
+  flex: 1;
+}
+
+.detail-flavor-box {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.version-tabs {
+  display: flex;
+  gap: 5px;
+  overflow-x: auto;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  scrollbar-width: none;
+}
+
+.version-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.version-tab {
+  padding: 5px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: #888;
+}
+
+.version-tab.active {
+  background: var(--secondary-color);
+  color: white;
+  border-color: var(--secondary-color);
+}
+
+.flavor-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #444;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.detail-table th, .detail-table td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+}
+
+.detail-table th {
+  width: 100px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.detail-types {
+  display: flex;
+  gap: 8px;
+}
+
+.detail-abilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ability-btn {
+  padding: 4px 12px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ability-btn:hover {
+  background: #eee;
+  border-color: #bbb;
+}
+
+.detail-loading, .detail-error {
+  text-align: center;
+  padding: 50px;
+  font-weight: bold;
+  color: #888;
+}
+
 .footer {
   text-align: center;
   margin-top: 50px;
@@ -617,6 +790,20 @@ body {
   font-size: 0.9rem;
   background: white;
   border-radius: 15px 15px 0 0;
+}
+
+@media (max-width: 800px) {
+  .detail-layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .detail-left {
+    flex: none;
+    width: 100%;
+  }
+  .detail-modal {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -658,9 +845,15 @@ body {
     justify-content: center;
   }
   .visitor-count {
+    position: static;
+    display: inline-block;
     margin-bottom: 10px;
   }
   .today-catch-header h2 {
     font-size: 1.1rem;
+  }
+  .today-date {
+    font-size: 0.8rem;
+    padding: 2px 6px;
   }
 }

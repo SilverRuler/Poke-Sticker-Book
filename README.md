@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+[포켓몬 띠부씰 도감 프로젝트 개발 일지]
+```bash
+1. 프로젝트 시작 (v1.0 기초)
+- 목표: 띠부띠부씰 수집 현황을 관리할 수 있는 웹 페이지 구축.
+- 기술 스택: React(TypeScript) + Vite, Node.js(Express) 백엔드.
+- 주요 기능:
+  * 포켓몬 등록 (번호 및 이름 검색 지원).
+  * 중복 확인 및 보유 수량 관리.
+  * 도감 보기 및 삭제 기능.
+  * 초기 데이터: 1번(이상해씨) ~ 1025번(복숭악동) 한글 이름 및 이미지 매핑.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. 기능 고도화 및 UI 최적화
+- 인증 시스템: 관리자 로그인(아이디/비밀번호) 기능을 추가하여 등록/삭제 권한 분리.
+- 디자인: 모바일 최적화 반응형 그리드 레이아웃, 포켓몬 타입(속성)별 배지 표기 및 고유 색상 적용.
+- 예정 도감: 실제 획득 전 미리 리스트업 할 수 있는 '예정 도감' 탭 추가.
+- 배경음악(BGM): bgm.mp3 탑재 및 사용자 첫 상호작용 시 자동 재생 로직 구현.
 
-Currently, two official plugins are available:
+3. 사용자 경험(UX) 및 보안 강화
+- 커스텀 모달: 브라우저 기본 다이얼로그(alert, prompt)를 리액트 기반 커스텀 모달로 대체하여 모바일 보안 경고 해결 및 디자인 통일.
+- 데이터 보존: 로컬 스토리지가 아닌 서버 사이드 JSON(data.json) 및 Redis 저장 방식으로 변경하여 기기간 동기화 구현.
+- 보안: 비밀번호를 프론트엔드가 아닌 서버에서 검증하도록 수정, .gitignore를 통한 민감 정보 유출 방지.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+4. Vercel 배포 및 최적화 (v1.1)
+- Redis 연동: Vercel 서버리스 환경을 위해 Upstash Redis 지원 (poke_ 접두사로 키 충돌 방지).
+- 이미지 로컬화: 외부 서버 다운에 대비하여 모든 포켓몬 이미지를 public/images/pokemon으로 다운로드 및 연동.
+- 특별 스티커: 도감 번호 외 '특별' 카테고리(피카츄 메타몽 등) 추가.
+- 방문자 카운터: IP 기반 중복 없는 Today/Total 카운터 구현 및 Vercel 배포 봇 차단 로직 적용.
+- 자동 초기화: 한국 시간(KST) 00시 기준 '오늘의 획득' 및 'Today 방문자' 자동 리셋.
 
-## React Compiler
+5. 최종 UI 디테일
+- 헤더 레이아웃 재배치 (BGM/로그인 버튼 중앙 정렬).
+- 모바일 가독성을 위한 서브타이틀 줄바꿈 처리.
+- '오늘의 획득' 날짜 박스와 초기화 버튼의 크기 및 디자인 통일화.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+[최종 기술 스택 요약]
+- Language: TypeScript
+- Frontend: React (Vite)
+- Backend: Node.js (Express)
+- Database: Upstash Redis
+- Deployment: Vercel
+- Assets: Localized Image Library (1025+ forms)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```

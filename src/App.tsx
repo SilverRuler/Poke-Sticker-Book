@@ -15,6 +15,28 @@ interface ModalConfig {
   inputType?: "text" | "password";
 }
 
+interface PokemonDetail {
+  id: number;
+  name: string;
+  classification: string;
+  height: number;
+  weight: number;
+  gender: string;
+  flavorTexts: { version: string; text: string }[];
+  abilities: { name: string; description: string }[];
+}
+
+const versionMap: { [key: string]: string } = {
+  red: "레드", blue: "블루", yellow: "피카츄", gold: "금", silver: "은", crystal: "크리스탈",
+  ruby: "루비", sapphire: "사파이어", emerald: "에메랄드", firered: "파이어레드", leafgreen: "리프그린",
+  diamond: "디아루가", pearl: "펄기아", platinum: "기라티나", heartgold: "하트골드", soulsilver: "소울실버",
+  black: "블랙", white: "화이트", "black-2": "블랙 2", "white-2": "화이트 2", x: "X", y: "Y",
+  "omega-ruby": "오메가루비", "alpha-sapphire": "알파사파이어", sun: "썬", moon: "문",
+  "ultra-sun": "울트라썬", "ultra-moon": "울트라문", "lets-go-pikachu": "레츠고! 피카츄",
+  "lets-go-eevee": "레츠고! 이브이", sword: "소드", shield: "실드", "scarlet": "스칼렛", "violet": "바이올렛",
+  "legends-arceus": "레전즈 아르세우스"
+};
+
 function App() {
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
@@ -32,7 +54,14 @@ function App() {
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  // Modal State
+  // Detail Modal State
+  const [detailKey, setDetailKey] = useState<string | null>(null);
+  const [detailData, setDetailData] = useState<PokemonDetail | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
+  const [activeFlavorIndex, setActiveFlavorIndex] = useState(0);
+  const [abilityModal, setAbilityModal] = useState<{ name: string; description: string } | null>(null);
+
+  // Custom Modal State
   const [modal, setModal] = useState<ModalConfig | null>(null);
   const [modalInput, setModalInput] = useState("");
 
@@ -118,6 +147,77 @@ function App() {
       else audioRef.current.play();
       setIsBgmPlaying(!isBgmPlaying);
     }
+  };
+
+  const fetchPokemonDetail = async (key: string) => {
+    const [idStr] = key.split("-");
+    const id = parseInt(idStr);
+    
+    if (id > 1025) return; // No detailed info for special stickers
+
+    setDetailLoading(true);
+    try {
+      const [pokemonRes, speciesRes] = await Promise.all([
+        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`),
+        fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
+      ]);
+      
+      const pokemon = await pokemonRes.json();
+      const species = await speciesRes.json();
+
+      // Classification
+      const classification = species.genera.find((g: any) => g.language.name === "ko")?.genus || "???";
+
+      // Gender
+      let gender = "수컷, 암컷";
+      if (species.gender_rate === -1) gender = "성별없음";
+      else if (species.gender_rate === 0) gender = "수컷";
+      else if (species.gender_rate === 8) gender = "암컷";
+
+      // Flavor Texts
+      const flavorTexts = species.flavor_text_entries
+        .filter((f: any) => f.language.name === "ko")
+        .map((f: any) => ({
+          version: versionMap[f.version.name] || f.version.name,
+          text: f.flavor_text.replace(/\f|\n|\r/g, " ")
+        }));
+
+      // Abilities
+      const abilities = await Promise.all(pokemon.abilities.map(async (a: any) => {
+        const res = await fetch(a.ability.url);
+        const data = await res.json();
+        const koName = data.names.find((n: any) => n.language.name === "ko")?.name || a.ability.name;
+        const koDesc = data.flavor_text_entries.find((f: any) => f.language.name === "ko")?.flavor_text || "설명이 없습니다.";
+        return { name: koName, description: koDesc };
+      }));
+
+      setDetailData({
+        id,
+        name: pokemonData.find(p => p.id === id)?.name || pokemon.name,
+        classification,
+        height: pokemon.height / 10,
+        weight: pokemon.weight / 10,
+        gender,
+        flavorTexts,
+        abilities
+      });
+      setActiveFlavorIndex(0);
+    } catch (error) {
+      console.error("Failed to fetch pokemon detail:", error);
+      showAlert("상세 정보를 가져오는 데 실패했습니다.");
+    } finally {
+      setDetailLoading(false);
+    }
+  };
+
+  const handleCardClick = (key: string) => {
+    setDetailKey(key);
+    fetchPokemonDetail(key);
+  };
+
+  const closeDetail = () => {
+    setDetailKey(null);
+    setDetailData(null);
   };
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
@@ -385,13 +485,13 @@ function App() {
           if (!pokemon) return null;
           const count = target[key];
           return (
-            <div key={key} className="pokemon-card">
+            <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
               <div className="card-header">
                 <span className="pokemon-no">No.{key.split("-")[0].padStart(4, "0")}</span>
                 {(isPending || isLoggedIn) && (
                   <button
                     className="delete-btn"
-                    onClick={() => deletePokemon(key, isPending, pokemon.name)}
+                    onClick={(e) => { e.stopPropagation(); deletePokemon(key, isPending, pokemon.name); }}
                     title="삭제"
                   >
                     &times;
@@ -463,6 +563,98 @@ function App() {
         </div>
       )}
 
+      {/* Pokemon Detail Modal */}
+      {detailKey && (
+        <div className="modal-overlay" onClick={closeDetail}>
+          <div className="detail-modal" onClick={e => e.stopPropagation()}>
+            <button className="close-detail-btn" onClick={closeDetail}>&times;</button>
+            {detailLoading ? (
+              <div className="detail-loading">정보를 불러오는 중...</div>
+            ) : detailData ? (
+              <div className="detail-layout">
+                <div className="detail-left">
+                  <div className="detail-img-box">
+                    <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
+                  </div>
+                  <div className="detail-form-info">
+                    {getPokemonByKey(detailKey)?.name}
+                  </div>
+                </div>
+                <div className="detail-right">
+                  <div className="detail-flavor-box">
+                    <div className="version-tabs">
+                      {detailData.flavorTexts.slice(0, 6).map((f, i) => (
+                        <button 
+                          key={i} 
+                          className={`version-tab ${activeFlavorIndex === i ? "active" : ""}`}
+                          onClick={() => setActiveFlavorIndex(i)}
+                        >
+                          {f.version}
+                        </button>
+                      ))}
+                    </div>
+                    <p className="flavor-text">
+                      {detailData.flavorTexts[activeFlavorIndex]?.text || "설명이 없습니다."}
+                    </p>
+                  </div>
+                  <table className="detail-table">
+                    <tbody>
+                      <tr>
+                        <th>타입</th>
+                        <td>
+                          <div className="detail-types">
+                            {getPokemonByKey(detailKey)?.types.map((t, i) => (
+                              <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>키 / 몸무게</th>
+                        <td>{detailData.height}m / {detailData.weight}kg</td>
+                      </tr>
+                      <tr>
+                        <th>분류</th>
+                        <td>{detailData.classification}</td>
+                      </tr>
+                      <tr>
+                        <th>성별</th>
+                        <td>{detailData.gender}</td>
+                      </tr>
+                      <tr>
+                        <th>특성</th>
+                        <td>
+                          <div className="detail-abilities">
+                            {detailData.abilities.map((a, i) => (
+                              <button key={i} className="ability-btn" onClick={() => setAbilityModal(a)}>
+                                {a.name}
+                              </button>
+                            ))}
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ) : (
+              <div className="detail-error">정보가 없습니다. (특별 스티커는 상세 정보를 지원하지 않습니다.)</div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Ability Description Modal */}
+      {abilityModal && (
+        <div className="modal-overlay" style={{ zIndex: 1100 }} onClick={() => setAbilityModal(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <h3>{abilityModal.name}</h3>
+            <p style={{ margin: "20px 0", lineHeight: "1.6" }}>{abilityModal.description}</p>
+            <button className="btn btn-primary" onClick={() => setAbilityModal(null)}>닫기</button>
+          </div>
+        </div>
+      )}
+
       <header className="header">
         <div className="visitor-count">
           Today: <span>{visitorStats.today}</span> | Total: <span>{visitorStats.total}</span>
@@ -513,10 +705,10 @@ function App() {
               const pokemon = getPokemonByKey(key);
               if (!pokemon) return null;
               return (
-                <div key={key} className="today-item">
+                <div key={key} className="today-item" onClick={() => handleCardClick(key)}>
                   <div className="today-img-box">
                     <img src={pokemon.image} alt={pokemon.name} />
-                    {isLoggedIn && <button className="today-remove-btn" onClick={() => removeTodayPokemon(key)}>&times;</button>}
+                    {isLoggedIn && <button className="today-remove-btn" onClick={(e) => { e.stopPropagation(); removeTodayPokemon(key); }}>&times;</button>}
                   </div>
                   <span>{pokemon.name}</span>
                 </div>

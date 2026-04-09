@@ -38,16 +38,22 @@ const getKSTDate = () => {
 const getData = async () => {
   if (redis) {
     const data = await redis.get(REDIS_KEY);
-    return data || { 
+    const defaultDB = { 
       collection: {}, 
       pending_collection: {}, 
       today_collection: [], 
+      anniversary_collection: [], // New for 30th Anniversary
       last_reset_date: getKSTDate(),
       visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] }
     };
+    if (!data) return defaultDB;
+    if (!data.anniversary_collection) data.anniversary_collection = [];
+    return data;
   } else {
-    if (!fs.existsSync(DB_FILE)) return { collection: {}, pending_collection: {}, today_collection: [], last_reset_date: getKSTDate(), visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] } };
-    return JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
+    if (!fs.existsSync(DB_FILE)) return { collection: {}, pending_collection: {}, today_collection: [], anniversary_collection: [], last_reset_date: getKSTDate(), visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] } };
+    const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
+    if (!data.anniversary_collection) data.anniversary_collection = [];
+    return data;
   }
 };
 
@@ -77,7 +83,8 @@ const getUsers = () => {
 const isBot = (ua) => {
   if (!ua) return false;
   const bots = ['bot', 'spider', 'crawl', 'vercel-screenshot', 'preview', 'slurp', 'facebookexternalhit', 'kakaotalk-scrap'];
-  return bots.some(bot => ua.toLowerCase().includes(bots));
+  const lowerUA = ua.toLowerCase();
+  return bots.some(bot => lowerUA.includes(bot));
 };
 
 // Middleware: Auto-reset and Visitor Tracking
@@ -130,7 +137,7 @@ app.get('/api/collection', (req, res) => {
   const response = {
     ...req.db,
     visitor_stats: safeVisitorStats,
-    server_date: getKSTDate() // Explicitly send the current server date
+    server_date: getKSTDate()
   };
   res.json(response);
 });
@@ -161,8 +168,13 @@ app.post('/api/collection/remove', async (req, res) => {
   const { key, count } = req.body;
   const val = req.db.collection[key];
   if (val) {
-    if (count === null || count === undefined || count >= val) delete req.db.collection[key];
-    else req.db.collection[key] -= count;
+    if (count === null || count === undefined || count >= val) {
+      delete req.db.collection[key];
+      // Also remove anniversary mark if fully deleted
+      req.db.anniversary_collection = req.db.anniversary_collection.filter(k => k !== key);
+    } else {
+      req.db.collection[key] -= count;
+    }
   }
   await saveData(req.db);
   res.json(req.db);
@@ -197,6 +209,20 @@ app.post('/api/today/remove', async (req, res) => {
 
 app.post('/api/today/clear', async (req, res) => {
   req.db.today_collection = [];
+  await saveData(req.db);
+  res.json(req.db);
+});
+
+// 30th Anniversary Toggle
+app.post('/api/anniversary/toggle', async (req, res) => {
+  const { key } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
+  
+  if (req.db.anniversary_collection.includes(key)) {
+    req.db.anniversary_collection = req.db.anniversary_collection.filter(k => k !== key);
+  } else {
+    req.db.anniversary_collection.push(key);
+  }
   await saveData(req.db);
   res.json(req.db);
 });

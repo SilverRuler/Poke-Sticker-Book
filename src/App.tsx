@@ -40,6 +40,7 @@ const versionMap: { [key: string]: string } = {
 function App() {
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
+  const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
   const [todayCollection, setTodayCollection] = useState<string[]>([]);
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
   const [serverDate, setServerDate] = useState("");
@@ -114,6 +115,7 @@ function App() {
       const data = await response.json();
       setCollection(data.collection || {});
       setPendingCollection(data.pending_collection || {});
+      setAnniversaryCollection(data.anniversary_collection || []);
       setTodayCollection(data.today_collection || []);
       setVisitorStats(data.visitor_stats);
       setServerDate(data.server_date);
@@ -121,6 +123,19 @@ function App() {
       console.error("Failed to fetch collection:", error);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const toggleBgm = () => {
+    if (audioRef.current) {
+      if (isBgmPlaying) {
+        audioRef.current.pause();
+        setIsBgmPlaying(false);
+      } else {
+        audioRef.current.play().then(() => {
+          setIsBgmPlaying(true);
+        }).catch(() => {});
+      }
     }
   };
 
@@ -138,16 +153,21 @@ function App() {
       window.removeEventListener("click", handleFirstInteraction);
     };
     window.addEventListener("click", handleFirstInteraction);
-    return () => window.removeEventListener("click", handleFirstInteraction);
-  }, []);
 
-  const toggleBgm = () => {
-    if (audioRef.current) {
-      if (isBgmPlaying) audioRef.current.pause();
-      else audioRef.current.play();
-      setIsBgmPlaying(!isBgmPlaying);
-    }
-  };
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === 'm') {
+        // Prevent trigger if typing in input
+        if (["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName || "")) return;
+        toggleBgm();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("click", handleFirstInteraction);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isBgmPlaying]);
 
   const fetchPokemonDetail = async (key: string) => {
     const [idStr] = key.split("-");
@@ -165,16 +185,13 @@ function App() {
       const pokemon = await pokemonRes.json();
       const species = await speciesRes.json();
 
-      // Classification
       const classification = species.genera.find((g: any) => g.language.name === "ko")?.genus || "???";
 
-      // Gender
       let gender = "수컷, 암컷";
       if (species.gender_rate === -1) gender = "성별없음";
       else if (species.gender_rate === 0) gender = "수컷";
       else if (species.gender_rate === 8) gender = "암컷";
 
-      // Flavor Texts
       const flavorTexts = species.flavor_text_entries
         .filter((f: any) => f.language.name === "ko")
         .map((f: any) => ({
@@ -182,7 +199,6 @@ function App() {
           text: f.flavor_text.replace(/\f|\n|\r/g, " ")
         }));
 
-      // Abilities
       const abilities = await Promise.all(pokemon.abilities.map(async (a: any) => {
         const res = await fetch(a.ability.url);
         const data = await res.json();
@@ -218,6 +234,20 @@ function App() {
   const closeDetail = () => {
     setDetailKey(null);
     setDetailData(null);
+  };
+
+  const toggleAnniversary = async (key: string) => {
+    try {
+      const response = await fetch("/api/anniversary/toggle", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key }),
+      });
+      const data = await response.json();
+      setAnniversaryCollection(data.anniversary_collection);
+    } catch (error) {
+      showAlert("30주년 설정 업데이트 실패");
+    }
   };
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
@@ -290,8 +320,9 @@ function App() {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ key }),
         });
-        const updatedToday = await (await fetch("/api/collection")).json();
-        setTodayCollection(updatedToday.today_collection);
+        const updatedRes = await fetch("/api/collection");
+        const updatedData = await updatedRes.json();
+        setTodayCollection(updatedData.today_collection);
       }
       
       const count = isPending ? data.pending_collection[key] : data.collection[key];
@@ -336,7 +367,10 @@ function App() {
       });
       const data = await response.json();
       if (isPending) setPendingCollection(data.pending_collection);
-      else setCollection(data.collection);
+      else {
+        setCollection(data.collection);
+        setAnniversaryCollection(data.anniversary_collection);
+      }
     } catch (error) {
       showAlert("삭제에 실패했습니다.");
     }
@@ -484,6 +518,7 @@ function App() {
           const pokemon = getPokemonByKey(key);
           if (!pokemon) return null;
           const count = target[key];
+          const isAnniversary = anniversaryCollection.includes(key);
           return (
             <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
               <div className="card-header">
@@ -500,6 +535,11 @@ function App() {
               </div>
               <div className="image-wrapper">
                 <img src={pokemon.image} alt={pokemon.name} loading="lazy" />
+                {isAnniversary && (
+                  <div className="anniversary-badge">
+                    Pokémon <span className="red">30th</span><br/>Anniversary
+                  </div>
+                )}
               </div>
               <div className="pokemon-name">{pokemon.name}</div>
               <div className="pokemon-types">
@@ -575,6 +615,15 @@ function App() {
                 <div className="detail-left">
                   <div className="detail-img-box">
                     <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
+                    <div className="anniversary-toggle">
+                      <label>
+                        <input 
+                          type="checkbox" 
+                          checked={anniversaryCollection.includes(detailKey)}
+                          onChange={() => toggleAnniversary(detailKey)}
+                        /> 30th
+                      </label>
+                    </div>
                   </div>
                   <div className="detail-form-info">
                     {getPokemonByKey(detailKey)?.name}

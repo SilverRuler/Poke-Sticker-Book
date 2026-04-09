@@ -1,8 +1,8 @@
-
 export interface PokemonForm {
   formId: string;
   name: string;
   image: string;
+  types: string[];
 }
 
 export interface PokemonEntry {
@@ -19,7 +19,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이상해씨",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000101.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -30,7 +34,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이상해풀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000201.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -41,17 +49,29 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이상해꽃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000301.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "메가이상해꽃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000302.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       },
       {
         "formId": "03",
         "name": "거다이맥스 이상해꽃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000303.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000303.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -62,7 +82,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파이리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000401.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -73,7 +96,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "리자드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000501.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -84,22 +110,38 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "리자몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000601.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가리자몽X",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000602.png",
+        "types": [
+          "불꽃",
+          "드래곤"
+        ]
       },
       {
         "formId": "03",
         "name": "메가리자몽Y",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000603.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000603.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       },
       {
         "formId": "04",
         "name": "거다이맥스 리자몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000604.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000604.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       }
     ]
   },
@@ -110,7 +152,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -121,7 +166,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어니부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -132,17 +180,26 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "거북왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000901.png",
+        "types": [
+          "물"
+        ]
       },
       {
         "formId": "02",
         "name": "메가거북왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000902.png",
+        "types": [
+          "물"
+        ]
       },
       {
         "formId": "03",
         "name": "거다이맥스 거북왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000903.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/000903.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -153,7 +210,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "캐터피",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001001.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -164,7 +224,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "단데기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001101.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -175,12 +238,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "버터플",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001201.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 버터플",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001202.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -191,7 +262,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뿔충이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001301.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -202,7 +277,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "딱충이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001401.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -213,12 +292,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "독침붕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001501.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "메가독침붕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001502.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -229,7 +316,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "구구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001601.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -240,7 +331,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피죤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001701.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -251,12 +346,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피죤투",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001801.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가피죤투",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001802.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -267,12 +370,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬렛",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001901.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 꼬렛",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/001902.png",
+        "types": [
+          "악",
+          "노말"
+        ]
       }
     ]
   },
@@ -283,12 +393,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레트라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002001.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 레트라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002002.png",
+        "types": [
+          "악",
+          "노말"
+        ]
       }
     ]
   },
@@ -299,7 +416,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깨비참",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002101.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -310,7 +431,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깨비드릴조",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002201.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -321,7 +446,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002301.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -332,7 +460,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아보크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002401.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -343,12 +474,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피카츄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002501.png",
+        "types": [
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 피카츄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002502.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -359,12 +496,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라이츄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002601.png",
+        "types": [
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 라이츄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002602.png",
+        "types": [
+          "전기",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -375,12 +519,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모래두지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002701.png",
+        "types": [
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 모래두지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002702.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002702.png",
+        "types": [
+          "얼음",
+          "강철"
+        ]
       }
     ]
   },
@@ -391,12 +542,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002801.png",
+        "types": [
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 고지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002802.png",
+        "types": [
+          "얼음",
+          "강철"
+        ]
       }
     ]
   },
@@ -407,7 +565,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니드런♀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/002901.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -418,7 +579,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니드리나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003001.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -429,7 +593,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니드퀸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003101.png",
+        "types": [
+          "독",
+          "땅"
+        ]
       }
     ]
   },
@@ -440,7 +608,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니드런♂",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003201.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -451,7 +622,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니드리노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003301.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -462,7 +636,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니드킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003401.png",
+        "types": [
+          "독",
+          "땅"
+        ]
       }
     ]
   },
@@ -473,7 +651,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "삐삐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003501.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -484,7 +665,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "픽시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003601.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -495,12 +679,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "식스테일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003701.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 식스테일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003702.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003702.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -511,12 +701,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나인테일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003801.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 나인테일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003802.png",
+        "types": [
+          "얼음",
+          "페어리"
+        ]
       }
     ]
   },
@@ -527,7 +724,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "푸린",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/003901.png",
+        "types": [
+          "노말",
+          "페어리"
+        ]
       }
     ]
   },
@@ -538,7 +739,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "푸크린",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004001.png",
+        "types": [
+          "노말",
+          "페어리"
+        ]
       }
     ]
   },
@@ -549,7 +754,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "주뱃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004101.png",
+        "types": [
+          "독",
+          "비행"
+        ]
       }
     ]
   },
@@ -560,7 +769,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "골뱃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004201.png",
+        "types": [
+          "독",
+          "비행"
+        ]
       }
     ]
   },
@@ -571,7 +784,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뚜벅쵸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004301.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -582,7 +799,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "냄새꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004401.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -593,7 +814,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라플레시아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004501.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -604,7 +829,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004601.png",
+        "types": [
+          "벌레",
+          "풀"
+        ]
       }
     ]
   },
@@ -615,7 +844,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파라섹트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004701.png",
+        "types": [
+          "벌레",
+          "풀"
+        ]
       }
     ]
   },
@@ -626,7 +859,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "콘팡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004801.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -637,7 +874,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "도나리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/004901.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -648,12 +889,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "디그다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005001.png",
+        "types": [
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 디그다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005002.png",
+        "types": [
+          "땅",
+          "강철"
+        ]
       }
     ]
   },
@@ -664,12 +912,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "닥트리오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005101.png",
+        "types": [
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 닥트리오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005102.png",
+        "types": [
+          "땅",
+          "강철"
+        ]
       }
     ]
   },
@@ -680,22 +935,34 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나옹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005201.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "04",
         "name": "거다이맥스 나옹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005204.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005204.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 나옹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005202.png",
+        "types": [
+          "악"
+        ]
       },
       {
         "formId": "03",
         "name": "가라르 나옹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005203.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005203.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -706,12 +973,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "페르시온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005301.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 페르시온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005302.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -722,7 +995,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고라파덕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005401.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -733,7 +1009,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "골덕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005501.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -744,7 +1023,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "망키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005601.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -755,7 +1037,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "성원숭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005701.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -766,12 +1051,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가디",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005801.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 가디",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005802.png",
+        "types": [
+          "불꽃",
+          "바위"
+        ]
       }
     ]
   },
@@ -782,12 +1074,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "윈디",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005901.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 윈디",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/005902.png",
+        "types": [
+          "불꽃",
+          "바위"
+        ]
       }
     ]
   },
@@ -798,7 +1097,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "발챙이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -809,7 +1111,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "슈륙챙이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006101.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -820,7 +1125,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "강챙이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006201.png",
+        "types": [
+          "물",
+          "격투"
+        ]
       }
     ]
   },
@@ -831,7 +1140,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "캐이시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006301.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -842,7 +1154,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "윤겔라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006401.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -853,12 +1168,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "후딘",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006501.png",
+        "types": [
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가후딘",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006502.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -869,7 +1190,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "알통몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006601.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -880,7 +1204,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "근육몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006701.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -891,12 +1218,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "괴력몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006801.png",
+        "types": [
+          "격투"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 괴력몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006802.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -907,7 +1240,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모다피",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/006901.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -918,7 +1255,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우츠동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007001.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -929,7 +1270,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우츠보트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007101.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -940,7 +1285,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "왕눈해",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007201.png",
+        "types": [
+          "물",
+          "독"
+        ]
       }
     ]
   },
@@ -951,7 +1300,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "독파리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007301.png",
+        "types": [
+          "물",
+          "독"
+        ]
       }
     ]
   },
@@ -962,12 +1315,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬마돌",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007401.png",
+        "types": [
+          "바위",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 꼬마돌",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007402.png",
+        "types": [
+          "바위",
+          "전기"
+        ]
       }
     ]
   },
@@ -978,12 +1339,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007501.png",
+        "types": [
+          "바위",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 데구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007502.png",
+        "types": [
+          "바위",
+          "전기"
+        ]
       }
     ]
   },
@@ -994,12 +1363,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "딱구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007601.png",
+        "types": [
+          "바위",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 딱구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007602.png",
+        "types": [
+          "바위",
+          "전기"
+        ]
       }
     ]
   },
@@ -1010,12 +1387,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포니타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007701.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 포니타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007702.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007702.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1026,12 +1409,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "날쌩마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007801.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 날쌩마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007802.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -1042,12 +1432,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007901.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 야돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/007902.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1058,17 +1455,29 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야도란",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008001.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가야도란",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008002.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       },
       {
         "formId": "03",
         "name": "가라르 야도란",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008003.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008003.png",
+        "types": [
+          "독",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1079,7 +1488,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008101.png",
+        "types": [
+          "전기",
+          "강철"
+        ]
       }
     ]
   },
@@ -1090,7 +1503,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레어코일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008201.png",
+        "types": [
+          "전기",
+          "강철"
+        ]
       }
     ]
   },
@@ -1101,12 +1518,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파오리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008301.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 파오리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008302.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -1117,7 +1541,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두두",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008401.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -1128,7 +1556,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두트리오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008501.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -1139,7 +1571,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쥬쥬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1150,7 +1585,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쥬레곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008701.png",
+        "types": [
+          "물",
+          "얼음"
+        ]
       }
     ]
   },
@@ -1161,12 +1600,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "질퍽이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008801.png",
+        "types": [
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 질퍽이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008802.png",
+        "types": [
+          "독",
+          "악"
+        ]
       }
     ]
   },
@@ -1177,12 +1623,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "질뻐기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008901.png",
+        "types": [
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 질뻐기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/008902.png",
+        "types": [
+          "독",
+          "악"
+        ]
       }
     ]
   },
@@ -1193,7 +1646,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "셀러",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1204,7 +1660,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파르셀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009101.png",
+        "types": [
+          "물",
+          "얼음"
+        ]
       }
     ]
   },
@@ -1215,7 +1675,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고오스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009201.png",
+        "types": [
+          "고스트",
+          "독"
+        ]
       }
     ]
   },
@@ -1226,7 +1690,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고우스트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009301.png",
+        "types": [
+          "고스트",
+          "독"
+        ]
       }
     ]
   },
@@ -1237,17 +1705,29 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "팬텀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009401.png",
+        "types": [
+          "고스트",
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "메가팬텀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009402.png",
+        "types": [
+          "고스트",
+          "독"
+        ]
       },
       {
         "formId": "03",
         "name": "거다이맥스 팬텀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009403.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009403.png",
+        "types": [
+          "고스트",
+          "독"
+        ]
       }
     ]
   },
@@ -1258,7 +1738,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "롱스톤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009501.png",
+        "types": [
+          "바위",
+          "땅"
+        ]
       }
     ]
   },
@@ -1269,7 +1753,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "슬리프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1280,7 +1767,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "슬리퍼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009701.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1291,7 +1781,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "크랩",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1302,12 +1795,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "킹크랩",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009901.png",
+        "types": [
+          "물"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 킹크랩",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/009902.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1318,12 +1817,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌리리공",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010001.png",
+        "types": [
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 찌리리공",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010002.png",
+        "types": [
+          "전기",
+          "풀"
+        ]
       }
     ]
   },
@@ -1334,12 +1840,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "붐볼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010101.png",
+        "types": [
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 붐볼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010102.png",
+        "types": [
+          "전기",
+          "풀"
+        ]
       }
     ]
   },
@@ -1350,7 +1863,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아라리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010201.png",
+        "types": [
+          "풀",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1361,12 +1878,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010301.png",
+        "types": [
+          "풀",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 나시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010302.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -1377,7 +1902,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "탕구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010401.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -1388,12 +1916,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "텅구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010501.png",
+        "types": [
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "알로라 텅구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010502.png",
+        "types": [
+          "불꽃",
+          "고스트"
+        ]
       }
     ]
   },
@@ -1404,7 +1939,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "시라소몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010601.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -1415,7 +1953,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "홍수몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010701.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -1426,7 +1967,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "내루미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010801.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1437,7 +1981,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "또가스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/010901.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -1448,12 +1995,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "또도가스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011001.png",
+        "types": [
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 또도가스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011002.png",
+        "types": [
+          "독",
+          "페어리"
+        ]
       }
     ]
   },
@@ -1464,7 +2018,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뿔카노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011101.png",
+        "types": [
+          "땅",
+          "바위"
+        ]
       }
     ]
   },
@@ -1475,7 +2033,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코뿌리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011201.png",
+        "types": [
+          "땅",
+          "바위"
+        ]
       }
     ]
   },
@@ -1486,7 +2048,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "럭키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1497,7 +2062,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "덩쿠리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011401.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -1508,12 +2076,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "캥카",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011501.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "메가캥카",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011502.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1524,7 +2098,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쏘드라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1535,7 +2112,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "시드라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1546,7 +2126,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "콘치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1557,7 +2140,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "왕콘치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/011901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1568,7 +2154,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "별가사리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1579,7 +2168,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아쿠스타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012101.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1590,12 +2183,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마임맨",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012201.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 마임맨",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012202.png",
+        "types": [
+          "얼음",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1606,7 +2207,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스라크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012301.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -1617,7 +2222,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루주라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012401.png",
+        "types": [
+          "얼음",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1628,7 +2237,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에레브",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012501.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -1639,7 +2251,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마그마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012601.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -1650,12 +2265,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쁘사이저",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012701.png",
+        "types": [
+          "벌레"
+        ]
       },
       {
         "formId": "02",
         "name": "메가쁘사이저",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012702.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012702.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -1666,22 +2288,36 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "켄타로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012801.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "팔데아 켄타로스(컴뱃)",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012802.png",
+        "types": [
+          "격투"
+        ]
       },
       {
         "formId": "03",
         "name": "팔데아 켄타로스(블레이즈)",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012803.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012803.png",
+        "types": [
+          "격투",
+          "불꽃"
+        ]
       },
       {
         "formId": "04",
         "name": "팔데아 켄타로스(워터)",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012804.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012804.png",
+        "types": [
+          "격투",
+          "물"
+        ]
       }
     ]
   },
@@ -1692,7 +2328,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "잉어킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/012901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1703,12 +2342,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "갸라도스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013001.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가갸라도스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013002.png",
+        "types": [
+          "물",
+          "악"
+        ]
       }
     ]
   },
@@ -1719,12 +2366,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라프라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013101.png",
+        "types": [
+          "물",
+          "얼음"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 라프라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013102.png",
+        "types": [
+          "물",
+          "얼음"
+        ]
       }
     ]
   },
@@ -1735,7 +2390,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메타몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1746,12 +2404,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이브이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013301.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 이브이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013302.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1762,7 +2426,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "샤미드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013401.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -1773,7 +2440,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쥬피썬더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013501.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -1784,7 +2454,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "부스터",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013601.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -1795,7 +2468,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폴리곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013701.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1806,7 +2482,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "암나이트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013801.png",
+        "types": [
+          "바위",
+          "물"
+        ]
       }
     ]
   },
@@ -1817,7 +2497,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "암스타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/013901.png",
+        "types": [
+          "바위",
+          "물"
+        ]
       }
     ]
   },
@@ -1828,7 +2512,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "투구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014001.png",
+        "types": [
+          "바위",
+          "물"
+        ]
       }
     ]
   },
@@ -1839,7 +2527,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "투구푸스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014101.png",
+        "types": [
+          "바위",
+          "물"
+        ]
       }
     ]
   },
@@ -1850,12 +2542,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "프테라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014201.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가프테라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014202.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
       }
     ]
   },
@@ -1866,12 +2566,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "잠만보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014301.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 잠만보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014302.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -1882,12 +2588,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "프리져",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014401.png",
+        "types": [
+          "얼음",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 프리져",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014402.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -1898,12 +2612,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "썬더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014501.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 썬더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014502.png",
+        "types": [
+          "격투",
+          "비행"
+        ]
       }
     ]
   },
@@ -1914,12 +2636,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파이어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014601.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 파이어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014602.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -1930,7 +2660,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미뇽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014701.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -1941,7 +2674,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "신뇽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014801.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -1952,7 +2688,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "망나뇽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/014901.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       }
     ]
   },
@@ -1963,17 +2703,27 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뮤츠",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015001.png",
+        "types": [
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가뮤츠X",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015002.png",
+        "types": [
+          "에스퍼",
+          "격투"
+        ]
       },
       {
         "formId": "03",
         "name": "메가뮤츠Y",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015003.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015003.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1984,7 +2734,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뮤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015101.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -1995,7 +2748,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치코리타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -2006,7 +2762,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "베이리프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015301.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -2017,7 +2776,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메가니움",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015401.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -2028,7 +2790,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "브케인",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015501.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -2039,7 +2804,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마그케인",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015601.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -2050,12 +2818,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "블레이범",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015701.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 블레이범",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015702.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015702.png",
+        "types": [
+          "불꽃",
+          "고스트"
+        ]
       }
     ]
   },
@@ -2066,7 +2841,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "리아코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -2077,7 +2855,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "엘리게이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/015901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -2088,7 +2869,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "장크로다일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -2099,7 +2883,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬리선",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016101.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2110,7 +2897,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다꼬리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2121,7 +2911,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "부우부",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016301.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -2132,7 +2926,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야부엉",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016401.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -2143,7 +2941,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레디바",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016501.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -2154,7 +2956,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레디안",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016601.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -2165,7 +2971,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "페이검",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016701.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -2176,7 +2986,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아리아도스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016801.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -2187,7 +3001,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "크로뱃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/016901.png",
+        "types": [
+          "독",
+          "비행"
+        ]
       }
     ]
   },
@@ -2198,7 +3016,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "초라기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017001.png",
+        "types": [
+          "물",
+          "전기"
+        ]
       }
     ]
   },
@@ -2209,7 +3031,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "랜턴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017101.png",
+        "types": [
+          "물",
+          "전기"
+        ]
       }
     ]
   },
@@ -2220,7 +3046,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피츄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017201.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -2231,7 +3060,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "삐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017301.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -2242,7 +3074,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "푸푸린",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017401.png",
+        "types": [
+          "노말",
+          "페어리"
+        ]
       }
     ]
   },
@@ -2253,7 +3089,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토게피",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017501.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -2264,7 +3103,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토게틱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017601.png",
+        "types": [
+          "페어리",
+          "비행"
+        ]
       }
     ]
   },
@@ -2275,7 +3118,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "네이티",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017701.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -2286,7 +3133,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "네이티오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017801.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -2297,7 +3148,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메리프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/017901.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -2308,7 +3162,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "보송송",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018001.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -2319,12 +3176,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "전룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018101.png",
+        "types": [
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "메가전룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018102.png",
+        "types": [
+          "전기",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -2335,7 +3199,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아르코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -2346,7 +3213,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마릴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018301.png",
+        "types": [
+          "물",
+          "페어리"
+        ]
       }
     ]
   },
@@ -2357,7 +3228,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마릴리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018401.png",
+        "types": [
+          "물",
+          "페어리"
+        ]
       }
     ]
   },
@@ -2368,7 +3243,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬지모",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018501.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -2379,7 +3257,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "왕구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -2390,7 +3271,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "통통코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018701.png",
+        "types": [
+          "풀",
+          "비행"
+        ]
       }
     ]
   },
@@ -2401,7 +3286,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018801.png",
+        "types": [
+          "풀",
+          "비행"
+        ]
       }
     ]
   },
@@ -2412,7 +3301,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "솜솜코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/018901.png",
+        "types": [
+          "풀",
+          "비행"
+        ]
       }
     ]
   },
@@ -2423,7 +3316,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에이팜",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019001.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2434,7 +3330,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "해너츠",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -2445,7 +3344,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "해루미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -2456,7 +3358,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "왕자리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019301.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -2467,12 +3373,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우파",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019401.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "팔데아 우파",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019402.png",
+        "types": [
+          "독",
+          "땅"
+        ]
       }
     ]
   },
@@ -2483,7 +3397,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "누오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019501.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -2494,7 +3412,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에브이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -2505,7 +3426,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "블래키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019701.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -2516,7 +3440,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "니로우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019801.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -2527,12 +3455,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야도킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019901.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 야도킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/019902.png",
+        "types": [
+          "독",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -2543,7 +3479,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무우마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020001.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -2554,7 +3493,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "안농",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020101.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -2565,7 +3507,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마자용",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020201.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -2576,7 +3521,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "키링키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020301.png",
+        "types": [
+          "노말",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -2587,7 +3536,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피콘",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020401.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -2598,7 +3550,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쏘콘",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020501.png",
+        "types": [
+          "벌레",
+          "강철"
+        ]
       }
     ]
   },
@@ -2609,7 +3565,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "노고치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2620,7 +3579,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "글라이거",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020701.png",
+        "types": [
+          "땅",
+          "비행"
+        ]
       }
     ]
   },
@@ -2631,12 +3594,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "강철톤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020801.png",
+        "types": [
+          "강철",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "메가강철톤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020802.png",
+        "types": [
+          "강철",
+          "땅"
+        ]
       }
     ]
   },
@@ -2647,7 +3618,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "블루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/020901.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -2658,7 +3632,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "그랑블루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021001.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -2669,12 +3646,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "침바루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021101.png",
+        "types": [
+          "물",
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 침바루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021102.png",
+        "types": [
+          "악",
+          "독"
+        ]
       }
     ]
   },
@@ -2685,12 +3670,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "핫삼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021201.png",
+        "types": [
+          "벌레",
+          "강철"
+        ]
       },
       {
         "formId": "02",
         "name": "메가핫삼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021202.png",
+        "types": [
+          "벌레",
+          "강철"
+        ]
       }
     ]
   },
@@ -2701,7 +3694,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "단단지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021301.png",
+        "types": [
+          "벌레",
+          "바위"
+        ]
       }
     ]
   },
@@ -2712,12 +3709,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "헤라크로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021401.png",
+        "types": [
+          "벌레",
+          "격투"
+        ]
       },
       {
         "formId": "02",
         "name": "메가헤라크로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021402.png",
+        "types": [
+          "벌레",
+          "격투"
+        ]
       }
     ]
   },
@@ -2728,12 +3733,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포푸니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021501.png",
+        "types": [
+          "악",
+          "얼음"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 포푸니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021502.png",
+        "types": [
+          "격투",
+          "독"
+        ]
       }
     ]
   },
@@ -2744,7 +3757,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깜지곰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2755,7 +3771,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "링곰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021701.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2766,7 +3785,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마그마그",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021801.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -2777,7 +3799,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마그카르고",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/021901.png",
+        "types": [
+          "불꽃",
+          "바위"
+        ]
       }
     ]
   },
@@ -2788,7 +3814,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꾸꾸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022001.png",
+        "types": [
+          "얼음",
+          "땅"
+        ]
       }
     ]
   },
@@ -2799,7 +3829,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메꾸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022101.png",
+        "types": [
+          "얼음",
+          "땅"
+        ]
       }
     ]
   },
@@ -2810,7 +3844,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코산호",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022201.png",
+        "types": [
+          "물",
+          "바위"
+        ]
       }
     ]
   },
@@ -2821,7 +3859,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "총어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022301.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -2832,7 +3873,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대포무노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022401.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -2843,7 +3887,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "딜리버드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022501.png",
+        "types": [
+          "얼음",
+          "비행"
+        ]
       }
     ]
   },
@@ -2854,7 +3902,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "만타인",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022601.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       }
     ]
   },
@@ -2865,7 +3917,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무장조",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022701.png",
+        "types": [
+          "강철",
+          "비행"
+        ]
       }
     ]
   },
@@ -2876,7 +3932,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "델빌",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022801.png",
+        "types": [
+          "악",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -2887,12 +3947,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "헬가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022901.png",
+        "types": [
+          "악",
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "메가헬가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/022902.png",
+        "types": [
+          "악",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -2903,7 +3971,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "킹드라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023001.png",
+        "types": [
+          "물",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -2914,7 +3986,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코코리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023101.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -2925,7 +4000,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코리갑",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023201.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -2936,7 +4014,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폴리곤2",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2947,7 +4028,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "노라키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2958,7 +4042,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루브도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -2969,7 +4056,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "배루키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023601.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -2980,7 +4070,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카포에라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023701.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -2991,7 +4084,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뽀뽀라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023801.png",
+        "types": [
+          "얼음",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -3002,7 +4099,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에레키드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/023901.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -3013,7 +4113,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마그비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024001.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -3024,7 +4127,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "밀탱크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024101.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3035,7 +4141,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "해피너스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3046,7 +4155,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라이코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024301.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -3057,7 +4169,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "앤테이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024401.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -3068,7 +4183,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스이쿤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024501.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -3079,7 +4197,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "애버라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024601.png",
+        "types": [
+          "바위",
+          "땅"
+        ]
       }
     ]
   },
@@ -3090,7 +4212,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데기라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024701.png",
+        "types": [
+          "바위",
+          "땅"
+        ]
       }
     ]
   },
@@ -3101,12 +4227,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마기라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024801.png",
+        "types": [
+          "바위",
+          "악"
+        ]
       },
       {
         "formId": "02",
         "name": "메가마기라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024802.png",
+        "types": [
+          "바위",
+          "악"
+        ]
       }
     ]
   },
@@ -3117,7 +4251,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루기아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/024901.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -3128,7 +4266,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "칠색조",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025001.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       }
     ]
   },
@@ -3139,7 +4281,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "세레비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025101.png",
+        "types": [
+          "에스퍼",
+          "풀"
+        ]
       }
     ]
   },
@@ -3150,7 +4296,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나무지기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -3161,7 +4310,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나무돌이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025301.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -3172,12 +4324,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나무킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025401.png",
+        "types": [
+          "풀"
+        ]
       },
       {
         "formId": "02",
         "name": "메가나무킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025402.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -3188,7 +4347,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아차모",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025501.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -3199,7 +4361,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "영치코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025601.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       }
     ]
   },
@@ -3210,12 +4376,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "번치코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025701.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       },
       {
         "formId": "02",
         "name": "메가번치코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025702.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025702.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       }
     ]
   },
@@ -3226,7 +4400,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "물짱이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -3237,7 +4414,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "늪짱이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/025901.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -3248,12 +4429,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대짱이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026001.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "메가대짱이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026002.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -3264,7 +4453,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포챠나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026101.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -3275,7 +4467,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "그라에나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026201.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -3286,12 +4481,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "지그제구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026301.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 지그제구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026302.png",
+        "types": [
+          "악",
+          "노말"
+        ]
       }
     ]
   },
@@ -3302,12 +4504,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "직구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026401.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 직구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026402.png",
+        "types": [
+          "악",
+          "노말"
+        ]
       }
     ]
   },
@@ -3318,7 +4527,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "개무소",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026501.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -3329,7 +4541,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "실쿤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026601.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -3340,7 +4555,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뷰티플라이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026701.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -3351,7 +4570,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카스쿤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026801.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -3362,7 +4584,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "독케일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/026901.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -3373,7 +4599,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "연꽃몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027001.png",
+        "types": [
+          "물",
+          "풀"
+        ]
       }
     ]
   },
@@ -3384,7 +4614,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "로토스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027101.png",
+        "types": [
+          "물",
+          "풀"
+        ]
       }
     ]
   },
@@ -3395,7 +4629,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "로파파",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027201.png",
+        "types": [
+          "물",
+          "풀"
+        ]
       }
     ]
   },
@@ -3406,7 +4644,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "도토링",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027301.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -3417,7 +4658,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "잎새코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027401.png",
+        "types": [
+          "풀",
+          "악"
+        ]
       }
     ]
   },
@@ -3428,7 +4673,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다탱구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027501.png",
+        "types": [
+          "풀",
+          "악"
+        ]
       }
     ]
   },
@@ -3439,7 +4688,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "테일로",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027601.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -3450,7 +4703,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스왈로",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027701.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -3461,7 +4718,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "갈모매",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027801.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       }
     ]
   },
@@ -3472,7 +4733,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "패리퍼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/027901.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       }
     ]
   },
@@ -3483,7 +4748,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "랄토스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028001.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -3494,7 +4763,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "킬리아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028101.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -3505,7 +4778,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가디안",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028201.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -3516,7 +4793,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비구술",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028301.png",
+        "types": [
+          "벌레",
+          "물"
+        ]
       }
     ]
   },
@@ -3527,7 +4808,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비나방",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028401.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -3538,7 +4823,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "버섯꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028501.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -3549,7 +4837,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "버섯모",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028601.png",
+        "types": [
+          "풀",
+          "격투"
+        ]
       }
     ]
   },
@@ -3560,7 +4852,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "게을로",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028701.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3571,7 +4866,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "발바로",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028801.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3582,7 +4880,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "게을킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/028901.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3593,7 +4894,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토중몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029001.png",
+        "types": [
+          "벌레",
+          "땅"
+        ]
       }
     ]
   },
@@ -3604,7 +4909,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아이스크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029101.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -3615,7 +4924,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "껍질몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029201.png",
+        "types": [
+          "벌레",
+          "고스트"
+        ]
       }
     ]
   },
@@ -3626,7 +4939,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "소곤룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3637,7 +4953,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "노공룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3648,7 +4967,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폭음룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3659,7 +4981,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마크탕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029601.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -3670,7 +4995,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "하리뭉",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029701.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -3681,7 +5009,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루리리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029801.png",
+        "types": [
+          "노말",
+          "페어리"
+        ]
       }
     ]
   },
@@ -3692,7 +5024,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코코파스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/029901.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -3703,7 +5038,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에나비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030001.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3714,7 +5052,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "델케티",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030101.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -3725,12 +5066,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깜까미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030201.png",
+        "types": [
+          "악",
+          "고스트"
+        ]
       },
       {
         "formId": "02",
         "name": "메가깜까미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030202.png",
+        "types": [
+          "악",
+          "고스트"
+        ]
       }
     ]
   },
@@ -3741,12 +5090,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "입치트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030301.png",
+        "types": [
+          "강철",
+          "페어리"
+        ]
       },
       {
         "formId": "02",
         "name": "메가입치트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030302.png",
+        "types": [
+          "강철",
+          "페어리"
+        ]
       }
     ]
   },
@@ -3757,7 +5114,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가보리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030401.png",
+        "types": [
+          "강철",
+          "바위"
+        ]
       }
     ]
   },
@@ -3768,7 +5129,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "갱도라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030501.png",
+        "types": [
+          "강철",
+          "바위"
+        ]
       }
     ]
   },
@@ -3779,12 +5144,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "보스로라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030601.png",
+        "types": [
+          "강철",
+          "바위"
+        ]
       },
       {
         "formId": "02",
         "name": "메가보스로라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030602.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -3795,7 +5167,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "요가랑",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030701.png",
+        "types": [
+          "격투",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -3806,12 +5182,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "요가램",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030801.png",
+        "types": [
+          "격투",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가요가램",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030802.png",
+        "types": [
+          "격투",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -3822,7 +5206,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "썬더라이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/030901.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -3833,12 +5220,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "썬더볼트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031001.png",
+        "types": [
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "메가썬더볼트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031002.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -3849,7 +5242,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "플러시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031101.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -3860,7 +5256,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마이농",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031201.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -3871,7 +5270,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "볼비트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031301.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -3882,7 +5284,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "네오비트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031401.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -3893,7 +5298,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "로젤리아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031501.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -3904,7 +5313,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼴깍몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031601.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -3915,7 +5327,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꿀꺽몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031701.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -3926,12 +5341,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "샤프니아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031801.png",
+        "types": [
+          "물",
+          "악"
+        ]
       },
       {
         "formId": "02",
         "name": "메가샤크니아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031802.png",
+        "types": [
+          "물",
+          "악"
+        ]
       }
     ]
   },
@@ -3942,7 +5365,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "샤크니아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/031901.png",
+        "types": [
+          "물",
+          "악"
+        ]
       }
     ]
   },
@@ -3953,7 +5380,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고래왕자",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -3964,7 +5394,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고래왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032101.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -3975,7 +5408,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "둔타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032201.png",
+        "types": [
+          "불꽃",
+          "땅"
+        ]
       }
     ]
   },
@@ -3986,12 +5423,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폭타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032301.png",
+        "types": [
+          "불꽃",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "메가폭타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032302.png",
+        "types": [
+          "불꽃",
+          "땅"
+        ]
       }
     ]
   },
@@ -4002,7 +5447,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코터스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032401.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -4013,7 +5461,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피그점프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032501.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4024,7 +5475,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피그킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4035,7 +5489,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "얼루기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032701.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -4046,7 +5503,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "톱치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032801.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -4057,7 +5517,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비브라바",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/032901.png",
+        "types": [
+          "땅",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -4068,7 +5532,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "플라이곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033001.png",
+        "types": [
+          "땅",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -4079,7 +5547,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "선인왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -4090,7 +5561,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "밤선인",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033201.png",
+        "types": [
+          "풀",
+          "악"
+        ]
       }
     ]
   },
@@ -4101,7 +5576,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파비코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033301.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -4112,12 +5591,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파비코리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033401.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가파비코리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033402.png",
+        "types": [
+          "드래곤",
+          "페어리"
+        ]
       }
     ]
   },
@@ -4128,7 +5615,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쟝고",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -4139,7 +5629,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "세비퍼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033601.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -4150,7 +5643,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루나톤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033701.png",
+        "types": [
+          "바위",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4161,7 +5658,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "솔록",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033801.png",
+        "types": [
+          "바위",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4172,7 +5673,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미꾸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/033901.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -4183,7 +5688,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메깅",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034001.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -4194,7 +5703,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가재군",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034101.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4205,7 +5717,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가재장군",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034201.png",
+        "types": [
+          "물",
+          "악"
+        ]
       }
     ]
   },
@@ -4216,7 +5732,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "오뚝군",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034301.png",
+        "types": [
+          "땅",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4227,7 +5747,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "점토도리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034401.png",
+        "types": [
+          "땅",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4238,7 +5762,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "릴링",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034501.png",
+        "types": [
+          "바위",
+          "풀"
+        ]
       }
     ]
   },
@@ -4249,7 +5777,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "릴리요",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034601.png",
+        "types": [
+          "바위",
+          "풀"
+        ]
       }
     ]
   },
@@ -4260,7 +5792,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아노딥스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034701.png",
+        "types": [
+          "바위",
+          "벌레"
+        ]
       }
     ]
   },
@@ -4271,7 +5807,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아말도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034801.png",
+        "types": [
+          "바위",
+          "벌레"
+        ]
       }
     ]
   },
@@ -4282,7 +5822,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빈티나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/034901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4293,7 +5836,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "밀로틱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4304,7 +5850,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "캐스퐁",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035101.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -4315,7 +5864,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "켈리몬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -4326,7 +5878,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어둠대신",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035301.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -4337,12 +5892,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다크펫",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035401.png",
+        "types": [
+          "고스트"
+        ]
       },
       {
         "formId": "02",
         "name": "메가다크펫",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035402.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -4353,7 +5914,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "해골몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035501.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -4364,7 +5928,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미라몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035601.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -4375,7 +5942,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "트로피우스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035701.png",
+        "types": [
+          "풀",
+          "비행"
+        ]
       }
     ]
   },
@@ -4386,7 +5957,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치렁",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035801.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4397,12 +5971,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "앱솔",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035901.png",
+        "types": [
+          "악"
+        ]
       },
       {
         "formId": "02",
         "name": "메가앱솔",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/035902.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -4413,7 +5993,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마자",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036001.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4424,7 +6007,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "눈꼬마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036101.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -4435,12 +6021,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "얼음귀신",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036201.png",
+        "types": [
+          "얼음"
+        ]
       },
       {
         "formId": "02",
         "name": "메가얼음귀신",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036202.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -4451,7 +6043,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대굴레오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036301.png",
+        "types": [
+          "얼음",
+          "물"
+        ]
       }
     ]
   },
@@ -4462,7 +6058,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "씨레오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036401.png",
+        "types": [
+          "얼음",
+          "물"
+        ]
       }
     ]
   },
@@ -4473,7 +6073,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "씨카이저",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036501.png",
+        "types": [
+          "얼음",
+          "물"
+        ]
       }
     ]
   },
@@ -4484,7 +6088,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "진주몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4495,7 +6102,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "헌테일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4506,7 +6116,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "분홍장이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4517,7 +6130,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "시라칸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/036901.png",
+        "types": [
+          "물",
+          "바위"
+        ]
       }
     ]
   },
@@ -4528,7 +6145,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "사랑동이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4539,7 +6159,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아공이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037101.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -4550,7 +6173,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쉘곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037201.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -4561,12 +6187,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "보만다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037301.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가보만다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037302.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       }
     ]
   },
@@ -4577,7 +6211,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메탕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037401.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4588,7 +6226,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메탕구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037501.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4599,12 +6241,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메타그로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037601.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가메타그로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037602.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4615,7 +6265,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레지락",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037701.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -4626,7 +6279,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레지아이스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037801.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -4637,7 +6293,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레지스틸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/037901.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -4648,12 +6307,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라티아스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038001.png",
+        "types": [
+          "드래곤",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가라티아스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038002.png",
+        "types": [
+          "드래곤",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4664,12 +6331,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라티오스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038101.png",
+        "types": [
+          "드래곤",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "메가라티오스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038102.png",
+        "types": [
+          "드래곤",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4680,7 +6355,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가이오가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038201.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4691,7 +6369,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "그란돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038301.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -4702,12 +6383,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레쿠쟈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038401.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "메가레쿠쟈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038402.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       }
     ]
   },
@@ -4718,7 +6407,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "지라치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038501.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4729,7 +6422,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "테오키스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -4740,7 +6436,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038701.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -4751,7 +6450,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "수풀부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038801.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -4762,7 +6464,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토대부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/038901.png",
+        "types": [
+          "풀",
+          "땅"
+        ]
       }
     ]
   },
@@ -4773,7 +6479,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "불꽃숭이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039001.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -4784,7 +6493,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파이숭이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039101.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       }
     ]
   },
@@ -4795,7 +6508,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "초염몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039201.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       }
     ]
   },
@@ -4806,7 +6523,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "팽도리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039301.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4817,7 +6537,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "팽태자",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039401.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -4828,7 +6551,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "엠페르트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039501.png",
+        "types": [
+          "물",
+          "강철"
+        ]
       }
     ]
   },
@@ -4839,7 +6566,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌르꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039601.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -4850,7 +6581,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌르버드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039701.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -4861,7 +6596,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌르호크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039801.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -4872,7 +6611,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비버니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/039901.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -4883,7 +6625,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비버통",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040001.png",
+        "types": [
+          "노말",
+          "물"
+        ]
       }
     ]
   },
@@ -4894,7 +6640,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "귀뚤뚜기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040101.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -4905,7 +6654,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "귀뚤톡크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040201.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -4916,7 +6668,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬링크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040301.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -4927,7 +6682,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "럭시오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040401.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -4938,7 +6696,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "렌트라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040501.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -4949,7 +6710,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬몽울",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040601.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -4960,7 +6725,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "로즈레이드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040701.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -4971,7 +6740,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두개도스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040801.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -4982,7 +6754,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "램펄드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/040901.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -4993,7 +6768,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "방패톱스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041001.png",
+        "types": [
+          "바위",
+          "강철"
+        ]
       }
     ]
   },
@@ -5004,7 +6783,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바리톱스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041101.png",
+        "types": [
+          "바위",
+          "강철"
+        ]
       }
     ]
   },
@@ -5015,7 +6798,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "도롱충이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041201.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -5026,7 +6812,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "도롱마담",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041301.png",
+        "types": [
+          "벌레",
+          "풀"
+        ]
       }
     ]
   },
@@ -5037,7 +6827,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나메일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041401.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -5048,7 +6842,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "세꿀버리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041501.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -5059,7 +6857,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비퀸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041601.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -5070,7 +6872,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파치리스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041701.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -5081,7 +6886,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "브이젤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5092,7 +6900,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "플로젤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/041901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5103,7 +6914,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "체리버",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042001.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5114,7 +6928,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "체리꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5125,7 +6942,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깝질무",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042201.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5136,7 +6956,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "트리토돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042301.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -5147,7 +6971,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "겟핸보숭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5158,7 +6985,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "흔들풍손",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042501.png",
+        "types": [
+          "고스트",
+          "비행"
+        ]
       }
     ]
   },
@@ -5169,7 +7000,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "둥실라이드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042601.png",
+        "types": [
+          "고스트",
+          "비행"
+        ]
       }
     ]
   },
@@ -5180,7 +7015,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이어롤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042701.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5191,12 +7029,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이어롭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042801.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "메가이어롭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042802.png",
+        "types": [
+          "노말",
+          "격투"
+        ]
       }
     ]
   },
@@ -5207,7 +7052,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무우마직",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/042901.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -5218,7 +7066,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "돈크로우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043001.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -5229,7 +7081,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나옹마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043101.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5240,7 +7095,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "몬냥이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5251,7 +7109,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "랑딸랑",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043301.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5262,7 +7123,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스컹뿡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043401.png",
+        "types": [
+          "독",
+          "악"
+        ]
       }
     ]
   },
@@ -5273,7 +7138,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스컹탱크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043501.png",
+        "types": [
+          "독",
+          "악"
+        ]
       }
     ]
   },
@@ -5284,7 +7153,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "동미러",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043601.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5295,7 +7168,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "동탁군",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043701.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5306,7 +7183,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬지지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043801.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -5317,7 +7197,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "흉내내",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/043901.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -5328,7 +7212,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "핑복",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044001.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5339,7 +7226,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "페라페",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044101.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -5350,7 +7241,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "화강돌",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044201.png",
+        "types": [
+          "고스트",
+          "악"
+        ]
       }
     ]
   },
@@ -5361,7 +7256,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "딥상어동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044301.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
       }
     ]
   },
@@ -5372,7 +7271,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "한바이트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044401.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
       }
     ]
   },
@@ -5383,12 +7286,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "한카리아스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044501.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "메가한카리아스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044502.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
       }
     ]
   },
@@ -5399,7 +7310,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "먹고자",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5410,7 +7324,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "리오르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044701.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -5421,12 +7338,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루카리오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044801.png",
+        "types": [
+          "격투",
+          "강철"
+        ]
       },
       {
         "formId": "02",
         "name": "메가루카리오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044802.png",
+        "types": [
+          "격투",
+          "강철"
+        ]
       }
     ]
   },
@@ -5437,7 +7362,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "히포포타스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/044901.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -5448,7 +7376,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "하마돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045001.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -5459,7 +7390,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스콜피",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045101.png",
+        "types": [
+          "독",
+          "벌레"
+        ]
       }
     ]
   },
@@ -5470,7 +7405,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드래피온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045201.png",
+        "types": [
+          "독",
+          "악"
+        ]
       }
     ]
   },
@@ -5481,7 +7420,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "삐딱구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045301.png",
+        "types": [
+          "독",
+          "격투"
+        ]
       }
     ]
   },
@@ -5492,7 +7435,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "독개굴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045401.png",
+        "types": [
+          "독",
+          "격투"
+        ]
       }
     ]
   },
@@ -5503,7 +7450,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무스틈니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045501.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5514,7 +7464,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "형광어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5525,7 +7478,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "네오라이트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5536,7 +7492,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "타만타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045801.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       }
     ]
   },
@@ -5547,7 +7507,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "눈쓰개",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/045901.png",
+        "types": [
+          "풀",
+          "얼음"
+        ]
       }
     ]
   },
@@ -5558,12 +7522,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "눈설왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046001.png",
+        "types": [
+          "풀",
+          "얼음"
+        ]
       },
       {
         "formId": "02",
         "name": "메가눈설왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046002.png",
+        "types": [
+          "풀",
+          "얼음"
+        ]
       }
     ]
   },
@@ -5574,7 +7546,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포푸니라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046101.png",
+        "types": [
+          "악",
+          "얼음"
+        ]
       }
     ]
   },
@@ -5585,7 +7561,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자포코일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046201.png",
+        "types": [
+          "전기",
+          "강철"
+        ]
       }
     ]
   },
@@ -5596,7 +7576,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "내룸벨트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5607,7 +7590,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "거대코뿌리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046401.png",
+        "types": [
+          "땅",
+          "바위"
+        ]
       }
     ]
   },
@@ -5618,7 +7605,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "덩쿠림보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046501.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5629,7 +7619,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에레키블",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046601.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -5640,7 +7633,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마그마번",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046701.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -5651,7 +7647,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토게키스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046801.png",
+        "types": [
+          "페어리",
+          "비행"
+        ]
       }
     ]
   },
@@ -5662,7 +7662,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메가자리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/046901.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -5673,7 +7677,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "리피아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047001.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5684,7 +7691,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "글레이시아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047101.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -5695,7 +7705,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "글라이온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047201.png",
+        "types": [
+          "땅",
+          "비행"
+        ]
       }
     ]
   },
@@ -5706,7 +7720,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "맘모꾸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047301.png",
+        "types": [
+          "얼음",
+          "땅"
+        ]
       }
     ]
   },
@@ -5717,7 +7735,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폴리곤Z",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5728,12 +7749,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "엘레이드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047501.png",
+        "types": [
+          "에스퍼",
+          "격투"
+        ]
       },
       {
         "formId": "02",
         "name": "메가엘레이드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047502.png",
+        "types": [
+          "에스퍼",
+          "격투"
+        ]
       }
     ]
   },
@@ -5744,7 +7773,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대코파스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047601.png",
+        "types": [
+          "바위",
+          "강철"
+        ]
       }
     ]
   },
@@ -5755,7 +7788,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야느와르몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047701.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -5766,7 +7802,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "눈여아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047801.png",
+        "types": [
+          "얼음",
+          "고스트"
+        ]
       }
     ]
   },
@@ -5777,7 +7817,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "로토무",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/047901.png",
+        "types": [
+          "전기",
+          "고스트"
+        ]
       }
     ]
   },
@@ -5788,7 +7832,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "유크시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048001.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5799,7 +7846,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "엠라이트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048101.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5810,7 +7860,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아그놈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048201.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5821,7 +7874,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "디아루가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048301.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -5832,7 +7889,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "펄기아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048401.png",
+        "types": [
+          "물",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -5843,7 +7904,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "히드런",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048501.png",
+        "types": [
+          "불꽃",
+          "강철"
+        ]
       }
     ]
   },
@@ -5854,7 +7919,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레지기가스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5865,7 +7933,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기라티나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048701.png",
+        "types": [
+          "고스트",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -5876,7 +7948,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "크레세리아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048801.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -5887,7 +7962,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피오네",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/048901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5898,7 +7976,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마나피",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -5909,7 +7990,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다크라이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049101.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -5920,7 +8004,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쉐이미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5931,7 +8018,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아르세우스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -5942,7 +8032,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비크티니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049401.png",
+        "types": [
+          "에스퍼",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -5953,7 +8047,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "주리비얀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049501.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5964,7 +8061,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "샤비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049601.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5975,7 +8075,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "샤로다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049701.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -5986,7 +8089,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뚜꾸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049801.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -5997,7 +8103,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "차오꿀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/049901.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       }
     ]
   },
@@ -6008,7 +8118,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "염무왕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050001.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
       }
     ]
   },
@@ -6019,7 +8133,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "수댕이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050101.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -6030,7 +8147,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쌍검자비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050201.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -6041,12 +8161,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대검귀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050301.png",
+        "types": [
+          "물"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 대검귀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050302.png",
+        "types": [
+          "물",
+          "악"
+        ]
       }
     ]
   },
@@ -6057,7 +8184,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "보르쥐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6068,7 +8198,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "보르그",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6079,7 +8212,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "요테리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6090,7 +8226,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "하데리어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050701.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6101,7 +8240,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바랜드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050801.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6112,7 +8254,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쌔비냥",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/050901.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -6123,7 +8268,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레파르다스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051001.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -6134,7 +8282,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야나프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -6145,7 +8296,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야나키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -6156,7 +8310,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바오프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051301.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -6167,7 +8324,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바오키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051401.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -6178,7 +8338,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "앗차프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051501.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -6189,7 +8352,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "앗차키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -6200,7 +8366,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "몽나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051701.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6211,7 +8380,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "몽얌나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051801.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6222,7 +8394,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "콩둘기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/051901.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -6233,7 +8409,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "유토브",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052001.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -6244,7 +8424,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "켄호로우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052101.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -6255,7 +8439,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "줄뮤마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052201.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -6266,7 +8453,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "제브라이카",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052301.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -6277,7 +8467,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "단굴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052401.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -6288,7 +8481,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "암트르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052501.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -6299,7 +8495,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기가이어스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052601.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -6310,7 +8509,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "또르박쥐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052701.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -6321,7 +8524,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "맘박쥐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052801.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -6332,7 +8539,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두더류",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/052901.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -6343,7 +8553,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "몰드류",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053001.png",
+        "types": [
+          "땅",
+          "강철"
+        ]
       }
     ]
   },
@@ -6354,12 +8568,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다부니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053101.png",
+        "types": [
+          "노말"
+        ]
       },
       {
         "formId": "02",
         "name": "메가다부니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053102.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6370,7 +8590,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "으랏차",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053201.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -6381,7 +8604,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토쇠골",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053301.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -6392,7 +8618,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "노보청",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053401.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -6403,7 +8632,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "동챙이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053501.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -6414,7 +8646,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두까비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053601.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -6425,7 +8661,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두빅굴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053701.png",
+        "types": [
+          "물",
+          "땅"
+        ]
       }
     ]
   },
@@ -6436,7 +8676,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "던지미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053801.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -6447,7 +8690,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "타격귀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/053901.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -6458,7 +8704,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두르보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054001.png",
+        "types": [
+          "벌레",
+          "풀"
+        ]
       }
     ]
   },
@@ -6469,7 +8719,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두르쿤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054101.png",
+        "types": [
+          "벌레",
+          "풀"
+        ]
       }
     ]
   },
@@ -6480,7 +8734,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모아머",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054201.png",
+        "types": [
+          "벌레",
+          "풀"
+        ]
       }
     ]
   },
@@ -6491,7 +8749,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마디네",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054301.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -6502,7 +8764,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "휠구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054401.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -6513,7 +8779,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "펜드라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054501.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
       }
     ]
   },
@@ -6524,7 +8794,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "소미안",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054601.png",
+        "types": [
+          "풀",
+          "페어리"
+        ]
       }
     ]
   },
@@ -6535,7 +8809,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "엘풍",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054701.png",
+        "types": [
+          "풀",
+          "페어리"
+        ]
       }
     ]
   },
@@ -6546,7 +8824,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치릴리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054801.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -6557,12 +8838,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드레디어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054901.png",
+        "types": [
+          "풀"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 드레디어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/054902.png",
+        "types": [
+          "풀",
+          "격투"
+        ]
       }
     ]
   },
@@ -6573,7 +8861,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "배쓰나이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -6584,7 +8875,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깜눈크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055101.png",
+        "types": [
+          "땅",
+          "악"
+        ]
       }
     ]
   },
@@ -6595,7 +8890,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "악비르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055201.png",
+        "types": [
+          "땅",
+          "악"
+        ]
       }
     ]
   },
@@ -6606,7 +8905,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "악비아르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055301.png",
+        "types": [
+          "땅",
+          "악"
+        ]
       }
     ]
   },
@@ -6617,12 +8920,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "달막화",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055401.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 달막화",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055402.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -6633,12 +8942,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "불비달마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055501.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 불비달마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055502.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -6649,7 +8964,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마라카치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055601.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -6660,7 +8978,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "돌살이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055701.png",
+        "types": [
+          "벌레",
+          "바위"
+        ]
       }
     ]
   },
@@ -6671,7 +8993,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "암팰리스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055801.png",
+        "types": [
+          "벌레",
+          "바위"
+        ]
       }
     ]
   },
@@ -6682,7 +9008,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "곤율랭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/055901.png",
+        "types": [
+          "악",
+          "격투"
+        ]
       }
     ]
   },
@@ -6693,7 +9023,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "곤율거니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056001.png",
+        "types": [
+          "악",
+          "격투"
+        ]
       }
     ]
   },
@@ -6704,7 +9038,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "심보러",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056101.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -6715,12 +9053,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데스마스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056201.png",
+        "types": [
+          "고스트"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 데스마스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056202.png",
+        "types": [
+          "땅",
+          "고스트"
+        ]
       }
     ]
   },
@@ -6731,7 +9076,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데스니칸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056301.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -6742,7 +9090,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "프로토가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056401.png",
+        "types": [
+          "물",
+          "바위"
+        ]
       }
     ]
   },
@@ -6753,7 +9105,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "늑골라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056501.png",
+        "types": [
+          "물",
+          "바위"
+        ]
       }
     ]
   },
@@ -6764,7 +9120,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아켄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056601.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
       }
     ]
   },
@@ -6775,7 +9135,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아케오스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056701.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
       }
     ]
   },
@@ -6786,7 +9150,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깨봉이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056801.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -6797,12 +9164,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "더스트나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056901.png",
+        "types": [
+          "독"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 더스트나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/056902.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -6813,12 +9186,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "조로아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057001.png",
+        "types": [
+          "악"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 조로아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057002.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057002.png",
+        "types": [
+          "노말",
+          "고스트"
+        ]
       }
     ]
   },
@@ -6829,12 +9209,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "조로아크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057101.png",
+        "types": [
+          "악"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 Zoroark",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057102.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -6845,7 +9231,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치라미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6856,7 +9245,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치라치노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -6867,7 +9259,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고디탱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057401.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6878,7 +9273,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고디보미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057501.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6889,7 +9287,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고디모아젤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6900,7 +9301,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "유니란",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057701.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6911,7 +9315,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "듀란",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057801.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6922,7 +9329,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "란쿨루스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/057901.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -6933,7 +9343,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬지보리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058001.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       }
     ]
   },
@@ -6944,7 +9358,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스완나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058101.png",
+        "types": [
+          "물",
+          "비행"
+        ]
       }
     ]
   },
@@ -6955,7 +9373,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바닐프티",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058201.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -6966,7 +9387,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바닐리치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058301.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -6977,7 +9401,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "배바닐라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058401.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -6988,7 +9415,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "사철록",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058501.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
       }
     ]
   },
@@ -6999,7 +9430,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바라철록",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058601.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
       }
     ]
   },
@@ -7010,7 +9445,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에몽가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058701.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
       }
     ]
   },
@@ -7021,7 +9460,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "딱정곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058801.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -7032,7 +9474,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "슈바르고",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/058901.png",
+        "types": [
+          "벌레",
+          "강철"
+        ]
       }
     ]
   },
@@ -7043,7 +9489,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깜놀버슬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059001.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -7054,7 +9504,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뽀록나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059101.png",
+        "types": [
+          "풀",
+          "독"
+        ]
       }
     ]
   },
@@ -7065,7 +9519,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "탱그릴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059201.png",
+        "types": [
+          "물",
+          "고스트"
+        ]
       }
     ]
   },
@@ -7076,7 +9534,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "탱탱겔",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059301.png",
+        "types": [
+          "물",
+          "고스트"
+        ]
       }
     ]
   },
@@ -7087,7 +9549,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "맘복치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059401.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -7098,7 +9563,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파쪼옥",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059501.png",
+        "types": [
+          "벌레",
+          "전기"
+        ]
       }
     ]
   },
@@ -7109,7 +9578,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "전툴라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059601.png",
+        "types": [
+          "벌레",
+          "전기"
+        ]
       }
     ]
   },
@@ -7120,7 +9593,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "철시드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059701.png",
+        "types": [
+          "풀",
+          "강철"
+        ]
       }
     ]
   },
@@ -7131,7 +9608,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "너트령",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059801.png",
+        "types": [
+          "풀",
+          "강철"
+        ]
       }
     ]
   },
@@ -7142,7 +9623,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기어르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/059901.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -7153,7 +9637,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기기어르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060001.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -7164,7 +9651,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기기기어르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060101.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -7175,7 +9665,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "저리어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060201.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -7186,7 +9679,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "저리릴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060301.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -7197,7 +9693,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "저리더프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060401.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -7208,7 +9707,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "리그레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060501.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -7219,7 +9721,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "벰크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -7230,7 +9735,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "불켜미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060701.png",
+        "types": [
+          "고스트",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7241,7 +9750,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "램프라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060801.png",
+        "types": [
+          "고스트",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7252,7 +9765,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "샹델라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/060901.png",
+        "types": [
+          "고스트",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7263,7 +9780,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "터검니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061001.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7274,7 +9794,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "액슨도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061101.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7285,7 +9808,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "액스라이즈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061201.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7296,7 +9822,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코고미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061301.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -7307,7 +9836,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "툰베어",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061401.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -7318,7 +9850,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "프리지오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061501.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -7329,7 +9864,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쪼마리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061601.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -7340,7 +9878,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어지리더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061701.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -7351,12 +9892,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061801.png",
+        "types": [
+          "땅",
+          "전기"
+        ]
       },
       {
         "formId": "02",
         "name": "가라르 메더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061802.png",
+        "types": [
+          "땅",
+          "강철"
+        ]
       }
     ]
   },
@@ -7367,7 +9916,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비조푸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/061901.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -7378,7 +9930,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비조도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062001.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -7389,7 +9944,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "크리만",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062101.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7400,7 +9958,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "골비람",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062201.png",
+        "types": [
+          "땅",
+          "고스트"
+        ]
       }
     ]
   },
@@ -7411,7 +9973,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "골루그",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062301.png",
+        "types": [
+          "땅",
+          "고스트"
+        ]
       }
     ]
   },
@@ -7422,7 +9988,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자망칼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062401.png",
+        "types": [
+          "악",
+          "강철"
+        ]
       }
     ]
   },
@@ -7433,7 +10003,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "절각참",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062501.png",
+        "types": [
+          "악",
+          "강철"
+        ]
       }
     ]
   },
@@ -7444,7 +10018,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "버프론",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -7455,7 +10032,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "수리둥보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062701.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -7466,12 +10047,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "워글",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062801.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 워글",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062802.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
       }
     ]
   },
@@ -7482,7 +10071,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "벌차이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/062901.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -7493,7 +10086,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "버랜지나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063001.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -7504,7 +10101,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "앤티골",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063101.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7515,7 +10115,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아이앤트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063201.png",
+        "types": [
+          "벌레",
+          "강철"
+        ]
       }
     ]
   },
@@ -7526,7 +10130,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모노두",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063301.png",
+        "types": [
+          "악",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7537,7 +10145,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "디헤드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063401.png",
+        "types": [
+          "악",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7548,7 +10160,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "삼삼드래",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063501.png",
+        "types": [
+          "악",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -7559,7 +10175,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "활화르바",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063601.png",
+        "types": [
+          "벌레",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7570,7 +10190,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "불카모스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063701.png",
+        "types": [
+          "벌레",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7581,7 +10205,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코바르온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063801.png",
+        "types": [
+          "강철",
+          "격투"
+        ]
       }
     ]
   },
@@ -7592,7 +10220,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "테라키온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/063901.png",
+        "types": [
+          "바위",
+          "격투"
+        ]
       }
     ]
   },
@@ -7603,7 +10235,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비리디온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064001.png",
+        "types": [
+          "풀",
+          "격투"
+        ]
       }
     ]
   },
@@ -7614,7 +10250,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토네로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064101.png",
+        "types": [
+          "비행"
+        ]
       }
     ]
   },
@@ -7625,7 +10264,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "볼트로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064201.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
       }
     ]
   },
@@ -7636,7 +10279,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레시라무",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064301.png",
+        "types": [
+          "드래곤",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7647,7 +10294,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "제크로무",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064401.png",
+        "types": [
+          "드래곤",
+          "전기"
+        ]
       }
     ]
   },
@@ -7658,7 +10309,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "랜드로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064501.png",
+        "types": [
+          "땅",
+          "비행"
+        ]
       }
     ]
   },
@@ -7669,7 +10324,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "큐레무",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064601.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
       }
     ]
   },
@@ -7680,7 +10339,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "케르디오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064701.png",
+        "types": [
+          "물",
+          "격투"
+        ]
       }
     ]
   },
@@ -7691,7 +10354,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메로엣타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064801.png",
+        "types": [
+          "노말",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -7702,7 +10369,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "게노세크트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/064901.png",
+        "types": [
+          "벌레",
+          "강철"
+        ]
       }
     ]
   },
@@ -7713,7 +10384,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "도치마론",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065001.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -7724,7 +10398,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "도치보구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -7735,7 +10412,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "브리가론",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065201.png",
+        "types": [
+          "풀",
+          "격투"
+        ]
       }
     ]
   },
@@ -7746,7 +10427,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "푸호꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065301.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7757,7 +10441,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "테르나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065401.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -7768,7 +10455,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마폭시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065501.png",
+        "types": [
+          "불꽃",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -7779,7 +10470,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "개구마르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -7790,7 +10484,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "개굴반장",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -7801,7 +10498,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "개굴닌자",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065801.png",
+        "types": [
+          "물",
+          "악"
+        ]
       }
     ]
   },
@@ -7812,7 +10513,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파르빗",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/065901.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -7823,7 +10527,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파르토",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066001.png",
+        "types": [
+          "노말",
+          "땅"
+        ]
       }
     ]
   },
@@ -7834,7 +10542,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "화살꼬빈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066101.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -7845,7 +10557,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "불화살빈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066201.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       }
     ]
   },
@@ -7856,7 +10572,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파이어로",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066301.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       }
     ]
   },
@@ -7867,7 +10587,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "분이벌레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066401.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -7878,7 +10601,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "분떠도리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066501.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -7889,7 +10615,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "비비용",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066601.png",
+        "types": [
+          "벌레",
+          "비행"
+        ]
       }
     ]
   },
@@ -7900,7 +10630,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레오꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066701.png",
+        "types": [
+          "불꽃",
+          "노말"
+        ]
       }
     ]
   },
@@ -7911,7 +10645,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "화염레오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066801.png",
+        "types": [
+          "불꽃",
+          "노말"
+        ]
       }
     ]
   },
@@ -7922,7 +10660,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "플라베베",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/066901.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -7933,7 +10674,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "플라엣테",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067001.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -7944,7 +10688,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "플라제스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067101.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -7955,7 +10702,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메이클",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -7966,7 +10716,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고고트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067301.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -7977,7 +10730,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "판짱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067401.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -7988,7 +10744,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "부란다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067501.png",
+        "types": [
+          "격투",
+          "악"
+        ]
       }
     ]
   },
@@ -7999,7 +10759,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "트리미앙",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -8010,7 +10773,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "냐스퍼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067701.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -8021,7 +10787,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "냐오닉스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067801.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -8032,7 +10801,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "단칼빙",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/067901.png",
+        "types": [
+          "강철",
+          "고스트"
+        ]
       }
     ]
   },
@@ -8043,7 +10816,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쌍검킬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068001.png",
+        "types": [
+          "강철",
+          "고스트"
+        ]
       }
     ]
   },
@@ -8054,7 +10831,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "킬가르도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068101.png",
+        "types": [
+          "강철",
+          "고스트"
+        ]
       }
     ]
   },
@@ -8065,7 +10846,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "슈쁘",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068201.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -8076,7 +10860,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "프레프티르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068301.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -8087,7 +10874,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나룸퍼프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068401.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -8098,7 +10888,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나루림",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068501.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -8109,7 +10902,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "오케이징",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068601.png",
+        "types": [
+          "악",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -8120,7 +10917,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "칼라마네로",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068701.png",
+        "types": [
+          "악",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -8131,7 +10932,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "거북손손",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068801.png",
+        "types": [
+          "바위",
+          "물"
+        ]
       }
     ]
   },
@@ -8142,7 +10947,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "거북손데스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/068901.png",
+        "types": [
+          "바위",
+          "물"
+        ]
       }
     ]
   },
@@ -8153,7 +10962,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "수레기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069001.png",
+        "types": [
+          "독",
+          "물"
+        ]
       }
     ]
   },
@@ -8164,7 +10977,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드래캄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069101.png",
+        "types": [
+          "독",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8175,7 +10992,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "완철포",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069201.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -8186,7 +11006,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "블로스터",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069301.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -8197,7 +11020,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "목도리키텔",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069401.png",
+        "types": [
+          "전기",
+          "노말"
+        ]
       }
     ]
   },
@@ -8208,7 +11035,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "일레도리자드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069501.png",
+        "types": [
+          "전기",
+          "노말"
+        ]
       }
     ]
   },
@@ -8219,7 +11050,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "티고라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069601.png",
+        "types": [
+          "바위",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8230,7 +11065,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "견고라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069701.png",
+        "types": [
+          "바위",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8241,7 +11080,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아마루스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069801.png",
+        "types": [
+          "바위",
+          "얼음"
+        ]
       }
     ]
   },
@@ -8252,7 +11095,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아마루르가",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/069901.png",
+        "types": [
+          "바위",
+          "얼음"
+        ]
       }
     ]
   },
@@ -8263,7 +11110,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "님피아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070001.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -8274,7 +11124,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루차불",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070101.png",
+        "types": [
+          "격투",
+          "비행"
+        ]
       }
     ]
   },
@@ -8285,7 +11139,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데덴네",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070201.png",
+        "types": [
+          "전기",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8296,7 +11154,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "멜리시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070301.png",
+        "types": [
+          "바위",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8307,7 +11169,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미끄메라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070401.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8318,12 +11183,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미끄네일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070501.png",
+        "types": [
+          "드래곤"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 미끄네일",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070502.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8334,12 +11206,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미끄래곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070601.png",
+        "types": [
+          "드래곤"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 미끄래곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070602.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8350,7 +11229,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "클레피",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070701.png",
+        "types": [
+          "강철",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8361,7 +11244,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나목령",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070801.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
       }
     ]
   },
@@ -8372,7 +11259,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대로트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/070901.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
       }
     ]
   },
@@ -8383,7 +11274,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "호바귀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071001.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
       }
     ]
   },
@@ -8394,7 +11289,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "펌킨인",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071101.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
       }
     ]
   },
@@ -8405,7 +11304,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꽁어름",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071201.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -8416,12 +11318,19 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "크레베이스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071301.png",
+        "types": [
+          "얼음"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 크레베이스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071302.png",
+        "types": [
+          "얼음",
+          "바위"
+        ]
       }
     ]
   },
@@ -8432,7 +11341,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "음뱃",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071401.png",
+        "types": [
+          "비행",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8443,7 +11356,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "음번",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071501.png",
+        "types": [
+          "비행",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8454,7 +11371,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "제르네아스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071601.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -8465,7 +11385,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이벨타르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071701.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -8476,7 +11400,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "지가르데",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071801.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
       }
     ]
   },
@@ -8487,12 +11415,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "디안시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071901.png",
+        "types": [
+          "바위",
+          "페어리"
+        ]
       },
       {
         "formId": "02",
         "name": "메가디안시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/071902.png",
+        "types": [
+          "바위",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8503,7 +11439,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "후파",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072001.png",
+        "types": [
+          "에스퍼",
+          "고스트"
+        ]
       }
     ]
   },
@@ -8514,7 +11454,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "볼케니온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072101.png",
+        "types": [
+          "불꽃",
+          "물"
+        ]
       }
     ]
   },
@@ -8525,7 +11469,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나몰빼미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072201.png",
+        "types": [
+          "풀",
+          "비행"
+        ]
       }
     ]
   },
@@ -8536,7 +11484,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빼미스로우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072301.png",
+        "types": [
+          "풀",
+          "비행"
+        ]
       }
     ]
   },
@@ -8547,12 +11499,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모크나이퍼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072401.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
       },
       {
         "formId": "02",
         "name": "히스이 모크나이퍼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072402.png",
+        "types": [
+          "풀",
+          "격투"
+        ]
       }
     ]
   },
@@ -8563,7 +11523,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "냐오불",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072501.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -8574,7 +11537,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "냐오히트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072601.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -8585,7 +11551,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어흥염",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072701.png",
+        "types": [
+          "불꽃",
+          "악"
+        ]
       }
     ]
   },
@@ -8596,7 +11566,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "누리공",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072801.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -8607,7 +11580,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "키요공",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/072901.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -8618,7 +11594,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "누리레느",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073001.png",
+        "types": [
+          "물",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8629,7 +11609,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "콕코구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073101.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -8640,7 +11624,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "크라파",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073201.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -8651,7 +11639,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "왕큰부리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073301.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -8662,7 +11654,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "영구스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -8673,7 +11668,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "형사구스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -8684,7 +11682,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "턱지충이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073601.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -8695,7 +11696,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "전지충이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073701.png",
+        "types": [
+          "벌레",
+          "전기"
+        ]
       }
     ]
   },
@@ -8706,7 +11711,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "투구뿌논",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073801.png",
+        "types": [
+          "벌레",
+          "전기"
+        ]
       }
     ]
   },
@@ -8717,7 +11726,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "오기지게",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/073901.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -8728,7 +11740,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모단단게",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074001.png",
+        "types": [
+          "격투",
+          "얼음"
+        ]
       }
     ]
   },
@@ -8739,7 +11755,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "춤추새",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074101.png",
+        "types": [
+          "불꽃",
+          "비행"
+        ]
       }
     ]
   },
@@ -8750,7 +11770,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에블리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074201.png",
+        "types": [
+          "벌레",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8761,7 +11785,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에리본",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074301.png",
+        "types": [
+          "벌레",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8772,7 +11800,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "암멍이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074401.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -8783,7 +11814,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루가루암",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074501.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -8794,7 +11828,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "약어리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -8805,7 +11842,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "시마사리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074701.png",
+        "types": [
+          "독",
+          "물"
+        ]
       }
     ]
   },
@@ -8816,7 +11857,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "더시마사리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074801.png",
+        "types": [
+          "독",
+          "물"
+        ]
       }
     ]
   },
@@ -8827,7 +11872,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "머드나기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/074901.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -8838,7 +11886,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "만마드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075001.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -8849,7 +11900,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "물거미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075101.png",
+        "types": [
+          "물",
+          "벌레"
+        ]
       }
     ]
   },
@@ -8860,7 +11915,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깨비물거미",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075201.png",
+        "types": [
+          "물",
+          "벌레"
+        ]
       }
     ]
   },
@@ -8871,7 +11930,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "짜랑랑",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075301.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -8882,7 +11944,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라란티스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075401.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -8893,7 +11958,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자마슈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075501.png",
+        "types": [
+          "풀",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8904,7 +11973,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마셰이드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075601.png",
+        "types": [
+          "풀",
+          "페어리"
+        ]
       }
     ]
   },
@@ -8915,7 +11988,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "야도뇽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075701.png",
+        "types": [
+          "독",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -8926,7 +12003,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "염뉴트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075801.png",
+        "types": [
+          "독",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -8937,7 +12018,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포곰곰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/075901.png",
+        "types": [
+          "노말",
+          "격투"
+        ]
       }
     ]
   },
@@ -8948,7 +12033,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이븐곰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076001.png",
+        "types": [
+          "노말",
+          "격투"
+        ]
       }
     ]
   },
@@ -8959,7 +12048,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "달콤아",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -8970,7 +12062,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "달무리나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076201.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -8981,7 +12076,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "달코퀸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076301.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -8992,7 +12090,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "큐아링",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076401.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -9003,7 +12104,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "하랑우탄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076501.png",
+        "types": [
+          "노말",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9014,7 +12119,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "내던숭이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076601.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -9025,7 +12133,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬시레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076701.png",
+        "types": [
+          "벌레",
+          "물"
+        ]
       }
     ]
   },
@@ -9036,7 +12148,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "갑주무사",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076801.png",
+        "types": [
+          "벌레",
+          "물"
+        ]
       }
     ]
   },
@@ -9047,7 +12163,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모래꿍",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/076901.png",
+        "types": [
+          "고스트",
+          "땅"
+        ]
       }
     ]
   },
@@ -9058,7 +12178,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모래성이당",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077001.png",
+        "types": [
+          "고스트",
+          "땅"
+        ]
       }
     ]
   },
@@ -9069,7 +12193,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "해무기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077101.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9080,7 +12207,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "타입:널",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9091,7 +12221,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "실버디",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077301.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9102,7 +12235,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메테노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077401.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
       }
     ]
   },
@@ -9113,7 +12250,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자말라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9124,7 +12264,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폭거북스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077601.png",
+        "types": [
+          "불꽃",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9135,7 +12279,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토게데마루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077701.png",
+        "types": [
+          "전기",
+          "강철"
+        ]
       }
     ]
   },
@@ -9146,7 +12294,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "따라큐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077801.png",
+        "types": [
+          "고스트",
+          "페어리"
+        ]
       }
     ]
   },
@@ -9157,7 +12309,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치갈기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/077901.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9168,7 +12324,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "할비롱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078001.png",
+        "types": [
+          "노말",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9179,7 +12339,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "타타륜",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078101.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
       }
     ]
   },
@@ -9190,7 +12354,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "짜랑꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078201.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9201,7 +12368,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "짜랑고우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078301.png",
+        "types": [
+          "드래곤",
+          "격투"
+        ]
       }
     ]
   },
@@ -9212,7 +12383,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "짜랑고우거",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078401.png",
+        "types": [
+          "드래곤",
+          "격투"
+        ]
       }
     ]
   },
@@ -9223,7 +12398,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카푸꼬꼬꼭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078501.png",
+        "types": [
+          "전기",
+          "페어리"
+        ]
       }
     ]
   },
@@ -9234,7 +12413,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카푸나비나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078601.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -9245,7 +12428,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카푸브루루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078701.png",
+        "types": [
+          "풀",
+          "페어리"
+        ]
       }
     ]
   },
@@ -9256,7 +12443,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카푸느지느",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078801.png",
+        "types": [
+          "물",
+          "페어리"
+        ]
       }
     ]
   },
@@ -9267,7 +12458,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코스모그",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/078901.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9278,7 +12472,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코스모움",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079001.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9289,7 +12486,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "솔가레오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079101.png",
+        "types": [
+          "에스퍼",
+          "강철"
+        ]
       }
     ]
   },
@@ -9300,7 +12501,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "루나아라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079201.png",
+        "types": [
+          "에스퍼",
+          "고스트"
+        ]
       }
     ]
   },
@@ -9311,7 +12516,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "텅비드",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079301.png",
+        "types": [
+          "바위",
+          "독"
+        ]
       }
     ]
   },
@@ -9322,7 +12531,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "매시붕",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079401.png",
+        "types": [
+          "벌레",
+          "격투"
+        ]
       }
     ]
   },
@@ -9333,7 +12546,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "페로코체",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079501.png",
+        "types": [
+          "벌레",
+          "격투"
+        ]
       }
     ]
   },
@@ -9344,7 +12561,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "전수목",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079601.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -9355,7 +12575,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "철화구야",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079701.png",
+        "types": [
+          "강철",
+          "비행"
+        ]
       }
     ]
   },
@@ -9366,7 +12590,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "종이신도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079801.png",
+        "types": [
+          "풀",
+          "강철"
+        ]
       }
     ]
   },
@@ -9377,7 +12605,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "악식킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/079901.png",
+        "types": [
+          "악",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9388,7 +12620,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "네크로즈마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080001.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9399,7 +12634,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마기아나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080101.png",
+        "types": [
+          "강철",
+          "페어리"
+        ]
       }
     ]
   },
@@ -9410,7 +12649,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마샤도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080201.png",
+        "types": [
+          "격투",
+          "고스트"
+        ]
       }
     ]
   },
@@ -9421,7 +12664,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "베베놈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080301.png",
+        "types": [
+          "독"
+        ]
       }
     ]
   },
@@ -9432,7 +12678,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아고용",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080401.png",
+        "types": [
+          "독",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9443,7 +12693,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "차곡차곡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080501.png",
+        "types": [
+          "바위",
+          "강철"
+        ]
       }
     ]
   },
@@ -9454,7 +12708,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두파팡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080601.png",
+        "types": [
+          "불꽃",
+          "고스트"
+        ]
       }
     ]
   },
@@ -9465,7 +12723,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "제라오라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080701.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -9476,7 +12737,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "멜탄",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080801.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -9487,12 +12751,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "멜메탈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080901.png",
+        "types": [
+          "강철"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 멜메탈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/080902.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -9503,7 +12773,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "흥나숭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081001.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -9514,7 +12787,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "채키몽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -9525,12 +12801,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고릴타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081201.png",
+        "types": [
+          "풀"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 고릴타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081202.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -9541,7 +12823,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "염버니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081301.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -9552,7 +12837,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "래비풋",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081401.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -9563,12 +12851,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에이스번",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081501.png",
+        "types": [
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 에이스번",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081502.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081502.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -9579,7 +12873,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "울머기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9590,7 +12887,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "누겔레온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9601,12 +12901,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "인텔리레온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081801.png",
+        "types": [
+          "물"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 인텔리레온",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081802.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9617,7 +12923,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "탐리스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/081901.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9628,7 +12937,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "요씽리스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082001.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9639,7 +12951,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파라꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082101.png",
+        "types": [
+          "비행"
+        ]
       }
     ]
   },
@@ -9650,7 +12965,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파크로우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082201.png",
+        "types": [
+          "비행"
+        ]
       }
     ]
   },
@@ -9661,12 +12979,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아머까오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082301.png",
+        "types": [
+          "비행",
+          "강철"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 아머까오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082302.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082302.png",
+        "types": [
+          "비행",
+          "강철"
+        ]
       }
     ]
   },
@@ -9677,7 +13003,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두루지벌레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082401.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -9688,7 +13017,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레돔벌레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082501.png",
+        "types": [
+          "벌레",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9699,12 +13032,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이올브",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082601.png",
+        "types": [
+          "벌레",
+          "에스퍼"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 이올브",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082602.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082602.png",
+        "types": [
+          "벌레",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -9715,7 +13056,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "훔처우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082701.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -9726,7 +13070,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "폭슬라이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082801.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -9737,7 +13084,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬모카",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/082901.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -9748,7 +13098,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "백솜모카",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083001.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -9759,7 +13112,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083101.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9770,7 +13126,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "배우르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -9781,7 +13140,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "깨물부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083301.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9792,12 +13154,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "갈가부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083401.png",
+        "types": [
+          "물",
+          "바위"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 갈가부기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083402.png",
+        "types": [
+          "물",
+          "바위"
+        ]
       }
     ]
   },
@@ -9808,7 +13178,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "멍파치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083501.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -9819,7 +13192,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "펄스멍",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083601.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -9830,7 +13206,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "탄동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083701.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -9841,7 +13220,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "탄차곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083801.png",
+        "types": [
+          "바위",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -9852,12 +13235,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "석탄산",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083901.png",
+        "types": [
+          "바위",
+          "불꽃"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 석탄산",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/083902.png",
+        "types": [
+          "바위",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -9868,7 +13259,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "과사삭벌레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084001.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9879,12 +13274,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "애프룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084101.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 애프룡",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084102.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9895,12 +13298,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "단지래플",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084201.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 단지래플",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084202.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084202.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -9911,7 +13322,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모래뱀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084301.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -9922,12 +13336,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "사다이사",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084401.png",
+        "types": [
+          "땅"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 사다이사",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084402.png",
+        "types": [
+          "땅"
+        ]
       }
     ]
   },
@@ -9938,7 +13358,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "윽우지",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084501.png",
+        "types": [
+          "비행",
+          "물"
+        ]
       }
     ]
   },
@@ -9949,7 +13373,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌로꼬치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084601.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9960,7 +13387,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬치조",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -9971,7 +13401,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "일레즌",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084801.png",
+        "types": [
+          "전기",
+          "독"
+        ]
       }
     ]
   },
@@ -9982,12 +13416,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스트린더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084901.png",
+        "types": [
+          "전기",
+          "독"
+        ]
       },
       {
         "formId": "03",
         "name": "거다이맥스 스트린더(하이)",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084903.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/084903.png",
+        "types": [
+          "전기",
+          "독"
+        ]
       }
     ]
   },
@@ -9998,7 +13440,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "태우지네",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085001.png",
+        "types": [
+          "불꽃",
+          "벌레"
+        ]
       }
     ]
   },
@@ -10009,12 +13455,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다태우지네",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085101.png",
+        "types": [
+          "불꽃",
+          "벌레"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 다태우지네",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085102.png",
+        "types": [
+          "불꽃",
+          "벌레"
+        ]
       }
     ]
   },
@@ -10025,7 +13479,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "때때무노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085201.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -10036,7 +13493,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "케오퍼스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085301.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -10047,7 +13507,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데인차",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085401.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -10058,7 +13521,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포트데스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085501.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -10069,7 +13535,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "몸지브림",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10080,7 +13549,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "손지브림",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085701.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10091,12 +13563,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "브리무음",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085801.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 브리무음",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085802.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085802.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -10107,7 +13587,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "메롱꿍",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/085901.png",
+        "types": [
+          "악",
+          "페어리"
+        ]
       }
     ]
   },
@@ -10118,7 +13602,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쏘겨모",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086001.png",
+        "types": [
+          "악",
+          "페어리"
+        ]
       }
     ]
   },
@@ -10129,12 +13617,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "오롱털",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086101.png",
+        "types": [
+          "악",
+          "페어리"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 오롱털",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086102.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086102.png",
+        "types": [
+          "악",
+          "페어리"
+        ]
       }
     ]
   },
@@ -10145,7 +13641,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가로막구리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086201.png",
+        "types": [
+          "악",
+          "노말"
+        ]
       }
     ]
   },
@@ -10156,7 +13656,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나이킹",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086301.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -10167,7 +13670,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "산호르곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086401.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -10178,7 +13684,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "창파나이트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086501.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -10189,7 +13698,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마임꽁꽁",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086601.png",
+        "types": [
+          "얼음",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10200,7 +13713,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "데스판",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086701.png",
+        "types": [
+          "땅",
+          "고스트"
+        ]
       }
     ]
   },
@@ -10211,7 +13728,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마빌크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086801.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -10222,12 +13742,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마휘핑",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086901.png",
+        "types": [
+          "페어리"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 마휘핑",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/086902.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -10238,7 +13764,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대여르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087001.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -10249,7 +13778,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌르성게",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087101.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -10260,7 +13792,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "누니머기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087201.png",
+        "types": [
+          "얼음",
+          "벌레"
+        ]
       }
     ]
   },
@@ -10271,7 +13807,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모스노우",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087301.png",
+        "types": [
+          "얼음",
+          "벌레"
+        ]
       }
     ]
   },
@@ -10282,7 +13822,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "돌헨진",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087401.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -10293,7 +13836,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빙큐보",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087501.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -10304,7 +13850,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "에써르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087601.png",
+        "types": [
+          "에스퍼",
+          "노말"
+        ]
       }
     ]
   },
@@ -10315,7 +13865,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모르페코",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087701.png",
+        "types": [
+          "전기",
+          "악"
+        ]
       }
     ]
   },
@@ -10326,7 +13880,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "끼리동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087801.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -10337,12 +13894,18 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대왕끼리동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087901.png",
+        "types": [
+          "강철"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 대왕끼리동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087902.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/087902.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -10353,7 +13916,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파치래곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088001.png",
+        "types": [
+          "전기",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -10364,7 +13931,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파치르돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088101.png",
+        "types": [
+          "전기",
+          "얼음"
+        ]
       }
     ]
   },
@@ -10375,7 +13946,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어래곤",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088201.png",
+        "types": [
+          "물",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -10386,7 +13961,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어치르돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088301.png",
+        "types": [
+          "물",
+          "얼음"
+        ]
       }
     ]
   },
@@ -10397,12 +13976,20 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두랄루돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088401.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       },
       {
         "formId": "02",
         "name": "거다이맥스 두랄루돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088402.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088402.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -10413,7 +14000,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드라꼰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088501.png",
+        "types": [
+          "드래곤",
+          "고스트"
+        ]
       }
     ]
   },
@@ -10424,7 +14015,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드래런치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088601.png",
+        "types": [
+          "드래곤",
+          "고스트"
+        ]
       }
     ]
   },
@@ -10435,7 +14030,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드래펄트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088701.png",
+        "types": [
+          "드래곤",
+          "고스트"
+        ]
       }
     ]
   },
@@ -10446,7 +14045,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자시안",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088801.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -10457,7 +14059,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자마젠타",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/088901.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -10468,7 +14073,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무한다이노",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089001.png",
+        "types": [
+          "독",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -10479,7 +14088,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "치고마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089101.png",
+        "types": [
+          "격투"
+        ]
       }
     ]
   },
@@ -10490,17 +14102,29 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우라오스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089201.png",
+        "types": [
+          "격투",
+          "악"
+        ]
       },
       {
         "formId": "03",
         "name": "거다이맥스 우라오스(일격)",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089203.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089203.png",
+        "types": [
+          "격투",
+          "악"
+        ]
       },
       {
         "formId": "04",
         "name": "거다이맥스 우라오스(연격)",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089204.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089204.png",
+        "types": [
+          "격투",
+          "악"
+        ]
       }
     ]
   },
@@ -10511,7 +14135,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "자루도",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089301.png",
+        "types": [
+          "악",
+          "풀"
+        ]
       }
     ]
   },
@@ -10522,7 +14150,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레지에레키",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089401.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -10533,7 +14164,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레지드래고",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089501.png",
+        "types": [
+          "드래곤"
+        ]
       }
     ]
   },
@@ -10544,7 +14178,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "블리자포스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089601.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -10555,7 +14192,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "레이스포스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089701.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -10566,7 +14206,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "버드렉스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089801.png",
+        "types": [
+          "에스퍼",
+          "풀"
+        ]
       }
     ]
   },
@@ -10577,7 +14221,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "신비록",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/089901.png",
+        "types": [
+          "노말",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10588,7 +14236,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "사마자르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090001.png",
+        "types": [
+          "벌레",
+          "바위"
+        ]
       }
     ]
   },
@@ -10599,7 +14251,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "다투곰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090101.png",
+        "types": [
+          "땅",
+          "노말"
+        ]
       }
     ]
   },
@@ -10610,7 +14266,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대쓰여너",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090201.png",
+        "types": [
+          "물",
+          "고스트"
+        ]
       }
     ]
   },
@@ -10621,7 +14281,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "포푸니크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090301.png",
+        "types": [
+          "격투",
+          "독"
+        ]
       }
     ]
   },
@@ -10632,7 +14296,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "장침바루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090401.png",
+        "types": [
+          "악",
+          "독"
+        ]
       }
     ]
   },
@@ -10643,7 +14311,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "러브로스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090501.png",
+        "types": [
+          "페어리",
+          "비행"
+        ]
       }
     ]
   },
@@ -10654,7 +14326,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나오하",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090601.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -10665,7 +14340,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "나로테",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090701.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -10676,7 +14354,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마스카나",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090801.png",
+        "types": [
+          "풀",
+          "악"
+        ]
       }
     ]
   },
@@ -10687,7 +14369,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "뜨아거",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/090901.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -10698,7 +14383,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "악뜨거",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091001.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -10709,7 +14397,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "라우드본",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091101.png",
+        "types": [
+          "불꽃",
+          "고스트"
+        ]
       }
     ]
   },
@@ -10720,7 +14412,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꾸왁스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091201.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -10731,7 +14426,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "아꾸왁",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091301.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -10742,7 +14440,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "웨이니발",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091401.png",
+        "types": [
+          "물",
+          "격투"
+        ]
       }
     ]
   },
@@ -10753,7 +14455,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "맛보돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -10764,7 +14469,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "퍼퓨돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091601.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -10775,7 +14483,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "타랜툴라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091701.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -10786,7 +14497,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "트래피더",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091801.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -10797,7 +14511,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "콩알뚜기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/091901.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -10808,7 +14525,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "엑스레그",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092001.png",
+        "types": [
+          "벌레",
+          "악"
+        ]
       }
     ]
   },
@@ -10819,7 +14540,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빠모",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092101.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -10830,7 +14554,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빠모트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092201.png",
+        "types": [
+          "전기",
+          "격투"
+        ]
       }
     ]
   },
@@ -10841,7 +14569,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빠르모트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092301.png",
+        "types": [
+          "전기",
+          "격투"
+        ]
       }
     ]
   },
@@ -10852,7 +14584,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두리쥐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -10863,7 +14598,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파밀리쥐",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092501.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -10874,7 +14612,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "쫀도기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092601.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -10885,7 +14626,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바우첼",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092701.png",
+        "types": [
+          "페어리"
+        ]
       }
     ]
   },
@@ -10896,7 +14640,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미니브",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092801.png",
+        "types": [
+          "풀",
+          "노말"
+        ]
       }
     ]
   },
@@ -10907,7 +14655,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "올리뇨",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/092901.png",
+        "types": [
+          "풀",
+          "노말"
+        ]
       }
     ]
   },
@@ -10918,7 +14670,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "올리르바",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093001.png",
+        "types": [
+          "풀",
+          "노말"
+        ]
       }
     ]
   },
@@ -10929,7 +14685,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "시비꼬",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093101.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
       }
     ]
   },
@@ -10940,7 +14700,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "베베솔트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093201.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -10951,7 +14714,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스태솔트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093301.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -10962,7 +14728,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "콜로솔트",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093401.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -10973,7 +14742,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카르본",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093501.png",
+        "types": [
+          "불꽃"
+        ]
       }
     ]
   },
@@ -10984,7 +14756,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "카디나르마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093601.png",
+        "types": [
+          "불꽃",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10995,7 +14771,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파라블레이즈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093701.png",
+        "types": [
+          "불꽃",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11006,7 +14786,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "빈나두",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093801.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -11017,7 +14800,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌리배리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/093901.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -11028,7 +14814,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌리비",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094001.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
       }
     ]
   },
@@ -11039,7 +14829,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "찌리비크",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094101.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
       }
     ]
   },
@@ -11050,7 +14844,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "오라티프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094201.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -11061,7 +14858,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "마피티프",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094301.png",
+        "types": [
+          "악"
+        ]
       }
     ]
   },
@@ -11072,7 +14872,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "땃쭈르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094401.png",
+        "types": [
+          "독",
+          "노말"
+        ]
       }
     ]
   },
@@ -11083,7 +14887,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "태깅구르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094501.png",
+        "types": [
+          "독",
+          "노말"
+        ]
       }
     ]
   },
@@ -11094,7 +14902,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "그푸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094601.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11105,7 +14917,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "공푸리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094701.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11116,7 +14932,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "들눈해",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094801.png",
+        "types": [
+          "땅",
+          "풀"
+        ]
       }
     ]
   },
@@ -11127,7 +14947,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "육파리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/094901.png",
+        "types": [
+          "땅",
+          "풀"
+        ]
       }
     ]
   },
@@ -11138,7 +14962,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "절벼게",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095001.png",
+        "types": [
+          "바위"
+        ]
       }
     ]
   },
@@ -11149,7 +14976,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "캡싸이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095101.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -11160,7 +14990,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "스코빌런",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095201.png",
+        "types": [
+          "풀",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -11171,7 +15005,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "구르데",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095301.png",
+        "types": [
+          "벌레"
+        ]
       }
     ]
   },
@@ -11182,7 +15019,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "베라카스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095401.png",
+        "types": [
+          "벌레",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11193,7 +15034,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "하느라기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095501.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11204,7 +15048,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "클레스퍼트라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095601.png",
+        "types": [
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11215,7 +15062,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어리짱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095701.png",
+        "types": [
+          "페어리",
+          "강철"
+        ]
       }
     ]
   },
@@ -11226,7 +15077,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "벼리짱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095801.png",
+        "types": [
+          "페어리",
+          "강철"
+        ]
       }
     ]
   },
@@ -11237,7 +15092,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "두드리짱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/095901.png",
+        "types": [
+          "페어리",
+          "강철"
+        ]
       }
     ]
   },
@@ -11248,7 +15107,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바다그다",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096001.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -11259,7 +15121,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "바닥트리오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096101.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -11270,7 +15135,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "떨구새",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096201.png",
+        "types": [
+          "비행",
+          "악"
+        ]
       }
     ]
   },
@@ -11281,7 +15150,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "맨돌핀",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096301.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -11292,7 +15164,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "돌핀맨",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096401.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -11303,7 +15178,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "부르롱",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096501.png",
+        "types": [
+          "강철",
+          "독"
+        ]
       }
     ]
   },
@@ -11314,7 +15193,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "부르르룸",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096601.png",
+        "types": [
+          "강철",
+          "독"
+        ]
       }
     ]
   },
@@ -11325,7 +15208,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모토마",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096701.png",
+        "types": [
+          "드래곤",
+          "노말"
+        ]
       }
     ]
   },
@@ -11336,7 +15223,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꿈트렁",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096801.png",
+        "types": [
+          "강철"
+        ]
       }
     ]
   },
@@ -11347,7 +15237,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "초롱순",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/096901.png",
+        "types": [
+          "바위",
+          "독"
+        ]
       }
     ]
   },
@@ -11358,7 +15252,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "킬라플로르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097001.png",
+        "types": [
+          "바위",
+          "독"
+        ]
       }
     ]
   },
@@ -11369,7 +15267,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "망망이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097101.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -11380,7 +15281,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "묘두기",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097201.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -11391,7 +15295,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꼬이밍고",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097301.png",
+        "types": [
+          "비행",
+          "격투"
+        ]
       }
     ]
   },
@@ -11402,7 +15310,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "터벅고래",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097401.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -11413,7 +15324,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우락고래",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097501.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -11424,7 +15338,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "가비루사",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097601.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11435,7 +15353,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "어써러셔",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097701.png",
+        "types": [
+          "물"
+        ]
       }
     ]
   },
@@ -11446,7 +15367,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "싸리용",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097801.png",
+        "types": [
+          "드래곤",
+          "물"
+        ]
       }
     ]
   },
@@ -11457,7 +15382,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "저승갓숭",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/097901.png",
+        "types": [
+          "격투",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11468,7 +15397,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "토오",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098001.png",
+        "types": [
+          "독",
+          "땅"
+        ]
       }
     ]
   },
@@ -11479,7 +15412,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "키키링",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098101.png",
+        "types": [
+          "노말",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11490,7 +15427,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "노고고치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098201.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -11501,7 +15441,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "대도각참",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098301.png",
+        "types": [
+          "악",
+          "강철"
+        ]
       }
     ]
   },
@@ -11512,7 +15456,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "위대한엄니",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098401.png",
+        "types": [
+          "땅",
+          "격투"
+        ]
       }
     ]
   },
@@ -11523,7 +15471,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "우렁찬꼬리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098501.png",
+        "types": [
+          "페어리",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11534,7 +15486,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "사나운버섯",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098601.png",
+        "types": [
+          "풀",
+          "악"
+        ]
       }
     ]
   },
@@ -11545,7 +15501,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "날개치는머리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098701.png",
+        "types": [
+          "고스트",
+          "페어리"
+        ]
       }
     ]
   },
@@ -11556,7 +15516,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "땅을기는날개",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098801.png",
+        "types": [
+          "벌레",
+          "격투"
+        ]
       }
     ]
   },
@@ -11567,7 +15531,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모래털가죽",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/098901.png",
+        "types": [
+          "전기",
+          "땅"
+        ]
       }
     ]
   },
@@ -11578,7 +15546,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠바퀴",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099001.png",
+        "types": [
+          "땅",
+          "강철"
+        ]
       }
     ]
   },
@@ -11589,7 +15561,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠보따리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099101.png",
+        "types": [
+          "얼음",
+          "물"
+        ]
       }
     ]
   },
@@ -11600,7 +15576,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠손",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099201.png",
+        "types": [
+          "격투",
+          "전기"
+        ]
       }
     ]
   },
@@ -11611,7 +15591,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠머리",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099301.png",
+        "types": [
+          "악",
+          "비행"
+        ]
       }
     ]
   },
@@ -11622,7 +15606,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠독나방",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099401.png",
+        "types": [
+          "불꽃",
+          "독"
+        ]
       }
     ]
   },
@@ -11633,7 +15621,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠가시",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099501.png",
+        "types": [
+          "바위",
+          "전기"
+        ]
       }
     ]
   },
@@ -11644,7 +15636,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드니차",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099601.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
       }
     ]
   },
@@ -11655,7 +15651,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드니꽁",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099701.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
       }
     ]
   },
@@ -11666,7 +15666,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "드닐레이브",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099801.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
       }
     ]
   },
@@ -11677,7 +15681,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "모으령",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/099901.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -11688,7 +15695,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "타부자고",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100001.png",
+        "types": [
+          "강철",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11699,7 +15710,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "총지엔",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100101.png",
+        "types": [
+          "악",
+          "풀"
+        ]
       }
     ]
   },
@@ -11710,7 +15725,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "파오젠",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100201.png",
+        "types": [
+          "악",
+          "얼음"
+        ]
       }
     ]
   },
@@ -11721,7 +15740,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "딩루",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100301.png",
+        "types": [
+          "악",
+          "땅"
+        ]
       }
     ]
   },
@@ -11732,7 +15755,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "위유이",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100401.png",
+        "types": [
+          "악",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -11743,7 +15770,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "고동치는달",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100501.png",
+        "types": [
+          "드래곤",
+          "악"
+        ]
       }
     ]
   },
@@ -11754,7 +15785,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠무인",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100601.png",
+        "types": [
+          "페어리",
+          "격투"
+        ]
       }
     ]
   },
@@ -11765,7 +15800,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "코라이돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100701.png",
+        "types": [
+          "격투",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11776,7 +15815,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "미라이돈",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100801.png",
+        "types": [
+          "전기",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11787,7 +15830,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "굽이치는물결",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/100901.png",
+        "types": [
+          "물",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11798,7 +15845,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠잎새",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101001.png",
+        "types": [
+          "풀",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11809,7 +15860,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "과미르",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101101.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11820,7 +15875,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "차데스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101201.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11831,7 +15890,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "그우린차",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101301.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11842,7 +15905,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "조타구",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101401.png",
+        "types": [
+          "독",
+          "격투"
+        ]
       }
     ]
   },
@@ -11853,7 +15920,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "이야후",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101501.png",
+        "types": [
+          "독",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11864,7 +15935,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기로치",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101601.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101601.png",
+        "types": [
+          "독",
+          "페어리"
+        ]
       }
     ]
   },
@@ -11875,7 +15950,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "오거폰",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101701.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101701.png",
+        "types": [
+          "풀"
+        ]
       }
     ]
   },
@@ -11886,7 +15964,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "브리두라스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101801.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101801.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11897,7 +15979,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "과미드라",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101901.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/101901.png",
+        "types": [
+          "풀",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11908,7 +15994,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "꿰뚫는화염",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102001.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102001.png",
+        "types": [
+          "불꽃",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11919,7 +16009,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "날뛰는우레",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102101.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102101.png",
+        "types": [
+          "전기",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -11930,7 +16024,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠암석",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102201.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102201.png",
+        "types": [
+          "바위",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11941,7 +16039,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "무쇠감투",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102301.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102301.png",
+        "types": [
+          "강철",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -11952,7 +16054,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "테라파고스",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102401.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102401.png",
+        "types": [
+          "노말"
+        ]
       }
     ]
   },
@@ -11963,7 +16068,11 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "복숭악동",
-        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102501.png"
+        "image": "https://data1.pokemonkorea.co.kr/newdata/pokedex/full/102501.png",
+        "types": [
+          "독",
+          "고스트"
+        ]
       }
     ]
   },
@@ -11974,7 +16083,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "피카츄로 변신한 메타몽",
-        "image": "/ditto_pika.png"
+        "image": "/ditto_pika.png",
+        "types": [
+          "특별"
+        ]
       }
     ]
   },
@@ -11985,7 +16097,10 @@ export const pokemonData: PokemonEntry[] = [
       {
         "formId": "01",
         "name": "기타",
-        "image": "/etc.png"
+        "image": "/etc.png",
+        "types": [
+          "특별"
+        ]
       }
     ]
   }

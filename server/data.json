@@ -78,5 +78,14 @@
   },
   "today_collection": [
     "495-01"
-  ]
+  ],
+  "visitor_stats": {
+    "total": 1,
+    "today": 1,
+    "last_date": "260409",
+    "today_ips": [
+      "58.226.40.71"
+    ]
+  },
+  "last_reset_date": "260409"
 }

@@ -58,10 +58,23 @@ body {
   margin: 10px 0;
 }
 
-.auth-bar {
+.auth-bar-center {
   display: flex;
-  justify-content: flex-end;
-  min-height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.mobile-only {
+  display: none;
 }
 
 .login-form {
@@ -91,7 +104,6 @@ body {
 }
 
 .bgm-btn {
-  margin-right: 15px;
   color: #ff5722;
 }
 
@@ -171,6 +183,12 @@ body {
   margin-bottom: 15px;
 }
 
+.today-catch-title-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .today-catch-header h2 {
   margin: 0;
   font-size: 1.4rem;
@@ -179,8 +197,15 @@ body {
 
 .today-date {
   font-size: 1rem;
-  color: #888;
-  margin-left: 10px;
+  color: #fff;
+  background: #333;
+  padding: 2px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.btn-reset-today {
+  flex-shrink: 0;
 }
 
 .today-empty {
@@ -399,7 +424,44 @@ body {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--text-color);
+  margin-bottom: 5px;
 }
+
+.pokemon-types {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.type-badge {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Type Colors */
+.type-노말 { background: #A8A878; }
+.type-불꽃 { background: #F08030; }
+.type-물 { background: #6890F0; }
+.type-풀 { background: #78C850; }
+.type-전기 { background: #F8D030; color: #333; }
+.type-얼음 { background: #98D8D8; color: #333; }
+.type-격투 { background: #C03028; }
+.type-독 { background: #A040A0; }
+.type-땅 { background: #E0C068; color: #333; }
+.type-비행 { background: #A890F0; }
+.type-에스퍼 { background: #F85888; }
+.type-벌레 { background: #A8B820; }
+.type-바위 { background: #B8A038; }
+.type-고스트 { background: #705898; }
+.type-드래곤 { background: #7038F8; }
+.type-강철 { background: #B8B8D0; color: #333; }
+.type-악 { background: #705848; }
+.type-페어리 { background: #EE99AC; }
+.type-스텔라 { background: #40B5A5; }
+.type-특별 { background: #333; }
 
 .pokemon-count {
   margin-top: 5px;
@@ -545,6 +607,19 @@ body {
 }
 
 @media (max-width: 600px) {
+  .header {
+    padding: 10px;
+  }
+  .header h1 {
+    font-size: 1.8rem;
+  }
+  .mobile-only {
+    display: block;
+  }
+  .auth-bar-center {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
   .nav-bar {
     flex-wrap: wrap;
     border-radius: 15px;
@@ -567,14 +642,18 @@ body {
   }
   .login-form {
     flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .header h1 {
-    font-size: 1.8rem;
+    justify-content: center;
   }
   .visitor-count {
     position: static;
     display: inline-block;
     margin-bottom: 10px;
+  }
+  .today-catch-header h2 {
+    font-size: 1.1rem;
+  }
+  .today-date {
+    font-size: 0.8rem;
+    padding: 2px 6px;
   }
 }

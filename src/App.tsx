@@ -353,13 +353,13 @@ function App() {
     setSearchResult(results.join("\n"));
   };
 
-  const getPokemonByKey = (key: string): { name: string, image: string } | null => {
+  const getPokemonByKey = (key: string): { name: string, image: string, types: string[] } | null => {
     const [idStr, formId] = key.split("-");
     const id = parseInt(idStr);
     const entry = pokemonData.find(p => p.id === id);
     if (!entry) return null;
     const form = entry.forms.find(f => f.formId === formId);
-    return form ? { name: form.name, image: form.image } : null;
+    return form ? { name: form.name, image: form.image, types: form.types || [] } : null;
   };
 
   const renderGrid = (target: CollectionMap, isPending: boolean) => {
@@ -402,6 +402,11 @@ function App() {
                 <img src={pokemon.image} alt={pokemon.name} loading="lazy" />
               </div>
               <div className="pokemon-name">{pokemon.name}</div>
+              <div className="pokemon-types">
+                {pokemon.types.map((t, i) => (
+                  <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                ))}
+              </div>
               <div className="pokemon-count">보유: {count}개</div>
             </div>
           );
@@ -462,7 +467,10 @@ function App() {
         <div className="visitor-count">
           Today: <span>{visitorStats.today}</span> | Total: <span>{visitorStats.total}</span>
         </div>
-        <div className="auth-bar">
+        
+        <h1>포켓몬 띠부씰 도감</h1>
+        
+        <div className="auth-bar-center">
           <button onClick={toggleBgm} className="btn-link bgm-btn">
             BGM {isBgmPlaying ? "OFF" : "ON"} 🎵
           </button>
@@ -483,14 +491,19 @@ function App() {
             </>
           )}
         </div>
-        <h1>포켓몬 띠부씰 도감</h1>
-        <p>나만의 띠부띠부씰 수집 현황을 관리해보세요!</p>
+
+        <p className="subtitle">
+          나만의 띠부띠부씰 수집 현황을 <br className="mobile-only" /> 관리해보세요!
+        </p>
       </header>
 
       <section className="today-catch-section">
         <div className="today-catch-header">
-          <h2>오늘의 획득 포켓몬 🔥 <span className="today-date">[{serverDate}]</span></h2>
-          {isLoggedIn && <button className="btn btn-mini btn-cancel" onClick={clearTodayCollection}>초기화</button>}
+          <div className="today-catch-title-box">
+            <span className="today-date">{serverDate}</span>
+            <h2>오늘의 획득 포켓몬 🔥</h2>
+          </div>
+          {isLoggedIn && <button className="btn btn-mini btn-cancel btn-reset-today" onClick={clearTodayCollection}>초기화</button>}
         </div>
         {todayCollection.length === 0 ? (
           <div className="today-empty">오늘의 획득이 아직 없습니다.</div>

@@ -761,18 +761,22 @@ body {
 }
 
 .ability-btn {
-  padding: 4px 12px;
-  border: 1px solid #ddd;
-  background: #f9f9f9;
-  border-radius: 15px;
-  font-size: 0.8rem;
+  padding: 6px 15px;
+  border: 1px solid var(--secondary-color);
+  background: #eef2ff;
+  color: var(--secondary-color);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .ability-btn:hover {
-  background: #eee;
-  border-color: #bbb;
+  background: var(--secondary-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .detail-loading, .detail-error {

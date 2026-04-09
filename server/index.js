@@ -21,14 +21,15 @@ app.use(express.static(path.join(__dirname, '../dist')));
 // Helper to read DB
 const readDB = () => {
   if (!fs.existsSync(DB_FILE)) {
-    return { collection: {}, pending_collection: {} };
+    return { collection: {}, pending_collection: {}, today_collection: [] };
   }
   try {
     const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
     if (!data.pending_collection) data.pending_collection = {};
+    if (!data.today_collection) data.today_collection = [];
     return data;
   } catch (e) {
-    return { collection: {}, pending_collection: {} };
+    return { collection: {}, pending_collection: {}, today_collection: [] };
   }
 };
 
@@ -43,51 +44,83 @@ app.get('/api/collection', (req, res) => {
 });
 
 // API: Register Pokemon (Generic for both)
-const addPokemon = (type, id, count, db) => {
+const addPokemon = (type, key, count, db) => {
   const target = type === 'main' ? 'collection' : 'pending_collection';
-  db[target][id] = (db[target][id] || 0) + (count || 1);
+  db[target][key] = (db[target][key] || 0) + (count || 1);
 };
 
 app.post('/api/collection/add', (req, res) => {
-  const { id, count } = req.body;
+  const { key, count } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
   const db = readDB();
-  addPokemon('main', id, count, db);
+  addPokemon('main', key, count, db);
   writeDB(db);
   res.json(db);
 });
 
 app.post('/api/pending/add', (req, res) => {
-  const { id, count } = req.body;
+  const { key, count } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
   const db = readDB();
-  addPokemon('pending', id, count, db);
+  addPokemon('pending', key, count, db);
   writeDB(db);
   res.json(db);
 });
 
 // API: Remove Pokemon (Generic for both, with count support)
-const removePokemon = (type, id, count, db) => {
+const removePokemon = (type, key, count, db) => {
   const target = type === 'main' ? 'collection' : 'pending_collection';
-  if (db[target][id]) {
-    if (count === null || count === undefined || count >= db[target][id]) {
-      delete db[target][id];
+  if (db[target][key]) {
+    if (count === null || count === undefined || count >= db[target][key]) {
+      delete db[target][key];
     } else {
-      db[target][id] -= count;
+      db[target][key] -= count;
     }
   }
 };
 
 app.post('/api/collection/remove', (req, res) => {
-  const { id, count } = req.body;
+  const { key, count } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
   const db = readDB();
-  removePokemon('main', id, count, db);
+  removePokemon('main', key, count, db);
   writeDB(db);
   res.json(db);
 });
 
 app.post('/api/pending/remove', (req, res) => {
-  const { id, count } = req.body;
+  const { key, count } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
   const db = readDB();
-  removePokemon('pending', id, count, db);
+  removePokemon('pending', key, count, db);
+  writeDB(db);
+  res.json(db);
+});
+
+// API: Today's Catch
+app.post('/api/today/add', (req, res) => {
+  const { key } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
+  const db = readDB();
+  if (!db.today_collection.includes(key)) {
+    db.today_collection.push(key);
+    writeDB(db);
+  }
+  res.json(db);
+});
+
+app.post('/api/today/remove', (req, res) => {
+  const { key } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
+  const db = readDB();
+  db.today_collection = db.today_collection.filter(item => item !== key);
+  writeDB(db);
+  res.json(db);
+});
+
+app.post('/api/today/clear', (req, res) => {
+  const db = readDB();
+  db.today_collection = [];
   writeDB(db);
   res.json(db);
 });

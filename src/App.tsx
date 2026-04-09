@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 import { pokemonData } from "./data/pokemonData";
 import type { PokemonEntry, PokemonForm } from "./data/pokemonData";
@@ -17,6 +17,8 @@ function App() {
   const [loginId, setLoginId] = useState("");
   const [loginPw, setLoginPw] = useState("");
   const [showLoginForm, setShowLoginForm] = useState(false);
+  const [isBgmPlaying, setIsBgmPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const fetchCollections = async () => {
     try {
@@ -36,7 +38,32 @@ function App() {
     fetchCollections();
     const auth = localStorage.getItem("is-logged-in");
     if (auth === "true") setIsLoggedIn(true);
+
+    const handleFirstInteraction = () => {
+      if (audioRef.current && !isBgmPlaying) {
+        audioRef.current.play().then(() => {
+          setIsBgmPlaying(true);
+        }).catch(() => {
+          // Auto-play might still be blocked
+        });
+      }
+      window.removeEventListener("click", handleFirstInteraction);
+    };
+    window.addEventListener("click", handleFirstInteraction);
+
+    return () => window.removeEventListener("click", handleFirstInteraction);
   }, []);
+
+  const toggleBgm = () => {
+    if (audioRef.current) {
+      if (isBgmPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsBgmPlaying(!isBgmPlaying);
+    }
+  };
 
   const handleLoginSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -333,8 +360,12 @@ function App() {
 
   return (
     <div className="app-container">
+      <audio ref={audioRef} src="/bgm.mp3" loop />
       <header className="header">
         <div className="auth-bar">
+          <button onClick={toggleBgm} className="btn-link bgm-btn">
+            BGM {isBgmPlaying ? "OFF" : "ON"} 🎵
+          </button>
           {isLoggedIn ? (
             <button onClick={logout} className="btn-link">로그아웃</button>
           ) : (

@@ -574,87 +574,89 @@ function App() {
         <div className="modal-overlay" onClick={closeDetail}>
           <div className="detail-modal" onClick={e => e.stopPropagation()}>
             <button className="close-detail-btn" onClick={closeDetail}>&times;</button>
-            {detailLoading ? (
-              <div className="detail-loading">정보를 불러오는 중...</div>
-            ) : detailData ? (
-              <div className="detail-layout">
-                <div className="detail-left">
-                  <div className="detail-img-box">
-                    <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
-                    <div className="anniversary-toggle">
-                      <label>
-                        <input 
-                          type="checkbox" 
-                          checked={anniversaryCollection.includes(detailKey)}
-                          onChange={() => toggleAnniversary(detailKey)}
-                        /> <span className="red">30</span>th
-                      </label>
+            <div className="detail-scroll-container">
+              {detailLoading ? (
+                <div className="detail-loading">정보를 불러오는 중...</div>
+              ) : detailData ? (
+                <div className="detail-layout">
+                  <div className="detail-left">
+                    <div className="detail-img-box">
+                      <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
+                      <div className="anniversary-toggle">
+                        <label>
+                          <input 
+                            type="checkbox" 
+                            checked={anniversaryCollection.includes(detailKey)}
+                            onChange={() => toggleAnniversary(detailKey)}
+                          /> <span className="red">30</span>th
+                        </label>
+                      </div>
+                    </div>
+                    <div className="detail-form-info">
+                      {getPokemonByKey(detailKey)?.name}
                     </div>
                   </div>
-                  <div className="detail-form-info">
-                    {getPokemonByKey(detailKey)?.name}
-                  </div>
-                </div>
-                <div className="detail-right">
-                  <div className="detail-flavor-box">
-                    <div className="version-tabs">
-                      {detailData.flavorTexts.slice(0, 6).map((f, i) => (
-                        <button 
-                          key={i} 
-                          className={`version-tab ${activeFlavorIndex === i ? "active" : ""}`}
-                          onClick={() => setActiveFlavorIndex(i)}
-                        >
-                          {f.version}
-                        </button>
-                      ))}
+                  <div className="detail-right">
+                    <div className="detail-flavor-box">
+                      <div className="version-tabs">
+                        {detailData.flavorTexts.slice(0, 6).map((f, i) => (
+                          <button 
+                            key={i} 
+                            className={`version-tab ${activeFlavorIndex === i ? "active" : ""}`}
+                            onClick={() => setActiveFlavorIndex(i)}
+                          >
+                            {f.version}
+                          </button>
+                        ))}
+                      </div>
+                      <p className="flavor-text">
+                        {detailData.flavorTexts[activeFlavorIndex]?.text || "설명이 없습니다."}
+                      </p>
                     </div>
-                    <p className="flavor-text">
-                      {detailData.flavorTexts[activeFlavorIndex]?.text || "설명이 없습니다."}
-                    </p>
+                    <table className="detail-table">
+                      <tbody>
+                        <tr>
+                          <th>타입</th>
+                          <td>
+                            <div className="detail-types">
+                              {getPokemonByKey(detailKey)?.types.map((t, i) => (
+                                <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                              ))}
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>키 / 몸무게</th>
+                          <td>{detailData.height}m / {detailData.weight}kg</td>
+                        </tr>
+                        <tr>
+                          <th>분류</th>
+                          <td>{detailData.classification}</td>
+                        </tr>
+                        <tr>
+                          <th>성별</th>
+                          <td>{detailData.gender}</td>
+                        </tr>
+                        <tr>
+                          <th>특성</th>
+                          <td>
+                            <div className="detail-abilities">
+                              {detailData.abilities.map((a, i) => (
+                                <button key={i} className="ability-btn" onClick={() => setAbilityModal(a)}>
+                                  {a.name}
+                                </button>
+                              ))}
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <table className="detail-table">
-                    <tbody>
-                      <tr>
-                        <th>타입</th>
-                        <td>
-                          <div className="detail-types">
-                            {getPokemonByKey(detailKey)?.types.map((t, i) => (
-                              <span key={i} className={`type-badge type-${t}`}>{t}</span>
-                            ))}
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>키 / 몸무게</th>
-                        <td>{detailData.height}m / {detailData.weight}kg</td>
-                      </tr>
-                      <tr>
-                        <th>분류</th>
-                        <td>{detailData.classification}</td>
-                      </tr>
-                      <tr>
-                        <th>성별</th>
-                        <td>{detailData.gender}</td>
-                      </tr>
-                      <tr>
-                        <th>특성</th>
-                        <td>
-                          <div className="detail-abilities">
-                            {detailData.abilities.map((a, i) => (
-                              <button key={i} className="ability-btn" onClick={() => setAbilityModal(a)}>
-                                {a.name}
-                              </button>
-                            ))}
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
-              </div>
-            ) : (
-              <div className="detail-error">정보가 없습니다. (특별 스티커는 상세 정보를 지원하지 않습니다.)</div>
-            )}
+              ) : (
+                <div className="detail-error">정보가 없습니다. (특별 스티커는 상세 정보를 지원하지 않습니다.)</div>
+              )}
+            </div>
           </div>
         </div>
       )}

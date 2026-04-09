@@ -1,0 +1,19 @@
+{
+  "id": 953,
+  "name": "rellor",
+  "classification": "굴리기포켓몬",
+  "height": 0.2,
+  "weight": 1,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "복안",
+      "description": "기술의 명중률이\n올라간다."
+    },
+    {
+      "name": "탈피",
+      "description": "상태 이상을\n회복할 때가 있다."
+    }
+  ]
+}

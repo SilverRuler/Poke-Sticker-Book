@@ -1,0 +1,24 @@
+{
+  "id": 805,
+  "name": "stakataka",
+  "classification": "돌담포켓몬",
+  "height": 5.5,
+  "weight": 820,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "울트라썬",
+      "text": "울트라홀에서 출현했다. 여러 개의 생명이 쌓여 1마리를 형성하고 있는 듯하다."
+    },
+    {
+      "version": "울트라문",
+      "text": "UB 같은 수수께끼의 생명체. 갑자기 움직이기 시작해서 덮쳐온 돌담의 정체는 이 녀석이다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "비스트부스트",
+      "description": "상대를 기절시켰을 때\n자신의 가장 높은\n능력이 올라간다."
+    }
+  ]
+}

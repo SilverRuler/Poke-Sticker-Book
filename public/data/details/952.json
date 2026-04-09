@@ -1,0 +1,23 @@
+{
+  "id": 952,
+  "name": "scovillain",
+  "classification": "하바네로포켓몬",
+  "height": 0.9,
+  "weight": 15,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "엽록소",
+      "description": "맑을 때 스피드가\n올라간다."
+    },
+    {
+      "name": "불면",
+      "description": "잠듦 상태가\n되지 않는다."
+    },
+    {
+      "name": "변덕쟁이",
+      "description": "능력이\n오르락내리락한다."
+    }
+  ]
+}

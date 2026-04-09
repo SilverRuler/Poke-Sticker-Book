@@ -1,0 +1,19 @@
+{
+  "id": 912,
+  "name": "quaxly",
+  "classification": "꼬마오리포켓몬",
+  "height": 0.5,
+  "weight": 6.1,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의\n위력이 올라간다."
+    },
+    {
+      "name": "자기과신",
+      "description": "상대를 쓰러뜨리면\n공격이 올라간다."
+    }
+  ]
+}

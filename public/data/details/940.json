@@ -1,0 +1,23 @@
+{
+  "id": 940,
+  "name": "wattrel",
+  "classification": "바다제비포켓몬",
+  "height": 0.4,
+  "weight": 3.6,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "wind-power",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "축전",
+      "description": "전기를 받으면\n회복한다."
+    },
+    {
+      "name": "승기",
+      "description": "능력이 떨어지면\n특수공격이 올라간다."
+    }
+  ]
+}

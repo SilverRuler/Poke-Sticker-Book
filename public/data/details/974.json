@@ -1,0 +1,23 @@
+{
+  "id": 974,
+  "name": "cetoddle",
+  "classification": "육지고래포켓몬",
+  "height": 1.2,
+  "weight": 45,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "두꺼운지방",
+      "description": "불꽃과 얼음타입의\n기술에 강하다."
+    },
+    {
+      "name": "눈숨기",
+      "description": "날씨가 싸라기눈일 때\n회피율이 올라간다."
+    },
+    {
+      "name": "우격다짐",
+      "description": "힘이 강해지지만\n추가 효과가 없어진다."
+    }
+  ]
+}

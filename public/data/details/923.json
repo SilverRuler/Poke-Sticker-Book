@@ -1,0 +1,23 @@
+{
+  "id": 923,
+  "name": "pawmot",
+  "classification": "손길포켓몬",
+  "height": 0.9,
+  "weight": 41,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "축전",
+      "description": "전기를 받으면\n회복한다."
+    },
+    {
+      "name": "자연회복",
+      "description": "배틀에서 일단 물러나면\n상태 이상이 회복된다."
+    },
+    {
+      "name": "철주먹",
+      "description": "펀치를 사용하는 기술의\n위력이 올라간다."
+    }
+  ]
+}

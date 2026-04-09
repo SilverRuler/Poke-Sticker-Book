@@ -1,0 +1,19 @@
+{
+  "id": 930,
+  "name": "arboliva",
+  "classification": "올리브포켓몬",
+  "height": 1.4,
+  "weight": 48.2,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "seed-sower",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "수확",
+      "description": "사용한 나무열매를\n몇 번이고 만들어 낸다."
+    }
+  ]
+}

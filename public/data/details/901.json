@@ -1,0 +1,23 @@
+{
+  "id": 901,
+  "name": "ursaluna",
+  "classification": "이탄포켓몬",
+  "height": 2.4,
+  "weight": 290,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "근성",
+      "description": "상태 이상이 되면\n공격이 올라간다."
+    },
+    {
+      "name": "방탄",
+      "description": "구슬이나 폭탄에\n맞지 않는다."
+    },
+    {
+      "name": "긴장감",
+      "description": "상대를 긴장시켜 나무열매를\n먹지 못하게 한다."
+    }
+  ]
+}

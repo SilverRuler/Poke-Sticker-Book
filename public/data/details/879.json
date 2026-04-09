@@ -1,0 +1,28 @@
+{
+  "id": 879,
+  "name": "copperajah",
+  "classification": "동상포켓몬",
+  "height": 3,
+  "weight": 650,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "녹색 피부는 물에도 강하다. 오래전에 다른 지방에서 오게 되어 사람과 함께 일했다."
+    },
+    {
+      "version": "실드",
+      "text": "무리를 지어 생활한다. 코의 악력은 큰 바위도 산산이 부술 정도로 강하다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "우격다짐",
+      "description": "힘이 강해지지만\n추가 효과가 없어진다."
+    },
+    {
+      "name": "헤비메탈",
+      "description": "자신의 무게가\n2배가 된다."
+    }
+  ]
+}

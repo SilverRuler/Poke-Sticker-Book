@@ -1,0 +1,32 @@
+{
+  "id": 823,
+  "name": "corviknight",
+  "classification": "까마귀포켓몬",
+  "height": 2.2,
+  "weight": 75,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "가라르지방의 하늘에는 적수가 없다. 검고 윤이 나는 강철의 자태는 상대에게 위압감을 주어 겁먹게 만든다."
+    },
+    {
+      "version": "실드",
+      "text": "비행 능력이 뛰어나고 매우 영리해 가라르지방에서 하늘의 택시로 활약한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "프레셔",
+      "description": "상대가 사용하는 기술의\nPP를 많이 줄인다."
+    },
+    {
+      "name": "긴장감",
+      "description": "상대를 긴장시켜 나무열매를\n먹지 못하게 한다."
+    },
+    {
+      "name": "미러아머",
+      "description": "자신이 받는\n능력 다운 효과에 한해\n되받아친다."
+    }
+  ]
+}

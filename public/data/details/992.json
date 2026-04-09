@@ -1,0 +1,15 @@
+{
+  "id": 992,
+  "name": "iron-hands",
+  "classification": "패러독스포켓몬",
+  "height": 1.8,
+  "weight": 380.7,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "quark-drive",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

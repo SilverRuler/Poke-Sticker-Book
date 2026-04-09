@@ -1,0 +1,15 @@
+{
+  "id": 999,
+  "name": "gimmighoul",
+  "classification": "보물상자포켓몬",
+  "height": 0.3,
+  "weight": 5,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "주눅",
+      "description": "주눅이 들어 스피드가\n올라가는 타입이 있다."
+    }
+  ]
+}

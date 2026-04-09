@@ -1,0 +1,28 @@
+{
+  "id": 819,
+  "name": "skwovet",
+  "classification": "볼가득포켓몬",
+  "height": 0.3,
+  "weight": 2.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "가라르의 여기저기에 있다. 양쪽 볼에 나무열매를 비축해두지 않으면 불안해한다."
+    },
+    {
+      "version": "실드",
+      "text": "항상 나무열매를 먹고 있어 보기보다 튼튼하다. 나무열매를 노리고 밭에 출몰한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "볼주머니",
+      "description": "어떤 나무열매라도\n먹으면 HP도 회복한다."
+    },
+    {
+      "name": "먹보",
+      "description": "나무열매를 여느 때보다\n빨리 사용한다."
+    }
+  ]
+}

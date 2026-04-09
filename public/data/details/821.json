@@ -1,0 +1,32 @@
+{
+  "id": 821,
+  "name": "rookidee",
+  "classification": "아기새포켓몬",
+  "height": 0.2,
+  "weight": 1.8,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "아무리 강한 상대라도 덤벼드는 용감한 성격을 가졌다. 도리어 당하면서도 점점 단련되어 간다."
+    },
+    {
+      "version": "실드",
+      "text": "작은 몸을 기민하게 날려 틈을 노리는 전법으로 몸집이 큰 상대를 농락한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "날카로운눈",
+      "description": "명중률이\n떨어지지 않는다."
+    },
+    {
+      "name": "긴장감",
+      "description": "상대를 긴장시켜 나무열매를\n먹지 못하게 한다."
+    },
+    {
+      "name": "부풀린가슴",
+      "description": "방어를 떨어뜨리는\n공격을 받지 않는다."
+    }
+  ]
+}

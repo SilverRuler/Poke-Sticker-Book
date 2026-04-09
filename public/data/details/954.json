@@ -1,0 +1,19 @@
+{
+  "id": 954,
+  "name": "rabsca",
+  "classification": "굴리기포켓몬",
+  "height": 0.3,
+  "weight": 3.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "싱크로",
+      "description": "독, 마비, 화상을\n상대에게 옮긴다."
+    },
+    {
+      "name": "텔레파시",
+      "description": "같은 편의 공격의 낌새를\n읽고 기술을 받지 않는다."
+    }
+  ]
+}

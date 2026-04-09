@@ -1,0 +1,19 @@
+{
+  "id": 905,
+  "name": "enamorus-incarnate",
+  "classification": "애증포켓몬",
+  "height": 1.6,
+  "weight": 48,
+  "gender": "암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "헤롱헤롱바디",
+      "description": "스치면 헤롱헤롱 상태가\n될 때가 있다."
+    },
+    {
+      "name": "심술꾸러기",
+      "description": "능력의 변화가\n역전된다."
+    }
+  ]
+}

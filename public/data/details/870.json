@@ -1,0 +1,28 @@
+{
+  "id": 870,
+  "name": "falinks",
+  "classification": "진형포켓몬",
+  "height": 3,
+  "weight": 62,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "리더라고 불리는 1마리와 멤버라고 불리는 5마리로 이루어져 있다. 리더의 명령은 절대적이다."
+    },
+    {
+      "version": "실드",
+      "text": "6마리가 1마리의 포켓몬이다. 대열을 바꿔가며 팀워크로 싸운다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "전투무장",
+      "description": "상대의 공격이\n급소에 맞지 않는다."
+    },
+    {
+      "name": "오기",
+      "description": "능력이 떨어지면\n공격이 올라간다."
+    }
+  ]
+}

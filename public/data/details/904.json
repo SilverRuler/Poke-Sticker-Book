@@ -1,0 +1,23 @@
+{
+  "id": 904,
+  "name": "overqwil",
+  "classification": "침붕포켓몬몬",
+  "height": 2.5,
+  "weight": 60.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "독가시",
+      "description": "접촉한 상대를\n중독시킬 때가 있다."
+    },
+    {
+      "name": "쓱쓱",
+      "description": "비가 올 때 스피드가\n올라간다."
+    },
+    {
+      "name": "위협",
+      "description": "상대의 공격을\n떨어뜨린다."
+    }
+  ]
+}

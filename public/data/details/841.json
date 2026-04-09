@@ -1,0 +1,32 @@
+{
+  "id": 841,
+  "name": "flapple",
+  "classification": "사과날개포켓몬",
+  "height": 0.3,
+  "weight": 1,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "새콤한 사과를 먹고 진화했다. 화상을 입을 정도로 강한 산성을 띠는 액체를 볼주머니에 저장하고 있다."
+    },
+    {
+      "version": "실드",
+      "text": "사과 껍질로 된 날개로 날며 강산성의 타액을 뱉는다. 사과의 형태로 변형한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "숙성",
+      "description": "나무열매를\n숙성시켜서\n효과가 2배가 된다."
+    },
+    {
+      "name": "먹보",
+      "description": "나무열매를 여느 때보다\n빨리 사용한다."
+    },
+    {
+      "name": "의욕",
+      "description": "공격은 높지만\n빗나가기 쉽다."
+    }
+  ]
+}

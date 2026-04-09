@@ -1,0 +1,15 @@
+{
+  "id": 1009,
+  "name": "walking-wake",
+  "classification": "패러독스포켓몬",
+  "height": 3.5,
+  "weight": 280,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

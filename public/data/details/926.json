@@ -1,0 +1,19 @@
+{
+  "id": 926,
+  "name": "fidough",
+  "classification": "강아지포켓몬",
+  "height": 0.3,
+  "weight": 10.9,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "마이페이스",
+      "description": "혼란 상태가\n되지 않는다."
+    },
+    {
+      "name": "서투름",
+      "description": "지니고 있는 도구를\n쓸 수 없다."
+    }
+  ]
+}

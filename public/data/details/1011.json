@@ -1,0 +1,23 @@
+{
+  "id": 1011,
+  "name": "dipplin",
+  "classification": "사과사탕포켓몬",
+  "height": 0.4,
+  "weight": 9.7,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "감미로운꿀",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "먹보",
+      "description": "나무열매를 여느 때보다\n빨리 사용한다."
+    },
+    {
+      "name": "점착",
+      "description": "달라붙어서\n도구를 지킨다."
+    }
+  ]
+}

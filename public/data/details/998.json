@@ -1,0 +1,19 @@
+{
+  "id": 998,
+  "name": "baxcalibur",
+  "classification": "빙룡포켓몬",
+  "height": 2.1,
+  "weight": 210,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "thermal-exchange",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "아이스바디",
+      "description": "싸라기눈일 때 HP를\n조금씩 회복한다."
+    }
+  ]
+}

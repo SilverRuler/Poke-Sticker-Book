@@ -1,0 +1,19 @@
+{
+  "id": 909,
+  "name": "fuecoco",
+  "classification": "불꽃악어포켓몬",
+  "height": 0.4,
+  "weight": 9.8,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "맹화",
+      "description": "위급할 때 불꽃타입의\n위력이 올라간다."
+    },
+    {
+      "name": "천진",
+      "description": "상대의 능력\n변화를 무시한다."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": 1018,
+  "name": "archaludon",
+  "classification": "합금포켓몬",
+  "height": 2,
+  "weight": 60,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "지구력",
+      "description": "공격을 받으면\n방어가 올라간다."
+    },
+    {
+      "name": "옹골참",
+      "description": "일격으로\n쓰러지지 않는다."
+    },
+    {
+      "name": "굳건한신념",
+      "description": "상대의 기술을 끌어모으는\n특성이나 기술의\n영향을 받지 않는다."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": 948,
+  "name": "toedscool",
+  "classification": "목이버섯포켓몬",
+  "height": 0.9,
+  "weight": 33,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "mycelium-might",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

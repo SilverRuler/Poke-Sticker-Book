@@ -1,0 +1,15 @@
+{
+  "id": 1005,
+  "name": "roaring-moon",
+  "classification": "패러독스포켓몬",
+  "height": 2,
+  "weight": 380,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": 929,
+  "name": "dolliv",
+  "classification": "올리브포켓몬",
+  "height": 0.6,
+  "weight": 11.9,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "일찍기상",
+      "description": "잠듦 상태에서\n빨리 깨어난다."
+    },
+    {
+      "name": "수확",
+      "description": "사용한 나무열매를\n몇 번이고 만들어 낸다."
+    }
+  ]
+}

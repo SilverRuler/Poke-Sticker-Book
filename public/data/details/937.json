@@ -1,0 +1,19 @@
+{
+  "id": 937,
+  "name": "ceruledge",
+  "classification": "불의검사포켓몬",
+  "height": 1.6,
+  "weight": 62,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "타오르는불꽃",
+      "description": "불꽃을 받으면\n불꽃 기술이 강해진다."
+    },
+    {
+      "name": "깨어진갑옷",
+      "description": "물리 기술을 받으면 방어가\n떨어지고 스피드가 올라간다."
+    }
+  ]
+}

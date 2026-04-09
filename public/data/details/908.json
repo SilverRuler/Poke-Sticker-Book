@@ -1,0 +1,19 @@
+{
+  "id": 908,
+  "name": "meowscarada",
+  "classification": "매지션포켓몬",
+  "height": 1.5,
+  "weight": 31.2,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "심록",
+      "description": "위급할 때 풀타입의\n위력이 올라간다."
+    },
+    {
+      "name": "변환자재",
+      "description": "사용한 기술과 같은\n타입으로 변화한다."
+    }
+  ]
+}

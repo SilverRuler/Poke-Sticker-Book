@@ -26,17 +26,6 @@ interface PokemonDetail {
   abilities: { name: string; description: string }[];
 }
 
-const versionMap: { [key: string]: string } = {
-  red: "레드", blue: "블루", yellow: "피카츄", gold: "금", silver: "은", crystal: "크리스탈",
-  ruby: "루비", sapphire: "사파이어", emerald: "에메랄드", firered: "파이어레드", leafgreen: "리프그린",
-  diamond: "디아루가", pearl: "펄기아", platinum: "기라티나", heartgold: "하트골드", soulsilver: "소울실버",
-  black: "블랙", white: "화이트", "black-2": "블랙 2", "white-2": "화이트 2", x: "X", y: "Y",
-  "omega-ruby": "오메가루비", "alpha-sapphire": "알파사파이어", sun: "썬", moon: "문",
-  "ultra-sun": "울트라썬", "ultra-moon": "울트라문", "lets-go-pikachu": "레츠고! 피카츄",
-  "lets-go-eevee": "레츠고! 이브이", sword: "소드", shield: "실드", "scarlet": "스칼렛", "violet": "바이올렛",
-  "legends-arceus": "레전즈 아르세우스"
-};
-
 function App() {
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
@@ -189,49 +178,14 @@ function App() {
 
     setDetailLoading(true);
     try {
-      const [pokemonRes, speciesRes] = await Promise.all([
-        fetch(`https://pokeapi.co/api/v2/pokemon/${id}`),
-        fetch(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
-      ]);
-      
-      const pokemon = await pokemonRes.json();
-      const species = await speciesRes.json();
+      const response = await fetch(`/data/details/${id}.json`);
+      if (!response.ok) throw new Error("Local data not found");
+      const data = await response.json();
 
-      const classification = species.genera.find((g: any) => g.language.name === "ko")?.genus || "???";
-
-      let gender = "수컷, 암컷";
-      if (species.gender_rate === -1) gender = "성별없음";
-      else if (species.gender_rate === 0) gender = "수컷";
-      else if (species.gender_rate === 8) gender = "암컷";
-
-      const flavorTexts = species.flavor_text_entries
-        .filter((f: any) => f.language.name === "ko")
-        .map((f: any) => ({
-          version: versionMap[f.version.name] || f.version.name,
-          text: f.flavor_text.replace(/\f|\n|\r/g, " ")
-        }));
-
-      const abilities = await Promise.all(pokemon.abilities.map(async (a: any) => {
-        const res = await fetch(a.ability.url);
-        const data = await res.json();
-        const koName = data.names.find((n: any) => n.language.name === "ko")?.name || a.ability.name;
-        const koDesc = data.flavor_text_entries.find((f: any) => f.language.name === "ko")?.flavor_text || "설명이 없습니다.";
-        return { name: koName, description: koDesc };
-      }));
-
-      setDetailData({
-        id,
-        name: pokemonData.find(p => p.id === id)?.name || pokemon.name,
-        classification,
-        height: pokemon.height / 10,
-        weight: pokemon.weight / 10,
-        gender,
-        flavorTexts,
-        abilities
-      });
+      setDetailData(data);
       setActiveFlavorIndex(0);
     } catch (error) {
-      console.error("Failed to fetch pokemon detail:", error);
+      console.error("Failed to fetch pokemon detail from local storage:", error);
       showAlert("상세 정보를 가져오는 데 실패했습니다.");
     } finally {
       setDetailLoading(false);

@@ -1,0 +1,23 @@
+{
+  "id": 932,
+  "name": "nacli",
+  "classification": "암염포켓몬",
+  "height": 0.4,
+  "weight": 16,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "purifying-salt",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "옹골참",
+      "description": "일격으로\n쓰러지지 않는다."
+    },
+    {
+      "name": "클리어바디",
+      "description": "상대가 능력을\n떨어뜨릴 수 없다."
+    }
+  ]
+}

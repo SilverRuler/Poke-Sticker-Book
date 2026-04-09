@@ -1,0 +1,19 @@
+{
+  "id": 1015,
+  "name": "munkidori",
+  "classification": "수하포켓몬",
+  "height": 1,
+  "weight": 12.2,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "독사슬",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을\n알 수 있다."
+    }
+  ]
+}

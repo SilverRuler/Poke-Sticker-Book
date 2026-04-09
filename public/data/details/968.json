@@ -1,0 +1,19 @@
+{
+  "id": 968,
+  "name": "orthworm",
+  "classification": "지렁이포켓몬",
+  "height": 2.5,
+  "weight": 310,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "earth-eater",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "모래숨기",
+      "description": "모래바람으로\n회피율이 올라간다."
+    }
+  ]
+}

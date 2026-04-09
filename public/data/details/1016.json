@@ -1,0 +1,19 @@
+{
+  "id": 1016,
+  "name": "fezandipiti",
+  "classification": "수하포켓몬",
+  "height": 1.4,
+  "weight": 30.1,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "독사슬",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "테크니션",
+      "description": "약한 기술의\n위력이 올라간다."
+    }
+  ]
+}

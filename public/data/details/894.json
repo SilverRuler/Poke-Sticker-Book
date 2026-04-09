@@ -1,0 +1,24 @@
+{
+  "id": 894,
+  "name": "regieleki",
+  "classification": "일렉트론포켓몬",
+  "height": 1.2,
+  "weight": 145,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "전기 에너지 덩어리다. 몸에 있는 링을 해제하면 숨겨진 힘이 해방된다고 한다."
+    },
+    {
+      "version": "실드",
+      "text": "온몸이 전기 에너지를 만드는 기관이다. 가라르 전 지역에서 사용하는 양의 전기를 만들어 낼 수 있다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "트랜지스터",
+      "description": "전기타입 기술의\n위력이 올라간다."
+    }
+  ]
+}

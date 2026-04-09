@@ -1,0 +1,28 @@
+{
+  "id": 813,
+  "name": "scorbunny",
+  "classification": "토끼포켓몬",
+  "height": 0.3,
+  "weight": 4.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "뛰어다니며 체온을 높이면 불꽃 에너지가 몸 안에 맴돌아 본래의 힘을 발휘할 수 있다."
+    },
+    {
+      "version": "실드",
+      "text": "싸울 준비가 되면 코끝과 발바닥의 볼록살에서 고열을 낸다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "맹화",
+      "description": "위급할 때 불꽃타입의\n위력이 올라간다."
+    },
+    {
+      "name": "리베로",
+      "description": "자신이 사용한 기술과\n같은 타입으로 변화한다."
+    }
+  ]
+}

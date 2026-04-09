@@ -1,0 +1,19 @@
+{
+  "id": 970,
+  "name": "glimmora",
+  "classification": "광석포켓몬",
+  "height": 1.5,
+  "weight": 45,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "toxic-debris",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "부식",
+      "description": "강철타입이나 독타입도\n독 상태로 만들 수 있다."
+    }
+  ]
+}

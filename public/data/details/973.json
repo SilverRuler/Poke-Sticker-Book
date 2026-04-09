@@ -1,0 +1,23 @@
+{
+  "id": 973,
+  "name": "flamigo",
+  "classification": "싱크로포켓몬",
+  "height": 1.6,
+  "weight": 37,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "배짱",
+      "description": "고스트타입에\n노말 기술이 맞는다."
+    },
+    {
+      "name": "갈지자걸음",
+      "description": "혼란에 빠져있으면\n회피하기 쉬워진다."
+    },
+    {
+      "name": "costar",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 878,
+  "name": "cufant",
+  "classification": "동상포켓몬",
+  "height": 1.2,
+  "weight": 100,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "5톤의 짐을 실어도 문제없는 힘이 장사인 포켓몬. 코를 이용해서 땅을 판다."
+    },
+    {
+      "version": "실드",
+      "text": "힘쓰는 일에 강하다. 동으로 된 몸체는 비에 녹슬어 선명한 녹색으로 변한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "우격다짐",
+      "description": "힘이 강해지지만\n추가 효과가 없어진다."
+    },
+    {
+      "name": "헤비메탈",
+      "description": "자신의 무게가\n2배가 된다."
+    }
+  ]
+}

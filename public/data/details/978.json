@@ -1,0 +1,19 @@
+{
+  "id": 978,
+  "name": "tatsugiri-curly",
+  "classification": "의태포켓몬",
+  "height": 0.3,
+  "weight": 8,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "commander",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "마중물",
+      "description": "물을 끌어모아\n특수공격을 올린다."
+    }
+  ]
+}

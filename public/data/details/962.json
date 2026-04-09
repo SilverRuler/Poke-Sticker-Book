@@ -1,0 +1,23 @@
+{
+  "id": 962,
+  "name": "bombirdier",
+  "classification": "낙하물포켓몬",
+  "height": 1.5,
+  "weight": 42.9,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "부풀린가슴",
+      "description": "방어를 떨어뜨리는\n공격을 받지 않는다."
+    },
+    {
+      "name": "날카로운눈",
+      "description": "명중률이\n떨어지지 않는다."
+    },
+    {
+      "name": "rocky-payload",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

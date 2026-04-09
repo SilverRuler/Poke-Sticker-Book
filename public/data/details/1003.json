@@ -1,0 +1,15 @@
+{
+  "id": 1003,
+  "name": "ting-lu",
+  "classification": "재액포켓몬",
+  "height": 2.7,
+  "weight": 699.7,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "vessel-of-ruin",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

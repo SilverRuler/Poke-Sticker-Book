@@ -1,0 +1,19 @@
+{
+  "id": 1014,
+  "name": "okidogi",
+  "classification": "수하포켓몬",
+  "height": 1.8,
+  "weight": 92.2,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "독사슬",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "guard-dog",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

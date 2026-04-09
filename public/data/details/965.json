@@ -1,0 +1,19 @@
+{
+  "id": 965,
+  "name": "varoom",
+  "classification": "단기통포켓몬",
+  "height": 1,
+  "weight": 35,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "방진",
+      "description": "먼지나 가루를\n막는다."
+    },
+    {
+      "name": "슬로스타트",
+      "description": "공격과 스피드가\n잠시 동안 절반이 된다."
+    }
+  ]
+}

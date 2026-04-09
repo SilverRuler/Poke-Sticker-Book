@@ -1,0 +1,23 @@
+{
+  "id": 939,
+  "name": "bellibolt",
+  "classification": "전기개구리포켓몬",
+  "height": 1.2,
+  "weight": 113,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "electromorphosis",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "정전기",
+      "description": "접촉한 상대를\n마비시킬 때가 있다."
+    },
+    {
+      "name": "습기",
+      "description": "누구도 폭발\n할 수 없게 된다."
+    }
+  ]
+}

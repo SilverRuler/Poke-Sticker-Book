@@ -1,0 +1,19 @@
+{
+  "id": 946,
+  "name": "bramblin",
+  "classification": "회전초포켓몬",
+  "height": 0.6,
+  "weight": 0.6,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "wind-rider",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "틈새포착",
+      "description": "상대의 벽을\n뚫고 공격한다."
+    }
+  ]
+}

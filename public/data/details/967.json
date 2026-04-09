@@ -1,0 +1,19 @@
+{
+  "id": 967,
+  "name": "cyclizar",
+  "classification": "라이드포켓몬",
+  "height": 1.6,
+  "weight": 63,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "탈피",
+      "description": "상태 이상을\n회복할 때가 있다."
+    },
+    {
+      "name": "재생력",
+      "description": "볼에 넣으면 HP가\n조금 회복된다."
+    }
+  ]
+}

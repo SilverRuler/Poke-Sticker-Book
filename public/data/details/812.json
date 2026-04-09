@@ -1,0 +1,28 @@
+{
+  "id": 812,
+  "name": "rillaboom",
+  "classification": "드러머포켓몬",
+  "height": 2.1,
+  "weight": 90,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "특별한 그루터기의 파워를 드럼 연주로 컨트롤한다. 뿌리를 조종해서 싸운다."
+    },
+    {
+      "version": "실드",
+      "text": "드럼 테크닉이 가장 뛰어난 자가 보스가 된다. 천성이 온화해서 그룹의 조화를 중히 여긴다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "심록",
+      "description": "위급할 때 풀타입의\n위력이 올라간다."
+    },
+    {
+      "name": "그래스메이커",
+      "description": "등장했을 때\n그래스필드를 사용한다."
+    }
+  ]
+}

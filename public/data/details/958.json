@@ -1,0 +1,23 @@
+{
+  "id": 958,
+  "name": "tinkatuff",
+  "classification": "해머포켓몬",
+  "height": 0.7,
+  "weight": 59.1,
+  "gender": "암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "틀깨기",
+      "description": "특성에 관계없이 상대에게\n기술을 쓸 수 있다."
+    },
+    {
+      "name": "마이페이스",
+      "description": "혼란 상태가\n되지 않는다."
+    },
+    {
+      "name": "나쁜손버릇",
+      "description": "닿은 상대로부터\n도구를 훔친다."
+    }
+  ]
+}

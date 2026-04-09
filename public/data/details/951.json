@@ -1,0 +1,23 @@
+{
+  "id": 951,
+  "name": "capsakid",
+  "classification": "하바네로포켓몬",
+  "height": 0.3,
+  "weight": 3,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "엽록소",
+      "description": "맑을 때 스피드가\n올라간다."
+    },
+    {
+      "name": "불면",
+      "description": "잠듦 상태가\n되지 않는다."
+    },
+    {
+      "name": "서투름",
+      "description": "지니고 있는 도구를\n쓸 수 없다."
+    }
+  ]
+}

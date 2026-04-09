@@ -1,0 +1,15 @@
+{
+  "id": 963,
+  "name": "finizen",
+  "classification": "돌고래포켓몬",
+  "height": 1.3,
+  "weight": 60.2,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "수의베일",
+      "description": "화상 상태가\n되지 않는다."
+    }
+  ]
+}

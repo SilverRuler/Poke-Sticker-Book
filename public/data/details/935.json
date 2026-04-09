@@ -1,0 +1,19 @@
+{
+  "id": 935,
+  "name": "charcadet",
+  "classification": "불의아이포켓몬",
+  "height": 0.6,
+  "weight": 10.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "타오르는불꽃",
+      "description": "불꽃을 받으면\n불꽃 기술이 강해진다."
+    },
+    {
+      "name": "불꽃몸",
+      "description": "접촉한 상대에게\n화상을 입힐 때가 있다."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": 913,
+  "name": "quaxwell",
+  "classification": "레슨포켓몬",
+  "height": 1.2,
+  "weight": 21.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의\n위력이 올라간다."
+    },
+    {
+      "name": "자기과신",
+      "description": "상대를 쓰러뜨리면\n공격이 올라간다."
+    }
+  ]
+}

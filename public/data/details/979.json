@@ -1,0 +1,23 @@
+{
+  "id": 979,
+  "name": "annihilape",
+  "classification": "분노숭이포켓몬",
+  "height": 1.2,
+  "weight": 56,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "의기양양",
+      "description": "잠듦 상태가\n되지 않는다."
+    },
+    {
+      "name": "정신력",
+      "description": "풀죽지 않는다."
+    },
+    {
+      "name": "오기",
+      "description": "능력이 떨어지면\n공격이 올라간다."
+    }
+  ]
+}

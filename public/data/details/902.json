@@ -1,0 +1,23 @@
+{
+  "id": 902,
+  "name": "basculegion-male",
+  "classification": "큰물고기포켓몬",
+  "height": 3,
+  "weight": 110,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "쓱쓱",
+      "description": "비가 올 때 스피드가\n올라간다."
+    },
+    {
+      "name": "적응력",
+      "description": "타입이 같은 기술의\n위력이 올라간다."
+    },
+    {
+      "name": "틀깨기",
+      "description": "특성에 관계없이 상대에게\n기술을 쓸 수 있다."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "id": 955,
+  "name": "flittle",
+  "classification": "프릴포켓몬",
+  "height": 0.2,
+  "weight": 1.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "위험예지",
+      "description": "상대가 지닌 위험한\n기술을 감지한다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을\n알 수 있다."
+    },
+    {
+      "name": "가속",
+      "description": "조금씩\n스피드가 높아진다."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 858,
+  "name": "hatterene",
+  "classification": "정적포켓몬",
+  "height": 2.1,
+  "weight": 5.1,
+  "gender": "암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "두통이 생길 정도의 사이코 파워를 주위에 발산해서 다른 생물이 접근하지 못하게 한다."
+    },
+    {
+      "version": "실드",
+      "text": "숲의 마녀라는 별명을 가졌다. 소란을 피우면 촉수의 손톱에 찢겨질지도 모른다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "치유의마음",
+      "description": "같은 편의 상태 이상을\n가끔 회복시킨다."
+    },
+    {
+      "name": "위험예지",
+      "description": "상대가 지닌 위험한\n기술을 감지한다."
+    },
+    {
+      "name": "매직미러",
+      "description": "변화 기술을\n되받아칠 수 있다."
+    }
+  ]
+}

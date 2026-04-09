@@ -1,0 +1,32 @@
+{
+  "id": 860,
+  "name": "morgrem",
+  "classification": "성악포켓몬",
+  "height": 0.8,
+  "weight": 12.5,
+  "gender": "수컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "납작 엎드려서 사과하는 척하다가 창처럼 뾰족한 뒷머리로 찌르는 전법을 구사한다."
+    },
+    {
+      "version": "실드",
+      "text": "못된 꾀를 내어 밤에 숲으로 꾀어내려 한다. 농작물을 키우는 힘을 갖고 있는 듯하다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "짓궂은마음",
+      "description": "변화 기술을 먼저\n쓸 수 있다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을\n알 수 있다."
+    },
+    {
+      "name": "나쁜손버릇",
+      "description": "닿은 상대로부터\n도구를 훔친다."
+    }
+  ]
+}

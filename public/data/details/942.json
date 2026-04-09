@@ -1,0 +1,23 @@
+{
+  "id": 942,
+  "name": "maschiff",
+  "classification": "애송이포켓몬",
+  "height": 0.5,
+  "weight": 16,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "위협",
+      "description": "상대의 공격을\n떨어뜨린다."
+    },
+    {
+      "name": "도주",
+      "description": "야생 포켓몬으로부터\n반드시 도망칠 수 있다."
+    },
+    {
+      "name": "잠복",
+      "description": "교체로 나온 상대에게\n2배 데미지로 공격할 수 있다."
+    }
+  ]
+}

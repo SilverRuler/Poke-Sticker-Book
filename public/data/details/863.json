@@ -1,0 +1,32 @@
+{
+  "id": 863,
+  "name": "perrserker",
+  "classification": "바이킹포켓몬",
+  "height": 0.8,
+  "weight": 28,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "머리의 털이 단단해져서 철로 된 헬멧처럼 되었다. 매우 호전적인 성질을 가졌다."
+    },
+    {
+      "version": "실드",
+      "text": "싸움에 열중해 진화한 결과 펴면 단검으로 변하는 위험한 발톱을 얻었다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "전투무장",
+      "description": "상대의 공격이\n급소에 맞지 않는다."
+    },
+    {
+      "name": "단단한발톱",
+      "description": "접촉하는 기술의\n위력이 올라간다."
+    },
+    {
+      "name": "강철정신",
+      "description": "같은 편의 강철타입\n공격의 위력이 올라간다."
+    }
+  ]
+}

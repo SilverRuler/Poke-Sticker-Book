@@ -1,0 +1,32 @@
+{
+  "id": 844,
+  "name": "sandaconda",
+  "classification": "모래뱀포켓몬",
+  "height": 3.8,
+  "weight": 65.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "온몸을 수축시킨 뒤 100kg의 모래를 콧구멍으로 내뿜는다. 모래가 없으면 무기력해진다."
+    },
+    {
+      "version": "실드",
+      "text": "독특한 똬리 형태는 모래주머니의 모래를 더 효율적으로 분사하기 위함이다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "모래뿜기",
+      "description": "공격을 받으면\n모래바람을 일으킨다."
+    },
+    {
+      "name": "탈피",
+      "description": "상태 이상을\n회복할 때가 있다."
+    },
+    {
+      "name": "모래숨기",
+      "description": "모래바람으로\n회피율이 올라간다."
+    }
+  ]
+}

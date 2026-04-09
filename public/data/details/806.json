@@ -1,0 +1,24 @@
+{
+  "id": 806,
+  "name": "blacephalon",
+  "classification": "불꽃놀이포켓몬",
+  "height": 1.8,
+  "weight": 13,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "울트라썬",
+      "text": "꿈틀거리며 사람에게 다가오다 느닷없이 머리를 폭발시킨다. 울트라비스트의 일종인 듯하다."
+    },
+    {
+      "version": "울트라문",
+      "text": "울트라홀에서 나타난 UB. 폭발로 상대를 놀라게 하고 그 틈에 생기를 빼앗는다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "비스트부스트",
+      "description": "상대를 기절시켰을 때\n자신의 가장 높은\n능력이 올라간다."
+    }
+  ]
+}

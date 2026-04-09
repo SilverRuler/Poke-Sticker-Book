@@ -1,0 +1,19 @@
+{
+  "id": 972,
+  "name": "houndstone",
+  "classification": "유령개포켓몬",
+  "height": 2,
+  "weight": 15,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "모래헤치기",
+      "description": "모래바람으로\n스피드가 올라간다."
+    },
+    {
+      "name": "복슬복슬",
+      "description": "상대로부터 받은 접촉하는 기술의\n데미지를 반감시키지만 불꽃타입\n기술의 데미지는 2배가 된다."
+    }
+  ]
+}

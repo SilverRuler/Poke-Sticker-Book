@@ -1,0 +1,23 @@
+{
+  "id": 925,
+  "name": "maushold-family-of-four",
+  "classification": "패밀리포켓몬",
+  "height": 0.3,
+  "weight": 2.3,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "프렌드가드",
+      "description": "같은 편의 데미지를\n줄일 수 있다."
+    },
+    {
+      "name": "볼주머니",
+      "description": "어떤 나무열매라도\n먹으면 HP도 회복한다."
+    },
+    {
+      "name": "테크니션",
+      "description": "약한 기술의\n위력이 올라간다."
+    }
+  ]
+}

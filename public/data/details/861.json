@@ -1,0 +1,32 @@
+{
+  "id": 861,
+  "name": "grimmsnarl",
+  "classification": "벌크업포켓몬",
+  "height": 1.5,
+  "weight": 61,
+  "gender": "수컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "머리카락을 전신에 휘감아 근력이 올랐다. 괴력몬을 압도하는 파워를 발휘한다."
+    },
+    {
+      "version": "실드",
+      "text": "머리카락은 근섬유의 역할을 하며 매듭이 풀어지면 촉수와 같은 움직임으로 상대를 묶어버린다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "짓궂은마음",
+      "description": "변화 기술을 먼저\n쓸 수 있다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을\n알 수 있다."
+    },
+    {
+      "name": "나쁜손버릇",
+      "description": "닿은 상대로부터\n도구를 훔친다."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": 984,
+  "name": "great-tusk",
+  "classification": "패러독스포켓몬",
+  "height": 2.2,
+  "weight": 320,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

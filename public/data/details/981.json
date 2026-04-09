@@ -1,0 +1,23 @@
+{
+  "id": 981,
+  "name": "farigiraf",
+  "classification": "긴목포켓몬",
+  "height": 3.2,
+  "weight": 160,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "cud-chew",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "armor-tail",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "초식",
+      "description": "풀 기술을 받으면\n공격이 올라간다."
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": 1020,
+  "name": "gouging-fire",
+  "classification": "패러독스포켓몬",
+  "height": 3.5,
+  "weight": 590,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

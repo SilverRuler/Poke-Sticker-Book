@@ -1,0 +1,23 @@
+{
+  "id": 956,
+  "name": "espathra",
+  "classification": "타조포켓몬",
+  "height": 1.9,
+  "weight": 90,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "opportunist",
+      "description": "설명이 없습니다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을\n알 수 있다."
+    },
+    {
+      "name": "가속",
+      "description": "조금씩\n스피드가 높아진다."
+    }
+  ]
+}

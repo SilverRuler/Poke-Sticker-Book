@@ -1,0 +1,23 @@
+{
+  "id": 921,
+  "name": "pawmi",
+  "classification": "쥐포켓몬",
+  "height": 0.3,
+  "weight": 2.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "정전기",
+      "description": "접촉한 상대를\n마비시킬 때가 있다."
+    },
+    {
+      "name": "자연회복",
+      "description": "배틀에서 일단 물러나면\n상태 이상이 회복된다."
+    },
+    {
+      "name": "철주먹",
+      "description": "펀치를 사용하는 기술의\n위력이 올라간다."
+    }
+  ]
+}

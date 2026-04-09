@@ -1,0 +1,23 @@
+{
+  "id": 945,
+  "name": "grafaiai",
+  "classification": "독원숭이포켓몬",
+  "height": 0.7,
+  "weight": 27.2,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "곡예",
+      "description": "도구가 없어지면\n스피드가 올라간다."
+    },
+    {
+      "name": "독수",
+      "description": "접촉하기만 해도 상대를\n독 상태로 만들 때가 있다."
+    },
+    {
+      "name": "짓궂은마음",
+      "description": "변화 기술을 먼저\n쓸 수 있다."
+    }
+  ]
+}

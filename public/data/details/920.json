@@ -1,0 +1,19 @@
+{
+  "id": 920,
+  "name": "lokix",
+  "classification": "메뚜기포켓몬",
+  "height": 1,
+  "weight": 17.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "벌레의알림",
+      "description": "위급할 때 벌레타입의\n위력이 올라간다."
+    },
+    {
+      "name": "색안경",
+      "description": "효과가 별로인 기술이\n강해진다."
+    }
+  ]
+}

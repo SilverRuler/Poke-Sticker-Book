@@ -1,0 +1,32 @@
+{
+  "id": 862,
+  "name": "obstagoon",
+  "classification": "정지포켓몬",
+  "height": 1.6,
+  "weight": 46,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "엄청난 성량을 가졌다. 샤우팅하며 위협하는 모습은 블로킹이라 불린다."
+    },
+    {
+      "version": "실드",
+      "text": "싸움을 반복하면서 진화한다. 팔을 크로스하고 우렁차게 외치면 어떤 상대라도 풀죽게 된다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "이판사판",
+      "description": "반동 데미지를\n받는 기술이 강해진다."
+    },
+    {
+      "name": "근성",
+      "description": "상태 이상이 되면\n공격이 올라간다."
+    },
+    {
+      "name": "오기",
+      "description": "능력이 떨어지면\n공격이 올라간다."
+    }
+  ]
+}

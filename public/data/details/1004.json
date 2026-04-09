@@ -1,0 +1,15 @@
+{
+  "id": 1004,
+  "name": "chi-yu",
+  "classification": "재액포켓몬",
+  "height": 0.4,
+  "weight": 4.9,
+  "gender": "성별없음",
+  "flavorTexts": [],
+  "abilities": [
+    {
+      "name": "beads-of-ruin",
+      "description": "설명이 없습니다."
+    }
+  ]
+}

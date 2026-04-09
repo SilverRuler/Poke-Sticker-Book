@@ -22,6 +22,8 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
   });
 }
 
+// REDIS_PREFIX: 'poke_' to avoid key collision
+const REDIS_KEY = 'poke_pokedex_db';
 const DB_FILE = path.join(__dirname, '../server/data.json');
 const USERS_FILE = path.join(__dirname, '../server/users.json');
 
@@ -35,7 +37,7 @@ const getKSTDate = () => {
 // Unified Data Access Layer
 const getData = async () => {
   if (redis) {
-    const data = await redis.get('pokedex_db');
+    const data = await redis.get(REDIS_KEY);
     return data || { 
       collection: {}, 
       pending_collection: {}, 
@@ -51,7 +53,7 @@ const getData = async () => {
 
 const saveData = async (data) => {
   if (redis) {
-    await redis.set('pokedex_db', data);
+    await redis.set(REDIS_KEY, data);
   } else {
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
   }
@@ -59,7 +61,11 @@ const saveData = async (data) => {
 
 const getUsers = () => {
   if (process.env.ADMIN_USERS) {
-    return JSON.parse(process.env.ADMIN_USERS);
+    try {
+      return JSON.parse(process.env.ADMIN_USERS);
+    } catch (e) {
+      console.error("ADMIN_USERS env var is not a valid JSON");
+    }
   }
   if (fs.existsSync(USERS_FILE)) {
     return JSON.parse(fs.readFileSync(USERS_FILE, 'utf8'));
@@ -67,21 +73,33 @@ const getUsers = () => {
   return [];
 };
 
+// Bot Detection Helper
+const isBot = (ua) => {
+  if (!ua) return false;
+  const bots = ['bot', 'spider', 'crawl', 'vercel-screenshot', 'preview', 'slurp', 'facebookexternalhit', 'kakaotalk-scrap'];
+  return bots.some(bot => ua.toLowerCase().includes(bots));
+};
+
 // Middleware: Auto-reset and Visitor Tracking
 app.use(async (req, res, next) => {
+  // Only process for /api requests
   if (!req.path.startsWith('/api')) return next();
   
   const db = await getData();
   const currentDate = getKSTDate();
   let changed = false;
 
+  // Reset Today's Catch if date changed
   if (db.last_reset_date !== currentDate) {
     db.today_collection = [];
     db.last_reset_date = currentDate;
     changed = true;
   }
 
+  // Ensure visitor_stats object exists
   if (!db.visitor_stats) db.visitor_stats = { total: 0, today: 0, last_date: currentDate, today_ips: [] };
+  
+  // Reset Today's Visitors if date changed
   if (db.visitor_stats.last_date !== currentDate) {
     db.visitor_stats.today = 0;
     db.visitor_stats.today_ips = [];
@@ -89,23 +107,32 @@ app.use(async (req, res, next) => {
     changed = true;
   }
 
-  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
-  if (!db.visitor_stats.today_ips.includes(ip)) {
-    db.visitor_stats.today += 1;
-    db.visitor_stats.total += 1;
-    db.visitor_stats.today_ips.push(ip);
-    changed = true;
+  // Count unique IP for today (exclude bots)
+  const ua = req.headers['user-agent'];
+  if (!isBot(ua)) {
+    const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+    if (!db.visitor_stats.today_ips.includes(ip)) {
+      db.visitor_stats.today += 1;
+      db.visitor_stats.total += 1;
+      db.visitor_stats.today_ips.push(ip);
+      changed = true;
+    }
   }
 
   if (changed) await saveData(db);
-  req.db = db;
+  req.db = db; // Pass db to handlers
   next();
 });
 
 // API Routes
 app.get('/api/collection', (req, res) => {
   const { today_ips, ...safeVisitorStats } = req.db.visitor_stats;
-  res.json({ ...req.db, visitor_stats: safeVisitorStats, server_date: getKSTDate() });
+  const response = {
+    ...req.db,
+    visitor_stats: safeVisitorStats,
+    server_date: getKSTDate() // Explicitly send the current server date
+  };
+  res.json(response);
 });
 
 app.post('/api/login', (req, res) => {
@@ -134,7 +161,7 @@ app.post('/api/collection/remove', async (req, res) => {
   const { key, count } = req.body;
   const val = req.db.collection[key];
   if (val) {
-    if (count === null || count >= val) delete req.db.collection[key];
+    if (count === null || count === undefined || count >= val) delete req.db.collection[key];
     else req.db.collection[key] -= count;
   }
   await saveData(req.db);
@@ -145,7 +172,7 @@ app.post('/api/pending/remove', async (req, res) => {
   const { key, count } = req.body;
   const val = req.db.pending_collection[key];
   if (val) {
-    if (count === null || count >= val) delete req.db.pending_collection[key];
+    if (count === null || count === undefined || count >= val) delete req.db.pending_collection[key];
     else req.db.pending_collection[key] -= count;
   }
   await saveData(req.db);

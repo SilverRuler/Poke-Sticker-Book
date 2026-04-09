@@ -52,7 +52,10 @@ function App() {
   const [loginId, setLoginId] = useState("");
   const [loginPw, setLoginPw] = useState("");
   const [showLoginForm, setShowLoginForm] = useState(false);
+  
+  // BGM State
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
+  const isBgmMutedManually = useRef(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Detail Modal State
@@ -131,21 +134,25 @@ function App() {
       if (isBgmPlaying) {
         audioRef.current.pause();
         setIsBgmPlaying(false);
+        isBgmMutedManually.current = true;
       } else {
         audioRef.current.play().then(() => {
           setIsBgmPlaying(true);
+          isBgmMutedManually.current = false;
         }).catch(() => {});
       }
     }
   };
 
+  // Initial load and listeners
   useEffect(() => {
     fetchCollections();
     const auth = localStorage.getItem("is-logged-in");
     if (auth === "true") setIsLoggedIn(true);
 
     const handleFirstInteraction = () => {
-      if (audioRef.current && !isBgmPlaying) {
+      // Only play if not already playing and not manually muted
+      if (audioRef.current && !isBgmPlaying && !isBgmMutedManually.current) {
         audioRef.current.play().then(() => {
           setIsBgmPlaying(true);
         }).catch(() => {});
@@ -154,19 +161,21 @@ function App() {
     };
     window.addEventListener("click", handleFirstInteraction);
 
+    return () => {
+      window.removeEventListener("click", handleFirstInteraction);
+    };
+  }, []);
+
+  // Separate Effect for Keyboard listener to use latest state
+  useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key.toLowerCase() === 'm') {
-        // Prevent trigger if typing in input
         if (["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName || "")) return;
         toggleBgm();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("click", handleFirstInteraction);
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isBgmPlaying]);
 
   const fetchPokemonDetail = async (key: string) => {
@@ -537,7 +546,7 @@ function App() {
                 <img src={pokemon.image} alt={pokemon.name} loading="lazy" />
                 {isAnniversary && (
                   <div className="anniversary-badge">
-                    Pokémon <span className="red">30th</span><br/>Anniversary
+                    Pokémon <span className="red">30</span>th<br/>Anniversary
                   </div>
                 )}
               </div>
@@ -621,7 +630,7 @@ function App() {
                           type="checkbox" 
                           checked={anniversaryCollection.includes(detailKey)}
                           onChange={() => toggleAnniversary(detailKey)}
-                        /> 30th
+                        /> <span className="red">30</span>th
                       </label>
                     </div>
                   </div>

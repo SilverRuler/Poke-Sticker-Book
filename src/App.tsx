@@ -5,10 +5,22 @@ import type { PokemonEntry, PokemonForm } from "./data/pokemonData";
 
 type CollectionMap = { [key: string]: number };
 
+interface ModalConfig {
+  type: "alert" | "confirm" | "prompt" | "choice";
+  message: string;
+  placeholder?: string;
+  choices?: { label: string; value: any }[];
+  onConfirm: (value?: any) => void;
+  onCancel?: () => void;
+  inputType?: "text" | "password";
+}
+
 function App() {
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
   const [todayCollection, setTodayCollection] = useState<string[]>([]);
+  const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
+  const [serverDate, setServerDate] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [searchResult, setSearchResult] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
@@ -20,6 +32,53 @@ function App() {
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  // Modal State
+  const [modal, setModal] = useState<ModalConfig | null>(null);
+  const [modalInput, setModalInput] = useState("");
+
+  const showAlert = (message: string) => {
+    return new Promise((resolve) => {
+      setModal({ type: "alert", message, onConfirm: () => { setModal(null); resolve(true); } });
+    });
+  };
+
+  const showConfirm = (message: string): Promise<boolean> => {
+    return new Promise((resolve) => {
+      setModal({ 
+        type: "confirm", 
+        message, 
+        onConfirm: () => { setModal(null); resolve(true); },
+        onCancel: () => { setModal(null); resolve(false); }
+      });
+    });
+  };
+
+  const showPrompt = (message: string, placeholder = "", inputType: "text" | "password" = "text"): Promise<string | null> => {
+    return new Promise((resolve) => {
+      setModalInput("");
+      setModal({ 
+        type: "prompt", 
+        message, 
+        placeholder,
+        inputType,
+        onConfirm: (val) => { setModal(null); resolve(val); },
+        onCancel: () => { setModal(null); resolve(null); }
+      });
+    });
+  };
+
+  const showChoice = (message: string, choices: { label: string; value: any }[]): Promise<any | null> => {
+    return new Promise((resolve) => {
+      setModal({
+        type: "choice",
+        message,
+        choices,
+        onConfirm: (val) => { setModal(null); resolve(val); },
+        onCancel: () => { setModal(null); resolve(null); }
+      });
+    });
+  };
+
   const fetchCollections = async () => {
     try {
       const response = await fetch("/api/collection");
@@ -27,6 +86,8 @@ function App() {
       setCollection(data.collection || {});
       setPendingCollection(data.pending_collection || {});
       setTodayCollection(data.today_collection || []);
+      setVisitorStats(data.visitor_stats);
+      setServerDate(data.server_date);
     } catch (error) {
       console.error("Failed to fetch collection:", error);
     } finally {
@@ -43,46 +104,49 @@ function App() {
       if (audioRef.current && !isBgmPlaying) {
         audioRef.current.play().then(() => {
           setIsBgmPlaying(true);
-        }).catch(() => {
-          // Auto-play might still be blocked
-        });
+        }).catch(() => {});
       }
       window.removeEventListener("click", handleFirstInteraction);
     };
     window.addEventListener("click", handleFirstInteraction);
-
     return () => window.removeEventListener("click", handleFirstInteraction);
   }, []);
 
   const toggleBgm = () => {
     if (audioRef.current) {
-      if (isBgmPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
-      }
+      if (isBgmPlaying) audioRef.current.pause();
+      else audioRef.current.play();
       setIsBgmPlaying(!isBgmPlaying);
     }
   };
 
-  const handleLoginSubmit = (e: React.FormEvent) => {
+  const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (loginId === "tyeun7" && loginPw === "dmswk123") {
-      setIsLoggedIn(true);
-      localStorage.setItem("is-logged-in", "true");
-      setShowLoginForm(false);
-      setLoginId("");
-      setLoginPw("");
-      alert("로그인 성공!");
-    } else {
-      alert("아이디 또는 비밀번호가 틀렸습니다.");
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: loginId, pw: loginPw }),
+      });
+      if (response.ok) {
+        setIsLoggedIn(true);
+        localStorage.setItem("is-logged-in", "true");
+        setShowLoginForm(false);
+        setLoginId("");
+        setLoginPw("");
+        showAlert("로그인 성공!");
+      } else {
+        showAlert("아이디 또는 비밀번호가 틀렸습니다.");
+      }
+    } catch (error) {
+      showAlert("로그인 서버 오류");
     }
   };
 
   const logout = () => {
     setIsLoggedIn(false);
     localStorage.removeItem("is-logged-in");
-    alert("로그아웃 되었습니다.");
+    showAlert("로그아웃 되었습니다.");
   };
 
   const findPokemonEntries = (input: string): PokemonEntry[] => {
@@ -98,27 +162,15 @@ function App() {
     );
   };
 
-  const selectForm = (entry: PokemonEntry): PokemonForm | null => {
+  const selectForm = async (entry: PokemonEntry): Promise<PokemonForm | null> => {
     if (entry.forms.length === 1) return entry.forms[0];
-    
-    let message = `${entry.name}의 어떤 형태를 등록하시겠습니까?\n`;
-    entry.forms.forEach((f, idx) => {
-      message += `${idx + 1}. ${f.name}\n`;
-    });
-    
-    const choice = prompt(message);
-    if (!choice) return null;
-    const idx = parseInt(choice) - 1;
-    if (idx >= 0 && idx < entry.forms.length) {
-      return entry.forms[idx];
-    }
-    alert("올바른 번호를 선택하세요.");
-    return null;
+    const choices = entry.forms.map((f) => ({ label: f.name, value: f }));
+    return await showChoice(`${entry.name}의 어떤 형태를 등록하시겠습니까?`, choices);
   };
 
   const registerPokemon = async (key: string, isPending: boolean, pokemonName: string) => {
     if (!isPending && !isLoggedIn) {
-      alert("등록 권한이 없습니다. 로그인해주세요.");
+      showAlert("등록 권한이 없습니다. 로그인해주세요.");
       return;
     }
     
@@ -143,15 +195,15 @@ function App() {
       }
       
       const count = isPending ? data.pending_collection[key] : data.collection[key];
-      alert(`${pokemonName} ${count}개 입니다. (오늘의 획득 목록에 추가됨)`);
+      showAlert(`${pokemonName} ${count}개 입니다. (오늘의 획득 목록에 추가됨)`);
     } catch (error) {
-      alert("등록에 실패했습니다.");
+      showAlert("등록에 실패했습니다.");
     }
   };
 
   const deletePokemon = async (key: string, isPending: boolean, pokemonName: string) => {
     if (!isPending && !isLoggedIn) {
-      alert("삭제 권한이 없습니다. 로그인해주세요.");
+      showAlert("삭제 권한이 없습니다. 로그인해주세요.");
       return;
     }
     const target = isPending ? pendingCollection : collection;
@@ -160,19 +212,19 @@ function App() {
     let deleteCount: number | null = 1;
     
     if (currentCount > 1) {
-      const input = prompt(`${pokemonName}을(를) 몇 개 삭제하시겠습니까? (현재 보유: ${currentCount}개, 전체 삭제하려면 'all' 입력)`);
+      const input = await showPrompt(`${pokemonName}을(를) 몇 개 삭제하시겠습니까? (현재 보유: ${currentCount}개, 전체 삭제하려면 'all' 입력)`);
       if (input === null) return;
       if (input.toLowerCase() === 'all') {
         deleteCount = null;
       } else {
         deleteCount = parseInt(input);
         if (isNaN(deleteCount) || deleteCount < 1) {
-          alert("올바른 개수를 입력하세요.");
+          showAlert("올바른 개수를 입력하세요.");
           return;
         }
       }
     } else {
-      if (!window.confirm(`${pokemonName}을(를) 삭제하시겠습니까?`)) return;
+      if (!(await showConfirm(`${pokemonName}을(를) 삭제하시겠습니까?`))) return;
     }
 
     const endpoint = isPending ? "/api/pending/remove" : "/api/collection/remove";
@@ -186,7 +238,7 @@ function App() {
       if (isPending) setPendingCollection(data.pending_collection);
       else setCollection(data.collection);
     } catch (error) {
-      alert("삭제에 실패했습니다.");
+      showAlert("삭제에 실패했습니다.");
     }
   };
 
@@ -201,28 +253,31 @@ function App() {
       const data = await response.json();
       setTodayCollection(data.today_collection);
     } catch (error) {
-      alert("오늘의 획득에서 삭제 실패");
+      showAlert("오늘의 획득에서 삭제 실패");
     }
   };
 
   const clearTodayCollection = async () => {
     if (!isLoggedIn) return;
-    if (!window.confirm("오늘의 획득 목록을 초기화하시겠습니까?")) return;
+    if (!(await showConfirm("오늘의 획득 목록을 초기화하시겠습니까?"))) return;
     try {
       const response = await fetch("/api/today/clear", { method: "POST" });
       const data = await response.json();
       setTodayCollection(data.today_collection);
     } catch (error) {
-      alert("초기화 실패");
+      showAlert("초기화 실패");
     }
   };
 
   const handleRegisterClick = async (isPending: boolean) => {
-    const input = prompt(`${isPending ? "예정 " : ""}등록할 포켓몬 번호 또는 이름 또는 '특별'을 입력하세요:`);
+    const input = await showPrompt(`${isPending ? "예정 " : ""}등록할 포켓몬 번호 또는 이름 또는 '특별'을 입력하세요:`);
     if (!input) return;
 
     if (input.trim() === "특별") {
-      const choice = prompt("특별 스티커 선택:\n1. 피카츄로 변신한 메타몽\n2. 기타");
+      const choice = await showChoice("특별 스티커 선택", [
+        { label: "피카츄로 변신한 메타몽", value: "1" },
+        { label: "기타", value: "2" }
+      ]);
       if (choice === "1") {
         registerPokemon("9999-01", isPending, "피카츄로 변신한 메타몽");
       } else if (choice === "2") {
@@ -233,58 +288,59 @@ function App() {
 
     const entries = findPokemonEntries(input);
     if (entries.length === 0) {
-      alert("검색 결과가 없습니다.");
+      showAlert("검색 결과가 없습니다.");
       return;
     }
 
     let entry = entries[0];
     if (entries.length > 1) {
-      let msg = "여러 포켓몬이 검색되었습니다. 선택하세요:\n";
-      entries.forEach((e, i) => msg += `${i + 1}. ${e.name}\n`);
-      const c = prompt(msg);
-      if (!c) return;
-      entry = entries[parseInt(c) - 1];
+      const choices = entries.map(e => ({ label: e.name, value: e }));
+      const selectedEntry = await showChoice("여러 포켓몬이 검색되었습니다. 선택하세요", choices);
+      if (!selectedEntry) return;
+      entry = selectedEntry;
     }
 
-    if (!entry) return;
-    const form = selectForm(entry);
+    const form = await selectForm(entry);
     if (form) {
       registerPokemon(`${entry.id}-${form.formId}`, isPending, form.name);
     }
   };
 
-  const checkDuplicate = (isPending: boolean) => {
-    const input = prompt(`${isPending ? "예정 " : ""}중복 확인을 할 포켓몬 번호 또는 이름을 입력하세요:`);
+  const checkDuplicate = async (isPending: boolean) => {
+    const input = await showPrompt(`${isPending ? "예정 " : ""}중복 확인을 할 포켓몬 번호 또는 이름을 입력하세요:`);
     if (!input) return;
     const entries = findPokemonEntries(input);
     if (entries.length === 0) {
-      alert("검색 결과가 없습니다.");
+      showAlert("검색 결과가 없습니다.");
       return;
     }
     
+    let foundAny = false;
     entries.forEach(entry => {
       entry.forms.forEach(form => {
         const key = `${entry.id}-${form.formId}`;
         const target = isPending ? pendingCollection : collection;
         const count = target[key] || 0;
         if (count > 0) {
-          alert(`[중복] ${form.name}은(는) ${count}개 있습니다!`);
+          showAlert(`[중복] ${form.name}은(는) ${count}개 있습니다!`);
+          foundAny = true;
         }
       });
     });
+    if (!foundAny) {
+      showAlert("아직 보유 중이 아닙니다.");
+    }
   };
 
-  const searchPokemon = (isPending: boolean) => {
-    const input = prompt(`${isPending ? "예정 " : ""}검색할 포켓몬 번호 또는 이름을 입력하세요:`);
+  const searchPokemon = async (isPending: boolean) => {
+    const input = await showPrompt(`${isPending ? "예정 " : ""}검색할 포켓몬 번호 또는 이름을 입력하세요:`);
     if (!input) return;
     const entries = findPokemonEntries(input);
     if (entries.length === 0) {
-      alert("검색 결과가 없습니다.");
+      showAlert("검색 결과가 없습니다.");
       return;
     }
     
-    // For simplicity, just show status of the first match or prompt for form if needed
-    // But user wants "획득한 포켓몬 입니다" or "미획득 포켓몬 입니다"
     const results: string[] = [];
     entries.forEach(entry => {
       entry.forms.forEach(form => {
@@ -361,7 +417,51 @@ function App() {
   return (
     <div className="app-container">
       <audio ref={audioRef} src="/bgm.mp3" loop />
+      
+      {/* Custom Modal */}
+      {modal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <p className="modal-message">{modal.message}</p>
+            {modal.type === "prompt" && (
+              <input 
+                className="modal-input"
+                type={modal.inputType || "text"}
+                value={modalInput}
+                onChange={(e) => setModalInput(e.target.value)}
+                placeholder={modal.placeholder}
+                autoFocus
+              />
+            )}
+            {modal.type === "choice" && (
+              <div className="modal-choices">
+                {modal.choices?.map((c, i) => (
+                  <button key={i} className="btn modal-choice-btn" onClick={() => modal.onConfirm(c.value)}>
+                    {c.label}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="modal-actions">
+              {modal.type !== "choice" && (
+                <button className="btn btn-primary" onClick={() => modal.onConfirm(modalInput)}>
+                  확인
+                </button>
+              )}
+              {(modal.type === "confirm" || modal.type === "prompt" || modal.type === "choice") && (
+                <button className="btn btn-cancel" onClick={modal.onCancel}>
+                  취소
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
       <header className="header">
+        <div className="visitor-count">
+          Today: <span>{visitorStats.today}</span> | Total: <span>{visitorStats.total}</span>
+        </div>
         <div className="auth-bar">
           <button onClick={toggleBgm} className="btn-link bgm-btn">
             BGM {isBgmPlaying ? "OFF" : "ON"} 🎵
@@ -389,7 +489,7 @@ function App() {
 
       <section className="today-catch-section">
         <div className="today-catch-header">
-          <h2>오늘의 획득 포켓몬 🔥</h2>
+          <h2>오늘의 획득 포켓몬 🔥 <span className="today-date">[{serverDate}]</span></h2>
           {isLoggedIn && <button className="btn btn-mini btn-cancel" onClick={clearTodayCollection}>초기화</button>}
         </div>
         {todayCollection.length === 0 ? (

@@ -129,7 +129,8 @@ function App() {
     }
   };
 
-  const toggleBgm = () => {
+  const toggleBgm = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
     if (audioRef.current) {
       if (isBgmPlaying) {
         audioRef.current.pause();
@@ -152,7 +153,9 @@ function App() {
 
     const handleFirstInteraction = () => {
       // Only play if not already playing and not manually muted
-      if (audioRef.current && !isBgmPlaying && !isBgmMutedManually.current) {
+      if (audioRef.current && !audioRef.current.paused) return; // Already playing
+      
+      if (audioRef.current && !isBgmMutedManually.current) {
         audioRef.current.play().then(() => {
           setIsBgmPlaying(true);
         }).catch(() => {});

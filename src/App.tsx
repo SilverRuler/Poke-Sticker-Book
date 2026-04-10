@@ -421,16 +421,14 @@ function App() {
         const target = isPending ? pendingCollection : collection;
         const count = target[key] || 0;
         if (count > 0) {
-          messages.push(`[중복] ${form.name}은(는) ${count}개 있습니다!`);
+          messages.push(`${form.name} 은(는) ${count}개 있습니다!`);
+        } else {
+          messages.push(`${form.name} 은(는) 아직 보유 중이 아닙니다.`);
         }
       });
     });
 
-    if (messages.length > 0) {
-      showAlert(messages.join("\n"));
-    } else {
-      showAlert("아직 보유 중이 아닙니다.");
-    }
+    showAlert(messages.join("\n"));
   };
 
   const searchPokemon = async (isPending: boolean) => {

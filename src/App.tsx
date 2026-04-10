@@ -438,10 +438,17 @@ function App() {
 
   const searchPokemon = async (isPending: boolean) => {
     const input = await showPrompt(`${isPending ? "예정 " : ""}검색할 포켓몬 번호 또는 이름을 입력하세요:`);
-    if (!input) return;
+    if (input === null) return;
+    
+    if (input.trim() === "") {
+      setGallerySearchTerm("");
+      return;
+    }
+
     const entries = findPokemonEntries(input);
     if (entries.length === 0) {
       showAlert("검색 결과가 없습니다.");
+      setGallerySearchTerm("");
       return;
     }
     
@@ -464,6 +471,8 @@ function App() {
         );
       });
     });
+    
+    setGallerySearchTerm(input.trim());
     showAlert(<div>{results}</div>);
   };
 
@@ -477,17 +486,31 @@ function App() {
   };
 
   const renderGrid = (target: CollectionMap, isPending: boolean) => {
-    const keys = Object.keys(target).sort((a, b) => {
+    let keys = Object.keys(target).sort((a, b) => {
       const [aId, aForm] = a.split("-").map(Number);
       const [bId, bForm] = b.split("-").map(Number);
       if (aId !== bId) return aId - bId;
       return aForm - bForm;
     });
+
+    if (gallerySearchTerm) {
+      const term = gallerySearchTerm.toLowerCase();
+      keys = keys.filter(key => {
+        const [idStr] = key.split("-");
+        const pokemon = getPokemonByKey(key);
+        if (!pokemon) return false;
+        return idStr === term || pokemon.name.toLowerCase().includes(term);
+      });
+    }
     
     if (keys.length === 0) {
       return (
         <div className="empty-state">
-          <p>아직 {isPending ? "띠부씰 예정 " : ""}수집된 띠부씰이 없습니다.</p>
+          <p>
+            {gallerySearchTerm 
+              ? "검색 결과와 일치하는 띠부씰이 없습니다." 
+              : `아직 ${isPending ? "띠부씰 예정 " : ""}수집된 띠부씰이 없습니다.`}
+          </p>
         </div>
       );
     }
@@ -844,8 +867,17 @@ function App() {
               onClick={() => searchPokemon(activeTab === "pending")}
               className="btn btn-info"
             >
-              보유 띠부씰 검색
+              {activeTab === "pending" ? "예정 띠부씰 검색" : "보유 띠부씰 검색"}
             </button>
+            {gallerySearchTerm && (
+              <button 
+                onClick={() => setGallerySearchTerm("")}
+                className="btn btn-cancel"
+                style={{ marginLeft: "5px" }}
+              >
+                검색 초기화
+              </button>
+            )}
           </>
         )}
       </nav>

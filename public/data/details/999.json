@@ -5,7 +5,12 @@
   "height": 0.3,
   "weight": 5,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "떠들썩한 장소를 좋아하기 때문에 도시 안에서 생활하는 야생 타부자고도 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "주눅",

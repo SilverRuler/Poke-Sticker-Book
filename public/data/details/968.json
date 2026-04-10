@@ -5,7 +5,12 @@
   "height": 2.5,
   "weight": 310,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "동굴 천장에 붙어 있다. 독성분으로 가득한 봉오리로 상대를 때려서 몸을 지킨다."
+    }
+  ],
   "abilities": [
     {
       "name": "earth-eater",

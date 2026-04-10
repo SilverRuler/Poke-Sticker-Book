@@ -5,7 +5,12 @@
   "height": 0.2,
   "weight": 0.7,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "먹이의 종류에 따라 색이 바뀌는 침으로 돌이나 나무에 무늬를 그려서 영역을 지키고 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "곡예",

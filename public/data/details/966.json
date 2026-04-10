@@ -5,7 +5,12 @@
   "height": 1.8,
   "weight": 120,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "목의 주름 안에 에너지를 비축하고 있기 때문에 사람을 태우고 장거리를 달릴 수 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "방진",

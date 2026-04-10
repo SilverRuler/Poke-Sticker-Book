@@ -5,7 +5,12 @@
   "height": 1.1,
   "weight": 61,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "작은 몸에는 어울리지 않는 길고 큰 앞니와 독이 든 침을 이용해 적으로부터 몸을 지킨다."
+    }
+  ],
   "abilities": [
     {
       "name": "위협",

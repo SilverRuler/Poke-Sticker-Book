@@ -5,7 +5,16 @@
   "height": 1.2,
   "weight": 8,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "어떤 책에 \"사나운버섯\"이라는 이름으로 기록된 생물이 이 포켓몬일 가능성이 있다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "괴상한 잡지에서 공룡과 버섯이 합쳐진 생물이라며 소개했던 포켓몬과 조금 닮은 것 같다."
+    }
+  ],
   "abilities": [
     {
       "name": "protosynthesis",

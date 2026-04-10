@@ -5,7 +5,16 @@
   "height": 2.3,
   "weight": 60,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "오컬트 잡지에서 소개된 적 있는 우주인이 보낸 과학 병기와 많이 닮았다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "근년에 목격된 사례가 있다. 오래된 탐험기에 기록된 정체불명의 물체를 닮은 포켓몬."
+    }
+  ],
   "abilities": [
     {
       "name": "protosynthesis",

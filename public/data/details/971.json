@@ -5,7 +5,12 @@
   "height": 0.6,
   "weight": 35,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "사별한 주인의 무덤을 수년간 지키다 보니 고스트포켓몬으로 환생하였다."
+    }
+  ],
   "abilities": [
     {
       "name": "픽업",

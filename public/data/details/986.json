@@ -5,7 +5,16 @@
   "height": 1.2,
   "weight": 21,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "어떤 서적에 등장하는 \"날개치는머리\"라는 생물과 비슷한 특징을 가진 포켓몬."
+    },
+    {
+      "version": "바이올렛",
+      "text": "오컬트 잡지에서 소개했던 익룡의 유령과 몇몇 특징이 닮았다."
+    }
+  ],
   "abilities": [
     {
       "name": "protosynthesis",

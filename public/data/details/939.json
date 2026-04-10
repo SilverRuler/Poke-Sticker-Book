@@ -5,7 +5,16 @@
   "height": 1.2,
   "weight": 113,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "날개의 뼈는 바람을 받으면 전기를 만들어 낸다. 바다에 뛰어들어 먹이를 감전시켜서 잡는다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "바닷가 절벽에 둥지를 짓는다. 둥지는 바삭바삭한 식감 덕에 인기 있는 별미다."
+    }
+  ],
   "abilities": [
     {
       "name": "electromorphosis",

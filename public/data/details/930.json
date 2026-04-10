@@ -5,7 +5,12 @@
   "height": 1.4,
   "weight": 48.2,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "깃털 색에 따라 그룹을 만든다. 녹색은 다른 색에 비해 유전되기 쉬워서 개체 수가 많다."
+    }
+  ],
   "abilities": [
     {
       "name": "seed-sower",

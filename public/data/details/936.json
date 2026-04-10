@@ -5,7 +5,12 @@
   "height": 1.5,
   "weight": 85,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "트레이너에게는 충성을 다하며 적의를 드러내는 자가 있으면 묻지도 않고 베어 버리려 한다."
+    }
+  ],
   "abilities": [
     {
       "name": "타오르는불꽃",

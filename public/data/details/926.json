@@ -5,7 +5,12 @@
   "height": 0.3,
   "weight": 10.9,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "구수한 체취를 통해 상대의 공복감을 크게 자극해서 기력과 체력을 깎아 낸다."
+    }
+  ],
   "abilities": [
     {
       "name": "마이페이스",

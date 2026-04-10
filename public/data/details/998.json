@@ -5,7 +5,12 @@
   "height": 2.1,
   "weight": 210,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "튼튼한 보물 상자 안에 숨은 덕에 높은 방어력을 자랑하지만 몸이 무거워서 잘 움직이지 못한다."
+    }
+  ],
   "abilities": [
     {
       "name": "thermal-exchange",

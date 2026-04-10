@@ -5,7 +5,16 @@
   "height": 1.5,
   "weight": 74.2,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "100t의 눈을 조종한다. 눈사태를 일으키고는 그 안을 드나들며 천진난만하게 논다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "먼 옛날, 검에 의해 이슬이 되어 사라진 자들의 증오가 눈을 두르고 포켓몬이 되었다."
+    }
+  ],
   "abilities": [
     {
       "name": "tablets-of-ruin",

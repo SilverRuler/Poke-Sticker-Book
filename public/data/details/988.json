@@ -5,7 +5,16 @@
   "height": 3.2,
   "weight": 92,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "포획된 사례는 없으며 데이터도 부족하다. 어느 탐험기에 기록된 생물과 특징이 일치한다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "오컬트 잡지 기사에 나왔던 1만 년을 산 레어코일의 모습과 약간 비슷하게 생겼다."
+    }
+  ],
   "abilities": [
     {
       "name": "protosynthesis",

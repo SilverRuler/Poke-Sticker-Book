@@ -5,7 +5,12 @@
   "height": 0.6,
   "weight": 10.5,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "트레이너에게 충성을 맹세하나 에스퍼 에너지를 단련하기 위해 혼자서 수련을 반복한다."
+    }
+  ],
   "abilities": [
     {
       "name": "타오르는불꽃",

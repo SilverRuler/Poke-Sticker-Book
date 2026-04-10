@@ -5,7 +5,12 @@
   "height": 0.5,
   "weight": 16,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "겉모습에 어울리지 않게 상냥하지만 가족을 위협하는 상대는 자비 없이 추격해서 처치한다."
+    }
+  ],
   "abilities": [
     {
       "name": "위협",

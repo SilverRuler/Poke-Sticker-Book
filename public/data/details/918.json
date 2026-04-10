@@ -5,7 +5,16 @@
   "height": 1,
   "weight": 16.5,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "제3의 다리가 접혀 있다. 위기에 처하면 10m 이상을 점프하는 다릿심을 가지고 있다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "점프력을 이용하여 상대의 공격을 피하며 데미지를 주는 전법이 특기다."
+    }
+  ],
   "abilities": [
     {
       "name": "불면",

@@ -5,7 +5,12 @@
   "height": 0.7,
   "weight": 8,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "독성분으로 이루어진 커다란 꽃을 피운다. 초롱순들과 연계해서 상대를 격퇴한다."
+    }
+  ],
   "abilities": [
     {
       "name": "toxic-debris",

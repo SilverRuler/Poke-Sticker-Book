@@ -609,7 +609,7 @@ function App() {
                   <div className="detail-left">
                     <div className="detail-img-box">
                       <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
-                      {(activeTab === "pending" || isLoggedIn) && (
+                      {activeTab !== "gallery" && (activeTab === "pending" || isLoggedIn) && (
                         <div className="anniversary-toggle">
                           <label>
                             <input 
@@ -771,9 +771,27 @@ function App() {
       </div>
 
       <nav className="nav-bar">
-        <button onClick={() => handleRegisterClick(activeTab === "pending")} className="btn btn-primary">띠부씰 등록</button>
-        <button onClick={() => checkDuplicate(activeTab === "pending")} className="btn btn-secondary">중복 확인</button>
-        <button onClick={() => searchPokemon(activeTab === "pending")} className="btn btn-info">보유 띠부씰 검색</button>
+        <button 
+          onClick={() => handleRegisterClick(activeTab === "pending")} 
+          className="btn btn-primary"
+          disabled={activeTab === "gallery"}
+        >
+          띠부씰 등록
+        </button>
+        <button 
+          onClick={() => checkDuplicate(activeTab === "pending")} 
+          className="btn btn-secondary"
+          disabled={activeTab === "gallery"}
+        >
+          중복 확인
+        </button>
+        <button 
+          onClick={() => searchPokemon(activeTab === "pending")} 
+          className="btn btn-info"
+          disabled={activeTab === "gallery"}
+        >
+          보유 띠부씰 검색
+        </button>
       </nav>
 
       <main className="content">

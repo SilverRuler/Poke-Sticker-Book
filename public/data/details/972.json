@@ -5,7 +5,12 @@
   "height": 2,
   "weight": 15,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "많을 때는 1만 마리도 넘는 꼬이밍고의 큰 무리가 동일한 움직임을 보이는 모습은 그야말로 압권이다."
+    }
+  ],
   "abilities": [
     {
       "name": "모래헤치기",

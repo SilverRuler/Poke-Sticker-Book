@@ -5,7 +5,16 @@
   "height": 1.2,
   "weight": 36,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "10억 년 후의 마기라스라며 괴상한 잡지에서 다뤘던 포켓몬과 닮은 점이 있다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "어느 탐험기에서 \"무쇠가시\"라고 소개했던 물체와 일치하는 특징이 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "quark-drive",

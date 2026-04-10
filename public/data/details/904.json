@@ -5,7 +5,12 @@
   "height": 2.5,
   "weight": 60.5,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS 아르세우스",
+      "text": "바다를 건너 날아와 혹독한 겨울의 끝을 알린다. 자애로움이 히스이 땅에 새로운 생명을 싹틔우게 했다는 전승이 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "독가시",

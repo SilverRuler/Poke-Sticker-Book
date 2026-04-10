@@ -5,7 +5,16 @@
   "height": 1.9,
   "weight": 58,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "거꾸로 매달린 채 절벽 위에서 먹이를 노리지만, 머리에 피가 몰리기 때문에 오랫동안은 버틸 수 없다고 한다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "깎아지른 듯한 절벽 위에 산다. 사이드 스텝으로 공격을 피하며 집게로 급소를 노린다."
+    }
+  ],
   "abilities": [
     {
       "name": "mycelium-might",

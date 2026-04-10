@@ -5,7 +5,12 @@
   "height": 0.4,
   "weight": 16,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "잘 잊어버리는 성격이라 자신이 소금에 절여 둔 먹잇감은 물론 트레이너의 지시도 쉽게 잊어버린다."
+    }
+  ],
   "abilities": [
     {
       "name": "purifying-salt",

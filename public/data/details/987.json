@@ -5,7 +5,16 @@
   "height": 1.4,
   "weight": 4,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "오래된 책에 \"땅을기는날개\"라는 이름으로 소개된 생물과 닮은 점이 있는 정체불명의 포켓몬."
+    },
+    {
+      "version": "바이올렛",
+      "text": "괴상한 잡지에서 소개했던 불카모스의 태곳적 모습과 약간 비슷하게 생긴 포켓몬이다."
+    }
+  ],
   "abilities": [
     {
       "name": "protosynthesis",

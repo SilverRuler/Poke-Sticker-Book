@@ -5,7 +5,12 @@
   "height": 0.6,
   "weight": 2.4,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "베베솔트가 지나간 자리에는 암염의 입자가 남아 있기 때문에 예로부터 솔트 로드라 불리고 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "위협",

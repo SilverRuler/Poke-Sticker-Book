@@ -5,7 +5,12 @@
   "height": 1.8,
   "weight": 89,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS 아르세우스",
+      "text": "히스이 땅에 펼쳐진 습지의 토양 덕분에 튼튼한 몸과 함께, 이탄을 자유롭게 다루는 새로운 재주를 익히게 된 것으로 추측된다."
+    }
+  ],
   "abilities": [
     {
       "name": "벌레의알림",

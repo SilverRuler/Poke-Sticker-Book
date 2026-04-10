@@ -5,7 +5,16 @@
   "height": 1.4,
   "weight": 35,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "주먹으로 대지를 갈랐다고 오래된 탐험기에 기록된 \"날개의왕\"의 정체인 듯하다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "모토마를 닮았지만 그보다 훨씬 튼튼하고 흉포하다. 생태 등은 밝혀진 것이 전혀 없다."
+    }
+  ],
   "abilities": [
     {
       "name": "quark-drive",

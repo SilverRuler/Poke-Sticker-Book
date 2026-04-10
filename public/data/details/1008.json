@@ -5,7 +5,16 @@
   "height": 3.5,
   "weight": 240,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "수수께끼에 둘러싸인 흉포한 생물. 오래된 탐험기에 기록된 물의 괴물의 이름을 따서 명명되었다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "초고대의 스이쿤이라며 오컬트 잡지에 게재됐던 일러스트와 비슷한 모습을 하고 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "hadron-engine",

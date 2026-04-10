@@ -5,7 +5,16 @@
   "height": 2.5,
   "weight": 303,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "자세한 것은 잘 알려지지 않았다. 모토마를 닮았지만 그보다 훨씬 강하고 냉혹하다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "오래된 서적에 \"무쇠이무기\"라는 이름으로 기록된 존재인 것 같다. 벼락으로 대지를 잿더미로 만들었다고 한다."
+    }
+  ],
   "abilities": [
     {
       "name": "orichalcum-pulse",

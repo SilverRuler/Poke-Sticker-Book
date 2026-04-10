@@ -5,7 +5,12 @@
   "height": 1.4,
   "weight": 38.6,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "무리의 결속이 매우 강하다. 얕보이지 않기 위해 언짢아 보이는 표정으로 상대를 위압한다."
+    }
+  ],
   "abilities": [
     {
       "name": "wind-power",

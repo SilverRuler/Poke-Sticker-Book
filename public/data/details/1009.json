@@ -5,7 +5,16 @@
   "height": 3.5,
   "weight": 280,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "오컬트 잡지에서 다뤘던 미래 비리디온의 모습과 많은 특징이 일치한다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "얼마 없는 목격담에 의하면 눈부시게 빛나는 검으로 큰 나무나 바위를 채 썰듯 베었다고 한다."
+    }
+  ],
   "abilities": [
     {
       "name": "protosynthesis",

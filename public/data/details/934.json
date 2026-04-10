@@ -5,7 +5,12 @@
   "height": 2.3,
   "weight": 240,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "불꽃을 조종하는 기술을 가지고 있어 먼 옛날부터 사람들에게 소중히 여겨지던 포켓몬이다."
+    }
+  ],
   "abilities": [
     {
       "name": "purifying-salt",

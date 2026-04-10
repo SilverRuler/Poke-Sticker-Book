@@ -5,7 +5,12 @@
   "height": 0.3,
   "weight": 3,
   "gender": "수컷, 암컷",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "두 개의 머리는 성격도 자신 있는 전법도 다르지만 싸울 때는 호흡이 척척 맞는다."
+    }
+  ],
   "abilities": [
     {
       "name": "엽록소",

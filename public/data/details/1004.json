@@ -5,7 +5,16 @@
   "height": 0.4,
   "weight": 4.9,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "수수께끼로 가득한 탐험기에 \"고동치는달\"이라는 이름으로 기록된 생물일 가능성이 있다."
+    },
+    {
+      "version": "바이올렛",
+      "text": "괴상한 잡지의 기사에 의하면 어떤 지방에서 일어나는 현상과 관련 있는 포켓몬이라고 한다."
+    }
+  ],
   "abilities": [
     {
       "name": "beads-of-ruin",

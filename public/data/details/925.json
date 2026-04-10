@@ -5,7 +5,12 @@
   "height": 0.3,
   "weight": 2.3,
   "gender": "성별없음",
-  "flavorTexts": [],
+  "flavorTexts": [
+    {
+      "version": "Pokémon LEGENDS Z-A",
+      "text": "체내에서 효모를 키우고 있다. 먼 옛날부터 사람과 함께 살며 식생활에 도움을 주고 있다."
+    }
+  ],
   "abilities": [
     {
       "name": "프렌드가드",

@@ -1,32 +1,6 @@
 {
   "id": 975,
-  "name": "cetitan",
-  "classification": "육지고래포켓몬",
-  "height": 4.5,
-  "weight": 700,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "불필요한 살을 분리하면 정신이 예민해져 사이코 파워가 상승한다. 떨어진 살은 담백하고 맛있다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "높은 재생 능력을 자랑한다. 군살을 버려서 몸을 가볍게 하고 먹잇감을 향해 돌격한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "두꺼운지방",
-      "description": "불꽃과 얼음타입의\n기술에 강하다."
-    },
-    {
-      "name": "눈치우기",
-      "description": "날씨가 싸라기눈일 때\n스피드가 올라간다."
-    },
-    {
-      "name": "우격다짐",
-      "description": "힘이 강해지지만\n추가 효과가 없어진다."
-    }
-  ]
+  "name": "우락고래",
+  "abilities": [],
+  "flavorTexts": []
 }

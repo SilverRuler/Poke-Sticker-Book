@@ -1,28 +1,6 @@
 {
   "id": 900,
-  "name": "kleavor",
-  "classification": "큰도끼포켓몬",
-  "height": 1.8,
-  "weight": 89,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS 아르세우스",
-      "text": "히스이 땅에 펼쳐진 습지의 토양 덕분에 튼튼한 몸과 함께, 이탄을 자유롭게 다루는 새로운 재주를 익히게 된 것으로 추측된다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "벌레의알림",
-      "description": "위급할 때 벌레타입의\n위력이 올라간다."
-    },
-    {
-      "name": "우격다짐",
-      "description": "힘이 강해지지만\n추가 효과가 없어진다."
-    },
-    {
-      "name": "sharpness",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "사마자르",
+  "abilities": [],
+  "flavorTexts": []
 }

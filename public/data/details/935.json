@@ -1,24 +1,6 @@
 {
   "id": 935,
-  "name": "charcadet",
-  "classification": "불의아이포켓몬",
-  "height": 0.6,
-  "weight": 10.5,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "트레이너에게 충성을 맹세하나 에스퍼 에너지를 단련하기 위해 혼자서 수련을 반복한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "타오르는불꽃",
-      "description": "불꽃을 받으면\n불꽃 기술이 강해진다."
-    },
-    {
-      "name": "불꽃몸",
-      "description": "접촉한 상대에게\n화상을 입힐 때가 있다."
-    }
-  ]
+  "name": "카르본",
+  "abilities": [],
+  "flavorTexts": []
 }

@@ -1,32 +1,6 @@
 {
   "id": 961,
-  "name": "wugtrio",
-  "classification": "정원장어포켓몬",
-  "height": 1.2,
-  "weight": 5.4,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "가슴의 깃털과 떨어진 깃털로 만든 주머니에 물건을 넣고는 높은 곳에서 떨어뜨리며 논다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "가슴팍의 주머니에 먹이를 담아서 둥지로 가져간다. 큰 소리가 나는 물건을 떨어뜨리는 것을 즐긴다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "미끈미끈",
-      "description": "접촉한 상대의\n스피드를 떨어뜨린다."
-    },
-    {
-      "name": "주눅",
-      "description": "주눅이 들어 스피드가\n올라가는 타입이 있다."
-    },
-    {
-      "name": "모래숨기",
-      "description": "모래바람으로\n회피율이 올라간다."
-    }
-  ]
+  "name": "바닥트리오",
+  "abilities": [],
+  "flavorTexts": []
 }

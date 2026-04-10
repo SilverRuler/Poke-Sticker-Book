@@ -1,28 +1,6 @@
 {
   "id": 902,
-  "name": "basculegion-male",
-  "classification": "큰물고기포켓몬",
-  "height": 3,
-  "weight": 110,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS 아르세우스",
-      "text": "다른 종을 압도하는 신체 능력과 맹독을 가지고 있어 한랭한 고지대에서는 맞수가 없다. 무리를 이루지 않고 고독함을 즐긴다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "쓱쓱",
-      "description": "비가 올 때 스피드가\n올라간다."
-    },
-    {
-      "name": "적응력",
-      "description": "타입이 같은 기술의\n위력이 올라간다."
-    },
-    {
-      "name": "틀깨기",
-      "description": "특성에 관계없이 상대에게\n기술을 쓸 수 있다."
-    }
-  ]
+  "name": "대쓰여너",
+  "abilities": [],
+  "flavorTexts": []
 }

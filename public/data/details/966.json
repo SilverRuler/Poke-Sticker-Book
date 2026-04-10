@@ -1,24 +1,6 @@
 {
   "id": 966,
-  "name": "revavroom",
-  "classification": "다기통포켓몬",
-  "height": 1.8,
-  "weight": 120,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "목의 주름 안에 에너지를 비축하고 있기 때문에 사람을 태우고 장거리를 달릴 수 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "방진",
-      "description": "먼지나 가루를\n막는다."
-    },
-    {
-      "name": "필터",
-      "description": "효과가 굉장한 기술의\n위력을 약하게 한다."
-    }
-  ]
+  "name": "부르르룸",
+  "abilities": [],
+  "flavorTexts": []
 }

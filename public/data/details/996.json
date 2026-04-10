@@ -1,24 +1,6 @@
 {
   "id": 996,
-  "name": "frigibax",
-  "classification": "얼음지느러미포켓몬",
-  "height": 0.5,
-  "weight": 17,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "얼음 마스크와 등지느러미의 검으로 무장했다. 민첩한 움직임으로 상대에게 달려들어 베어 버린다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "thermal-exchange",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "아이스바디",
-      "description": "싸라기눈일 때 HP를\n조금씩 회복한다."
-    }
-  ]
+  "name": "드니차",
+  "abilities": [],
+  "flavorTexts": []
 }

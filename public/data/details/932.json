@@ -1,28 +1,6 @@
 {
   "id": 932,
-  "name": "nacli",
-  "classification": "암염포켓몬",
-  "height": 0.4,
-  "weight": 16,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "잘 잊어버리는 성격이라 자신이 소금에 절여 둔 먹잇감은 물론 트레이너의 지시도 쉽게 잊어버린다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "purifying-salt",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "옹골참",
-      "description": "일격으로\n쓰러지지 않는다."
-    },
-    {
-      "name": "클리어바디",
-      "description": "상대가 능력을\n떨어뜨릴 수 없다."
-    }
-  ]
+  "name": "베베솔트",
+  "abilities": [],
+  "flavorTexts": []
 }

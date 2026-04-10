@@ -1,24 +1,6 @@
 {
   "id": 936,
-  "name": "armarouge",
-  "classification": "불의전사포켓몬",
-  "height": 1.5,
-  "weight": 85,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "트레이너에게는 충성을 다하며 적의를 드러내는 자가 있으면 묻지도 않고 베어 버리려 한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "타오르는불꽃",
-      "description": "불꽃을 받으면\n불꽃 기술이 강해진다."
-    },
-    {
-      "name": "깨어진갑옷",
-      "description": "물리 기술을 받으면 방어가\n떨어지고 스피드가 올라간다."
-    }
-  ]
+  "name": "카디나르마",
+  "abilities": [],
+  "flavorTexts": []
 }

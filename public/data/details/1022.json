@@ -1,24 +1,6 @@
 {
   "id": 1022,
-  "name": "iron-boulder",
-  "classification": "패러독스포켓몬",
-  "height": 1.5,
-  "weight": 162.5,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "코바르온 형태의 최신 병기라며 오컬트 잡지에 소개됐던 정체불명의 물체를 닮았다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "빛나는 칼날을 발사하며 주위의 모든 것을 베어 버렸다고 하나 그 밖의 정보는 전무하여 정체불명이다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "quark-drive",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "무쇠암석",
+  "abilities": [],
+  "flavorTexts": []
 }

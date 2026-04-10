@@ -1,24 +1,6 @@
 {
   "id": 968,
-  "name": "orthworm",
-  "classification": "지렁이포켓몬",
-  "height": 2.5,
-  "weight": 310,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "동굴 천장에 붙어 있다. 독성분으로 가득한 봉오리로 상대를 때려서 몸을 지킨다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "earth-eater",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "모래숨기",
-      "description": "모래바람으로\n회피율이 올라간다."
-    }
-  ]
+  "name": "꿈트렁",
+  "abilities": [],
+  "flavorTexts": []
 }

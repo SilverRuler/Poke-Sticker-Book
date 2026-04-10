@@ -1,28 +1,6 @@
 {
   "id": 912,
-  "name": "quaxly",
-  "classification": "꼬마오리포켓몬",
-  "height": 0.5,
-  "weight": 6.1,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "열심히 얕은 여울을 달리며 하반신을 단련하고, 동료들끼리 발 기술의 화려함을 겨룬다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "다양한 지방의 포켓몬과 사람의 움직임을 보고 자신의 춤으로 승화시키는 노력가."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "급류",
-      "description": "위급할 때 물타입의\n위력이 올라간다."
-    },
-    {
-      "name": "자기과신",
-      "description": "상대를 쓰러뜨리면\n공격이 올라간다."
-    }
-  ]
+  "name": "꾸왁스",
+  "abilities": [],
+  "flavorTexts": []
 }

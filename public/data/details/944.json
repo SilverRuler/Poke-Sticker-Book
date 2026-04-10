@@ -1,28 +1,6 @@
 {
   "id": 944,
-  "name": "shroodle",
-  "classification": "독쥐포켓몬",
-  "height": 0.2,
-  "weight": 0.7,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "먹이의 종류에 따라 색이 바뀌는 침으로 돌이나 나무에 무늬를 그려서 영역을 지키고 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "곡예",
-      "description": "도구가 없어지면\n스피드가 올라간다."
-    },
-    {
-      "name": "나쁜손버릇",
-      "description": "닿은 상대로부터\n도구를 훔친다."
-    },
-    {
-      "name": "짓궂은마음",
-      "description": "변화 기술을 먼저\n쓸 수 있다."
-    }
-  ]
+  "name": "땃쭈르",
+  "abilities": [],
+  "flavorTexts": []
 }

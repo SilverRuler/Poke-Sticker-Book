@@ -1,28 +1,6 @@
 {
   "id": 927,
-  "name": "dachsbun",
-  "classification": "개포켓몬",
-  "height": 0.5,
-  "weight": 14.9,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "머리의 열매에서 오일을 나오게 해서 적으로부터 몸을 지킨다. 오일은 펄쩍 뛸 만큼 떫고 쓰다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "영양분을 오일로 바꿔서 머리의 열매에 비축한다. 아무것도 먹거나 마시지 않아도 일주일은 끄떡없다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "well-baked-body",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "아로마베일",
-      "description": "같은 편으로 향하는\n멘탈 공격을 막는다."
-    }
-  ]
+  "name": "바우첼",
+  "abilities": [],
+  "flavorTexts": []
 }

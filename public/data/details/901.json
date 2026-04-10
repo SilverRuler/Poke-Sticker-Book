@@ -1,36 +1,6 @@
 {
   "id": 901,
-  "name": "ursaluna",
-  "classification": "이탄포켓몬",
-  "height": 2.4,
-  "weight": 290,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "태어난 강으로 향하는 가혹한 여정 중에 목숨을 잃은 동료들의 영혼을 몸에 두르고 있다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "가공할 만한 점프력을 가졌다. 죽은 동료들의 분노가 몸을 붉게 물들였다."
-    },
-    {
-      "version": "Pokémon LEGENDS 아르세우스",
-      "text": "물길을 거슬러 오르는 여정에서 뜻을 이루지 못하고 죽은 동료들의 혼을 두르고 있다. 히스이에 흐르는 하천에서는 대적할 자가 없다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "근성",
-      "description": "상태 이상이 되면\n공격이 올라간다."
-    },
-    {
-      "name": "방탄",
-      "description": "구슬이나 폭탄에\n맞지 않는다."
-    },
-    {
-      "name": "긴장감",
-      "description": "상대를 긴장시켜 나무열매를\n먹지 못하게 한다."
-    }
-  ]
+  "name": "다투곰",
+  "abilities": [],
+  "flavorTexts": []
 }

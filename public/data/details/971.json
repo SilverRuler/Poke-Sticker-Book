@@ -1,24 +1,6 @@
 {
   "id": 971,
-  "name": "greavard",
-  "classification": "유령개포켓몬",
-  "height": 0.6,
-  "weight": 35,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "사별한 주인의 무덤을 수년간 지키다 보니 고스트포켓몬으로 환생하였다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "픽업",
-      "description": "도구를 주워올\n때가 있다."
-    },
-    {
-      "name": "복슬복슬",
-      "description": "상대로부터 받은 접촉하는 기술의\n데미지를 반감시키지만 불꽃타입\n기술의 데미지는 2배가 된다."
-    }
-  ]
+  "name": "망망이",
+  "abilities": [],
+  "flavorTexts": []
 }

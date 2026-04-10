@@ -1,32 +1,6 @@
 {
   "id": 980,
-  "name": "clodsire",
-  "classification": "가시물고기포켓몬",
-  "height": 1.8,
-  "weight": 223,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "머리와 꼬리 2개의 뇌파가 동기화하여 에스퍼 파워가 키링키의 10배로 강화되었다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "단단한 테일 헤드로 본체의 머리를 보호하면서 긴 목을 휘둘러 박치기를 먹여 준다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "독가시",
-      "description": "접촉한 상대를\n중독시킬 때가 있다."
-    },
-    {
-      "name": "저수",
-      "description": "물을 받으면\n회복한다."
-    },
-    {
-      "name": "천진",
-      "description": "상대의 능력\n변화를 무시한다."
-    }
-  ]
+  "name": "토오",
+  "abilities": [],
+  "flavorTexts": []
 }

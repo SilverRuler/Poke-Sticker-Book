@@ -1,28 +1,6 @@
 {
   "id": 917,
-  "name": "tarountula",
-  "classification": "실타래포켓몬",
-  "height": 0.3,
-  "weight": 4,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "나뭇가지나 천장에 실로 달라붙어 소리 없이 행동한다. 먹잇감에게 들키기 전에 쓰러뜨린다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "튼튼하고 끈끈한 실을 영역 안에 둘러쳐서 침입자를 함정에 빠트린다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "불면",
-      "description": "잠듦 상태가\n되지 않는다."
-    },
-    {
-      "name": "잠복",
-      "description": "교체로 나온 상대에게\n2배 데미지로 공격할 수 있다."
-    }
-  ]
+  "name": "타랜툴라",
+  "abilities": [],
+  "flavorTexts": []
 }

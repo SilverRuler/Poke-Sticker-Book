@@ -1,32 +1,6 @@
 {
   "id": 924,
-  "name": "tandemaus",
-  "classification": "커플포켓몬",
-  "height": 0.3,
-  "weight": 1.8,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "잠을 자는 곳이나 먹이를 먹는 곳 등, 용도에 따라 나눈 여러 개의 방으로 구성된 커다란 집을 만든다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "어느새 아이가 늘었다. 가족같이 지내지만, 세 마리의 관계는 제대로 밝혀진 것이 없다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "도주",
-      "description": "야생 포켓몬으로부터\n반드시 도망칠 수 있다."
-    },
-    {
-      "name": "픽업",
-      "description": "도구를 주워올\n때가 있다."
-    },
-    {
-      "name": "마이페이스",
-      "description": "혼란 상태가\n되지 않는다."
-    }
-  ]
+  "name": "두리쥐",
+  "abilities": [],
+  "flavorTexts": []
 }

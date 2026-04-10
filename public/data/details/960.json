@@ -1,32 +1,6 @@
 {
   "id": 960,
-  "name": "wiglett",
-  "classification": "정원장어포켓몬",
-  "height": 1.2,
-  "weight": 1.8,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "겉보기와 다르게 성질이 사납다. 기다란 몸으로 먹잇감을 죄어서 굴 안으로 끌고 들어간다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "물고기포켓몬의 일종. 닥트리오의 리전폼인 것으로 여겨지던 시기도 있었다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "미끈미끈",
-      "description": "접촉한 상대의\n스피드를 떨어뜨린다."
-    },
-    {
-      "name": "주눅",
-      "description": "주눅이 들어 스피드가\n올라가는 타입이 있다."
-    },
-    {
-      "name": "모래숨기",
-      "description": "모래바람으로\n회피율이 올라간다."
-    }
-  ]
+  "name": "바다그다",
+  "abilities": [],
+  "flavorTexts": []
 }

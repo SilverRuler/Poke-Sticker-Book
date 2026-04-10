@@ -1,20 +1,6 @@
 {
   "id": 995,
-  "name": "iron-thorns",
-  "classification": "패러독스포켓몬",
-  "height": 1.6,
-  "weight": 303,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "불꽃 기술의 열을 얼음타입의 에너지로 변환해서 공기를 얼리는 등지느러미를 가지고 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "quark-drive",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "무쇠가시",
+  "abilities": [],
+  "flavorTexts": []
 }

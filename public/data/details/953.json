@@ -1,28 +1,6 @@
 {
   "id": 953,
-  "name": "rellor",
-  "classification": "굴리기포켓몬",
-  "height": 0.2,
-  "weight": 1,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "구슬을 지탱하는 몸은 거의 움직이지 않기 때문에, 구슬 안에 본체가 있는 것으로 여겨지고 있다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "구슬 안에는 아이가 잠들어 있다. 편하게 잠들 수 있게 다리로 구슬을 굴려서 달랜다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "복안",
-      "description": "기술의 명중률이\n올라간다."
-    },
-    {
-      "name": "탈피",
-      "description": "상태 이상을\n회복할 때가 있다."
-    }
-  ]
+  "name": "구르데",
+  "abilities": [],
+  "flavorTexts": []
 }

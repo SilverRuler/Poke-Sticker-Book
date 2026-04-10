@@ -1,24 +1,6 @@
 {
   "id": 1000,
-  "name": "gholdengo",
-  "classification": "보물생명체포켓몬",
-  "height": 1.2,
-  "weight": 30,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "왕의 악행을 목간에 기록했다는 이유로 처벌을 받은 사람의 원한이 마른 잎을 두르고 포켓몬이 되었다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "초목의 에너지를 흡수한다. 주위의 숲은 금세 말라비틀어지며 논밭에는 흉작이 들게 된다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "good-as-gold",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "타부자고",
+  "abilities": [],
+  "flavorTexts": []
 }

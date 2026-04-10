@@ -1,24 +1,6 @@
 {
   "id": 930,
-  "name": "arboliva",
-  "classification": "올리브포켓몬",
-  "height": 1.4,
-  "weight": 48.2,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "깃털 색에 따라 그룹을 만든다. 녹색은 다른 색에 비해 유전되기 쉬워서 개체 수가 많다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "seed-sower",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "수확",
-      "description": "사용한 나무열매를\n몇 번이고 만들어 낸다."
-    }
-  ]
+  "name": "올리르바",
+  "abilities": [],
+  "flavorTexts": []
 }

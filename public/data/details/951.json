@@ -1,28 +1,6 @@
 {
   "id": 951,
-  "name": "capsakid",
-  "classification": "하바네로포켓몬",
-  "height": 0.3,
-  "weight": 3,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "두 개의 머리는 성격도 자신 있는 전법도 다르지만 싸울 때는 호흡이 척척 맞는다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "엽록소",
-      "description": "맑을 때 스피드가\n올라간다."
-    },
-    {
-      "name": "불면",
-      "description": "잠듦 상태가\n되지 않는다."
-    },
-    {
-      "name": "서투름",
-      "description": "지니고 있는 도구를\n쓸 수 없다."
-    }
-  ]
+  "name": "캡싸이",
+  "abilities": [],
+  "flavorTexts": []
 }

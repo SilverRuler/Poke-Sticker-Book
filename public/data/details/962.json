@@ -1,32 +1,6 @@
 {
   "id": 962,
-  "name": "bombirdier",
-  "classification": "낙하물포켓몬",
-  "height": 1.5,
-  "weight": 42.9,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "꼬리지느러미에 있는 물의 고리를 가지고 동료와 노는 것을 좋아한다. 초음파로 생명체의 기분을 감지한다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "물의 고리는 머리의 구멍에서 나오는 점액질과 바닷물을 섞어서 만들어 낸 것이다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "부풀린가슴",
-      "description": "방어를 떨어뜨리는\n공격을 받지 않는다."
-    },
-    {
-      "name": "날카로운눈",
-      "description": "명중률이\n떨어지지 않는다."
-    },
-    {
-      "name": "rocky-payload",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "떨구새",
+  "abilities": [],
+  "flavorTexts": []
 }

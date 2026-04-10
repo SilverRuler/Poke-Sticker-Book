@@ -1,24 +1,6 @@
 {
   "id": 991,
-  "name": "iron-bundle",
-  "classification": "패러독스포켓몬",
-  "height": 0.6,
-  "weight": 11,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "어떤 운동선수를 개조한 모습이라며 오컬트 잡지에서 대서특필했던 사이보그와 닮았다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "어느 탐험기에 기록된 \"무쇠손\"이라는 물체와 닮은 점이 많은 포켓몬."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "quark-drive",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "무쇠보따리",
+  "abilities": [],
+  "flavorTexts": []
 }

@@ -1,28 +1,6 @@
 {
   "id": 941,
-  "name": "kilowattrel",
-  "classification": "군함조포켓몬",
-  "height": 1.4,
-  "weight": 38.6,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "무리의 결속이 매우 강하다. 얕보이지 않기 위해 언짢아 보이는 표정으로 상대를 위압한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "wind-power",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "축전",
-      "description": "전기를 받으면\n회복한다."
-    },
-    {
-      "name": "승기",
-      "description": "능력이 떨어지면\n특수공격이 올라간다."
-    }
-  ]
+  "name": "찌리비크",
+  "abilities": [],
+  "flavorTexts": []
 }

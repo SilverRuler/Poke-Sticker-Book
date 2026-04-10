@@ -1,28 +1,6 @@
 {
   "id": 965,
-  "name": "varoom",
-  "classification": "단기통포켓몬",
-  "height": 1,
-  "weight": 35,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "독소와 바위 성분이 섞인 가스를 8개로 늘어난 실린더에서 폭발시켜 에너지를 만들어 낸다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "배기음을 내어 거세게 위협한다. 원통형의 입을 통해 혀를 꺼내고는 독액을 흩뿌린다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "방진",
-      "description": "먼지나 가루를\n막는다."
-    },
-    {
-      "name": "슬로스타트",
-      "description": "공격과 스피드가\n잠시 동안 절반이 된다."
-    }
-  ]
+  "name": "부르롱",
+  "abilities": [],
+  "flavorTexts": []
 }

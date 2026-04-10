@@ -1,28 +1,6 @@
 {
   "id": 931,
-  "name": "squawkabilly-green-plumage",
-  "classification": "잉꼬포켓몬",
-  "height": 0.6,
-  "weight": 2.4,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "베베솔트가 지나간 자리에는 암염의 입자가 남아 있기 때문에 예로부터 솔트 로드라 불리고 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "위협",
-      "description": "상대의 공격을\n떨어뜨린다."
-    },
-    {
-      "name": "의욕",
-      "description": "공격은 높지만\n빗나가기 쉽다."
-    },
-    {
-      "name": "근성",
-      "description": "상태 이상이 되면\n공격이 올라간다."
-    }
-  ]
+  "name": "시비꼬",
+  "abilities": [],
+  "flavorTexts": []
 }

@@ -1,28 +1,6 @@
 {
   "id": 911,
-  "name": "skeledirge",
-  "classification": "싱어포켓몬",
-  "height": 1.6,
-  "weight": 326.5,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "옛날에 머나먼 땅에서 찾아와 정착했다. 날개에서 분비되는 젤은 물과 먼지를 튕겨 낸다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "유속이 빠른 강에서도 자유롭게 헤엄칠 수 있는 다릿심을 가졌다. 깔끔한 것을 좋아하며 집착이 강하다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "맹화",
-      "description": "위급할 때 불꽃타입의\n위력이 올라간다."
-    },
-    {
-      "name": "천진",
-      "description": "상대의 능력\n변화를 무시한다."
-    }
-  ]
+  "name": "라우드본",
+  "abilities": [],
+  "flavorTexts": []
 }

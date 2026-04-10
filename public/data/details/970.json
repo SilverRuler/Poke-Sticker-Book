@@ -1,24 +1,6 @@
 {
   "id": 970,
-  "name": "glimmora",
-  "classification": "광석포켓몬",
-  "height": 1.5,
-  "weight": 45,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "장난치고 노는 것을 무엇보다 좋아한다. 털을 문질러서 상대의 생기가 바닥날 때까지 흡수한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "toxic-debris",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "부식",
-      "description": "강철타입이나 독타입도\n독 상태로 만들 수 있다."
-    }
-  ]
+  "name": "킬라플로르",
+  "abilities": [],
+  "flavorTexts": []
 }

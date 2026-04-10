@@ -1,28 +1,6 @@
 {
   "id": 934,
-  "name": "garganacl",
-  "classification": "암염포켓몬",
-  "height": 2.3,
-  "weight": 240,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "불꽃을 조종하는 기술을 가지고 있어 먼 옛날부터 사람들에게 소중히 여겨지던 포켓몬이다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "purifying-salt",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "옹골참",
-      "description": "일격으로\n쓰러지지 않는다."
-    },
-    {
-      "name": "클리어바디",
-      "description": "상대가 능력을\n떨어뜨릴 수 없다."
-    }
-  ]
+  "name": "콜로솔트",
+  "abilities": [],
+  "flavorTexts": []
 }

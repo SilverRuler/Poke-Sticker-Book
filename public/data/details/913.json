@@ -1,28 +1,6 @@
 {
   "id": 913,
-  "name": "quaxwell",
-  "classification": "레슨포켓몬",
-  "height": 1.2,
-  "weight": 21.5,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "발차기 한 번에 트럭을 굴려 버릴 정도로 강한 다릿심을 활용하여 이국적인 춤을 선보인다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "이국적인 느낌이 강한 댄스로 보는 이를 매료시킨 다음 물로 만든 깃털 장식을 휘둘러 베어 버린다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "급류",
-      "description": "위급할 때 물타입의\n위력이 올라간다."
-    },
-    {
-      "name": "자기과신",
-      "description": "상대를 쓰러뜨리면\n공격이 올라간다."
-    }
-  ]
+  "name": "아꾸왁",
+  "abilities": [],
+  "flavorTexts": []
 }

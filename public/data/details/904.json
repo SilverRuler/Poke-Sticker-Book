@@ -1,28 +1,6 @@
 {
   "id": 904,
-  "name": "overqwil",
-  "classification": "침붕포켓몬몬",
-  "height": 2.5,
-  "weight": 60.5,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS 아르세우스",
-      "text": "바다를 건너 날아와 혹독한 겨울의 끝을 알린다. 자애로움이 히스이 땅에 새로운 생명을 싹틔우게 했다는 전승이 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "독가시",
-      "description": "접촉한 상대를\n중독시킬 때가 있다."
-    },
-    {
-      "name": "쓱쓱",
-      "description": "비가 올 때 스피드가\n올라간다."
-    },
-    {
-      "name": "위협",
-      "description": "상대의 공격을\n떨어뜨린다."
-    }
-  ]
+  "name": "장침바루",
+  "abilities": [],
+  "flavorTexts": []
 }

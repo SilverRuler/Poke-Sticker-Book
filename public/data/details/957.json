@@ -1,28 +1,6 @@
 {
   "id": 957,
-  "name": "tinkatink",
-  "classification": "대장장이포켓몬",
-  "height": 0.4,
-  "weight": 8.9,
-  "gender": "암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "금속을 모으기 위해 사람이 사는 마을로 내려와 공장이나 창고를 뒤질 때도 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "틀깨기",
-      "description": "특성에 관계없이 상대에게\n기술을 쓸 수 있다."
-    },
-    {
-      "name": "마이페이스",
-      "description": "혼란 상태가\n되지 않는다."
-    },
-    {
-      "name": "나쁜손버릇",
-      "description": "닿은 상대로부터\n도구를 훔친다."
-    }
-  ]
+  "name": "어리짱",
+  "abilities": [],
+  "flavorTexts": []
 }

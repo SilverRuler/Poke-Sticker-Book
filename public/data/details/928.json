@@ -1,28 +1,6 @@
 {
   "id": 928,
-  "name": "smoliv",
-  "classification": "올리브포켓몬",
-  "height": 0.3,
-  "weight": 6.5,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "신선한 향기가 나는 맛있는 오일을 나눠 준다. 오래전부터 인간과 공존해 왔다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "햇빛을 충분히 쬐어 머리의 열매가 익으면 마을을 떠나 여행에 나선다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "일찍기상",
-      "description": "잠듦 상태에서\n빨리 깨어난다."
-    },
-    {
-      "name": "수확",
-      "description": "사용한 나무열매를\n몇 번이고 만들어 낸다."
-    }
-  ]
+  "name": "미니브",
+  "abilities": [],
+  "flavorTexts": []
 }

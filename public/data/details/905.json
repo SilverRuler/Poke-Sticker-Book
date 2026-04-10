@@ -1,28 +1,6 @@
 {
   "id": 905,
-  "name": "enamorus-incarnate",
-  "classification": "애증포켓몬",
-  "height": 1.6,
-  "weight": 48,
-  "gender": "암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "복슬복슬한 털은 식물에 가까운 성분으로 이루어져 있다. 수시로 세수를 하면서 건조해지는 것을 방지한다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "몸에서 나오는 달콤한 향기로 주위를 매료시킨다. 햇빛에 닿으면 향기가 더욱 강해진다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "헤롱헤롱바디",
-      "description": "스치면 헤롱헤롱 상태가\n될 때가 있다."
-    },
-    {
-      "name": "심술꾸러기",
-      "description": "능력의 변화가\n역전된다."
-    }
-  ]
+  "name": "러브로스",
+  "abilities": [],
+  "flavorTexts": []
 }

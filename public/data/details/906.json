@@ -1,28 +1,6 @@
 {
   "id": 906,
-  "name": "sprigatito",
-  "classification": "풀고양이포켓몬",
-  "height": 0.4,
-  "weight": 4.1,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "긴 털 아래 숨긴 덩굴을 능숙하게 다뤄서 단단한 꽃봉오리로 상대를 가격한다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "털의 강도는 기분에 따라 변한다. 전투태세에 들어가면 바늘처럼 예리하고 뾰족해진다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "심록",
-      "description": "위급할 때 풀타입의\n위력이 올라간다."
-    },
-    {
-      "name": "변환자재",
-      "description": "사용한 기술과 같은\n타입으로 변화한다."
-    }
-  ]
+  "name": "나오하",
+  "abilities": [],
+  "flavorTexts": []
 }

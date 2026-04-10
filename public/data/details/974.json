@@ -1,32 +1,6 @@
 {
   "id": 974,
-  "name": "cetoddle",
-  "classification": "육지고래포켓몬",
-  "height": 1.2,
-  "weight": 45,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "빙설 지대를 떼 지어 다닌다. 강인한 근육과 두꺼운 피하지방으로 몸을 보호한다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "얼음 에너지를 집중시키면 위턱의 뿔이 초저온이 되어 주위를 얼려 버린다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "두꺼운지방",
-      "description": "불꽃과 얼음타입의\n기술에 강하다."
-    },
-    {
-      "name": "눈숨기",
-      "description": "날씨가 싸라기눈일 때\n회피율이 올라간다."
-    },
-    {
-      "name": "우격다짐",
-      "description": "힘이 강해지지만\n추가 효과가 없어진다."
-    }
-  ]
+  "name": "터벅고래",
+  "abilities": [],
+  "flavorTexts": []
 }

@@ -1,32 +1,6 @@
 {
   "id": 923,
-  "name": "pawmot",
-  "classification": "손길포켓몬",
-  "height": 0.9,
-  "weight": 41,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "호흡이 척척 맞는 콤비네이션으로 집의 재료가 될 만한 것을 앞니로 잘라 내어 가지고 간다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "언제나 두 마리가 함께한다. 발견한 먹이는 정확히 반으로 나눠서 사이좋게 먹는다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "축전",
-      "description": "전기를 받으면\n회복한다."
-    },
-    {
-      "name": "자연회복",
-      "description": "배틀에서 일단 물러나면\n상태 이상이 회복된다."
-    },
-    {
-      "name": "철주먹",
-      "description": "펀치를 사용하는 기술의\n위력이 올라간다."
-    }
-  ]
+  "name": "빠르모트",
+  "abilities": [],
+  "flavorTexts": []
 }

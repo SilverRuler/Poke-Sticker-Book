@@ -1,32 +1,6 @@
 {
   "id": 979,
-  "name": "annihilape",
-  "classification": "분노숭이포켓몬",
-  "height": 1.2,
-  "weight": 56,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "적에게 공격을 받으면 몸에서 굵은 가시를 내지르며 반격한다. 몸이 끊어질 각오가 필요한 위험한 기술이다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "연못이나 늪의 밑바닥에서 산다. 등에 우파를 태우고 헤엄치며 건너편까지 옮겨다 준다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "의기양양",
-      "description": "잠듦 상태가\n되지 않는다."
-    },
-    {
-      "name": "정신력",
-      "description": "풀죽지 않는다."
-    },
-    {
-      "name": "오기",
-      "description": "능력이 떨어지면\n공격이 올라간다."
-    }
-  ]
+  "name": "저승갓숭",
+  "abilities": [],
+  "flavorTexts": []
 }

@@ -1,28 +1,6 @@
 {
   "id": 967,
-  "name": "cyclizar",
-  "classification": "라이드포켓몬",
-  "height": 1.6,
-  "weight": 63,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "적에게 공격을 받으면 털을 주먹처럼 사용하여 폭풍 같은 기세로 펀치를 날린다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "건조한 사막에 산다. 땅속의 철분을 먹으며 금속으로 된 몸을 유지하고 있다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "탈피",
-      "description": "상태 이상을\n회복할 때가 있다."
-    },
-    {
-      "name": "재생력",
-      "description": "볼에 넣으면 HP가\n조금 회복된다."
-    }
-  ]
+  "name": "모토마",
+  "abilities": [],
+  "flavorTexts": []
 }

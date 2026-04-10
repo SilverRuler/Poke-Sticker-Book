@@ -1,24 +1,6 @@
 {
   "id": 1003,
-  "name": "ting-lu",
-  "classification": "재액포켓몬",
-  "height": 2.7,
-  "weight": 699.7,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "3000도의 불꽃을 조종한다. 바위와 자갈을 녹여서 만든 마그마의 바다를 유유히 헤엄친다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "여러 분쟁의 불씨가 된 곡옥에 모여든 질투가 불꽃을 두르고 포켓몬이 되었다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "vessel-of-ruin",
-      "description": "설명이 없습니다."
-    }
-  ]
+  "name": "딩루",
+  "abilities": [],
+  "flavorTexts": []
 }

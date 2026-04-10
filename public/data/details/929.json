@@ -1,28 +1,6 @@
 {
   "id": 929,
-  "name": "dolliv",
-  "classification": "올리브포켓몬",
-  "height": 0.6,
-  "weight": 11.9,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "온화하면서도 매우 자비롭다. 영양이 풍부한 맛있는 오일을 약해진 포켓몬에게 나눠 준다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "진하고 좋은 향이 나는 오일을 암석조차도 꿰뚫어 버릴 기세로 발사하여 적을 물리친다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "일찍기상",
-      "description": "잠듦 상태에서\n빨리 깨어난다."
-    },
-    {
-      "name": "수확",
-      "description": "사용한 나무열매를\n몇 번이고 만들어 낸다."
-    }
-  ]
+  "name": "올리뇨",
+  "abilities": [],
+  "flavorTexts": []
 }

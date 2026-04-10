@@ -1,24 +1,6 @@
 {
   "id": 969,
-  "name": "glimmet",
-  "classification": "광석포켓몬",
-  "height": 0.7,
-  "weight": 8,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "독성분으로 이루어진 커다란 꽃을 피운다. 초롱순들과 연계해서 상대를 격퇴한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "toxic-debris",
-      "description": "설명이 없습니다."
-    },
-    {
-      "name": "부식",
-      "description": "강철타입이나 독타입도\n독 상태로 만들 수 있다."
-    }
-  ]
+  "name": "초롱순",
+  "abilities": [],
+  "flavorTexts": []
 }

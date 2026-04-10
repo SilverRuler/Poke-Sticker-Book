@@ -1,28 +1,6 @@
 {
   "id": 977,
-  "name": "dondozo",
-  "classification": "큰메기포켓몬",
-  "height": 12,
-  "weight": 220,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "Pokémon LEGENDS Z-A",
-      "text": "파트너로 삼을 어써러셔를 서로 차지하기 위해 싸리용끼리 치열한 싸움을 벌인다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "천진",
-      "description": "상대의 능력\n변화를 무시한다."
-    },
-    {
-      "name": "둔감",
-      "description": "헤롱헤롱이나 도발 상태가\n되지 않는다."
-    },
-    {
-      "name": "수의베일",
-      "description": "화상 상태가\n되지 않는다."
-    }
-  ]
+  "name": "어써러셔",
+  "abilities": [],
+  "flavorTexts": []
 }

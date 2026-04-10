@@ -1,28 +1,6 @@
 {
   "id": 954,
-  "name": "rabsca",
-  "classification": "굴리기포켓몬",
-  "height": 0.3,
-  "weight": 3.5,
-  "gender": "수컷, 암컷",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "배의 하늘하늘한 부분에서 나오는 사이코 파워를 통해, 겨우 1cm지만 발끝이 지상에 떠 있다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "황무지를 달리며 지낸다. 좋아하는 나무열매를 빼앗기면 쫓아와서 복수한다."
-    }
-  ],
-  "abilities": [
-    {
-      "name": "싱크로",
-      "description": "독, 마비, 화상을\n상대에게 옮긴다."
-    },
-    {
-      "name": "텔레파시",
-      "description": "같은 편의 공격의 낌새를\n읽고 기술을 받지 않는다."
-    }
-  ]
+  "name": "베라카스",
+  "abilities": [],
+  "flavorTexts": []
 }

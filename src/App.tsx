@@ -35,7 +35,7 @@ function App() {
   const [serverDate, setServerDate] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const [activeTab, setActiveTab] = useState<"main" | "pending">("main");
+  const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery">("main");
   
   const [loginId, setLoginId] = useState("");
   const [loginPw, setLoginPw] = useState("");
@@ -472,7 +472,7 @@ function App() {
     if (keys.length === 0) {
       return (
         <div className="empty-state">
-          <p>아직 {isPending ? "예정 " : ""}수집된 포켓몬이 없습니다.</p>
+          <p>아직 {isPending ? "띠부씰 예정 " : ""}수집된 띠부씰이 없습니다.</p>
         </div>
       );
     }
@@ -515,6 +515,34 @@ function App() {
               <div className="pokemon-count">보유: {count}개</div>
             </div>
           );
+        })}
+      </div>
+    );
+  };
+
+  const renderGallery = () => {
+    return (
+      <div className="pokemon-grid">
+        {pokemonData.map((entry) => {
+          return entry.forms.map((form) => {
+            const key = `${entry.id}-${form.formId}`;
+            return (
+              <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
+                <div className="card-header">
+                  <span className="pokemon-no">No.{entry.id.toString().padStart(4, "0")}</span>
+                </div>
+                <div className="image-wrapper">
+                  <img src={form.image} alt={form.name} loading="lazy" />
+                </div>
+                <div className="pokemon-name">{form.name}</div>
+                <div className="pokemon-types">
+                  {form.types.map((t, i) => (
+                    <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            );
+          });
         })}
       </div>
     );
@@ -737,22 +765,23 @@ function App() {
       </section>
 
       <div className="tab-menu">
-        <button className={`tab-btn ${activeTab === "main" ? "active" : ""}`} onClick={() => setActiveTab("main")}>포켓몬 도감</button>
-        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => setActiveTab("pending")}>포켓몬 예정 도감</button>
+        <button className={`tab-btn ${activeTab === "main" ? "active" : ""}`} onClick={() => setActiveTab("main")}>띠부씰 도감</button>
+        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => setActiveTab("pending")}>띠부씰 예정 도감</button>
+        <button className={`tab-btn ${activeTab === "gallery" ? "active" : ""}`} onClick={() => setActiveTab("gallery")}>전체 포켓몬 확인</button>
       </div>
 
       <nav className="nav-bar">
-        <button onClick={() => handleRegisterClick(activeTab === "pending")} className="btn btn-primary">포켓몬 등록</button>
+        <button onClick={() => handleRegisterClick(activeTab === "pending")} className="btn btn-primary">띠부씰 등록</button>
         <button onClick={() => checkDuplicate(activeTab === "pending")} className="btn btn-secondary">중복 확인</button>
-        <button onClick={() => searchPokemon(activeTab === "pending")} className="btn btn-info">도감 검색</button>
+        <button onClick={() => searchPokemon(activeTab === "pending")} className="btn btn-info">보유 띠부씰 검색</button>
       </nav>
 
       <main className="content">
         <div className="stats">
-          {activeTab === "main" ? "현재 수집(종류)" : "예정 수집(종류)"}: 
-          <strong> {activeTab === "main" ? Object.keys(collection).length : Object.keys(pendingCollection).length}</strong> / 1025
+          {activeTab === "main" ? "현재 수집(종류)" : activeTab === "pending" ? "예정 수집(종류)" : "전체 포켓몬"} : 
+          <strong> {activeTab === "main" ? Object.keys(collection).length : activeTab === "pending" ? Object.keys(pendingCollection).length : pokemonData.reduce((acc, p) => acc + p.forms.length, 0)}</strong> / 1025
         </div>
-        {activeTab === "main" ? renderGrid(collection, false) : renderGrid(pendingCollection, true)}
+        {activeTab === "main" ? renderGrid(collection, false) : activeTab === "pending" ? renderGrid(pendingCollection, true) : renderGallery()}
       </main>
 
       <footer className="footer">

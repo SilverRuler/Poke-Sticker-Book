@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./App.css";
 import { pokemonData } from "./data/pokemonData";
 import type { PokemonEntry, PokemonForm } from "./data/pokemonData";
@@ -7,7 +7,7 @@ type CollectionMap = { [key: string]: number };
 
 interface ModalConfig {
   type: "alert" | "confirm" | "prompt" | "choice";
-  message: string;
+  message: React.ReactNode;
   placeholder?: string;
   choices?: { label: string; value: any }[];
   onConfirm: (value?: any) => void;
@@ -56,14 +56,15 @@ function App() {
   // Custom Modal State
   const [modal, setModal] = useState<ModalConfig | null>(null);
   const [modalInput, setModalInput] = useState("");
+  const [gallerySearchTerm, setGallerySearchTerm] = useState("");
 
-  const showAlert = (message: string) => {
+  const showAlert = (message: React.ReactNode) => {
     return new Promise((resolve) => {
       setModal({ type: "alert", message, onConfirm: () => { setModal(null); resolve(true); } });
     });
   };
 
-  const showConfirm = (message: string): Promise<boolean> => {
+  const showConfirm = (message: React.ReactNode): Promise<boolean> => {
     return new Promise((resolve) => {
       setModal({ 
         type: "confirm", 
@@ -74,7 +75,7 @@ function App() {
     });
   };
 
-  const showPrompt = (message: string, placeholder = "", inputType: "text" | "password" = "text"): Promise<string | null> => {
+  const showPrompt = (message: React.ReactNode, placeholder = "", inputType: "text" | "password" = "text"): Promise<string | null> => {
     return new Promise((resolve) => {
       setModalInput("");
       setModal({ 
@@ -88,7 +89,7 @@ function App() {
     });
   };
 
-  const showChoice = (message: string, choices: { label: string; value: any }[]): Promise<any | null> => {
+  const showChoice = (message: React.ReactNode, choices: { label: string; value: any }[]): Promise<any | null> => {
     return new Promise((resolve) => {
       setModal({
         type: "choice",
@@ -414,21 +415,25 @@ function App() {
       return;
     }
     
-    const messages: string[] = [];
+    const messages: React.ReactNode[] = [];
     entries.forEach(entry => {
       entry.forms.forEach(form => {
         const key = `${entry.id}-${form.formId}`;
         const target = isPending ? pendingCollection : collection;
         const count = target[key] || 0;
         if (count > 0) {
-          messages.push(`${form.name} 은(는) ${count}개 있습니다!`);
+          messages.push(
+            <div key={key}>
+              {form.name} 은(는) <span style={{ color: "red", fontWeight: "bold" }}>{count}</span>개 있습니다!
+            </div>
+          );
         } else {
-          messages.push(`${form.name} 은(는) 아직 보유 중이 아닙니다.`);
+          messages.push(<div key={key}>{form.name} 은(는) 아직 보유 중이 아닙니다.</div>);
         }
       });
     });
 
-    showAlert(messages.join("\n"));
+    showAlert(<div>{messages}</div>);
   };
 
   const searchPokemon = async (isPending: boolean) => {
@@ -440,16 +445,26 @@ function App() {
       return;
     }
     
-    const results: string[] = [];
+    const results: React.ReactNode[] = [];
     entries.forEach(entry => {
       entry.forms.forEach(form => {
         const key = `${entry.id}-${form.formId}`;
         const target = isPending ? pendingCollection : collection;
-        const status = target[key] > 0 ? "획득한 포켓몬 입니다." : "미획득 포켓몬 입니다.";
-        results.push(`${form.name}: ${status}`);
+        const status = target[key] > 0 ? (
+          <span>
+            <span style={{ color: "red", fontWeight: "bold" }}>획득한</span> 포켓몬 입니다.
+          </span>
+        ) : (
+          "미획득 포켓몬 입니다."
+        );
+        results.push(
+          <div key={key}>
+            {form.name}: {status}
+          </div>
+        );
       });
     });
-    showAlert(results.join("\n"));
+    showAlert(<div>{results}</div>);
   };
 
   const getPokemonByKey = (key: string): { name: string, image: string, types: string[] } | null => {
@@ -520,12 +535,44 @@ function App() {
     );
   };
 
+  const handleGallerySearch = async () => {
+    const term = await showPrompt("찾고 싶은 포켓몬 번호나 이름을 입력하세요:");
+    if (term === null) return;
+    setGallerySearchTerm(term.trim());
+  };
+
   const renderGallery = () => {
+    const filteredData = pokemonData.filter(entry => {
+      if (!gallerySearchTerm) return true;
+      const term = gallerySearchTerm.toLowerCase();
+      // Search by ID (number)
+      if (entry.id.toString() === term) return true;
+      // Search by name
+      if (entry.name.toLowerCase().includes(term)) return true;
+      // Search by form name
+      return entry.forms.some(f => f.name.toLowerCase().includes(term));
+    });
+
     return (
       <div className="pokemon-grid">
-        {pokemonData.map((entry) => {
+        {filteredData.map((entry) => {
           return entry.forms.map((form) => {
             const key = `${entry.id}-${form.formId}`;
+            
+            // If we have a search term, only show the form that matches the name if the entry itself didn't match by ID
+            // but for simplicity, if entry matched by ID, show all forms.
+            // If searched by name, show all forms of that pokemon that match the name.
+            if (gallerySearchTerm) {
+              const term = gallerySearchTerm.toLowerCase();
+              const entryIdMatch = entry.id.toString() === term;
+              const entryNameMatch = entry.name.toLowerCase().includes(term);
+              const formNameMatch = form.name.toLowerCase().includes(term);
+              
+              if (!entryIdMatch && !entryNameMatch && !formNameMatch) {
+                return null;
+              }
+            }
+
             return (
               <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
                 <div className="card-header">
@@ -560,7 +607,7 @@ function App() {
       {modal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <p className="modal-message">{modal.message}</p>
+            <div className="modal-message">{modal.message}</div>
             {modal.type === "prompt" && (
               <input 
                 className="modal-input"
@@ -765,35 +812,43 @@ function App() {
       </section>
 
       <div className="tab-menu">
-        <button className={`tab-btn ${activeTab === "main" ? "active" : ""}`} onClick={() => setActiveTab("main")}>띠부씰 도감</button>
-        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => setActiveTab("pending")}>띠부씰 예정 도감</button>
-        <button className={`tab-btn ${activeTab === "gallery" ? "active" : ""}`} onClick={() => setActiveTab("gallery")}>전체 포켓몬 확인</button>
+        <button className={`tab-btn ${activeTab === "main" ? "active" : ""}`} onClick={() => { setActiveTab("main"); setGallerySearchTerm(""); }}>띠부씰 도감</button>
+        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => { setActiveTab("pending"); setGallerySearchTerm(""); }}>띠부씰 예정 도감</button>
+        <button className={`tab-btn ${activeTab === "gallery" ? "active" : ""}`} onClick={() => { setActiveTab("gallery"); setGallerySearchTerm(""); }}>전체 포켓몬 확인</button>
       </div>
 
       <nav className="nav-bar">
-        <button 
-          onClick={() => handleRegisterClick(activeTab === "pending")} 
-          className="btn btn-primary"
-          disabled={activeTab === "gallery"}
-        >
-          띠부씰 등록
-        </button>
-        <button 
-          onClick={() => checkDuplicate(activeTab === "pending")} 
-          className="btn btn-secondary"
-          disabled={activeTab === "gallery"}
-        >
-          중복 확인
-        </button>
-        <button 
-          onClick={() => searchPokemon(activeTab === "pending")} 
-          className="btn btn-info"
-          disabled={activeTab === "gallery"}
-        >
-          보유 띠부씰 검색
-        </button>
+        {activeTab === "gallery" ? (
+          <button
+            onClick={handleGallerySearch}
+            className="btn btn-primary"
+            style={{ margin: "0 auto" }}
+          >
+            포켓몬 검색
+          </button>
+        ) : (
+          <>
+            <button
+              onClick={() => handleRegisterClick(activeTab === "pending")}
+              className="btn btn-primary"
+            >
+              띠부씰 등록
+            </button>
+            <button
+              onClick={() => checkDuplicate(activeTab === "pending")}
+              className="btn btn-secondary"
+            >
+              중복 확인
+            </button>
+            <button
+              onClick={() => searchPokemon(activeTab === "pending")}
+              className="btn btn-info"
+            >
+              보유 띠부씰 검색
+            </button>
+          </>
+        )}
       </nav>
-
       <main className="content">
         <div className="stats">
           {activeTab === "main" ? "현재 수집(종류)" : activeTab === "pending" ? "예정 수집(종류)" : "전체 포켓몬"} : 

@@ -320,7 +320,7 @@ body {
 }
 
 .tab-btn {
-  padding: 10px 30px;
+  padding: 10px 20px;
   border: 2px solid #ddd;
   background: white;
   cursor: pointer;
@@ -328,6 +328,10 @@ body {
   font-weight: bold;
   transition: all 0.2s;
   color: #666;
+  white-space: nowrap;
+  flex: 1;
+  text-align: center;
+  font-size: 0.95rem;
 }
 
 .tab-btn.active {
@@ -915,5 +919,16 @@ body {
   .today-date {
     font-size: 0.8rem;
     padding: 2px 6px;
+  }
+  .tab-menu {
+    gap: 5px;
+    padding: 0 10px;
+    flex-wrap: wrap;
+  }
+  .tab-btn {
+    padding: 10px 5px;
+    font-size: 0.75rem;
+    min-width: 80px;
+    border-radius: 8px;
   }
 }

@@ -582,15 +582,17 @@ function App() {
                   <div className="detail-left">
                     <div className="detail-img-box">
                       <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
-                      <div className="anniversary-toggle">
-                        <label>
-                          <input 
-                            type="checkbox" 
-                            checked={anniversaryCollection.includes(detailKey)}
-                            onChange={() => toggleAnniversary(detailKey)}
-                          /> <span className="red">30</span>th
-                        </label>
-                      </div>
+                      {(activeTab === "pending" || isLoggedIn) && (
+                        <div className="anniversary-toggle">
+                          <label>
+                            <input 
+                              type="checkbox" 
+                              checked={anniversaryCollection.includes(detailKey)}
+                              onChange={() => toggleAnniversary(detailKey)}
+                            /> <span className="red">30</span>th
+                          </label>
+                        </div>
+                      )}
                     </div>
                     <div className="detail-form-info">
                       {getPokemonByKey(detailKey)?.name}

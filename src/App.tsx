@@ -842,50 +842,57 @@ function App() {
 
       <nav className="nav-bar">
         {activeTab === "gallery" ? (
-          <div style={{ display: "flex", gap: "5px", justifyContent: "center", width: "100%" }}>
-            <button
-              onClick={handleGallerySearch}
-              className="btn btn-primary"
-            >
-              포켓몬 검색
-            </button>
-            {gallerySearchTerm && (
-              <button 
-                onClick={() => setGallerySearchTerm("")}
-                className="btn btn-cancel"
+          <>
+            <div className="nav-group">
+              <button
+                onClick={handleGallerySearch}
+                className="btn btn-primary"
               >
-                검색 초기화
+                포켓몬 검색
               </button>
+            </div>
+            {gallerySearchTerm && (
+              <div className="reset-group">
+                <button 
+                  onClick={() => setGallerySearchTerm("")}
+                  className="btn btn-cancel"
+                >
+                  검색 초기화
+                </button>
+              </div>
             )}
-          </div>
+          </>
         ) : (
           <>
-            <button
-              onClick={() => handleRegisterClick(activeTab === "pending")}
-              className="btn btn-primary"
-            >
-              띠부씰 등록
-            </button>
-            <button
-              onClick={() => checkDuplicate(activeTab === "pending")}
-              className="btn btn-secondary"
-            >
-              중복 확인
-            </button>
-            <button
-              onClick={() => searchPokemon(activeTab === "pending")}
-              className="btn btn-info"
-            >
-              {activeTab === "pending" ? "예정 띠부씰 검색" : "보유 띠부씰 검색"}
-            </button>
-            {gallerySearchTerm && (
-              <button 
-                onClick={() => setGallerySearchTerm("")}
-                className="btn btn-cancel"
-                style={{ marginLeft: "5px" }}
+            <div className="nav-group">
+              <button
+                onClick={() => handleRegisterClick(activeTab === "pending")}
+                className="btn btn-primary"
               >
-                검색 초기화
+                띠부씰 등록
               </button>
+              <button
+                onClick={() => checkDuplicate(activeTab === "pending")}
+                className="btn btn-secondary"
+              >
+                중복 확인
+              </button>
+              <button
+                onClick={() => searchPokemon(activeTab === "pending")}
+                className="btn btn-info"
+              >
+                {activeTab === "pending" ? "예정 띠부씰 검색" : "보유 띠부씰 검색"}
+              </button>
+            </div>
+            {gallerySearchTerm && (
+              <div className="reset-group">
+                <button 
+                  onClick={() => setGallerySearchTerm("")}
+                  className="btn btn-cancel"
+                >
+                  검색 초기화
+                </button>
+              </div>
             )}
           </>
         )}

@@ -34,7 +34,6 @@ function App() {
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
   const [serverDate, setServerDate] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
-  const [searchResult, setSearchResult] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<"main" | "pending">("main");
   
@@ -415,19 +414,21 @@ function App() {
       return;
     }
     
-    let foundAny = false;
+    const messages: string[] = [];
     entries.forEach(entry => {
       entry.forms.forEach(form => {
         const key = `${entry.id}-${form.formId}`;
         const target = isPending ? pendingCollection : collection;
         const count = target[key] || 0;
         if (count > 0) {
-          showAlert(`[중복] ${form.name}은(는) ${count}개 있습니다!`);
-          foundAny = true;
+          messages.push(`[중복] ${form.name}은(는) ${count}개 있습니다!`);
         }
       });
     });
-    if (!foundAny) {
+
+    if (messages.length > 0) {
+      showAlert(messages.join("\n"));
+    } else {
       showAlert("아직 보유 중이 아닙니다.");
     }
   };
@@ -450,7 +451,7 @@ function App() {
         results.push(`${form.name}: ${status}`);
       });
     });
-    setSearchResult(results.join("\n"));
+    showAlert(results.join("\n"));
   };
 
   const getPokemonByKey = (key: string): { name: string, image: string, types: string[] } | null => {
@@ -749,12 +750,6 @@ function App() {
       </nav>
 
       <main className="content">
-        {searchResult && (
-          <div className="search-result-box" style={{ whiteSpace: "pre-line" }}>
-            <p>{searchResult}</p>
-            <button onClick={() => setSearchResult(null)}>닫기</button>
-          </div>
-        )}
         <div className="stats">
           {activeTab === "main" ? "현재 수집(종류)" : "예정 수집(종류)"}: 
           <strong> {activeTab === "main" ? Object.keys(collection).length : Object.keys(pendingCollection).length}</strong> / 1025

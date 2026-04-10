@@ -842,13 +842,22 @@ function App() {
 
       <nav className="nav-bar">
         {activeTab === "gallery" ? (
-          <button
-            onClick={handleGallerySearch}
-            className="btn btn-primary"
-            style={{ margin: "0 auto" }}
-          >
-            포켓몬 검색
-          </button>
+          <div style={{ display: "flex", gap: "5px", justifyContent: "center", width: "100%" }}>
+            <button
+              onClick={handleGallerySearch}
+              className="btn btn-primary"
+            >
+              포켓몬 검색
+            </button>
+            {gallerySearchTerm && (
+              <button 
+                onClick={() => setGallerySearchTerm("")}
+                className="btn btn-cancel"
+              >
+                검색 초기화
+              </button>
+            )}
+          </div>
         ) : (
           <>
             <button

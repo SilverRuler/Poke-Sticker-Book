@@ -1,6 +1,32 @@
 {
   "id": 974,
   "name": "터벅고래",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "육지고래포켓몬",
+  "height": 1.2,
+  "weight": 45.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "두꺼운지방",
+      "description": "불꽃과 얼음타입의 기술에 강하다."
+    },
+    {
+      "name": "눈숨기",
+      "description": "날씨가 싸라기눈일 때 회피율이 올라간다."
+    },
+    {
+      "name": "우격다짐",
+      "description": "힘이 강해지지만 추가 효과가 없어진다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer."
+    },
+    {
+      "version": "violet",
+      "text": "It lives in frigid regions in pods of five or so individuals. It loves the minerals found in snow and ice."
+    }
+  ]
 }

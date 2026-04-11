@@ -1,6 +1,28 @@
 {
   "id": 917,
   "name": "타랜툴라",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "실타래포켓몬",
+  "height": 0.3,
+  "weight": 4.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "불면",
+      "description": "잠듦 상태가 되지 않는다."
+    },
+    {
+      "name": "잠복",
+      "description": "교체로 나온 상대에게 2배 데미지로 공격할 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pokémon’s natural enemy."
+    },
+    {
+      "version": "violet",
+      "text": "The thread it secretes from its rear is as strong as wire. The secret behind the thread’s strength is the topic of ongoing research."
+    }
+  ]
 }

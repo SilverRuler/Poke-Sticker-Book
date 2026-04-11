@@ -1,6 +1,32 @@
 {
   "id": 925,
   "name": "파밀리쥐",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패밀리포켓몬",
+  "height": 0.3,
+  "weight": 2.3,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "프렌드가드",
+      "description": "같은 편의 데미지를 줄일 수 있다."
+    },
+    {
+      "name": "볼주머니",
+      "description": "어떤 나무열매라도 먹으면 HP도 회복한다."
+    },
+    {
+      "name": "테크니션",
+      "description": "약한 기술의 위력이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure."
+    },
+    {
+      "version": "violet",
+      "text": "The larger pair protects the little ones during battles. When facing strong opponents, the whole group will join the fight."
+    }
+  ]
 }

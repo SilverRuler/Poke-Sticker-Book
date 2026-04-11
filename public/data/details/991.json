@@ -1,6 +1,24 @@
 {
   "id": 991,
   "name": "무쇠보따리",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 0.6,
+  "weight": 11.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "quark-drive",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization."
+    },
+    {
+      "version": "violet",
+      "text": "It resembles a mysterious object mentioned in an old book. There are only two reported sightings of this Pokémon."
+    }
+  ]
 }

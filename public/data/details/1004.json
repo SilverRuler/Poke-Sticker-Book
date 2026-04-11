@@ -1,6 +1,24 @@
 {
   "id": 1004,
   "name": "위유이",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "재액포켓몬",
+  "height": 0.4,
+  "weight": 4.9,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "beads-of-ruin",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand."
+    },
+    {
+      "version": "violet",
+      "text": "The envy accumulated within curved beads that sparked multiple conflicts has clad itself in fire and become a Pokémon."
+    }
+  ]
 }

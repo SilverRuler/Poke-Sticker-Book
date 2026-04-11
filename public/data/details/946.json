@@ -1,6 +1,28 @@
 {
   "id": 946,
   "name": "그푸리",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "회전초포켓몬",
+  "height": 0.6,
+  "weight": 0.6,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "wind-rider",
+      "description": ""
+    },
+    {
+      "name": "틈새포착",
+      "description": "상대의 벽을 뚫고 공격한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pokémon."
+    },
+    {
+      "version": "violet",
+      "text": "Not even Bramblin knows where it is headed as it tumbles across the wilderness, blown by the wind. It loathes getting wet."
+    }
+  ]
 }

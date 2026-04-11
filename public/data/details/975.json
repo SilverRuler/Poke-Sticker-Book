@@ -1,6 +1,32 @@
 {
   "id": 975,
   "name": "우락고래",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "육지고래포켓몬",
+  "height": 4.5,
+  "weight": 700.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "두꺼운지방",
+      "description": "불꽃과 얼음타입의 기술에 강하다."
+    },
+    {
+      "name": "눈치우기",
+      "description": "날씨가 싸라기눈일 때 스피드가 올라간다."
+    },
+    {
+      "name": "우격다짐",
+      "description": "힘이 강해지지만 추가 효과가 없어진다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin."
+    },
+    {
+      "version": "violet",
+      "text": "Ice energy builds up in the horn on its upper jaw, causing the horn to reach cryogenic temperatures that freeze its surroundings."
+    }
+  ]
 }

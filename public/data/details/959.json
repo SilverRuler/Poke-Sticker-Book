@@ -1,6 +1,32 @@
 {
   "id": 959,
   "name": "두드리짱",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "해머포켓몬",
+  "height": 0.7,
+  "weight": 112.8,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "틀깨기",
+      "description": "특성에 관계없이 상대에게 기술을 쓸 수 있다."
+    },
+    {
+      "name": "마이페이스",
+      "description": "혼란 상태가 되지 않는다."
+    },
+    {
+      "name": "나쁜손버릇",
+      "description": "닿은 상대로부터 도구를 훔친다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight."
+    },
+    {
+      "version": "violet",
+      "text": "The hammer tops 220 pounds, yet it gets swung around easily by Tinkaton as it steals whatever it pleases and carries its plunder back home."
+    }
+  ]
 }

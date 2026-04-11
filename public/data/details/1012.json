@@ -1,6 +1,28 @@
 {
   "id": 1012,
   "name": "차데스",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "말차포켓몬",
+  "height": 0.1,
+  "weight": 1.1,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "대접",
+      "description": ""
+    },
+    {
+      "name": "내열",
+      "description": "불꽃 기술의 위력을 약하게 한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon."
+    },
+    {
+      "version": "violet",
+      "text": "Poltchageist looks like a regional form of Sinistea, but it was recently discovered that the two Pokémon are entirely unrelated."
+    }
+  ]
 }

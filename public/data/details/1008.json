@@ -1,6 +1,24 @@
 {
   "id": 1008,
   "name": "미라이돈",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 3.5,
+  "weight": 240.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "hadron-engine",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful."
+    },
+    {
+      "version": "violet",
+      "text": "This seems to be the Iron Serpent mentioned in an old book. The Iron Serpent is said to have turned the land to ash with its lightning."
+    }
+  ]
 }

@@ -1,6 +1,24 @@
 {
   "id": 999,
   "name": "모으령",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "보물상자포켓몬",
+  "height": 0.3,
+  "weight": 5.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "주눅",
+      "description": "주눅이 들어 스피드가 올라가는 타입이 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure."
+    },
+    {
+      "version": "violet",
+      "text": "It lives inside an old treasure chest. Sometimes it gets left in shop corners since no one realizes it’s actually a Pokémon."
+    }
+  ]
 }

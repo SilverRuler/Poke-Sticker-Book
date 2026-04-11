@@ -1,6 +1,28 @@
 {
   "id": 906,
   "name": "나오하",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "풀고양이포켓몬",
+  "height": 0.4,
+  "weight": 4.1,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "심록",
+      "description": "위급할 때 풀타입의 위력이 올라간다."
+    },
+    {
+      "name": "변환자재",
+      "description": "사용한 기술과 같은 타입으로 변화한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Its fluffy fur is similar in composition to plants. This Pokémon frequently washes its face to keep it from drying out."
+    },
+    {
+      "version": "violet",
+      "text": "The sweet scent its body gives off mesmerizes those around it. The scent grows stronger when this Pokémon is in the sun."
+    }
+  ]
 }

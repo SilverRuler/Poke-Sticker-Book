@@ -1,6 +1,28 @@
 {
   "id": 909,
   "name": "뜨아거",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "불꽃악어포켓몬",
+  "height": 0.4,
+  "weight": 9.8,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "맹화",
+      "description": "위급할 때 불꽃타입의 위력이 올라간다."
+    },
+    {
+      "name": "천진",
+      "description": "상대의 능력 변화를 무시한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy."
+    },
+    {
+      "version": "violet",
+      "text": "Its flame sac is small, so energy is always leaking out. This energy is released from the dent atop Fuecoco’s head and flickers to and fro."
+    }
+  ]
 }

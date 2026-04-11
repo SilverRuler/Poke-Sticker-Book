@@ -1,6 +1,32 @@
 {
   "id": 952,
   "name": "스코빌런",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "하바네로포켓몬",
+  "height": 0.9,
+  "weight": 15.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "엽록소",
+      "description": "맑을 때 스피드가 올라간다."
+    },
+    {
+      "name": "불면",
+      "description": "잠듦 상태가 되지 않는다."
+    },
+    {
+      "name": "변덕쟁이",
+      "description": "능력이 오르락내리락한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame."
+    },
+    {
+      "version": "violet",
+      "text": "The green head has turned vicious due to the spicy chemicals stimulating its brain. Once it goes on a rampage, there is no stopping it."
+    }
+  ]
 }

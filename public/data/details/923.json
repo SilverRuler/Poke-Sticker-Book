@@ -1,6 +1,32 @@
 {
   "id": 923,
   "name": "빠르모트",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "손길포켓몬",
+  "height": 0.9,
+  "weight": 41.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "축전",
+      "description": "전기를 받으면 회복한다."
+    },
+    {
+      "name": "자연회복",
+      "description": "배틀에서 일단 물러나면 상태 이상이 회복된다."
+    },
+    {
+      "name": "철주먹",
+      "description": "펀치를 사용하는 기술의 위력이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements."
+    },
+    {
+      "version": "violet",
+      "text": "Pawmot’s fluffy fur acts as a battery. It can store the same amount of electricity as an electric car."
+    }
+  ]
 }

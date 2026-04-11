@@ -1,6 +1,24 @@
 {
   "id": 1009,
   "name": "굽이치는물결",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 3.5,
+  "weight": 280.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal."
+    },
+    {
+      "version": "violet",
+      "text": "It resembles an illustration published in a paranormal magazine, said to be a depiction of a super-ancient Suicune."
+    }
+  ]
 }

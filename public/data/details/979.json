@@ -1,6 +1,32 @@
 {
   "id": 979,
   "name": "저승갓숭",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "분노숭이포켓몬",
+  "height": 1.2,
+  "weight": 56.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "의기양양",
+      "description": "잠듦 상태가 되지 않는다."
+    },
+    {
+      "name": "정신력",
+      "description": "풀죽지 않는다."
+    },
+    {
+      "name": "오기",
+      "description": "능력이 떨어지면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body."
+    },
+    {
+      "version": "violet",
+      "text": "It imbues its fists with the power of the rage that it kept hidden in its heart. Opponents struck by these imbued fists will be shattered to their core."
+    }
+  ]
 }

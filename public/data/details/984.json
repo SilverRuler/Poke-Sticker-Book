@@ -1,6 +1,24 @@
 {
   "id": 984,
   "name": "위대한엄니",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 2.2,
+  "weight": 320.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Sightings of this Pokémon have occurred in recent years. The name Great Tusk was taken from a creature listed in a certain book."
+    },
+    {
+      "version": "violet",
+      "text": "This creature resembles a mysterious Pokémon that, according to a paranormal magazine, has lived since ancient times."
+    }
+  ]
 }

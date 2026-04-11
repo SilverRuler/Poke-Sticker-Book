@@ -1,6 +1,24 @@
 {
   "id": 905,
   "name": "러브로스",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "애증포켓몬",
+  "height": 1.6,
+  "weight": 48.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "헤롱헤롱바디",
+      "description": "스치면 헤롱헤롱 상태가 될 때가 있다."
+    },
+    {
+      "name": "심술꾸러기",
+      "description": "능력의 변화가 역전된다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "legends-arceus",
+      "text": "When it flies to this land from across the sea, the bitter winter comes to an end. According to legend, this Pokémon's love gives rise to the budding of fresh life across Hisui."
+    }
+  ]
 }

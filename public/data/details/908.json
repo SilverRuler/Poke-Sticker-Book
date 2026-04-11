@@ -1,6 +1,28 @@
 {
   "id": 908,
   "name": "마스카나",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "매지션포켓몬",
+  "height": 1.5,
+  "weight": 31.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "심록",
+      "description": "위급할 때 풀타입의 위력이 올라간다."
+    },
+    {
+      "name": "변환자재",
+      "description": "사용한 기술과 같은 타입으로 변화한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon uses the reflective fur lining its cape to camouflage the stem of its flower, creating the illusion that the flower is floating."
+    },
+    {
+      "version": "violet",
+      "text": "With skillful misdirection, it rigs foes with pollen-packed flower bombs. Meowscarada sets off the bombs before its foes realize what’s going on."
+    }
+  ]
 }

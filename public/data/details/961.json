@@ -1,6 +1,32 @@
 {
   "id": 961,
   "name": "바닥트리오",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "정원장어포켓몬",
+  "height": 1.2,
+  "weight": 5.4,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "미끈미끈",
+      "description": "접촉한 상대의 스피드를 떨어뜨린다."
+    },
+    {
+      "name": "주눅",
+      "description": "주눅이 들어 스피드가 올라가는 타입이 있다."
+    },
+    {
+      "name": "모래숨기",
+      "description": "모래바람으로 회피율이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den."
+    },
+    {
+      "version": "violet",
+      "text": "A variety of fish Pokémon, Wugtrio was once considered to be a regional form of Dugtrio."
+    }
+  ]
 }

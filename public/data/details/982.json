@@ -1,6 +1,32 @@
 {
   "id": 982,
   "name": "노고고치",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "땅뱀포켓몬",
+  "height": 3.6,
+  "weight": 39.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "하늘의은총",
+      "description": "기술의 추가 효과가 나오기 쉽다."
+    },
+    {
+      "name": "도주",
+      "description": "야생 포켓몬으로부터 반드시 도망칠 수 있다."
+    },
+    {
+      "name": "주눅",
+      "description": "주눅이 들어 스피드가 올라가는 타입이 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles."
+    },
+    {
+      "version": "violet",
+      "text": "It drives enemies out of its nest by sucking in enough air to fill its long, narrow lungs, then releasing the air in an intense blast."
+    }
+  ]
 }

@@ -1,6 +1,28 @@
 {
   "id": 927,
   "name": "바우첼",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "개포켓몬",
+  "height": 0.5,
+  "weight": 14.9,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "well-baked-body",
+      "description": ""
+    },
+    {
+      "name": "아로마베일",
+      "description": "같은 편으로 향하는 멘탈 공격을 막는다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages."
+    },
+    {
+      "version": "violet",
+      "text": "The surface of this Pokémon’s skin hardens when exposed to intense heat, and its body has an appetizing aroma."
+    }
+  ]
 }

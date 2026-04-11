@@ -1,6 +1,24 @@
 {
   "id": 949,
   "name": "육파리",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "목이버섯포켓몬",
+  "height": 1.9,
+  "weight": 58.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "mycelium-might",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach."
+    },
+    {
+      "version": "violet",
+      "text": "It coils its 10 tentacles around prey and sucks out their nutrients, causing the prey pain. The folds along the rim of its head are a popular delicacy."
+    }
+  ]
 }

@@ -4,21 +4,21 @@
   "classification": "테라스탈포켓몬",
   "height": 0.2,
   "weight": 6.5,
-  "gender": "성별없음",
-  "flavorTexts": [
-    {
-      "version": "스칼렛",
-      "text": "에너지를 단단한 결정으로 바꾸는 능력으로 몸을 지킨다. 테라스탈의 근원이 되는 포켓몬이다."
-    },
-    {
-      "version": "바이올렛",
-      "text": "에너지를 단단한 결정으로 바꾸는 능력으로 몸을 지킨다. 테라스탈의 근원이 되는 포켓몬이다."
-    }
-  ],
+  "gender": "성별불명",
   "abilities": [
     {
       "name": "테라체인지",
-      "description": "등장했을 때 주위의 에너지를 흡수하여 테라스탈폼으로 변화한다."
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon."
+    },
+    {
+      "version": "violet",
+      "text": "It’s thought that this Pokémon lived in ancient Paldea until it got caught in seismic shifts and went extinct."
     }
   ]
 }

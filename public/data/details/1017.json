@@ -1,6 +1,24 @@
 {
   "id": 1017,
   "name": "오거폰",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "가면포켓몬",
+  "height": 1.2,
+  "weight": 39.8,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "오기",
+      "description": "능력이 떨어지면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks."
+    },
+    {
+      "version": "violet",
+      "text": "This mischief-loving Pokémon is full of curiosity. It battles by drawing out the type-based energy contained within its masks."
+    }
+  ]
 }

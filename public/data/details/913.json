@@ -1,6 +1,28 @@
 {
   "id": 913,
   "name": "아꾸왁",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "레슨포켓몬",
+  "height": 1.2,
+  "weight": 21.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의 위력이 올라간다."
+    },
+    {
+      "name": "자기과신",
+      "description": "상대를 쓰러뜨리면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully."
+    },
+    {
+      "version": "violet",
+      "text": "The hardworking Quaxwell observes people and Pokémon from various regions and incorporates their movements into its own dance routines."
+    }
+  ]
 }

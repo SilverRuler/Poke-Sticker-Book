@@ -1,6 +1,32 @@
 {
   "id": 1011,
   "name": "과미르",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "사과사탕포켓몬",
+  "height": 0.4,
+  "weight": 9.7,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "감미로운꿀",
+      "description": ""
+    },
+    {
+      "name": "먹보",
+      "description": "나무열매를 여느 때보다 빨리 사용한다."
+    },
+    {
+      "name": "점착",
+      "description": "달라붙어서 도구를 지킨다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Dipplin is two creatures in one Pokémon. Its evolution was triggered by a special apple grown only in one place."
+    },
+    {
+      "version": "violet",
+      "text": "The head sticking out belongs to the fore-wyrm, while the tail belongs to the core-wyrm. The two share one apple and help each other out."
+    }
+  ]
 }

@@ -1,6 +1,32 @@
 {
   "id": 922,
   "name": "빠모트",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "쥐포켓몬",
+  "height": 0.4,
+  "weight": 6.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "축전",
+      "description": "전기를 받으면 회복한다."
+    },
+    {
+      "name": "자연회복",
+      "description": "배틀에서 일단 물러나면 상태 이상이 회복된다."
+    },
+    {
+      "name": "철주먹",
+      "description": "펀치를 사용하는 기술의 위력이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks."
+    },
+    {
+      "version": "violet",
+      "text": "Pawmo uses a unique fighting technique in which it uses its forepaws to strike foes and zap them with electricity from its paw pads simultaneously."
+    }
+  ]
 }

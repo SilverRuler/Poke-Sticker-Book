@@ -1,6 +1,24 @@
 {
   "id": 1007,
   "name": "코라이돈",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 2.5,
+  "weight": 303.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "orichalcum-pulse",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists."
+    },
+    {
+      "version": "violet",
+      "text": "This Pokémon resembles Cyclizar, but it is far burlier and more ferocious. Nothing is known about its ecology or other features."
+    }
+  ]
 }

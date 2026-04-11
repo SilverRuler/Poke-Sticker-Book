@@ -1,6 +1,28 @@
 {
   "id": 901,
   "name": "다투곰",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "이탄포켓몬",
+  "height": 2.4,
+  "weight": 290.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "근성",
+      "description": "상태 이상이 되면 공격이 올라간다."
+    },
+    {
+      "name": "방탄",
+      "description": "구슬이나 폭탄에 맞지 않는다."
+    },
+    {
+      "name": "긴장감",
+      "description": "상대를 긴장시켜 나무열매를 먹지 못하게 한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "legends-arceus",
+      "text": "I believe it was Hisui's swampy terrain that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will."
+    }
+  ]
 }

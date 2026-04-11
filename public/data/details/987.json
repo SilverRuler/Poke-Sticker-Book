@@ -1,6 +1,24 @@
 {
   "id": 987,
   "name": "날개치는머리",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 1.4,
+  "weight": 4.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon has characteristics similar to those of Flutter Mane, a creature mentioned in a certain book."
+    },
+    {
+      "version": "violet",
+      "text": "It has similar features to a ghostly pterosaur that was covered in a paranormal magazine, but the two have little else in common."
+    }
+  ]
 }

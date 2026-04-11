@@ -1,6 +1,28 @@
 {
   "id": 947,
   "name": "공푸리",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "회전초포켓몬",
+  "height": 1.2,
+  "weight": 6.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "wind-rider",
+      "description": ""
+    },
+    {
+      "name": "틈새포착",
+      "description": "상대의 벽을 뚫고 공격한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it."
+    },
+    {
+      "version": "violet",
+      "text": "Brambleghast wanders around arid regions. On rare occasions, mass outbreaks of these Pokémon will bury an entire town."
+    }
+  ]
 }

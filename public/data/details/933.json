@@ -1,6 +1,32 @@
 {
   "id": 933,
   "name": "스태솔트",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "암염포켓몬",
+  "height": 0.6,
+  "weight": 105.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "purifying-salt",
+      "description": ""
+    },
+    {
+      "name": "옹골참",
+      "description": "일격으로 쓰러지지 않는다."
+    },
+    {
+      "name": "클리어바디",
+      "description": "상대가 능력을 떨어뜨릴 수 없다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body."
+    },
+    {
+      "version": "violet",
+      "text": "It compresses rock salt inside its body and shoots out hardened salt pellets with enough force to perforate an iron sheet."
+    }
+  ]
 }

@@ -1,6 +1,28 @@
 {
   "id": 971,
   "name": "망망이",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "유령개포켓몬",
+  "height": 0.6,
+  "weight": 35.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "픽업",
+      "description": "도구를 주워올 때가 있다."
+    },
+    {
+      "name": "복슬복슬",
+      "description": "상대로부터 받은 접촉하는 기술의 데미지를 반감시키지만 불꽃타입 기술의 데미지는 2배가 된다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon."
+    },
+    {
+      "version": "violet",
+      "text": "This friendly Pokémon doesn’t like being alone. Pay it even the slightest bit of attention, and it will follow you forever."
+    }
+  ]
 }

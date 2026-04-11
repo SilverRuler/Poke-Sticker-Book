@@ -1,6 +1,24 @@
 {
   "id": 1020,
   "name": "꿰뚫는화염",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 3.5,
+  "weight": 590.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame."
+    },
+    {
+      "version": "violet",
+      "text": "It resembles an eerie Pokémon once shown in a paranormal magazine. That Pokémon was said to be an Entei regenerated from a fossil."
+    }
+  ]
 }

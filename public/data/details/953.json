@@ -1,6 +1,28 @@
 {
   "id": 953,
   "name": "구르데",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "굴리기포켓몬",
+  "height": 0.2,
+  "weight": 1.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "복안",
+      "description": "기술의 명중률이 올라간다."
+    },
+    {
+      "name": "탈피",
+      "description": "상태 이상을 회복할 때가 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life."
+    },
+    {
+      "version": "violet",
+      "text": "It rolls its mud ball around while the energy it needs for evolution matures. Eventually the time comes for it to evolve."
+    }
+  ]
 }

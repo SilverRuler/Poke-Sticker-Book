@@ -1,6 +1,24 @@
 {
   "id": 1000,
   "name": "타부자고",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "보물생명체포켓몬",
+  "height": 1.2,
+  "weight": 30.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "good-as-gold",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody."
+    },
+    {
+      "version": "violet",
+      "text": "It has a sturdy body made up of stacked coins. Gholdengo overwhelms its enemies by firing coin after coin at them in quick succession."
+    }
+  ]
 }

@@ -1,6 +1,28 @@
 {
   "id": 918,
   "name": "트래피더",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "트랩포켓몬",
+  "height": 1.0,
+  "weight": 16.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "불면",
+      "description": "잠듦 상태가 되지 않는다."
+    },
+    {
+      "name": "잠복",
+      "description": "교체로 나온 상대에게 2배 데미지로 공격할 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It clings to branches and ceilings using its threads and moves without a sound. It takes out its prey before the prey even notices it."
+    },
+    {
+      "version": "violet",
+      "text": "Spidops covers its territory in tough, sticky threads to set up traps for intruders."
+    }
+  ]
 }

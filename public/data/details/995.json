@@ -1,6 +1,24 @@
 {
   "id": 995,
   "name": "무쇠가시",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 1.6,
+  "weight": 303.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "quark-drive",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future."
+    },
+    {
+      "version": "violet",
+      "text": "Some of its notable features match those of an object named within a certain expedition journal as Iron Thorns."
+    }
+  ]
 }

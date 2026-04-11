@@ -1,6 +1,24 @@
 {
   "id": 985,
   "name": "우렁찬꼬리",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "패러독스포켓몬",
+  "height": 1.2,
+  "weight": 8.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "There has been only one reported sighting of this Pokémon. It resembles a mysterious creature depicted in an old expedition journal."
+    },
+    {
+      "version": "violet",
+      "text": "It resembles a mysterious Pokémon described in a paranormal magazine as a Jigglypuff from one billion years ago."
+    }
+  ]
 }

@@ -1,6 +1,32 @@
 {
   "id": 1019,
   "name": "과미드라",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "사과이무기포켓몬",
+  "height": 1.8,
+  "weight": 93.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "감미로운꿀",
+      "description": ""
+    },
+    {
+      "name": "재생력",
+      "description": "볼에 넣으면 HP가 조금 회복된다."
+    },
+    {
+      "name": "점착",
+      "description": "달라붙어서 도구를 지킨다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander."
+    },
+    {
+      "version": "violet",
+      "text": "These capricious syrpents have banded together. On the rare occasion that their moods align, their true power is unleashed."
+    }
+  ]
 }

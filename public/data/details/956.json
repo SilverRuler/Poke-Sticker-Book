@@ -1,6 +1,32 @@
 {
   "id": 956,
   "name": "클레스퍼트라",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "타조포켓몬",
+  "height": 1.9,
+  "weight": 90.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "opportunist",
+      "description": ""
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을 알 수 있다."
+    },
+    {
+      "name": "가속",
+      "description": "조금씩 스피드가 높아진다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "scarlet",
+      "text": "It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament."
+    },
+    {
+      "version": "violet",
+      "text": "It emits psychic power from the gaps between its multicolored frills and sprints at speeds greater than 120 mph."
+    }
+  ]
 }

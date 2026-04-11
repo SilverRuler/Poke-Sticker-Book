@@ -1,6 +1,28 @@
 {
   "id": 902,
   "name": "대쓰여너",
-  "abilities": [],
-  "flavorTexts": []
+  "classification": "큰물고기포켓몬",
+  "height": 3.0,
+  "weight": 110.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "쓱쓱",
+      "description": "비가 올 때 스피드가 올라간다."
+    },
+    {
+      "name": "적응력",
+      "description": "타입이 같은 기술의 위력이 올라간다."
+    },
+    {
+      "name": "틀깨기",
+      "description": "특성에 관계없이 상대에게 기술을 쓸 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "legends-arceus",
+      "text": "Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout all Hisui's rivers is Basculegion's equal."
+    }
+  ]
 }

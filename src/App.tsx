@@ -27,12 +27,19 @@ interface PokemonDetail {
 }
 
 function App() {
+  const formatYYMMDD = (date: Date) => {
+    const y = date.getFullYear().toString().slice(-2);
+    const m = (date.getMonth() + 1).toString().padStart(2, '0');
+    const d = date.getDate().toString().padStart(2, '0');
+    return `${y}${m}${d}`;
+  };
+
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
   const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
   const [todayCollection, setTodayCollection] = useState<string[]>([]);
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
-  const [serverDate, setServerDate] = useState(new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }));
+  const [serverDate, setServerDate] = useState(formatYYMMDD(new Date()));
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery">("main");
@@ -132,15 +139,18 @@ function App() {
       setPendingCollection(data.pending_collection || {});
       setAnniversaryCollection(data.anniversary_collection || []);
       setTodayCollection(data.today_collection || []);
-      setServerDate(data.server_date || new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }));
+      setServerDate(data.server_date || formatYYMMDD(new Date()));
     } catch (error) {
       console.log("Using local collection as fallback");
       const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
       const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
       const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
       setCollection(localColl);
       setPendingCollection(localPending);
       setTodayCollection(localToday);
+      setAnniversaryCollection(localAnniv);
+      setServerDate(formatYYMMDD(new Date()));
     } finally {
       setLoading(false);
     }
@@ -226,8 +236,17 @@ function App() {
       });
       const data = await response.json();
       setAnniversaryCollection(data.anniversary_collection);
+      localStorage.setItem("anniversary_collection", JSON.stringify(data.anniversary_collection));
     } catch (error) {
-      showAlert("30주년 설정 업데이트 실패");
+      const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
+      let updatedAnniv;
+      if (localAnniv.includes(key)) {
+        updatedAnniv = localAnniv.filter((k: string) => k !== key);
+      } else {
+        updatedAnniv = [...localAnniv, key];
+      }
+      setAnniversaryCollection(updatedAnniv);
+      localStorage.setItem("anniversary_collection", JSON.stringify(updatedAnniv));
     }
   };
 
@@ -326,7 +345,7 @@ function App() {
         localStorage.setItem("today_collection", JSON.stringify(updatedData.today_collection));
       }
       
-      showAlert(`${pokemonName} ${updatedCount}개 입니다. (오늘의 획득 목록에 추가됨)`);
+      showAlert(`${pokemonName} ${updatedCount}개 입니다. (${isPending ? "예정 목록에 추가됨" : "오늘의 획득 목록에 추가됨"})`);
     } catch (error) {
       // Fallback to local storage if API fails
       if (isPending) {
@@ -334,7 +353,7 @@ function App() {
         localPending[key] = (localPending[key] || 0) + 1;
         setPendingCollection(localPending);
         localStorage.setItem("pending_collection", JSON.stringify(localPending));
-        showAlert(`${pokemonName} ${localPending[key]}개 입니다. (로컬 저장됨)`);
+        showAlert(`${pokemonName} ${localPending[key]}개 입니다. (예정 목록에 추가됨)`);
       } else {
         const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
         localColl[key] = (localColl[key] || 0) + 1;
@@ -346,7 +365,7 @@ function App() {
         setTodayCollection(localToday);
         localStorage.setItem("today_collection", JSON.stringify(localToday));
         
-        showAlert(`${pokemonName} ${localColl[key]}개 입니다. (로컬 저장됨)`);
+        showAlert(`${pokemonName} ${localColl[key]}개 입니다. (오늘의 획득 목록에 추가됨)`);
       }
     }
   };

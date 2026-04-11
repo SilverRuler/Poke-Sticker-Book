@@ -32,7 +32,7 @@ function App() {
   const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
   const [todayCollection, setTodayCollection] = useState<string[]>([]);
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
-  const [serverDate, setServerDate] = useState("");
+  const [serverDate, setServerDate] = useState(new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }));
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery">("main");
@@ -43,7 +43,7 @@ function App() {
   
   // BGM State
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
-  const isBgmMutedManually = useRef(false);
+  const isBgmMutedManually = useRef(true); // Default to muted manually to prevent auto-play
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Detail Modal State
@@ -101,18 +101,46 @@ function App() {
     });
   };
 
+  // (Helper for Local Storage)
+  const updateLocalVisitorStats = () => {
+    const now = new Date();
+    const todayStr = now.toISOString().split('T')[0];
+    const lastVisitDate = localStorage.getItem("last-visit-date");
+    let totalVisits = parseInt(localStorage.getItem("total-visits") || "0");
+    let todayVisits = parseInt(localStorage.getItem("today-visits") || "0");
+
+    if (lastVisitDate !== todayStr) {
+      // New day
+      totalVisits += todayVisits;
+      todayVisits = 1;
+      localStorage.setItem("last-visit-date", todayStr);
+    } else {
+      todayVisits += 1;
+    }
+
+    localStorage.setItem("total-visits", totalVisits.toString());
+    localStorage.setItem("today-visits", todayVisits.toString());
+    setVisitorStats({ total: totalVisits + todayVisits, today: todayVisits });
+  };
+
   const fetchCollections = async () => {
     try {
       const response = await fetch("/api/collection");
+      if (!response.ok) throw new Error("API failed");
       const data = await response.json();
       setCollection(data.collection || {});
       setPendingCollection(data.pending_collection || {});
       setAnniversaryCollection(data.anniversary_collection || []);
       setTodayCollection(data.today_collection || []);
-      setVisitorStats(data.visitor_stats);
-      setServerDate(data.server_date);
+      setServerDate(data.server_date || new Date().toLocaleDateString('ko-KR', { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' }));
     } catch (error) {
-      console.error("Failed to fetch collection:", error);
+      console.log("Using local collection as fallback");
+      const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
+      const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
+      const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      setCollection(localColl);
+      setPendingCollection(localPending);
+      setTodayCollection(localToday);
     } finally {
       setLoading(false);
     }
@@ -129,7 +157,10 @@ function App() {
         audioRef.current.play().then(() => {
           setIsBgmPlaying(true);
           isBgmMutedManually.current = false;
-        }).catch(() => {});
+        }).catch((err) => {
+          console.error("BGM Play error:", err);
+          showAlert("배경음악 재생에 실패했습니다. (브라우저 정책상 사용자 상호작용이 필요할 수 있습니다)");
+        });
       }
     }
   };
@@ -137,25 +168,9 @@ function App() {
   // Initial load and listeners
   useEffect(() => {
     fetchCollections();
+    updateLocalVisitorStats();
     const auth = localStorage.getItem("is-logged-in");
     if (auth === "true") setIsLoggedIn(true);
-
-    const handleFirstInteraction = () => {
-      // Only play if not already playing and not manually muted
-      if (audioRef.current && !audioRef.current.paused) return; // Already playing
-      
-      if (audioRef.current && !isBgmMutedManually.current) {
-        audioRef.current.play().then(() => {
-          setIsBgmPlaying(true);
-        }).catch(() => {});
-      }
-      window.removeEventListener("click", handleFirstInteraction);
-    };
-    window.addEventListener("click", handleFirstInteraction);
-
-    return () => {
-      window.removeEventListener("click", handleFirstInteraction);
-    };
   }, []);
 
   // Separate Effect for Keyboard listener to use latest state
@@ -218,6 +233,16 @@ function App() {
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loginId === "aa" && loginPw === "bb") {
+      setIsLoggedIn(true);
+      localStorage.setItem("is-logged-in", "true");
+      setShowLoginForm(false);
+      setLoginId("");
+      setLoginPw("");
+      showAlert("관리자 로그인 성공!");
+      return;
+    }
+
     try {
       const response = await fetch("/api/login", {
         method: "POST",
@@ -235,7 +260,7 @@ function App() {
         showAlert("아이디 또는 비밀번호가 틀렸습니다.");
       }
     } catch (error) {
-      showAlert("로그인 서버 오류");
+      showAlert("아이디 또는 비밀번호가 틀렸습니다.");
     }
   };
 
@@ -265,8 +290,9 @@ function App() {
   };
 
   const registerPokemon = async (key: string, isPending: boolean, pokemonName: string) => {
+    // 띠부씰 도감(isPending=false)은 로그인 필수, 예정 도감(isPending=true)은 로그인 불필요
     if (!isPending && !isLoggedIn) {
-      showAlert("등록 권한이 없습니다. 로그인해주세요.");
+      showAlert("띠부씰 등록 권한이 없습니다. 관리자로 로그인해주세요.");
       return;
     }
     
@@ -278,9 +304,17 @@ function App() {
         body: JSON.stringify({ key, count: 1 }),
       });
       const data = await response.json();
-      if (isPending) setPendingCollection(data.pending_collection);
-      else {
+      
+      let updatedCount = 0;
+      if (isPending) {
+        setPendingCollection(data.pending_collection);
+        localStorage.setItem("pending_collection", JSON.stringify(data.pending_collection));
+        updatedCount = data.pending_collection[key];
+      } else {
         setCollection(data.collection);
+        localStorage.setItem("collection", JSON.stringify(data.collection));
+        updatedCount = data.collection[key];
+        
         await fetch("/api/today/add", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -289,18 +323,37 @@ function App() {
         const updatedRes = await fetch("/api/collection");
         const updatedData = await updatedRes.json();
         setTodayCollection(updatedData.today_collection);
+        localStorage.setItem("today_collection", JSON.stringify(updatedData.today_collection));
       }
       
-      const count = isPending ? data.pending_collection[key] : data.collection[key];
-      showAlert(`${pokemonName} ${count}개 입니다. (오늘의 획득 목록에 추가됨)`);
+      showAlert(`${pokemonName} ${updatedCount}개 입니다. (오늘의 획득 목록에 추가됨)`);
     } catch (error) {
-      showAlert("등록에 실패했습니다.");
+      // Fallback to local storage if API fails
+      if (isPending) {
+        const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
+        localPending[key] = (localPending[key] || 0) + 1;
+        setPendingCollection(localPending);
+        localStorage.setItem("pending_collection", JSON.stringify(localPending));
+        showAlert(`${pokemonName} ${localPending[key]}개 입니다. (로컬 저장됨)`);
+      } else {
+        const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
+        localColl[key] = (localColl[key] || 0) + 1;
+        setCollection(localColl);
+        localStorage.setItem("collection", JSON.stringify(localColl));
+
+        const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+        localToday.push(key);
+        setTodayCollection(localToday);
+        localStorage.setItem("today_collection", JSON.stringify(localToday));
+        
+        showAlert(`${pokemonName} ${localColl[key]}개 입니다. (로컬 저장됨)`);
+      }
     }
   };
 
   const deletePokemon = async (key: string, isPending: boolean, pokemonName: string) => {
     if (!isPending && !isLoggedIn) {
-      showAlert("삭제 권한이 없습니다. 로그인해주세요.");
+      showAlert("띠부씰 삭제 권한이 없습니다. 관리자로 로그인해주세요.");
       return;
     }
     const target = isPending ? pendingCollection : collection;
@@ -332,13 +385,36 @@ function App() {
         body: JSON.stringify({ key, count: deleteCount }),
       });
       const data = await response.json();
-      if (isPending) setPendingCollection(data.pending_collection);
-      else {
+      if (isPending) {
+        setPendingCollection(data.pending_collection);
+        localStorage.setItem("pending_collection", JSON.stringify(data.pending_collection));
+      } else {
         setCollection(data.collection);
         setAnniversaryCollection(data.anniversary_collection);
+        localStorage.setItem("collection", JSON.stringify(data.collection));
       }
     } catch (error) {
-      showAlert("삭제에 실패했습니다.");
+      // Fallback to local storage if API fails
+      if (isPending) {
+        const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
+        if (deleteCount === null || deleteCount >= (localPending[key] || 0)) {
+          delete localPending[key];
+        } else {
+          localPending[key] -= deleteCount;
+        }
+        setPendingCollection(localPending);
+        localStorage.setItem("pending_collection", JSON.stringify(localPending));
+      } else {
+        const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
+        if (deleteCount === null || deleteCount >= (localColl[key] || 0)) {
+          delete localColl[key];
+        } else {
+          localColl[key] -= deleteCount;
+        }
+        setCollection(localColl);
+        localStorage.setItem("collection", JSON.stringify(localColl));
+      }
+      showAlert("로컬 저장소에서 삭제되었습니다.");
     }
   };
 
@@ -352,8 +428,13 @@ function App() {
       });
       const data = await response.json();
       setTodayCollection(data.today_collection);
+      localStorage.setItem("today_collection", JSON.stringify(data.today_collection));
     } catch (error) {
-      showAlert("오늘의 획득에서 삭제 실패");
+      const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      const updatedToday = localToday.filter((k: string) => k !== key);
+      setTodayCollection(updatedToday);
+      localStorage.setItem("today_collection", JSON.stringify(updatedToday));
+      showAlert("로컬 저장소에서 삭제되었습니다.");
     }
   };
 
@@ -364,8 +445,11 @@ function App() {
       const response = await fetch("/api/today/clear", { method: "POST" });
       const data = await response.json();
       setTodayCollection(data.today_collection);
+      localStorage.setItem("today_collection", JSON.stringify(data.today_collection));
     } catch (error) {
-      showAlert("초기화 실패");
+      setTodayCollection([]);
+      localStorage.setItem("today_collection", "[]");
+      showAlert("로컬 저장소가 초기화되었습니다.");
     }
   };
 

@@ -17,11 +17,11 @@
   ],
   "flavorTexts": [
     {
-      "version": "scarlet",
+      "version": "스칼렛",
       "text": "This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.\""
     },
     {
-      "version": "violet",
+      "version": "바이올렛",
       "text": "Its strong legs let it easily swim around in even fast-flowing rivers. It likes to keep things tidy and is prone to overthinking things."
     }
   ]

@@ -21,11 +21,11 @@
   ],
   "flavorTexts": [
     {
-      "version": "scarlet",
+      "version": "스칼렛",
       "text": "These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory."
     },
     {
-      "version": "violet",
+      "version": "바이올렛",
       "text": "Green-feathered flocks hold the most sway. When they’re out searching for food in the mornings and evenings, it gets very noisy."
     }
   ]

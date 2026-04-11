@@ -13,11 +13,11 @@
   ],
   "flavorTexts": [
     {
-      "version": "scarlet",
+      "version": "스칼렛",
       "text": "This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks."
     },
     {
-      "version": "violet",
+      "version": "바이올렛",
       "text": "This mischief-loving Pokémon is full of curiosity. It battles by drawing out the type-based energy contained within its masks."
     }
   ]

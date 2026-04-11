@@ -21,11 +21,11 @@
   ],
   "flavorTexts": [
     {
-      "version": "scarlet",
+      "version": "스칼렛",
       "text": "This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body."
     },
     {
-      "version": "violet",
+      "version": "바이올렛",
       "text": "It compresses rock salt inside its body and shoots out hardened salt pellets with enough force to perforate an iron sheet."
     }
   ]

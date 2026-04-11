@@ -21,11 +21,11 @@
   ],
   "flavorTexts": [
     {
-      "version": "scarlet",
+      "version": "스칼렛",
       "text": "This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements."
     },
     {
-      "version": "violet",
+      "version": "바이올렛",
       "text": "Pawmot’s fluffy fur acts as a battery. It can store the same amount of electricity as an electric car."
     }
   ]

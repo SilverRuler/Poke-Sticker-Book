@@ -13,11 +13,11 @@
   ],
   "flavorTexts": [
     {
-      "version": "scarlet",
+      "version": "스칼렛",
       "text": "This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation."
     },
     {
-      "version": "violet",
+      "version": "바이올렛",
       "text": "Its physical capabilities are no different than a Finizen’s, but when its allies are in danger, it transforms and powers itself up."
     }
   ]

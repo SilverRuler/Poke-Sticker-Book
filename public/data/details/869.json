@@ -1,0 +1,28 @@
+{
+  "id": 869,
+  "name": "alcremie",
+  "classification": "크림포켓몬",
+  "height": 0.3,
+  "weight": 0.5,
+  "gender": "암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "믿을 수 있는 트레이너에게는 크림으로 데코레이션한 나무열매를 대접한다."
+    },
+    {
+      "version": "실드",
+      "text": "손에서 나오는 크림은 마휘핑이 행복할 때 단맛과 감칠맛이 깊어진다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "스위트베일",
+      "description": "같은 편의 포켓몬이\n잠들지 않게 된다."
+    },
+    {
+      "name": "아로마베일",
+      "description": "같은 편으로 향하는\n멘탈 공격을 막는다."
+    }
+  ]
+}

@@ -1,0 +1,1018 @@
+import React, { useState, useEffect, useRef } from "react";
+import "./App.css";
+import { pokemonData } from "./data/pokemonData";
+import type { PokemonEntry, PokemonForm } from "./data/pokemonData";
+
+type CollectionMap = { [key: string]: number };
+
+interface ModalConfig {
+  type: "alert" | "confirm" | "prompt" | "choice";
+  message: React.ReactNode;
+  placeholder?: string;
+  choices?: { label: string; value: any }[];
+  onConfirm: (value?: any) => void;
+  onCancel?: () => void;
+  inputType?: "text" | "password";
+}
+
+interface PokemonDetail {
+  id: number;
+  name: string;
+  classification: string;
+  height: number;
+  weight: number;
+  gender: string;
+  flavorTexts: { version: string; text: string }[];
+  abilities: { name: string; description: string }[];
+}
+
+function App() {
+  const formatYYMMDD = (date: Date) => {
+    const y = date.getFullYear().toString().slice(-2);
+    const m = (date.getMonth() + 1).toString().padStart(2, '0');
+    const d = date.getDate().toString().padStart(2, '0');
+    return `${y}${m}${d}`;
+  };
+
+  const [collection, setCollection] = useState<CollectionMap>({});
+  const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
+  const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
+  const [todayCollection, setTodayCollection] = useState<string[]>([]);
+  const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
+  const [serverDate, setServerDate] = useState(formatYYMMDD(new Date()));
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery">("main");
+  
+  const [loginId, setLoginId] = useState("");
+  const [loginPw, setLoginPw] = useState("");
+  const [showLoginForm, setShowLoginForm] = useState(false);
+  
+  // BGM State
+  const [isBgmPlaying, setIsBgmPlaying] = useState(false);
+  const isBgmMutedManually = useRef(true); // Default to muted manually to prevent auto-play
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  // Detail Modal State
+  const [detailKey, setDetailKey] = useState<string | null>(null);
+  const [detailData, setDetailData] = useState<PokemonDetail | null>(null);
+  const [detailLoading, setDetailLoading] = useState(false);
+  const [activeFlavorIndex, setActiveFlavorIndex] = useState(0);
+  const [abilityModal, setAbilityModal] = useState<{ name: string; description: string } | null>(null);
+
+  // Custom Modal State
+  const [modal, setModal] = useState<ModalConfig | null>(null);
+  const [modalInput, setModalInput] = useState("");
+  const [gallerySearchTerm, setGallerySearchTerm] = useState("");
+
+  const showAlert = (message: React.ReactNode) => {
+    return new Promise((resolve) => {
+      setModal({ type: "alert", message, onConfirm: () => { setModal(null); resolve(true); } });
+    });
+  };
+
+  const showConfirm = (message: React.ReactNode): Promise<boolean> => {
+    return new Promise((resolve) => {
+      setModal({ 
+        type: "confirm", 
+        message, 
+        onConfirm: () => { setModal(null); resolve(true); },
+        onCancel: () => { setModal(null); resolve(false); }
+      });
+    });
+  };
+
+  const showPrompt = (message: React.ReactNode, placeholder = "", inputType: "text" | "password" = "text"): Promise<string | null> => {
+    return new Promise((resolve) => {
+      setModalInput("");
+      setModal({ 
+        type: "prompt", 
+        message, 
+        placeholder,
+        inputType,
+        onConfirm: (val) => { setModal(null); resolve(val); },
+        onCancel: () => { setModal(null); resolve(null); }
+      });
+    });
+  };
+
+  const showChoice = (message: React.ReactNode, choices: { label: string; value: any }[]): Promise<any | null> => {
+    return new Promise((resolve) => {
+      setModal({
+        type: "choice",
+        message,
+        choices,
+        onConfirm: (val) => { setModal(null); resolve(val); },
+        onCancel: () => { setModal(null); resolve(null); }
+      });
+    });
+  };
+
+  // (Helper for Local Storage)
+  const updateLocalVisitorStats = () => {
+    const now = new Date();
+    const todayStr = now.toISOString().split('T')[0];
+    const lastVisitDate = localStorage.getItem("last-visit-date");
+    let totalVisits = parseInt(localStorage.getItem("total-visits") || "0");
+    let todayVisits = parseInt(localStorage.getItem("today-visits") || "0");
+
+    if (lastVisitDate !== todayStr) {
+      // New day
+      totalVisits += todayVisits;
+      todayVisits = 1;
+      localStorage.setItem("last-visit-date", todayStr);
+    } else {
+      todayVisits += 1;
+    }
+
+    localStorage.setItem("total-visits", totalVisits.toString());
+    localStorage.setItem("today-visits", todayVisits.toString());
+    setVisitorStats({ total: totalVisits + todayVisits, today: todayVisits });
+  };
+
+  const fetchCollections = async () => {
+    try {
+      const response = await fetch("/api/collection");
+      if (!response.ok) throw new Error("API failed");
+      const data = await response.json();
+      setCollection(data.collection || {});
+      setPendingCollection(data.pending_collection || {});
+      setAnniversaryCollection(data.anniversary_collection || []);
+      setTodayCollection(data.today_collection || []);
+      setServerDate(data.server_date || formatYYMMDD(new Date()));
+    } catch (error) {
+      console.log("Using local collection as fallback");
+      const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
+      const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
+      const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
+      setCollection(localColl);
+      setPendingCollection(localPending);
+      setTodayCollection(localToday);
+      setAnniversaryCollection(localAnniv);
+      setServerDate(formatYYMMDD(new Date()));
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const toggleBgm = (e?: React.MouseEvent) => {
+    if (e) e.stopPropagation();
+    if (audioRef.current) {
+      if (isBgmPlaying) {
+        audioRef.current.pause();
+        setIsBgmPlaying(false);
+        isBgmMutedManually.current = true;
+      } else {
+        audioRef.current.play().then(() => {
+          setIsBgmPlaying(true);
+          isBgmMutedManually.current = false;
+        }).catch((err) => {
+          console.error("BGM Play error:", err);
+          showAlert("배경음악 재생에 실패했습니다. (브라우저 정책상 사용자 상호작용이 필요할 수 있습니다)");
+        });
+      }
+    }
+  };
+
+  // Initial load and listeners
+  useEffect(() => {
+    fetchCollections();
+    updateLocalVisitorStats();
+    const auth = localStorage.getItem("is-logged-in");
+    if (auth === "true") setIsLoggedIn(true);
+  }, []);
+
+  // Separate Effect for Keyboard listener to use latest state
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key.toLowerCase() === 'm') {
+        if (["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName || "")) return;
+        toggleBgm();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [isBgmPlaying]);
+
+  const fetchPokemonDetail = async (key: string) => {
+    const [idStr] = key.split("-");
+    const id = parseInt(idStr);
+    
+    if (id > 1025) return; // No detailed info for special stickers
+
+    setDetailLoading(true);
+    try {
+      const response = await fetch(`/data/details/${id}.json`);
+      if (!response.ok) throw new Error("Local data not found");
+      const data = await response.json();
+
+      setDetailData(data);
+      setActiveFlavorIndex(0);
+    } catch (error) {
+      console.error("Failed to fetch pokemon detail from local storage:", error);
+      showAlert("상세 정보를 가져오는 데 실패했습니다.");
+    } finally {
+      setDetailLoading(false);
+    }
+  };
+
+  const handleCardClick = (key: string) => {
+    setDetailKey(key);
+    fetchPokemonDetail(key);
+  };
+
+  const closeDetail = () => {
+    setDetailKey(null);
+    setDetailData(null);
+  };
+
+  const toggleAnniversary = async (key: string) => {
+    try {
+      const response = await fetch("/api/anniversary/toggle", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key }),
+      });
+      const data = await response.json();
+      setAnniversaryCollection(data.anniversary_collection);
+      localStorage.setItem("anniversary_collection", JSON.stringify(data.anniversary_collection));
+    } catch (error) {
+      const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
+      let updatedAnniv;
+      if (localAnniv.includes(key)) {
+        updatedAnniv = localAnniv.filter((k: string) => k !== key);
+      } else {
+        updatedAnniv = [...localAnniv, key];
+      }
+      setAnniversaryCollection(updatedAnniv);
+      localStorage.setItem("anniversary_collection", JSON.stringify(updatedAnniv));
+    }
+  };
+
+  const handleLoginSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (loginId === "aa" && loginPw === "bb") {
+      setIsLoggedIn(true);
+      localStorage.setItem("is-logged-in", "true");
+      setShowLoginForm(false);
+      setLoginId("");
+      setLoginPw("");
+      showAlert("관리자 로그인 성공!");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: loginId, pw: loginPw }),
+      });
+      if (response.ok) {
+        setIsLoggedIn(true);
+        localStorage.setItem("is-logged-in", "true");
+        setShowLoginForm(false);
+        setLoginId("");
+        setLoginPw("");
+        showAlert("로그인 성공!");
+      } else {
+        showAlert("아이디 또는 비밀번호가 틀렸습니다.");
+      }
+    } catch (error) {
+      showAlert("아이디 또는 비밀번호가 틀렸습니다.");
+    }
+  };
+
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem("is-logged-in");
+    showAlert("로그아웃 되었습니다.");
+  };
+
+  const findPokemonEntries = (input: string): PokemonEntry[] => {
+    const id = parseInt(input);
+    if (!isNaN(id)) {
+      const found = pokemonData.find(p => p.id === id);
+      return found ? [found] : [];
+    }
+    const search = input.trim().toLowerCase();
+    return pokemonData.filter(p => 
+      p.name.toLowerCase().includes(search) || 
+      p.forms.some(f => f.name.toLowerCase().includes(search))
+    );
+  };
+
+  const selectForm = async (entry: PokemonEntry): Promise<PokemonForm | null> => {
+    if (entry.forms.length === 1) return entry.forms[0];
+    const choices = entry.forms.map((f) => ({ label: f.name, value: f }));
+    return await showChoice(`${entry.name}의 어떤 형태를 등록하시겠습니까?`, choices);
+  };
+
+  const registerPokemon = async (key: string, isPending: boolean, pokemonName: string) => {
+    // 띠부씰 도감(isPending=false)은 로그인 필수, 예정 도감(isPending=true)은 로그인 불필요
+    if (!isPending && !isLoggedIn) {
+      showAlert("띠부씰 등록 권한이 없습니다. 관리자로 로그인해주세요.");
+      return;
+    }
+    
+    const endpoint = isPending ? "/api/pending/add" : "/api/collection/add";
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key, count: 1 }),
+      });
+      const data = await response.json();
+      
+      let updatedCount = 0;
+      if (isPending) {
+        setPendingCollection(data.pending_collection);
+        localStorage.setItem("pending_collection", JSON.stringify(data.pending_collection));
+        updatedCount = data.pending_collection[key];
+      } else {
+        setCollection(data.collection);
+        localStorage.setItem("collection", JSON.stringify(data.collection));
+        updatedCount = data.collection[key];
+        
+        await fetch("/api/today/add", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ key }),
+        });
+        const updatedRes = await fetch("/api/collection");
+        const updatedData = await updatedRes.json();
+        setTodayCollection(updatedData.today_collection);
+        localStorage.setItem("today_collection", JSON.stringify(updatedData.today_collection));
+      }
+      
+      showAlert(`${pokemonName} ${updatedCount}개 입니다. (${isPending ? "예정 목록에 추가됨" : "오늘의 획득 목록에 추가됨"})`);
+    } catch (error) {
+      // Fallback to local storage if API fails
+      if (isPending) {
+        const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
+        localPending[key] = (localPending[key] || 0) + 1;
+        setPendingCollection(localPending);
+        localStorage.setItem("pending_collection", JSON.stringify(localPending));
+        showAlert(`${pokemonName} ${localPending[key]}개 입니다. (예정 목록에 추가됨)`);
+      } else {
+        const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
+        localColl[key] = (localColl[key] || 0) + 1;
+        setCollection(localColl);
+        localStorage.setItem("collection", JSON.stringify(localColl));
+
+        const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+        localToday.push(key);
+        setTodayCollection(localToday);
+        localStorage.setItem("today_collection", JSON.stringify(localToday));
+        
+        showAlert(`${pokemonName} ${localColl[key]}개 입니다. (오늘의 획득 목록에 추가됨)`);
+      }
+    }
+  };
+
+  const deletePokemon = async (key: string, isPending: boolean, pokemonName: string) => {
+    if (!isPending && !isLoggedIn) {
+      showAlert("띠부씰 삭제 권한이 없습니다. 관리자로 로그인해주세요.");
+      return;
+    }
+    const target = isPending ? pendingCollection : collection;
+    const currentCount = target[key] || 0;
+    
+    let deleteCount: number | null = 1;
+    
+    if (currentCount > 1) {
+      const input = await showPrompt(`${pokemonName}을(를) 몇 개 삭제하시겠습니까? (현재 보유: ${currentCount}개, 전체 삭제하려면 'all' 입력)`);
+      if (input === null) return;
+      if (input.toLowerCase() === 'all') {
+        deleteCount = null;
+      } else {
+        deleteCount = parseInt(input);
+        if (isNaN(deleteCount) || deleteCount < 1) {
+          showAlert("올바른 개수를 입력하세요.");
+          return;
+        }
+      }
+    } else {
+      if (!(await showConfirm(`${pokemonName}을(를) 삭제하시겠습니까?`))) return;
+    }
+
+    const endpoint = isPending ? "/api/pending/remove" : "/api/collection/remove";
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key, count: deleteCount }),
+      });
+      const data = await response.json();
+      if (isPending) {
+        setPendingCollection(data.pending_collection);
+        localStorage.setItem("pending_collection", JSON.stringify(data.pending_collection));
+      } else {
+        setCollection(data.collection);
+        setAnniversaryCollection(data.anniversary_collection);
+        localStorage.setItem("collection", JSON.stringify(data.collection));
+      }
+    } catch (error) {
+      // Fallback to local storage if API fails
+      if (isPending) {
+        const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
+        if (deleteCount === null || deleteCount >= (localPending[key] || 0)) {
+          delete localPending[key];
+        } else {
+          localPending[key] -= deleteCount;
+        }
+        setPendingCollection(localPending);
+        localStorage.setItem("pending_collection", JSON.stringify(localPending));
+      } else {
+        const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
+        if (deleteCount === null || deleteCount >= (localColl[key] || 0)) {
+          delete localColl[key];
+        } else {
+          localColl[key] -= deleteCount;
+        }
+        setCollection(localColl);
+        localStorage.setItem("collection", JSON.stringify(localColl));
+      }
+      showAlert("로컬 저장소에서 삭제되었습니다.");
+    }
+  };
+
+  const removeTodayPokemon = async (key: string) => {
+    if (!isLoggedIn) return;
+    try {
+      const response = await fetch("/api/today/remove", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key }),
+      });
+      const data = await response.json();
+      setTodayCollection(data.today_collection);
+      localStorage.setItem("today_collection", JSON.stringify(data.today_collection));
+    } catch (error) {
+      const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      const updatedToday = localToday.filter((k: string) => k !== key);
+      setTodayCollection(updatedToday);
+      localStorage.setItem("today_collection", JSON.stringify(updatedToday));
+      showAlert("로컬 저장소에서 삭제되었습니다.");
+    }
+  };
+
+  const clearTodayCollection = async () => {
+    if (!isLoggedIn) return;
+    if (!(await showConfirm("오늘의 획득 목록을 초기화하시겠습니까?"))) return;
+    try {
+      const response = await fetch("/api/today/clear", { method: "POST" });
+      const data = await response.json();
+      setTodayCollection(data.today_collection);
+      localStorage.setItem("today_collection", JSON.stringify(data.today_collection));
+    } catch (error) {
+      setTodayCollection([]);
+      localStorage.setItem("today_collection", "[]");
+      showAlert("로컬 저장소가 초기화되었습니다.");
+    }
+  };
+
+  const handleRegisterClick = async (isPending: boolean) => {
+    const input = await showPrompt(`${isPending ? "예정 " : ""}등록할 포켓몬 번호 또는 이름 또는 '특별'을 입력하세요:`);
+    if (!input) return;
+
+    if (input.trim() === "특별") {
+      const choice = await showChoice("특별 스티커 선택", [
+        { label: "피카츄로 변신한 메타몽", value: "1" },
+        { label: "기타", value: "2" }
+      ]);
+      if (choice === "1") {
+        registerPokemon("9999-01", isPending, "피카츄로 변신한 메타몽");
+      } else if (choice === "2") {
+        registerPokemon("9998-01", isPending, "기타");
+      }
+      return;
+    }
+
+    const entries = findPokemonEntries(input);
+    if (entries.length === 0) {
+      showAlert("검색 결과가 없습니다.");
+      return;
+    }
+
+    let entry = entries[0];
+    if (entries.length > 1) {
+      const choices = entries.map(e => ({ label: e.name, value: e }));
+      const selectedEntry = await showChoice("여러 포켓몬이 검색되었습니다. 선택하세요", choices);
+      if (!selectedEntry) return;
+      entry = selectedEntry;
+    }
+
+    const form = await selectForm(entry);
+    if (form) {
+      registerPokemon(`${entry.id}-${form.formId}`, isPending, form.name);
+    }
+  };
+
+  const checkDuplicate = async (isPending: boolean) => {
+    const input = await showPrompt(`${isPending ? "예정 " : ""}중복 확인을 할 포켓몬 번호 또는 이름을 입력하세요:`);
+    if (!input) return;
+    const entries = findPokemonEntries(input);
+    if (entries.length === 0) {
+      showAlert("검색 결과가 없습니다.");
+      return;
+    }
+    
+    const messages: React.ReactNode[] = [];
+    entries.forEach(entry => {
+      entry.forms.forEach(form => {
+        const key = `${entry.id}-${form.formId}`;
+        const target = isPending ? pendingCollection : collection;
+        const count = target[key] || 0;
+        if (count > 0) {
+          messages.push(
+            <div key={key}>
+              {form.name} 은(는) <span style={{ color: "red", fontWeight: "bold" }}>{count}</span>개 있습니다!
+            </div>
+          );
+        } else {
+          messages.push(<div key={key}>{form.name} 은(는) 아직 보유 중이 아닙니다.</div>);
+        }
+      });
+    });
+
+    showAlert(<div>{messages}</div>);
+  };
+
+  const searchPokemon = async (isPending: boolean) => {
+    const input = await showPrompt(`${isPending ? "예정 " : ""}검색할 포켓몬 번호 또는 이름을 입력하세요:`);
+    if (input === null) return;
+    
+    if (input.trim() === "") {
+      setGallerySearchTerm("");
+      return;
+    }
+
+    const entries = findPokemonEntries(input);
+    if (entries.length === 0) {
+      showAlert("검색 결과가 없습니다.");
+      setGallerySearchTerm("");
+      return;
+    }
+    
+    const results: React.ReactNode[] = [];
+    entries.forEach(entry => {
+      entry.forms.forEach(form => {
+        const key = `${entry.id}-${form.formId}`;
+        const target = isPending ? pendingCollection : collection;
+        const status = target[key] > 0 ? (
+          <span>
+            <span style={{ color: "red", fontWeight: "bold" }}>획득한</span> 포켓몬 입니다.
+          </span>
+        ) : (
+          "미획득 포켓몬 입니다."
+        );
+        results.push(
+          <div key={key}>
+            {form.name}: {status}
+          </div>
+        );
+      });
+    });
+    
+    setGallerySearchTerm(input.trim());
+    showAlert(<div>{results}</div>);
+  };
+
+  const getPokemonByKey = (key: string): { name: string, image: string, types: string[] } | null => {
+    const [idStr, formId] = key.split("-");
+    const id = parseInt(idStr);
+    const entry = pokemonData.find(p => p.id === id);
+    if (!entry) return null;
+    const form = entry.forms.find(f => f.formId === formId);
+    return form ? { name: form.name, image: form.image, types: form.types || [] } : null;
+  };
+
+  const renderGrid = (target: CollectionMap, isPending: boolean) => {
+    let keys = Object.keys(target).sort((a, b) => {
+      const [aId, aForm] = a.split("-").map(Number);
+      const [bId, bForm] = b.split("-").map(Number);
+      if (aId !== bId) return aId - bId;
+      return aForm - bForm;
+    });
+
+    if (gallerySearchTerm) {
+      const term = gallerySearchTerm.toLowerCase();
+      keys = keys.filter(key => {
+        const [idStr] = key.split("-");
+        const pokemon = getPokemonByKey(key);
+        if (!pokemon) return false;
+        return idStr === term || pokemon.name.toLowerCase().includes(term);
+      });
+    }
+    
+    if (keys.length === 0) {
+      return (
+        <div className="empty-state">
+          <p>
+            {gallerySearchTerm 
+              ? "검색 결과와 일치하는 띠부씰이 없습니다." 
+              : `아직 ${isPending ? "띠부씰 예정 " : ""}수집된 띠부씰이 없습니다.`}
+          </p>
+        </div>
+      );
+    }
+    
+    return (
+      <div className="pokemon-grid">
+        {keys.map((key) => {
+          const pokemon = getPokemonByKey(key);
+          if (!pokemon) return null;
+          const count = target[key];
+          const isAnniversary = anniversaryCollection.includes(key);
+          return (
+            <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
+              <div className="card-header">
+                <span className="pokemon-no">No.{key.split("-")[0].padStart(4, "0")}</span>
+                {(isPending || isLoggedIn) && (
+                  <button
+                    className="delete-btn"
+                    onClick={(e) => { e.stopPropagation(); deletePokemon(key, isPending, pokemon.name); }}
+                    title="삭제"
+                  >
+                    &times;
+                  </button>
+                )}
+              </div>
+              <div className="image-wrapper">
+                <img src={pokemon.image} alt={pokemon.name} loading="lazy" />
+                {isAnniversary && (
+                  <div className="anniversary-badge">
+                    Pokémon <span className="red">30</span>th<br/>Anniversary
+                  </div>
+                )}
+              </div>
+              <div className="pokemon-name">{pokemon.name}</div>
+              <div className="pokemon-types">
+                {pokemon.types.map((t, i) => (
+                  <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                ))}
+              </div>
+              <div className="pokemon-count">보유: {count}개</div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
+  const handleGallerySearch = async () => {
+    const term = await showPrompt("찾고 싶은 포켓몬 번호나 이름을 입력하세요:");
+    if (term === null) return;
+    setGallerySearchTerm(term.trim());
+  };
+
+  const renderGallery = () => {
+    const filteredData = pokemonData.filter(entry => {
+      if (!gallerySearchTerm) return true;
+      const term = gallerySearchTerm.toLowerCase();
+      // Search by ID (number)
+      if (entry.id.toString() === term) return true;
+      // Search by name
+      if (entry.name.toLowerCase().includes(term)) return true;
+      // Search by form name
+      return entry.forms.some(f => f.name.toLowerCase().includes(term));
+    });
+
+    return (
+      <div className="pokemon-grid">
+        {filteredData.map((entry) => {
+          return entry.forms.map((form) => {
+            const key = `${entry.id}-${form.formId}`;
+            
+            // If we have a search term, only show the form that matches the name if the entry itself didn't match by ID
+            // but for simplicity, if entry matched by ID, show all forms.
+            // If searched by name, show all forms of that pokemon that match the name.
+            if (gallerySearchTerm) {
+              const term = gallerySearchTerm.toLowerCase();
+              const entryIdMatch = entry.id.toString() === term;
+              const entryNameMatch = entry.name.toLowerCase().includes(term);
+              const formNameMatch = form.name.toLowerCase().includes(term);
+              
+              if (!entryIdMatch && !entryNameMatch && !formNameMatch) {
+                return null;
+              }
+            }
+
+            return (
+              <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
+                <div className="card-header">
+                  <span className="pokemon-no">No.{entry.id.toString().padStart(4, "0")}</span>
+                </div>
+                <div className="image-wrapper">
+                  <img src={form.image} alt={form.name} loading="lazy" />
+                </div>
+                <div className="pokemon-name">{form.name}</div>
+                <div className="pokemon-types">
+                  {form.types.map((t, i) => (
+                    <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            );
+          });
+        })}
+      </div>
+    );
+  };
+
+  if (loading) {
+    return <div className="loading">데이터를 불러오는 중...</div>;
+  }
+
+  return (
+    <div className="app-container">
+      <audio ref={audioRef} src="/bgm.mp3" loop />
+      
+      {/* Custom Modal */}
+      {modal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <div className="modal-message">{modal.message}</div>
+            {modal.type === "prompt" && (
+              <input 
+                className="modal-input"
+                type={modal.inputType || "text"}
+                value={modalInput}
+                onChange={(e) => setModalInput(e.target.value)}
+                placeholder={modal.placeholder}
+                autoFocus
+              />
+            )}
+            {modal.type === "choice" && (
+              <div className="modal-choices">
+                {modal.choices?.map((c, i) => (
+                  <button key={i} className="btn modal-choice-btn" onClick={() => modal.onConfirm(c.value)}>
+                    {c.label}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="modal-actions">
+              {modal.type !== "choice" && (
+                <button className="btn btn-primary" onClick={() => modal.onConfirm(modalInput)}>
+                  확인
+                </button>
+              )}
+              {(modal.type === "confirm" || modal.type === "prompt" || modal.type === "choice") && (
+                <button className="btn btn-cancel" onClick={modal.onCancel}>
+                  취소
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Pokemon Detail Modal */}
+      {detailKey && (
+        <div className="modal-overlay" onClick={closeDetail}>
+          <div className="detail-modal" onClick={e => e.stopPropagation()}>
+            <button className="close-detail-btn" onClick={closeDetail}>&times;</button>
+            <div className="detail-scroll-container">
+              {detailLoading ? (
+                <div className="detail-loading">정보를 불러오는 중...</div>
+              ) : detailData ? (
+                <div className="detail-layout">
+                  <div className="detail-left">
+                    <div className="detail-img-box">
+                      <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
+                      {activeTab !== "gallery" && (activeTab === "pending" || isLoggedIn) && (
+                        <div className="anniversary-toggle">
+                          <label>
+                            <input 
+                              type="checkbox" 
+                              checked={anniversaryCollection.includes(detailKey)}
+                              onChange={() => toggleAnniversary(detailKey)}
+                            /> <span className="red">30</span>th
+                          </label>
+                        </div>
+                      )}
+                    </div>
+                    <div className="detail-form-info">
+                      {getPokemonByKey(detailKey)?.name}
+                    </div>
+                  </div>
+                  <div className="detail-right">
+                    <div className="detail-flavor-box">
+                      <div className="version-tabs">
+                        {detailData.flavorTexts.slice(0, 6).map((f, i) => (
+                          <button 
+                            key={i} 
+                            className={`version-tab ${activeFlavorIndex === i ? "active" : ""}`}
+                            onClick={() => setActiveFlavorIndex(i)}
+                          >
+                            {f.version}
+                          </button>
+                        ))}
+                      </div>
+                      <p className="flavor-text">
+                        {detailData.flavorTexts[activeFlavorIndex]?.text || "설명이 없습니다."}
+                      </p>
+                    </div>
+                    <table className="detail-table">
+                      <tbody>
+                        <tr>
+                          <th>타입</th>
+                          <td>
+                            <div className="detail-types">
+                              {getPokemonByKey(detailKey)?.types.map((t, i) => (
+                                <span key={i} className={`type-badge type-${t}`}>{t}</span>
+                              ))}
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>키 / 몸무게</th>
+                          <td>{detailData.height}m / {detailData.weight}kg</td>
+                        </tr>
+                        <tr>
+                          <th>분류</th>
+                          <td>{detailData.classification}</td>
+                        </tr>
+                        <tr>
+                          <th>성별</th>
+                          <td>{detailData.gender}</td>
+                        </tr>
+                        <tr>
+                          <th>특성</th>
+                          <td>
+                            <div className="detail-abilities">
+                              {detailData.abilities.map((a, i) => (
+                                <button key={i} className="ability-btn" onClick={() => setAbilityModal(a)}>
+                                  {a.name}
+                                </button>
+                              ))}
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ) : (
+                <div className="detail-error">정보가 없습니다. (특별 스티커는 상세 정보를 지원하지 않습니다.)</div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Ability Description Modal */}
+      {abilityModal && (
+        <div className="modal-overlay" style={{ zIndex: 1100 }} onClick={() => setAbilityModal(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <h3>{abilityModal.name}</h3>
+            <p style={{ margin: "20px 0", lineHeight: "1.6" }}>{abilityModal.description}</p>
+            <button className="btn btn-primary" onClick={() => setAbilityModal(null)}>닫기</button>
+          </div>
+        </div>
+      )}
+
+      <header className="header">
+        <div className="visitor-count">
+          Today: <span>{visitorStats.today}</span> | Total: <span>{visitorStats.total}</span>
+        </div>
+        
+        <h1>포켓몬 띠부씰 도감</h1>
+        
+        <div className="auth-bar-center">
+          <button onClick={toggleBgm} className="btn-link bgm-btn">
+            BGM {isBgmPlaying ? "OFF" : "ON"} 🎵
+          </button>
+          {isLoggedIn ? (
+            <button onClick={logout} className="btn-link">로그아웃</button>
+          ) : (
+            <>
+              {showLoginForm ? (
+                <form className="login-form" onSubmit={handleLoginSubmit}>
+                  <input type="text" placeholder="아이디" value={loginId} onChange={(e) => setLoginId(e.target.value)} required />
+                  <input type="password" placeholder="비밀번호" value={loginPw} onChange={(e) => setLoginPw(e.target.value)} required />
+                  <button type="submit" className="btn btn-mini">로그인</button>
+                  <button type="button" className="btn btn-mini btn-cancel" onClick={() => setShowLoginForm(false)}>취소</button>
+                </form>
+              ) : (
+                <button onClick={() => setShowLoginForm(true)} className="btn-link">관리자 로그인</button>
+              )}
+            </>
+          )}
+        </div>
+
+        <p className="subtitle">
+          나만의 띠부띠부씰 수집 현황을 <br className="mobile-only" /> 관리해보세요!
+        </p>
+      </header>
+
+      <section className="today-catch-section">
+        <div className="today-catch-header">
+          <div className="today-catch-title-box">
+            <span className="today-date">{serverDate}</span>
+            <h2>오늘의 획득 포켓몬 🔥</h2>
+          </div>
+          {isLoggedIn && <button className="btn btn-mini btn-cancel btn-reset-today" onClick={clearTodayCollection}>초기화</button>}
+        </div>
+        {todayCollection.length === 0 ? (
+          <div className="today-empty">오늘의 획득이 아직 없습니다.</div>
+        ) : (
+          <div className="today-list">
+            {todayCollection.map(key => {
+              const pokemon = getPokemonByKey(key);
+              if (!pokemon) return null;
+              return (
+                <div key={key} className="today-item" onClick={() => handleCardClick(key)}>
+                  <div className="today-img-box">
+                    <img src={pokemon.image} alt={pokemon.name} />
+                    {isLoggedIn && <button className="today-remove-btn" onClick={(e) => { e.stopPropagation(); removeTodayPokemon(key); }}>&times;</button>}
+                  </div>
+                  <span>{pokemon.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </section>
+
+      <div className="tab-menu">
+        <button className={`tab-btn ${activeTab === "main" ? "active" : ""}`} onClick={() => { setActiveTab("main"); setGallerySearchTerm(""); }}>띠부씰 도감</button>
+        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => { setActiveTab("pending"); setGallerySearchTerm(""); }}>띠부씰 예정 도감</button>
+        <button className={`tab-btn ${activeTab === "gallery" ? "active" : ""}`} onClick={() => { setActiveTab("gallery"); setGallerySearchTerm(""); }}>전체 포켓몬 확인</button>
+      </div>
+
+      <nav className="nav-bar">
+        {activeTab === "gallery" ? (
+          <>
+            <div className="nav-group">
+              <button
+                onClick={handleGallerySearch}
+                className="btn btn-primary"
+              >
+                포켓몬 검색
+              </button>
+            </div>
+            {gallerySearchTerm && (
+              <div className="reset-group">
+                <button 
+                  onClick={() => setGallerySearchTerm("")}
+                  className="btn btn-cancel"
+                >
+                  검색 초기화
+                </button>
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <div className="nav-group">
+              <button
+                onClick={() => handleRegisterClick(activeTab === "pending")}
+                className="btn btn-primary"
+              >
+                띠부씰 등록
+              </button>
+              <button
+                onClick={() => checkDuplicate(activeTab === "pending")}
+                className="btn btn-secondary"
+              >
+                중복 확인
+              </button>
+              <button
+                onClick={() => searchPokemon(activeTab === "pending")}
+                className="btn btn-info"
+              >
+                {activeTab === "pending" ? "예정 띠부씰 검색" : "보유 띠부씰 검색"}
+              </button>
+            </div>
+            {gallerySearchTerm && (
+              <div className="reset-group">
+                <button 
+                  onClick={() => setGallerySearchTerm("")}
+                  className="btn btn-cancel"
+                >
+                  검색 초기화
+                </button>
+              </div>
+            )}
+          </>
+        )}
+      </nav>
+      <main className="content">
+        <div className="stats">
+          {activeTab === "main" ? "현재 수집(종류)" : activeTab === "pending" ? "예정 수집(종류)" : "전체 포켓몬"} : 
+          <strong> {activeTab === "main" ? Object.keys(collection).length : activeTab === "pending" ? Object.keys(pendingCollection).length : pokemonData.reduce((acc, p) => acc + p.forms.length, 0)}</strong> / 1025
+        </div>
+        {activeTab === "main" ? renderGrid(collection, false) : activeTab === "pending" ? renderGrid(pendingCollection, true) : renderGallery()}
+      </main>
+
+      <footer className="footer">
+        <p>© 2026 Pokemon Sticker Collector. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+}
+
+export default App;

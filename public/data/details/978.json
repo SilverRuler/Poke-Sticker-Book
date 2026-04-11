@@ -1,0 +1,28 @@
+{
+  "id": 978,
+  "name": "싸리용",
+  "classification": "의태포켓몬",
+  "height": 0.3,
+  "weight": 8.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "commander",
+      "description": ""
+    },
+    {
+      "name": "마중물",
+      "description": "물을 끌어모아 특수공격을 올린다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Tatsugiri is an extremely cunning Pokémon. It feigns weakness to lure in prey, then orders its partner to attack."
+    }
+  ]
+}

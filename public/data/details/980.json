@@ -1,0 +1,32 @@
+{
+  "id": 980,
+  "name": "토오",
+  "classification": "가시물고기포켓몬",
+  "height": 1.8,
+  "weight": 223.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "독가시",
+      "description": "접촉한 상대를 중독시킬 때가 있다."
+    },
+    {
+      "name": "저수",
+      "description": "물을 받으면 회복한다."
+    },
+    {
+      "name": "천진",
+      "description": "상대의 능력 변화를 무시한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It lives at the bottom of ponds and swamps. It will carry Wooper on its back and ferry them across water from one shore to the other."
+    }
+  ]
+}

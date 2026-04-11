@@ -1,0 +1,24 @@
+{
+  "id": 1002,
+  "name": "파오젠",
+  "classification": "재액포켓몬",
+  "height": 1.9,
+  "weight": 152.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "sword-of-ruin",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused."
+    },
+    {
+      "version": "바이올렛",
+      "text": "The hatred of those who perished by the sword long ago has clad itself in snow and become a Pokémon."
+    }
+  ]
+}

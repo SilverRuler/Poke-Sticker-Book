@@ -1,0 +1,32 @@
+{
+  "id": 943,
+  "name": "마피티프",
+  "classification": "두목포켓몬",
+  "height": 1.1,
+  "weight": 61.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "위협",
+      "description": "상대의 공격을 떨어뜨린다."
+    },
+    {
+      "name": "guard-dog",
+      "description": ""
+    },
+    {
+      "name": "잠복",
+      "description": "교체로 나온 상대에게 2배 데미지로 공격할 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Mabosstiff loves playing with children. Though usually gentle, it takes on an intimidating look when protecting its family."
+    }
+  ]
+}

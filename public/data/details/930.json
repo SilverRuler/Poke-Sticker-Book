@@ -1,0 +1,28 @@
+{
+  "id": 930,
+  "name": "올리르바",
+  "classification": "올리브포켓몬",
+  "height": 1.4,
+  "weight": 48.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "seed-sower",
+      "description": ""
+    },
+    {
+      "name": "수확",
+      "description": "사용한 나무열매를 몇 번이고 만들어 낸다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon."
+    },
+    {
+      "version": "바이올렛",
+      "text": "This Pokémon drives back enemies by launching its rich, aromatic oil at them with enough force to smash a boulder."
+    }
+  ]
+}

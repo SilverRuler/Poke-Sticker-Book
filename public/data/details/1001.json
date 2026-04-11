@@ -1,0 +1,24 @@
+{
+  "id": 1001,
+  "name": "총지엔",
+  "classification": "재액포켓몬",
+  "height": 1.5,
+  "weight": 74.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "tablets-of-ruin",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It drains the life-force from vegetation, causing nearby forests to instantly wither and fields to turn barren."
+    }
+  ]
+}

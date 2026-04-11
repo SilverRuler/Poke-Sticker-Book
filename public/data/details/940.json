@@ -1,0 +1,32 @@
+{
+  "id": 940,
+  "name": "찌리비",
+  "classification": "바다제비포켓몬",
+  "height": 0.4,
+  "weight": 3.6,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "wind-power",
+      "description": ""
+    },
+    {
+      "name": "축전",
+      "description": "전기를 받으면 회복한다."
+    },
+    {
+      "name": "승기",
+      "description": "능력이 떨어지면 특수공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them."
+    },
+    {
+      "version": "바이올렛",
+      "text": "These Pokémon make their nests on coastal cliffs. The nests have a strange, crackling texture, and they’re a popular delicacy."
+    }
+  ]
+}

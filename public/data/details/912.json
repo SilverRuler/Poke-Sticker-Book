@@ -1,0 +1,28 @@
+{
+  "id": 912,
+  "name": "꾸왁스",
+  "classification": "꼬마오리포켓몬",
+  "height": 0.5,
+  "weight": 6.1,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의 위력이 올라간다."
+    },
+    {
+      "name": "자기과신",
+      "description": "상대를 쓰러뜨리면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.\""
+    },
+    {
+      "version": "바이올렛",
+      "text": "Its strong legs let it easily swim around in even fast-flowing rivers. It likes to keep things tidy and is prone to overthinking things."
+    }
+  ]
+}

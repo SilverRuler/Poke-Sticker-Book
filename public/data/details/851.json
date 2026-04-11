@@ -1,0 +1,32 @@
+{
+  "id": 851,
+  "name": "centiskorch",
+  "classification": "발열포켓몬",
+  "height": 3,
+  "weight": 120,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "발열 시의 체온은 약 800도. 몸을 채찍처럼 휘면서 덤벼든다."
+    },
+    {
+      "version": "실드",
+      "text": "공격적인 성질을 가졌다. 탄 몸도 위험하지만 큰 이빨도 날카롭다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "타오르는불꽃",
+      "description": "불꽃을 받으면\n불꽃 기술이 강해진다."
+    },
+    {
+      "name": "하얀연기",
+      "description": "상대가 능력을\n떨어뜨릴 수 없다."
+    },
+    {
+      "name": "불꽃몸",
+      "description": "접촉한 상대에게\n화상을 입힐 때가 있다."
+    }
+  ]
+}

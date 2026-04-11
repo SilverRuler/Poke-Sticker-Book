@@ -1,0 +1,28 @@
+{
+  "id": 900,
+  "name": "사마자르",
+  "classification": "큰도끼포켓몬",
+  "height": 1.8,
+  "weight": 89.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "벌레의알림",
+      "description": "위급할 때 벌레타입의 위력이 올라간다."
+    },
+    {
+      "name": "우격다짐",
+      "description": "힘이 강해지지만 추가 효과가 없어진다."
+    },
+    {
+      "name": "sharpness",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "레전즈-아르세우스",
+      "text": "A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee."
+    }
+  ]
+}

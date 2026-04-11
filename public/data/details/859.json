@@ -1,0 +1,32 @@
+{
+  "id": 859,
+  "name": "impidimp",
+  "classification": "꾀부리기포켓몬",
+  "height": 0.4,
+  "weight": 5.5,
+  "gender": "수컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "사람이나 포켓몬이 싫어하는 감정을 가질 때 발생시키는 마이너스 에너지를 코로 빨아들여서 건강해진다."
+    },
+    {
+      "version": "실드",
+      "text": "민가에 숨어들어 도둑질을 하고 속상해하는 사람의 마이너스 에너지도 얻는다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "짓궂은마음",
+      "description": "변화 기술을 먼저\n쓸 수 있다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을\n알 수 있다."
+    },
+    {
+      "name": "나쁜손버릇",
+      "description": "닿은 상대로부터\n도구를 훔친다."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": 1005,
+  "name": "고동치는달",
+  "classification": "패러독스포켓몬",
+  "height": 2.0,
+  "weight": 380.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries."
+    },
+    {
+      "version": "바이올렛",
+      "text": "According to an article in a dubious magazine, this Pokémon has some connection to a phenomenon that occurs in a certain region."
+    }
+  ]
+}

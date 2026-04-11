@@ -1,0 +1,32 @@
+{
+  "id": 916,
+  "name": "퍼퓨돈",
+  "classification": "돼지포켓몬",
+  "height": 1.0,
+  "weight": 120.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "lingering-aroma",
+      "description": ""
+    },
+    {
+      "name": "먹보",
+      "description": "나무열매를 여느 때보다 빨리 사용한다."
+    },
+    {
+      "name": "두꺼운지방",
+      "description": "불꽃과 얼음타입의 기술에 강하다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Oinkologne is proud of its fine, glossy skin. It emits a concentrated scent from the tip of its tail."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It entrances female Pokémon with the sweet, alluring scent that wafts from all over its body."
+    }
+  ]
+}

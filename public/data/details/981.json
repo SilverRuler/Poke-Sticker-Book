@@ -1,0 +1,32 @@
+{
+  "id": 981,
+  "name": "키키링",
+  "classification": "긴목포켓몬",
+  "height": 3.2,
+  "weight": 160.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "cud-chew",
+      "description": ""
+    },
+    {
+      "name": "armor-tail",
+      "description": ""
+    },
+    {
+      "name": "초식",
+      "description": "풀 기술을 받으면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s."
+    },
+    {
+      "version": "바이올렛",
+      "text": "The hardened head from the tail protects the head of the main body as Farigiraf whips its long neck around to headbutt enemies."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 904,
+  "name": "장침바루",
+  "classification": "침붕포켓몬몬",
+  "height": 2.5,
+  "weight": 60.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "독가시",
+      "description": "접촉한 상대를 중독시킬 때가 있다."
+    },
+    {
+      "name": "쓱쓱",
+      "description": "비가 올 때 스피드가 올라간다."
+    },
+    {
+      "name": "위협",
+      "description": "상대의 공격을 떨어뜨린다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "레전즈-아르세우스",
+      "text": "Its lancelike spikes and savage temperament have earned it the nickname ”sea fiend.” It slurps up poison to nourish itself."
+    }
+  ]
+}

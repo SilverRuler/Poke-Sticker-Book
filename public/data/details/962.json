@@ -1,0 +1,32 @@
+{
+  "id": 962,
+  "name": "떨구새",
+  "classification": "낙하물포켓몬",
+  "height": 1.5,
+  "weight": 42.9,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "부풀린가슴",
+      "description": "방어를 떨어뜨리는 공격을 받지 않는다."
+    },
+    {
+      "name": "날카로운눈",
+      "description": "명중률이 떨어지지 않는다."
+    },
+    {
+      "name": "rocky-payload",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Bombirdier uses the apron on its chest to bundle up food, which it carries back to its nest. It enjoys dropping things that make loud noises."
+    }
+  ]
+}

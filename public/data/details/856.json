@@ -1,0 +1,32 @@
+{
+  "id": 856,
+  "name": "hatenna",
+  "classification": "차분포켓몬",
+  "height": 0.4,
+  "weight": 3.4,
+  "gender": "암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "머리의 돌기로 생물의 기분을 감지한다. 온화한 자에게만 마음을 연다."
+    },
+    {
+      "version": "실드",
+      "text": "인적이 드문 곳을 좋아한다. 강한 감정이 느껴지면 쏜살같이 도망쳐버린다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "치유의마음",
+      "description": "같은 편의 상태 이상을\n가끔 회복시킨다."
+    },
+    {
+      "name": "위험예지",
+      "description": "상대가 지닌 위험한\n기술을 감지한다."
+    },
+    {
+      "name": "매직미러",
+      "description": "변화 기술을\n되받아칠 수 있다."
+    }
+  ]
+}

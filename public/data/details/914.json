@@ -1,0 +1,28 @@
+{
+  "id": 914,
+  "name": "웨이니발",
+  "classification": "댄서포켓몬",
+  "height": 1.8,
+  "weight": 61.9,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의 위력이 올라간다."
+    },
+    {
+      "name": "자기과신",
+      "description": "상대를 쓰러뜨리면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Dancing in ways that evoke far-away places, this Pokémon mesmerizes all that see it. Flourishes of its decorative water feathers slice into its foes."
+    }
+  ]
+}

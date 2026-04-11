@@ -1,0 +1,28 @@
+{
+  "id": 926,
+  "name": "쫀도기",
+  "classification": "강아지포켓몬",
+  "height": 0.3,
+  "weight": 10.9,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "마이페이스",
+      "description": "혼란 상태가 되지 않는다."
+    },
+    {
+      "name": "서투름",
+      "description": "지니고 있는 도구를 쓸 수 없다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity."
+    },
+    {
+      "version": "바이올렛",
+      "text": "The yeast in Fidough’s breath is useful for cooking, so this Pokémon has been protected by people since long ago."
+    }
+  ]
+}

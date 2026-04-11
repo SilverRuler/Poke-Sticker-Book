@@ -1,0 +1,28 @@
+{
+  "id": 1013,
+  "name": "그우린차",
+  "classification": "말차포켓몬",
+  "height": 0.2,
+  "weight": 2.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "대접",
+      "description": ""
+    },
+    {
+      "name": "내열",
+      "description": "불꽃 기술의 위력을 약하게 한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It prefers cool, dark places, such as the back of a shelf or the space beneath a home's floorboards. It wanders in search of prey after sunset."
+    }
+  ]
+}

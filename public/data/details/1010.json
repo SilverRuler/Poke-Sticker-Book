@@ -1,0 +1,24 @@
+{
+  "id": 1010,
+  "name": "무쇠잎새",
+  "classification": "패러독스포켓몬",
+  "height": 1.5,
+  "weight": 125.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "quark-drive",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Many of its physical characteristics match those of a Virizion from the future that was covered in a paranormal magazine."
+    },
+    {
+      "version": "바이올렛",
+      "text": "According to the few eyewitness accounts that exist, it used its shining blades to julienne large trees and boulders."
+    }
+  ]
+}

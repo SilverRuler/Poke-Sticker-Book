@@ -1,0 +1,28 @@
+{
+  "id": 972,
+  "name": "묘두기",
+  "classification": "유령개포켓몬",
+  "height": 2.0,
+  "weight": 15.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "모래헤치기",
+      "description": "모래바람으로 스피드가 올라간다."
+    },
+    {
+      "name": "복슬복슬",
+      "description": "상대로부터 받은 접촉하는 기술의 데미지를 반감시키지만 불꽃타입 기술의 데미지는 2배가 된다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master."
+    },
+    {
+      "version": "바이올렛",
+      "text": "A lovingly mourned Pokémon was reborn as Houndstone. It doesn’t like anyone touching the protuberance atop its head."
+    }
+  ]
+}

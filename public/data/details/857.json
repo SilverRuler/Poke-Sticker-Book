@@ -1,0 +1,32 @@
+{
+  "id": 857,
+  "name": "hattrem",
+  "classification": "정숙포켓몬",
+  "height": 0.6,
+  "weight": 4.8,
+  "gender": "암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "강한 감정을 품은 자라면 누가 됐든 조용하게 만드는데 그 수단이 매우 난폭하다."
+    },
+    {
+      "version": "실드",
+      "text": "머리의 술로 상대를 때려 꼼짝 못 하게 한다. 프로복서조차 한 방에 KO되는 파괴력이다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "치유의마음",
+      "description": "같은 편의 상태 이상을\n가끔 회복시킨다."
+    },
+    {
+      "name": "위험예지",
+      "description": "상대가 지닌 위험한\n기술을 감지한다."
+    },
+    {
+      "name": "매직미러",
+      "description": "변화 기술을\n되받아칠 수 있다."
+    }
+  ]
+}

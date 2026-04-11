@@ -1,0 +1,24 @@
+{
+  "id": 990,
+  "name": "무쇠바퀴",
+  "classification": "패러독스포켓몬",
+  "height": 0.9,
+  "weight": 240.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "quark-drive",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Sightings of this Pokémon have occurred in recent years. It resembles a mysterious object described in an old expedition journal."
+    }
+  ]
+}

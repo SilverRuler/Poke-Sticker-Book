@@ -1,0 +1,32 @@
+{
+  "id": 960,
+  "name": "바다그다",
+  "classification": "정원장어포켓몬",
+  "height": 1.2,
+  "weight": 1.8,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "미끈미끈",
+      "description": "접촉한 상대의 스피드를 떨어뜨린다."
+    },
+    {
+      "name": "주눅",
+      "description": "주눅이 들어 스피드가 올라가는 타입이 있다."
+    },
+    {
+      "name": "모래숨기",
+      "description": "모래바람으로 회피율이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Though it looks like Diglett, Wiglett is an entirely different species. The resemblance seems to be a coincidental result of environmental adaptation."
+    }
+  ]
+}

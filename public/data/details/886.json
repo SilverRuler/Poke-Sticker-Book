@@ -1,0 +1,32 @@
+{
+  "id": 886,
+  "name": "drakloak",
+  "classification": "돌보미포켓몬",
+  "height": 1.4,
+  "weight": 11,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "비행 속도는 시속 200km. 드라꼰과 함께 싸우며 무사히 진화할 때까지 돌본다."
+    },
+    {
+      "version": "실드",
+      "text": "보살피는 드라꼰을 머리에 태우지 않으면 진정하지 못하고 다른 포켓몬을 태우려고 한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "클리어바디",
+      "description": "상대가 능력을\n떨어뜨릴 수 없다."
+    },
+    {
+      "name": "틈새포착",
+      "description": "상대의 벽을\n뚫고 공격한다."
+    },
+    {
+      "name": "저주받은바디",
+      "description": "공격받으면 가끔 상대를\n사슬묶기 상태로 만든다."
+    }
+  ]
+}

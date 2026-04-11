@@ -1,0 +1,24 @@
+{
+  "id": 993,
+  "name": "무쇠머리",
+  "classification": "패러독스포켓몬",
+  "height": 1.3,
+  "weight": 111.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "quark-drive",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It resembles a certain Pokémon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It’s possible that Iron Jugulis, an object described in an old book, may actually be this Pokémon."
+    }
+  ]
+}

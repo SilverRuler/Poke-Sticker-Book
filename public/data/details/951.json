@@ -1,0 +1,32 @@
+{
+  "id": 951,
+  "name": "캡싸이",
+  "classification": "하바네로포켓몬",
+  "height": 0.3,
+  "weight": 3.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "엽록소",
+      "description": "맑을 때 스피드가 올라간다."
+    },
+    {
+      "name": "불면",
+      "description": "잠듦 상태가 되지 않는다."
+    },
+    {
+      "name": "서투름",
+      "description": "지니고 있는 도구를 쓸 수 없다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Traditional Paldean dishes can be extremely spicy because they include the shed front teeth of Capsakid among their ingredients."
+    }
+  ]
+}

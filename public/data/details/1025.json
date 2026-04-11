@@ -1,0 +1,24 @@
+{
+  "id": 1025,
+  "name": "복숭악동",
+  "classification": "지배포켓몬",
+  "height": 0.3,
+  "weight": 0.3,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "독조종",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt’s control, chained to its will."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Its peach-shaped shell serves as storage for a potent poison. It makes poisonous mochi and serves them to people and Pokémon."
+    }
+  ]
+}

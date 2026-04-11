@@ -1,0 +1,32 @@
+{
+  "id": 824,
+  "name": "blipbug",
+  "classification": "유충포켓몬",
+  "height": 0.4,
+  "weight": 8,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "언제나 부지런히 정보를 모으기 때문에 똑똑하다. 단, 힘은 그저 그렇다."
+    },
+    {
+      "version": "실드",
+      "text": "밭에서 자주 보이는 포켓몬이다. 몸에 난 털로 주위에서 일어나는 일을 감지한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "벌레의알림",
+      "description": "위급할 때 벌레타입의\n위력이 올라간다."
+    },
+    {
+      "name": "복안",
+      "description": "기술의 명중률이\n올라간다."
+    },
+    {
+      "name": "텔레파시",
+      "description": "같은 편의 공격의 낌새를\n읽고 기술을 받지 않는다."
+    }
+  ]
+}

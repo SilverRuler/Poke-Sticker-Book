@@ -1,0 +1,28 @@
+{
+  "id": 910,
+  "name": "악뜨거",
+  "classification": "불꽃악어포켓몬",
+  "height": 1.0,
+  "weight": 30.7,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "맹화",
+      "description": "위급할 때 불꽃타입의 위력이 올라간다."
+    },
+    {
+      "name": "천진",
+      "description": "상대의 능력 변화를 무시한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "The combination of Crocalor’s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pokémon’s head."
+    },
+    {
+      "version": "바이올렛",
+      "text": "The valve in Crocalor’s flame sac is closely connected to its vocal cords. This Pokémon utters a guttural cry as it spews flames every which way."
+    }
+  ]
+}

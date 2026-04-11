@@ -1,0 +1,24 @@
+{
+  "id": 893,
+  "name": "zarude",
+  "classification": "나쁜원숭이포켓몬",
+  "height": 1.8,
+  "weight": 70,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "무리 지어 밀림에 산다. 매우 공격적이라 숲에 사는 포켓몬들에게는 두려움의 대상이다."
+    },
+    {
+      "version": "실드",
+      "text": "몸에 난 덩굴이 끊어지면 토양에 영양분이 되어 숲의 식물들을 성장시킨다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "리프가드",
+      "description": "맑을 때는\n상태 이상이 되지 않는다."
+    }
+  ]
+}

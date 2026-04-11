@@ -1,0 +1,24 @@
+{
+  "id": 986,
+  "name": "사나운버섯",
+  "classification": "패러독스포켓몬",
+  "height": 1.2,
+  "weight": 21.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It is possible that the creature listed as Brute Bonnet in a certain book could actually be this Pokémon."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It bears a slight resemblance to a Pokémon described in a dubious magazine as a cross between a dinosaur and a mushroom."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 849,
+  "name": "toxtricity-amped",
+  "classification": "펑크포켓몬",
+  "height": 1.6,
+  "weight": 40,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "가슴에 난 돌기를 긁으면 전기가 일어나며 주위에 기타와 비슷한 소리가 울려퍼진다."
+    },
+    {
+      "version": "실드",
+      "text": "호전적이며 성미가 급하다. 고인 물을 벌컥벌컥 마셔서 물속의 독소를 흡수한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "펑크록",
+      "description": "소리 기술의 위력이 올라간다.\n상대로부터 받는 소리 기술의\n데미지는 절반이 된다."
+    },
+    {
+      "name": "플러스",
+      "description": "플러스나 마이너스가 있으면\n특수공격이 올라간다."
+    },
+    {
+      "name": "테크니션",
+      "description": "약한 기술의\n위력이 올라간다."
+    }
+  ]
+}

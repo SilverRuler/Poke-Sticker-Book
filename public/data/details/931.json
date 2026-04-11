@@ -1,0 +1,32 @@
+{
+  "id": 931,
+  "name": "시비꼬",
+  "classification": "잉꼬포켓몬",
+  "height": 0.6,
+  "weight": 2.4,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "위협",
+      "description": "상대의 공격을 떨어뜨린다."
+    },
+    {
+      "name": "의욕",
+      "description": "공격은 높지만 빗나가기 쉽다."
+    },
+    {
+      "name": "근성",
+      "description": "상태 이상이 되면 공격이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Green-feathered flocks hold the most sway. When they’re out searching for food in the mornings and evenings, it gets very noisy."
+    }
+  ]
+}

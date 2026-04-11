@@ -1,0 +1,32 @@
+{
+  "id": 944,
+  "name": "땃쭈르",
+  "classification": "독쥐포켓몬",
+  "height": 0.2,
+  "weight": 0.7,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "곡예",
+      "description": "도구가 없어지면 스피드가 올라간다."
+    },
+    {
+      "name": "나쁜손버릇",
+      "description": "닿은 상대로부터 도구를 훔친다."
+    },
+    {
+      "name": "짓궂은마음",
+      "description": "변화 기술을 먼저 쓸 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire."
+    },
+    {
+      "version": "바이올렛",
+      "text": "To keep enemies away from its territory, it paints markings around its nest using a poisonous liquid that has an acrid odor."
+    }
+  ]
+}

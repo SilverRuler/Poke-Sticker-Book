@@ -1,0 +1,24 @@
+{
+  "id": 989,
+  "name": "모래털가죽",
+  "classification": "패러독스포켓몬",
+  "height": 2.3,
+  "weight": 60.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "No records exist of this Pokémon being caught. Data is lacking, but the Pokémon’s traits match up with a creature shown in an expedition journal."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It slightly resembles a Magneton that lived for 10,000 years and was featured in an article in a paranormal magazine."
+    }
+  ]
+}

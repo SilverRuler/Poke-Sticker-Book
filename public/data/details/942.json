@@ -1,0 +1,32 @@
+{
+  "id": 942,
+  "name": "오라티프",
+  "classification": "애송이포켓몬",
+  "height": 0.5,
+  "weight": 16.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "위협",
+      "description": "상대의 공격을 떨어뜨린다."
+    },
+    {
+      "name": "도주",
+      "description": "야생 포켓몬으로부터 반드시 도망칠 수 있다."
+    },
+    {
+      "name": "잠복",
+      "description": "교체로 나온 상대에게 2배 데미지로 공격할 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Its well-developed jaw and fangs are strong enough to crunch through boulders, and its thick fat makes for an excellent defense."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 924,
+  "name": "두리쥐",
+  "classification": "커플포켓몬",
+  "height": 0.3,
+  "weight": 1.8,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "도주",
+      "description": "야생 포켓몬으로부터 반드시 도망칠 수 있다."
+    },
+    {
+      "name": "픽업",
+      "description": "도구를 주워올 때가 있다."
+    },
+    {
+      "name": "마이페이스",
+      "description": "혼란 상태가 되지 않는다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them."
+    },
+    {
+      "version": "바이올렛",
+      "text": "The pair sticks together no matter what. They split any food they find exactly in half and then eat it together."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 935,
+  "name": "카르본",
+  "classification": "불의아이포켓몬",
+  "height": 0.6,
+  "weight": 10.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "타오르는불꽃",
+      "description": "불꽃을 받으면 불꽃 기술이 강해진다."
+    },
+    {
+      "name": "불꽃몸",
+      "description": "접촉한 상대에게 화상을 입힐 때가 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Its firepower increases when it fights, reaching over 1,800 degrees Fahrenheit. It likes berries that are rich in fat."
+    }
+  ]
+}

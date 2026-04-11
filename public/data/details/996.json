@@ -1,0 +1,28 @@
+{
+  "id": 996,
+  "name": "드니차",
+  "classification": "얼음지느러미포켓몬",
+  "height": 0.5,
+  "weight": 17.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "thermal-exchange",
+      "description": ""
+    },
+    {
+      "name": "아이스바디",
+      "description": "싸라기눈일 때 HP를 조금씩 회복한다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores."
+    },
+    {
+      "version": "바이올렛",
+      "text": "This Pokémon lives in forests and craggy areas. Using the power of its dorsal fin, it cools the inside of its nest like a refrigerator."
+    }
+  ]
+}

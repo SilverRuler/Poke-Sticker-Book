@@ -1,0 +1,32 @@
+{
+  "id": 938,
+  "name": "빈나두",
+  "classification": "전기올챙이포켓몬",
+  "height": 0.3,
+  "weight": 0.4,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "마이페이스",
+      "description": "혼란 상태가 되지 않는다."
+    },
+    {
+      "name": "정전기",
+      "description": "접촉한 상대를 마비시킬 때가 있다."
+    },
+    {
+      "name": "습기",
+      "description": "누구도 폭발 할 수 없게 된다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It floats using the electricity stored in its body. When thunderclouds are around, Tadbulb will float higher off the ground."
+    }
+  ]
+}

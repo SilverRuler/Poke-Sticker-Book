@@ -1,0 +1,28 @@
+{
+  "id": 1014,
+  "name": "조타구",
+  "classification": "수하포켓몬",
+  "height": 1.8,
+  "weight": 92.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "독사슬",
+      "description": ""
+    },
+    {
+      "name": "guard-dog",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Okidogi is a ruffian with a short temper. It can pulverize anything by swinging around the chain on its neck."
+    }
+  ]
+}

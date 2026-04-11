@@ -1,0 +1,28 @@
+{
+  "id": 920,
+  "name": "엑스레그",
+  "classification": "메뚜기포켓몬",
+  "height": 1.0,
+  "weight": 17.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "벌레의알림",
+      "description": "위급할 때 벌레타입의 위력이 올라간다."
+    },
+    {
+      "name": "색안경",
+      "description": "효과가 별로인 기술이 강해진다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It uses its normally folded third set of legs when in Showdown Mode. This places a huge burden on its body, so it can’t stay in this mode for long."
+    }
+  ]
+}

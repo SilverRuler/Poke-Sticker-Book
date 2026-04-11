@@ -1,0 +1,28 @@
+{
+  "id": 954,
+  "name": "베라카스",
+  "classification": "굴리기포켓몬",
+  "height": 0.3,
+  "weight": 3.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "싱크로",
+      "description": "독, 마비, 화상을 상대에게 옮긴다."
+    },
+    {
+      "name": "텔레파시",
+      "description": "같은 편의 공격의 낌새를 읽고 기술을 받지 않는다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball."
+    },
+    {
+      "version": "바이올렛",
+      "text": "An infant sleeps inside the ball. Rabsca rolls the ball soothingly with its legs to ensure the infant sleeps comfortably."
+    }
+  ]
+}

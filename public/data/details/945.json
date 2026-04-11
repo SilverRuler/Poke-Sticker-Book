@@ -1,0 +1,32 @@
+{
+  "id": 945,
+  "name": "태깅구르",
+  "classification": "독원숭이포켓몬",
+  "height": 0.7,
+  "weight": 27.2,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "곡예",
+      "description": "도구가 없어지면 스피드가 올라간다."
+    },
+    {
+      "name": "독수",
+      "description": "접촉하기만 해도 상대를 독 상태로 만들 때가 있다."
+    },
+    {
+      "name": "짓궂은마음",
+      "description": "변화 기술을 먼저 쓸 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Each Grafaiai paints its own individual pattern, and it will paint that same pattern over and over again throughout its life."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": 955,
+  "name": "하느라기",
+  "classification": "프릴포켓몬",
+  "height": 0.2,
+  "weight": 1.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "위험예지",
+      "description": "상대가 지닌 위험한 기술을 감지한다."
+    },
+    {
+      "name": "통찰",
+      "description": "상대가 지닌 물건을 알 수 있다."
+    },
+    {
+      "name": "가속",
+      "description": "조금씩 스피드가 높아진다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It spends its time running around wastelands. If anyone steals its beloved berries, it will chase them down and exact its revenge."
+    }
+  ]
+}

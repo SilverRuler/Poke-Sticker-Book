@@ -1,0 +1,24 @@
+{
+  "id": 948,
+  "name": "들눈해",
+  "classification": "목이버섯포켓몬",
+  "height": 0.9,
+  "weight": 33.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "mycelium-might",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Though it looks like Tentacool, Toedscool is a completely different species. Its legs may be thin, but it can run at a speed of 30 mph."
+    }
+  ]
+}

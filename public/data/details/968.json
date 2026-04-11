@@ -1,0 +1,28 @@
+{
+  "id": 968,
+  "name": "꿈트렁",
+  "classification": "지렁이포켓몬",
+  "height": 2.5,
+  "weight": 310.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "earth-eater",
+      "description": ""
+    },
+    {
+      "name": "모래숨기",
+      "description": "모래바람으로 회피율이 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches."
+    },
+    {
+      "version": "바이올렛",
+      "text": "This Pokémon lives in arid deserts. It maintains its metal body by consuming iron from the soil."
+    }
+  ]
+}

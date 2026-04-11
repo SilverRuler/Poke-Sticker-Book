@@ -1,0 +1,28 @@
+{
+  "id": 936,
+  "name": "카디나르마",
+  "classification": "불의전사포켓몬",
+  "height": 1.5,
+  "weight": 85.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "타오르는불꽃",
+      "description": "불꽃을 받으면 불꽃 기술이 강해진다."
+    },
+    {
+      "name": "깨어진갑옷",
+      "description": "물리 기술을 받으면 방어가 떨어지고 스피드가 올라간다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal."
+    },
+    {
+      "version": "바이올렛",
+      "text": "This Pokémon clads itself in armor that has been fortified by psychic and fire energy, and it shoots blazing fireballs."
+    }
+  ]
+}

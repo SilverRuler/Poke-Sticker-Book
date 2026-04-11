@@ -1,0 +1,24 @@
+{
+  "id": 1024,
+  "name": "테라파고스",
+  "classification": "테라스탈포켓몬",
+  "height": 0.2,
+  "weight": 6.5,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "테라체인지",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It’s thought that this Pokémon lived in ancient Paldea until it got caught in seismic shifts and went extinct."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 969,
+  "name": "초롱순",
+  "classification": "광석포켓몬",
+  "height": 0.7,
+  "weight": 8.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "toxic-debris",
+      "description": ""
+    },
+    {
+      "name": "부식",
+      "description": "강철타입이나 독타입도 독 상태로 만들 수 있다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Glimmet’s toxic mineral crystals look just like flower petals. This Pokémon scatters poisonous powder like pollen to protect itself."
+    }
+  ]
+}

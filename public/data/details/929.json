@@ -1,0 +1,28 @@
+{
+  "id": 929,
+  "name": "올리뇨",
+  "classification": "올리브포켓몬",
+  "height": 0.6,
+  "weight": 11.9,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "일찍기상",
+      "description": "잠듦 상태에서 빨리 깨어난다."
+    },
+    {
+      "name": "수확",
+      "description": "사용한 나무열매를 몇 번이고 만들어 낸다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone."
+    },
+    {
+      "version": "바이올렛",
+      "text": "It basks in the sun to its heart’s content until the fruits on its head ripen. After that, Dolliv departs from human settlements and goes on a journey."
+    }
+  ]
+}

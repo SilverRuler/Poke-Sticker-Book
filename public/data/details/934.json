@@ -1,0 +1,32 @@
+{
+  "id": 934,
+  "name": "콜로솔트",
+  "classification": "암염포켓몬",
+  "height": 2.3,
+  "weight": 240.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "purifying-salt",
+      "description": ""
+    },
+    {
+      "name": "옹골참",
+      "description": "일격으로 쓰러지지 않는다."
+    },
+    {
+      "name": "클리어바디",
+      "description": "상대가 능력을 떨어뜨릴 수 없다."
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Many Pokémon gather around Garganacl, hoping to lick at its mineral-rich salt."
+    }
+  ]
+}

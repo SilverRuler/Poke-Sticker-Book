@@ -1,0 +1,24 @@
+{
+  "id": 988,
+  "name": "땅을기는날개",
+  "classification": "패러독스포켓몬",
+  "height": 3.2,
+  "weight": 92.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "protosynthesis",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This mysterious Pokémon has some similarities to a creature that an old book introduced as Slither Wing."
+    },
+    {
+      "version": "바이올렛",
+      "text": "This Pokémon somewhat resembles an ancient form of Volcarona that was introduced in a dubious magazine."
+    }
+  ]
+}

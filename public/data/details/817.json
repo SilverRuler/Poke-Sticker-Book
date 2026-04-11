@@ -1,0 +1,28 @@
+{
+  "id": 817,
+  "name": "drizzile",
+  "classification": "물도마뱀포켓몬",
+  "height": 0.7,
+  "weight": 11.5,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "손바닥에서 나오는 수분을 빚어서 만든 물구슬로 두뇌 싸움을 펼친다."
+    },
+    {
+      "version": "실드",
+      "text": "머리가 좋지만 귀찮음이 많다. 영역에 적이 다가오지 못하게 여기저기에 함정을 만들어 놓는다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의\n위력이 올라간다."
+    },
+    {
+      "name": "스나이퍼",
+      "description": "급소에 맞혔을 때\n위력이 올라간다."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": 853,
+  "name": "grapploct",
+  "classification": "유술포켓몬",
+  "height": 1.6,
+  "weight": 39,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "온몸이 근육덩어리다. 촉수를 사용해서 펼치는 조르기 기술의 위력은 무시무시하다."
+    },
+    {
+      "version": "실드",
+      "text": "자신의 실력을 시험하기 위해 육지로 올라가 대전 상대를 찾는다. 싸움이 끝나면 바다로 돌아간다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "유연",
+      "description": "마비 상태가\n되지 않는다."
+    },
+    {
+      "name": "테크니션",
+      "description": "약한 기술의\n위력이 올라간다."
+    }
+  ]
+}

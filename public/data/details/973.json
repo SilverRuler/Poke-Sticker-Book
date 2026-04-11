@@ -1,0 +1,32 @@
+{
+  "id": 973,
+  "name": "꼬이밍고",
+  "classification": "싱크로포켓몬",
+  "height": 1.6,
+  "weight": 37.0,
+  "gender": "성별불명",
+  "abilities": [
+    {
+      "name": "배짱",
+      "description": "고스트타입에 노말 기술이 맞는다."
+    },
+    {
+      "name": "갈지자걸음",
+      "description": "혼란에 빠져있으면 회피하기 쉬워진다."
+    },
+    {
+      "name": "costar",
+      "description": ""
+    }
+  ],
+  "flavorTexts": [
+    {
+      "version": "스칼렛",
+      "text": "This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak."
+    },
+    {
+      "version": "바이올렛",
+      "text": "Thanks to a behavior of theirs known as “synchronizing,” an entire flock of these Pokémon can attack simultaneously in perfect harmony."
+    }
+  ]
+}

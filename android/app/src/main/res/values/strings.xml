@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">pokemon-collector</string>
+    <string name="app_name">PokeSealDex</string>
     <string name="title_activity_main">pokemon-collector</string>
     <string name="package_name">com.silverruler.pokestickerbook</string>
     <string name="custom_url_scheme">com.silverruler.pokestickerbook</string>

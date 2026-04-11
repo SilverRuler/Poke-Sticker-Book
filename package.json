@@ -11,6 +11,8 @@
     "start": "node server/local.js"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.0",
+    "@capacitor/core": "^8.3.0",
     "@upstash/redis": "^1.37.0",
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
@@ -19,6 +21,7 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.3.0",
     "@eslint/js": "^9.39.4",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",

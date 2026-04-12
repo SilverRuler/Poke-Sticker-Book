@@ -108,28 +108,6 @@ function App() {
     });
   };
 
-  // (Helper for Local Storage)
-  const updateLocalVisitorStats = () => {
-    const now = new Date();
-    const todayStr = now.toISOString().split('T')[0];
-    const lastVisitDate = localStorage.getItem("last-visit-date");
-    let totalVisits = parseInt(localStorage.getItem("total-visits") || "0");
-    let todayVisits = parseInt(localStorage.getItem("today-visits") || "0");
-
-    if (lastVisitDate !== todayStr) {
-      // New day
-      totalVisits += todayVisits;
-      todayVisits = 1;
-      localStorage.setItem("last-visit-date", todayStr);
-    } else {
-      todayVisits += 1;
-    }
-
-    localStorage.setItem("total-visits", totalVisits.toString());
-    localStorage.setItem("today-visits", todayVisits.toString());
-    setVisitorStats({ total: totalVisits + todayVisits, today: todayVisits });
-  };
-
   const fetchCollections = async () => {
     try {
       const response = await fetch("/api/collection");
@@ -139,6 +117,7 @@ function App() {
       setPendingCollection(data.pending_collection || {});
       setAnniversaryCollection(data.anniversary_collection || []);
       setTodayCollection(data.today_collection || []);
+      setVisitorStats(data.visitor_stats || { total: 0, today: 0 });
       setServerDate(data.server_date || formatYYMMDD(new Date()));
     } catch (error) {
       console.log("Using local collection as fallback");
@@ -178,7 +157,6 @@ function App() {
   // Initial load and listeners
   useEffect(() => {
     fetchCollections();
-    updateLocalVisitorStats();
     const auth = localStorage.getItem("is-logged-in");
     if (auth === "true") setIsLoggedIn(true);
   }, []);

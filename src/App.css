@@ -269,17 +269,28 @@ body {
   display: flex;
   gap: 15px;
   overflow-x: auto;
-  padding: 10px 5px;
-  scrollbar-width: thin;
+  padding: 10px 5px 20px 5px; /* bottom padding for scrollbar space */
+  scrollbar-width: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .today-list::-webkit-scrollbar {
-  height: 6px;
+  height: 8px;
+  display: block;
+}
+
+.today-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 .today-list::-webkit-scrollbar-thumb {
-  background: #ddd;
+  background: #ccc;
   border-radius: 10px;
+}
+
+.today-list::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
 
 .today-item {

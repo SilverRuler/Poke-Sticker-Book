@@ -1009,9 +1009,9 @@ function App() {
             <h2>{activeTab === "pending" ? "예정 " : ""}오늘의 획득 포켓몬 🔥</h2>
           </div>
           <div className="today-catch-actions">
-            <button className="btn btn-mini btn-info" onClick={viewHistory}>지난 획득 포켓몬 보기</button>
+            <button className="btn btn-mini btn-info btn-today-action" onClick={viewHistory}>기록 보기</button>
             {(activeTab === "pending" || isLoggedIn) && (
-              <button className="btn btn-mini btn-cancel btn-reset-today" onClick={clearTodayCollection}>초기화</button>
+              <button className="btn btn-mini btn-cancel btn-today-action" onClick={clearTodayCollection}>초기화</button>
             )}
           </div>
         </div>

@@ -252,7 +252,7 @@ body {
   line-height: 1;
 }
 
-.btn-reset-today {
+.btn-today-action {
   flex: none !important;
   flex-shrink: 0;
   padding: 6px 10px !important;

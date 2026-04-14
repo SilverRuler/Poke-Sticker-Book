@@ -22,8 +22,12 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
   });
 }
 
-// REDIS_PREFIX: 'poke_' to avoid key collision
-const REDIS_KEY = 'poke_pokedex_db';
+// REDIS_KEYS: Separated for different purposes
+const COLLECTION_KEY = 'poke_collection_db';
+const STATS_KEY = 'poke_stats_db';
+const ANNIVERSARY_KEY = 'poke_anniversary_db';
+const OLD_REDIS_KEY = 'poke_pokedex_db';
+
 const DB_FILE = path.join(__dirname, '../server/data.json');
 const USERS_FILE = path.join(__dirname, '../server/users.json');
 
@@ -36,33 +40,74 @@ const getKSTDate = () => {
 
 // Unified Data Access Layer
 const getData = async () => {
+  const defaultDB = { 
+    collection: {}, 
+    pending_collection: {}, 
+    today_collection: [], 
+    anniversary_collection: [], 
+    pending_anniversary_collection: [],
+    last_reset_date: getKSTDate(),
+    visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] }
+  };
+
   if (redis) {
-    const data = await redis.get(REDIS_KEY);
-    const defaultDB = { 
-      collection: {}, 
-      pending_collection: {}, 
-      today_collection: [], 
-      anniversary_collection: [], // 30th Anniversary for Main Collection
-      pending_anniversary_collection: [], // 30th Anniversary for Pending Collection
-      last_reset_date: getKSTDate(),
-      visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] }
+    // Fetch all three keys in parallel
+    const [collData, statsData, annivData] = await Promise.all([
+      redis.get(COLLECTION_KEY),
+      redis.get(STATS_KEY),
+      redis.get(ANNIVERSARY_KEY)
+    ]);
+
+    // Migration logic: If new keys don't exist, check old key
+    if (!collData && !statsData && !annivData) {
+      const oldData = await redis.get(OLD_REDIS_KEY);
+      if (oldData) {
+        console.log("Migrating from old poke_pokedex_db...");
+        return {
+          collection: oldData.collection || {},
+          pending_collection: oldData.pending_collection || {},
+          today_collection: oldData.today_collection || [],
+          anniversary_collection: oldData.anniversary_collection || [],
+          pending_anniversary_collection: oldData.pending_anniversary_collection || [],
+          last_reset_date: oldData.last_reset_date || getKSTDate(),
+          visitor_stats: oldData.visitor_stats || defaultDB.visitor_stats
+        };
+      }
+    }
+
+    return {
+      collection: collData?.collection || {},
+      pending_collection: collData?.pending_collection || {},
+      today_collection: collData?.today_collection || [],
+      last_reset_date: statsData?.last_reset_date || getKSTDate(),
+      visitor_stats: statsData?.visitor_stats || defaultDB.visitor_stats,
+      anniversary_collection: annivData?.anniversary_collection || [],
+      pending_anniversary_collection: annivData?.pending_anniversary_collection || []
     };
-    if (!data) return defaultDB;
-    if (!data.anniversary_collection) data.anniversary_collection = [];
-    if (!data.pending_anniversary_collection) data.pending_anniversary_collection = [];
-    return data;
   } else {
-    if (!fs.existsSync(DB_FILE)) return { collection: {}, pending_collection: {}, today_collection: [], anniversary_collection: [], pending_anniversary_collection: [], last_reset_date: getKSTDate(), visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] } };
+    if (!fs.existsSync(DB_FILE)) return defaultDB;
     const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
-    if (!data.anniversary_collection) data.anniversary_collection = [];
-    if (!data.pending_anniversary_collection) data.pending_anniversary_collection = [];
-    return data;
+    return { ...defaultDB, ...data };
   }
 };
 
 const saveData = async (data) => {
   if (redis) {
-    await redis.set(REDIS_KEY, data);
+    await Promise.all([
+      redis.set(COLLECTION_KEY, {
+        collection: data.collection,
+        pending_collection: data.pending_collection,
+        today_collection: data.today_collection
+      }),
+      redis.set(STATS_KEY, {
+        last_reset_date: data.last_reset_date,
+        visitor_stats: data.visitor_stats
+      }),
+      redis.set(ANNIVERSARY_KEY, {
+        anniversary_collection: data.anniversary_collection,
+        pending_anniversary_collection: data.pending_anniversary_collection
+      })
+    ]);
   } else {
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
   }

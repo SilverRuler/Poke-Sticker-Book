@@ -239,6 +239,34 @@ function App() {
     }
   };
 
+  const moveToMain = async (key: string) => {
+    if (!isLoggedIn) return;
+    if (!(await showConfirm("이 띠부씰을 띠부씰 도감으로 이동하시겠습니까?"))) return;
+
+    try {
+      const response = await fetch("/api/pending/move-to-main", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key }),
+      });
+      const data = await response.json();
+      setCollection(data.collection);
+      setPendingCollection(data.pending_collection);
+      setAnniversaryCollection(data.anniversary_collection);
+      setPendingAnniversaryCollection(data.pending_anniversary_collection);
+      
+      localStorage.setItem("collection", JSON.stringify(data.collection));
+      localStorage.setItem("pending_collection", JSON.stringify(data.pending_collection));
+      localStorage.setItem("anniversary_collection", JSON.stringify(data.anniversary_collection));
+      localStorage.setItem("pending_anniversary_collection", JSON.stringify(data.pending_anniversary_collection));
+      
+      closeDetail();
+      showAlert("띠부씰 도감으로 이동되었습니다.");
+    } catch (error) {
+      showAlert("이동 중 오류가 발생했습니다.");
+    }
+  };
+
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (loginId === "aa" && loginPw === "bb") {
@@ -792,6 +820,16 @@ function App() {
                     </div>
                     <div className="detail-form-info">
                       {getPokemonByKey(detailKey)?.name}
+                      {activeTab === "pending" && isLoggedIn && (
+                        <div style={{ marginTop: "10px" }}>
+                          <button 
+                            className="btn btn-mini btn-primary"
+                            onClick={() => moveToMain(detailKey)}
+                          >
+                            띠부씰 도감으로 이동
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                   <div className="detail-right">

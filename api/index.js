@@ -199,6 +199,32 @@ app.post('/api/pending/remove', async (req, res) => {
   res.json(req.db);
 });
 
+app.post('/api/pending/move-to-main', async (req, res) => {
+  const { key } = req.body;
+  if (!key) return res.status(400).json({ error: 'Key required' });
+
+  const pendingCount = req.db.pending_collection[key] || 0;
+  if (pendingCount > 0) {
+    // Add to main collection (increment by the pending count)
+    req.db.collection[key] = (req.db.collection[key] || 0) + pendingCount;
+    // Remove from pending collection
+    delete req.db.pending_collection[key];
+
+    // Move anniversary status if exists
+    if (req.db.pending_anniversary_collection.includes(key)) {
+      req.db.pending_anniversary_collection = req.db.pending_anniversary_collection.filter(k => k !== key);
+      if (!req.db.anniversary_collection.includes(key)) {
+        req.db.anniversary_collection.push(key);
+      }
+    }
+    
+    await saveData(req.db);
+    res.json(req.db);
+  } else {
+    res.status(400).json({ error: 'Not in pending collection' });
+  }
+});
+
 app.post('/api/today/add', async (req, res) => {
   const { key } = req.body;
   if (!req.db.today_collection.includes(key)) {

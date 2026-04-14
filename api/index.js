@@ -42,17 +42,20 @@ const getData = async () => {
       collection: {}, 
       pending_collection: {}, 
       today_collection: [], 
-      anniversary_collection: [], // New for 30th Anniversary
+      anniversary_collection: [], // 30th Anniversary for Main Collection
+      pending_anniversary_collection: [], // 30th Anniversary for Pending Collection
       last_reset_date: getKSTDate(),
       visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] }
     };
     if (!data) return defaultDB;
     if (!data.anniversary_collection) data.anniversary_collection = [];
+    if (!data.pending_anniversary_collection) data.pending_anniversary_collection = [];
     return data;
   } else {
-    if (!fs.existsSync(DB_FILE)) return { collection: {}, pending_collection: {}, today_collection: [], anniversary_collection: [], last_reset_date: getKSTDate(), visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] } };
+    if (!fs.existsSync(DB_FILE)) return { collection: {}, pending_collection: {}, today_collection: [], anniversary_collection: [], pending_anniversary_collection: [], last_reset_date: getKSTDate(), visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] } };
     const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
     if (!data.anniversary_collection) data.anniversary_collection = [];
+    if (!data.pending_anniversary_collection) data.pending_anniversary_collection = [];
     return data;
   }
 };
@@ -184,8 +187,13 @@ app.post('/api/pending/remove', async (req, res) => {
   const { key, count } = req.body;
   const val = req.db.pending_collection[key];
   if (val) {
-    if (count === null || count === undefined || count >= val) delete req.db.pending_collection[key];
-    else req.db.pending_collection[key] -= count;
+    if (count === null || count === undefined || count >= val) {
+      delete req.db.pending_collection[key];
+      // Also remove anniversary mark if fully deleted
+      req.db.pending_anniversary_collection = req.db.pending_anniversary_collection.filter(k => k !== key);
+    } else {
+      req.db.pending_collection[key] -= count;
+    }
   }
   await saveData(req.db);
   res.json(req.db);
@@ -215,13 +223,21 @@ app.post('/api/today/clear', async (req, res) => {
 
 // 30th Anniversary Toggle
 app.post('/api/anniversary/toggle', async (req, res) => {
-  const { key } = req.body;
+  const { key, isPending } = req.body;
   if (!key) return res.status(400).json({ error: 'Key required' });
   
-  if (req.db.anniversary_collection.includes(key)) {
-    req.db.anniversary_collection = req.db.anniversary_collection.filter(k => k !== key);
+  if (isPending) {
+    if (req.db.pending_anniversary_collection.includes(key)) {
+      req.db.pending_anniversary_collection = req.db.pending_anniversary_collection.filter(k => k !== key);
+    } else {
+      req.db.pending_anniversary_collection.push(key);
+    }
   } else {
-    req.db.anniversary_collection.push(key);
+    if (req.db.anniversary_collection.includes(key)) {
+      req.db.anniversary_collection = req.db.anniversary_collection.filter(k => k !== key);
+    } else {
+      req.db.anniversary_collection.push(key);
+    }
   }
   await saveData(req.db);
   res.json(req.db);

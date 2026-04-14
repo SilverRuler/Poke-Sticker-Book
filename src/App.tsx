@@ -37,6 +37,7 @@ function App() {
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
   const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
+  const [pendingAnniversaryCollection, setPendingAnniversaryCollection] = useState<string[]>([]);
   const [todayCollection, setTodayCollection] = useState<string[]>([]);
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
   const [serverDate, setServerDate] = useState(formatYYMMDD(new Date()));
@@ -116,6 +117,7 @@ function App() {
       setCollection(data.collection || {});
       setPendingCollection(data.pending_collection || {});
       setAnniversaryCollection(data.anniversary_collection || []);
+      setPendingAnniversaryCollection(data.pending_anniversary_collection || []);
       setTodayCollection(data.today_collection || []);
       setVisitorStats(data.visitor_stats || { total: 0, today: 0 });
       setServerDate(data.server_date || formatYYMMDD(new Date()));
@@ -125,10 +127,12 @@ function App() {
       const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
       const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
       const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
+      const localPendingAnniv = JSON.parse(localStorage.getItem("pending_anniversary_collection") || "[]");
       setCollection(localColl);
       setPendingCollection(localPending);
       setTodayCollection(localToday);
       setAnniversaryCollection(localAnniv);
+      setPendingAnniversaryCollection(localPendingAnniv);
       setServerDate(formatYYMMDD(new Date()));
     } finally {
       setLoading(false);
@@ -205,26 +209,33 @@ function App() {
     setDetailData(null);
   };
 
-  const toggleAnniversary = async (key: string) => {
+  const toggleAnniversary = async (key: string, isPending: boolean) => {
     try {
       const response = await fetch("/api/anniversary/toggle", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ key }),
+        body: JSON.stringify({ key, isPending }),
       });
       const data = await response.json();
       setAnniversaryCollection(data.anniversary_collection);
+      setPendingAnniversaryCollection(data.pending_anniversary_collection);
       localStorage.setItem("anniversary_collection", JSON.stringify(data.anniversary_collection));
+      localStorage.setItem("pending_anniversary_collection", JSON.stringify(data.pending_anniversary_collection));
     } catch (error) {
-      const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
+      const storageKey = isPending ? "pending_anniversary_collection" : "anniversary_collection";
+      const localAnniv = JSON.parse(localStorage.getItem(storageKey) || "[]");
       let updatedAnniv;
       if (localAnniv.includes(key)) {
         updatedAnniv = localAnniv.filter((k: string) => k !== key);
       } else {
         updatedAnniv = [...localAnniv, key];
       }
-      setAnniversaryCollection(updatedAnniv);
-      localStorage.setItem("anniversary_collection", JSON.stringify(updatedAnniv));
+      if (isPending) {
+        setPendingAnniversaryCollection(updatedAnniv);
+      } else {
+        setAnniversaryCollection(updatedAnniv);
+      }
+      localStorage.setItem(storageKey, JSON.stringify(updatedAnniv));
     }
   };
 
@@ -384,11 +395,14 @@ function App() {
       const data = await response.json();
       if (isPending) {
         setPendingCollection(data.pending_collection);
+        setPendingAnniversaryCollection(data.pending_anniversary_collection);
         localStorage.setItem("pending_collection", JSON.stringify(data.pending_collection));
+        localStorage.setItem("pending_anniversary_collection", JSON.stringify(data.pending_anniversary_collection));
       } else {
         setCollection(data.collection);
         setAnniversaryCollection(data.anniversary_collection);
         localStorage.setItem("collection", JSON.stringify(data.collection));
+        localStorage.setItem("anniversary_collection", JSON.stringify(data.anniversary_collection));
       }
     } catch (error) {
       // Fallback to local storage if API fails
@@ -602,7 +616,7 @@ function App() {
           const pokemon = getPokemonByKey(key);
           if (!pokemon) return null;
           const count = target[key];
-          const isAnniversary = anniversaryCollection.includes(key);
+          const isAnniversary = isPending ? pendingAnniversaryCollection.includes(key) : anniversaryCollection.includes(key);
           return (
             <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
               <div className="card-header">
@@ -768,14 +782,13 @@ function App() {
                       {activeTab !== "gallery" && (activeTab === "pending" || isLoggedIn) && (
                         <div className="anniversary-toggle">
                           <label>
-                            <input 
-                              type="checkbox" 
-                              checked={anniversaryCollection.includes(detailKey)}
-                              onChange={() => toggleAnniversary(detailKey)}
+                            <input
+                              type="checkbox"
+                              checked={activeTab === "pending" ? pendingAnniversaryCollection.includes(detailKey) : anniversaryCollection.includes(detailKey)}
+                              onChange={() => toggleAnniversary(detailKey, activeTab === "pending")}
                             /> <span className="red">30</span>th
                           </label>
-                        </div>
-                      )}
+                        </div>                      )}
                     </div>
                     <div className="detail-form-info">
                       {getPokemonByKey(detailKey)?.name}

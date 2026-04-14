@@ -38,7 +38,10 @@ function App() {
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
   const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
   const [pendingAnniversaryCollection, setPendingAnniversaryCollection] = useState<string[]>([]);
-  const [todayCollection, setTodayCollection] = useState<string[]>([]);
+  const [todayCollectionMain, setTodayCollectionMain] = useState<string[]>([]);
+  const [todayCollectionPending, setTodayCollectionPending] = useState<string[]>([]);
+  const [historyMain, setHistoryMain] = useState<{ [date: string]: string[] }>({});
+  const [historyPending, setHistoryPending] = useState<{ [date: string]: string[] }>({});
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
   const [serverDate, setServerDate] = useState(formatYYMMDD(new Date()));
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
@@ -65,6 +68,10 @@ function App() {
   const [modal, setModal] = useState<ModalConfig | null>(null);
   const [modalInput, setModalInput] = useState("");
   const [gallerySearchTerm, setGallerySearchTerm] = useState("");
+
+  // History Modal State
+  const [showHistoryModal, setShowHistoryModal] = useState(false);
+  const [historyItems, setHistoryItems] = useState<{ date: string, keys: string[] }[]>([]);
 
   const showAlert = (message: React.ReactNode) => {
     return new Promise((resolve) => {
@@ -118,19 +125,24 @@ function App() {
       setPendingCollection(data.pending_collection || {});
       setAnniversaryCollection(data.anniversary_collection || []);
       setPendingAnniversaryCollection(data.pending_anniversary_collection || []);
-      setTodayCollection(data.today_collection || []);
+      setTodayCollectionMain(data.today_collection_main || []);
+      setTodayCollectionPending(data.today_collection_pending || []);
+      setHistoryMain(data.history_main || {});
+      setHistoryPending(data.history_pending || {});
       setVisitorStats(data.visitor_stats || { total: 0, today: 0 });
       setServerDate(data.server_date || formatYYMMDD(new Date()));
     } catch (error) {
       console.log("Using local collection as fallback");
       const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
       const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
-      const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      const localTodayMain = JSON.parse(localStorage.getItem("today_collection_main") || "[]");
+      const localTodayPending = JSON.parse(localStorage.getItem("today_collection_pending") || "[]");
       const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
       const localPendingAnniv = JSON.parse(localStorage.getItem("pending_anniversary_collection") || "[]");
       setCollection(localColl);
       setPendingCollection(localPending);
-      setTodayCollection(localToday);
+      setTodayCollectionMain(localTodayMain);
+      setTodayCollectionPending(localTodayPending);
       setAnniversaryCollection(localAnniv);
       setPendingAnniversaryCollection(localPendingAnniv);
       setServerDate(formatYYMMDD(new Date()));
@@ -350,19 +362,21 @@ function App() {
         setCollection(data.collection);
         localStorage.setItem("collection", JSON.stringify(data.collection));
         updatedCount = data.collection[key];
-        
-        await fetch("/api/today/add", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ key }),
-        });
-        const updatedRes = await fetch("/api/collection");
-        const updatedData = await updatedRes.json();
-        setTodayCollection(updatedData.today_collection);
-        localStorage.setItem("today_collection", JSON.stringify(updatedData.today_collection));
       }
+
+      await fetch("/api/today/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key, isPending }),
+      });
+      const updatedRes = await fetch("/api/collection");
+      const updatedData = await updatedRes.json();
+      setTodayCollectionMain(updatedData.today_collection_main);
+      setTodayCollectionPending(updatedData.today_collection_pending);
+      localStorage.setItem("today_collection_main", JSON.stringify(updatedData.today_collection_main));
+      localStorage.setItem("today_collection_pending", JSON.stringify(updatedData.today_collection_pending));
       
-      showAlert(`${pokemonName} ${updatedCount}개 입니다. (${isPending ? "예정 목록에 추가됨" : "오늘의 획득 목록에 추가됨"})`);
+      showAlert(`${pokemonName} ${updatedCount}개 입니다. (${isPending ? "예정 목록 및 오늘의 획득에 추가됨" : "오늘의 획득 목록에 추가됨"})`);
     } catch (error) {
       // Fallback to local storage if API fails
       if (isPending) {
@@ -370,6 +384,12 @@ function App() {
         localPending[key] = (localPending[key] || 0) + 1;
         setPendingCollection(localPending);
         localStorage.setItem("pending_collection", JSON.stringify(localPending));
+        
+        const localTodayPending = JSON.parse(localStorage.getItem("today_collection_pending") || "[]");
+        localTodayPending.push(key);
+        setTodayCollectionPending(localTodayPending);
+        localStorage.setItem("today_collection_pending", JSON.stringify(localTodayPending));
+
         showAlert(`${pokemonName} ${localPending[key]}개 입니다. (예정 목록에 추가됨)`);
       } else {
         const localColl = JSON.parse(localStorage.getItem("collection") || "{}");
@@ -377,10 +397,10 @@ function App() {
         setCollection(localColl);
         localStorage.setItem("collection", JSON.stringify(localColl));
 
-        const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
-        localToday.push(key);
-        setTodayCollection(localToday);
-        localStorage.setItem("today_collection", JSON.stringify(localToday));
+        const localTodayMain = JSON.parse(localStorage.getItem("today_collection_main") || "[]");
+        localTodayMain.push(key);
+        setTodayCollectionMain(localTodayMain);
+        localStorage.setItem("today_collection_main", JSON.stringify(localTodayMain));
         
         showAlert(`${pokemonName} ${localColl[key]}개 입니다. (오늘의 획득 목록에 추가됨)`);
       }
@@ -458,38 +478,78 @@ function App() {
   };
 
   const removeTodayPokemon = async (key: string) => {
-    if (!isLoggedIn) return;
+    const isPending = activeTab === "pending";
+    if (!isLoggedIn && !isPending) return; // Main today removal needs login, Pending today does not (consistent with register)
+    // Actually, in current code, register for pending doesn't need login, 
+    // but the removal button for today is only shown if isLoggedIn.
+    // Let's keep it consistent: if it's pending tab, allow removal if the button is there.
+    
     try {
       const response = await fetch("/api/today/remove", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ key }),
+        body: JSON.stringify({ key, isPending }),
       });
       const data = await response.json();
-      setTodayCollection(data.today_collection);
-      localStorage.setItem("today_collection", JSON.stringify(data.today_collection));
+      setTodayCollectionMain(data.today_collection_main);
+      setTodayCollectionPending(data.today_collection_pending);
+      localStorage.setItem("today_collection_main", JSON.stringify(data.today_collection_main));
+      localStorage.setItem("today_collection_pending", JSON.stringify(data.today_collection_pending));
     } catch (error) {
-      const localToday = JSON.parse(localStorage.getItem("today_collection") || "[]");
+      const storageKey = isPending ? "today_collection_pending" : "today_collection_main";
+      const localToday = JSON.parse(localStorage.getItem(storageKey) || "[]");
       const updatedToday = localToday.filter((k: string) => k !== key);
-      setTodayCollection(updatedToday);
-      localStorage.setItem("today_collection", JSON.stringify(updatedToday));
+      if (isPending) setTodayCollectionPending(updatedToday);
+      else setTodayCollectionMain(updatedToday);
+      localStorage.setItem(storageKey, JSON.stringify(updatedToday));
       showAlert("로컬 저장소에서 삭제되었습니다.");
     }
   };
 
   const clearTodayCollection = async () => {
-    if (!isLoggedIn) return;
-    if (!(await showConfirm("오늘의 획득 목록을 초기화하시겠습니까?"))) return;
+    const isPending = activeTab === "pending";
+    if (!isLoggedIn && !isPending) return;
+    if (!(await showConfirm(`${isPending ? "예정 " : ""}오늘의 획득 목록을 초기화하시겠습니까?`))) return;
     try {
-      const response = await fetch("/api/today/clear", { method: "POST" });
+      const response = await fetch("/api/today/clear", { 
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ isPending })
+      });
       const data = await response.json();
-      setTodayCollection(data.today_collection);
-      localStorage.setItem("today_collection", JSON.stringify(data.today_collection));
+      setTodayCollectionMain(data.today_collection_main);
+      setTodayCollectionPending(data.today_collection_pending);
+      localStorage.setItem("today_collection_main", JSON.stringify(data.today_collection_main));
+      localStorage.setItem("today_collection_pending", JSON.stringify(data.today_collection_pending));
     } catch (error) {
-      setTodayCollection([]);
-      localStorage.setItem("today_collection", "[]");
+      if (isPending) {
+        setTodayCollectionPending([]);
+        localStorage.setItem("today_collection_pending", "[]");
+      } else {
+        setTodayCollectionMain([]);
+        localStorage.setItem("today_collection_main", "[]");
+      }
       showAlert("로컬 저장소가 초기화되었습니다.");
     }
+  };
+
+  const viewHistory = () => {
+    const isPending = activeTab === "pending";
+    const history = isPending ? historyPending : historyMain;
+    const sortedDates = Object.keys(history).sort((a, b) => b.localeCompare(a));
+    
+    if (sortedDates.length === 0) {
+      showAlert("기록된 지난 획득 포켓몬이 없습니다.");
+      return;
+    }
+
+    const items = sortedDates.map(date => ({
+      date,
+      keys: history[date]
+    }));
+    
+    setHistoryItems(items);
+    setShowHistoryModal(true);
   };
 
   const handleRegisterClick = async (isPending: boolean) => {
@@ -946,22 +1006,29 @@ function App() {
         <div className="today-catch-header">
           <div className="today-catch-title-box">
             <span className="today-date">{serverDate}</span>
-            <h2>오늘의 획득 포켓몬 🔥</h2>
+            <h2>{activeTab === "pending" ? "예정 " : ""}오늘의 획득 포켓몬 🔥</h2>
           </div>
-          {isLoggedIn && <button className="btn btn-mini btn-cancel btn-reset-today" onClick={clearTodayCollection}>초기화</button>}
+          <div className="today-catch-actions">
+            <button className="btn btn-mini btn-info" onClick={viewHistory}>지난 획득 포켓몬 보기</button>
+            {(activeTab === "pending" || isLoggedIn) && (
+              <button className="btn btn-mini btn-cancel btn-reset-today" onClick={clearTodayCollection}>초기화</button>
+            )}
+          </div>
         </div>
-        {todayCollection.length === 0 ? (
+        {(activeTab === "pending" ? todayCollectionPending : todayCollectionMain).length === 0 ? (
           <div className="today-empty">오늘의 획득이 아직 없습니다.</div>
         ) : (
           <div className="today-list">
-            {todayCollection.map(key => {
+            {(activeTab === "pending" ? todayCollectionPending : todayCollectionMain).map((key, idx) => {
               const pokemon = getPokemonByKey(key);
               if (!pokemon) return null;
               return (
-                <div key={key} className="today-item" onClick={() => handleCardClick(key)}>
+                <div key={`${key}-${idx}`} className="today-item" onClick={() => handleCardClick(key)}>
                   <div className="today-img-box">
                     <img src={pokemon.image} alt={pokemon.name} />
-                    {isLoggedIn && <button className="today-remove-btn" onClick={(e) => { e.stopPropagation(); removeTodayPokemon(key); }}>&times;</button>}
+                    {(activeTab === "pending" || isLoggedIn) && (
+                      <button className="today-remove-btn" onClick={(e) => { e.stopPropagation(); removeTodayPokemon(key); }}>&times;</button>
+                    )}
                   </div>
                   <span>{pokemon.name}</span>
                 </div>
@@ -1041,6 +1108,39 @@ function App() {
         </div>
         {activeTab === "main" ? renderGrid(collection, false) : activeTab === "pending" ? renderGrid(pendingCollection, true) : renderGallery()}
       </main>
+
+      {/* History Modal */}
+      {showHistoryModal && (
+        <div className="modal-overlay" onClick={() => setShowHistoryModal(false)}>
+          <div className="modal-content history-modal" onClick={e => e.stopPropagation()}>
+            <button className="close-detail-btn" onClick={() => setShowHistoryModal(false)}>&times;</button>
+            <h3>지난 획득 기록</h3>
+            <div className="history-list-scroll">
+              {historyItems.map((item, idx) => (
+                <div key={idx} className="history-date-item">
+                  <div className="history-date-header">
+                    <strong>20{item.date.slice(0, 2)}-{item.date.slice(2, 4)}-{item.date.slice(4, 6)}</strong>
+                  </div>
+                  <div className="history-pokemon-row">
+                    {item.keys.map(key => {
+                      const pokemon = getPokemonByKey(key);
+                      if (!pokemon) return null;
+                      return (
+                        <div key={key} className="history-poke-img" title={pokemon.name}>
+                          <img src={pokemon.image} alt={pokemon.name} />
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="modal-actions">
+              <button className="btn btn-primary" onClick={() => setShowHistoryModal(false)}>닫기</button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <footer className="footer">
         <p>© 2026 Pokemon Sticker Collector. All rights reserved.</p>

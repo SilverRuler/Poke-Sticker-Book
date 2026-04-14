@@ -1,0 +1,47 @@
+# Poke-Sticker-Book Project Summary
+
+이 프로젝트는 포켓몬 띠부띠부씰 수집 현황을 관리하고 공유하는 웹 애플리케이션입니다.
+
+## 📋 프로젝트 개요
+- **기술 스택**: React (Vite, TypeScript), Express, Upstash Redis
+- **주요 기능**: 띠부씰 등록/삭제, 중복 확인, 30주년 기념 씰 체크, 오늘 획득 목록 관리, 방문자 통계
+
+## 🛠️ 최근 업데이트 사항 (2026-04-14)
+1. **모달 편의성 개선**:
+   - 띠부씰 등록/검색 모달에서 **Enter 키**로 즉시 확인이 가능하도록 개선.
+2. **30주년(30th) 체크 상태 분리**:
+   - '띠부씰 도감'과 '띠부씰 예정 도감'의 30주년 체크 상태를 각각 독립적으로 관리하도록 데이터 구조 및 API 수정.
+3. **관리자 기능 추가**:
+   - '띠부씰 예정 도감'의 상세 페이지에서 **'띠부씰 도감으로 이동'** 버튼 추가 (관리자 로그인 시 노출).
+   - 클릭 시 예정 도감에서 메인 도감으로 개수 및 30주년 상태가 함께 이동됨.
+4. **모바일 레이아웃 최적화**:
+   - '오늘의 획득 포켓몬'이 많아질 때 화면이 가로로 늘어지는 현상 해결.
+   - `box-sizing: border-box` 및 너비 제한 설정을 통해 전체 레이아웃 고정.
+   - 오늘의 포켓몬 리스트의 **하단 스크롤바**가 항상 보이도록 스타일 개선 (높이 8px, 트랙 배경 추가).
+5. **Redis 데이터베이스 구조 고도화 (Partitioning)**:
+   - 성능 및 관리 효율을 위해 기존 `poke_pokedex_db` 하나에 몰려있던 데이터를 3개의 Key로 분리:
+     - `poke_collection_db`: 메인/예정/오늘의 콜렉션 데이터
+     - `poke_stats_db`: 리셋 날짜 및 방문자 통계
+     - `poke_anniversary_db`: 메인/예정 30주년 체크 상태
+   - 기존 데이터 자동 마이그레이션 로직 포함.
+6. **오늘의 획득 포켓몬 분리 및 히스토리 관리**:
+   - '띠부씰 도감'과 '띠부씰 예정 도감'의 오늘의 획득 포켓몬 목록을 별도로 관리.
+   - 날짜별 획득 히스토리(260414 등) 기록 및 보기 기능 추가.
+   - [지난 획득 포켓몬 보기] 버튼을 통해 과거 날짜별 획득 목록을 모달로 확인 가능.
+   - 데이터 구조 고도화: `today_collection_main`, `today_collection_pending`, `history_main`, `history_pending` 추가.
+   - 기존 `today_collection` 데이터 자동 마이그레이션 포함.
+
+## 🏗️ 시스템 구조
+### Backend (api/index.js)
+- **Unified Data Access**: `getData()`에서 3개의 Redis Key를 `Promise.all`로 병렬 로드.
+- **Auto-Reset**: 미들웨어에서 날짜 변경 감지 시 '오늘의 획득' 및 '일일 방문자' 초기화.
+- **Migration**: 새로운 키가 없을 경우 `poke_pokedex_db`에서 데이터를 읽어와 재배치.
+
+### Frontend (src/App.tsx)
+- **State Management**: `collection`, `pendingCollection`, `anniversaryCollection`, `pendingAnniversaryCollection` 등 개별 상태 관리.
+- **Tab System**: `main`(도감), `pending`(예정), `gallery`(전체) 탭으로 구성.
+
+## 🚀 다음 단계 가이드
+- 현재 모든 변경 사항은 `main` 및 `develop` 브랜치에 반영되어 있습니다.
+- 새로운 기능 구현 시 `api/index.js`의 `saveData`와 `getData`가 3개의 키를 사용함을 유의하십시오.
+- 관리자 로그인은 `aa` / `bb` (Vercel 환경 변수 권장)로 수행합니다.

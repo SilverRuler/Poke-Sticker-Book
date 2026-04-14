@@ -43,7 +43,11 @@ const getData = async () => {
   const defaultDB = { 
     collection: {}, 
     pending_collection: {}, 
-    today_collection: [], 
+    today_collection: [], // Legacy, for migration
+    today_collection_main: [],
+    today_collection_pending: [],
+    history_main: {},
+    history_pending: {},
     anniversary_collection: [], 
     pending_anniversary_collection: [],
     last_reset_date: getKSTDate(),
@@ -64,9 +68,10 @@ const getData = async () => {
       if (oldData) {
         console.log("Migrating from old poke_pokedex_db...");
         return {
+          ...defaultDB,
           collection: oldData.collection || {},
           pending_collection: oldData.pending_collection || {},
-          today_collection: oldData.today_collection || [],
+          today_collection_main: oldData.today_collection || [],
           anniversary_collection: oldData.anniversary_collection || [],
           pending_anniversary_collection: oldData.pending_anniversary_collection || [],
           last_reset_date: oldData.last_reset_date || getKSTDate(),
@@ -75,10 +80,20 @@ const getData = async () => {
       }
     }
 
+    // Secondary migration: move shared today_collection to today_collection_main
+    let todayMain = collData?.today_collection_main;
+    let todayPending = collData?.today_collection_pending || [];
+    if (!todayMain && collData?.today_collection) {
+      todayMain = collData.today_collection;
+    }
+
     return {
       collection: collData?.collection || {},
       pending_collection: collData?.pending_collection || {},
-      today_collection: collData?.today_collection || [],
+      today_collection_main: todayMain || [],
+      today_collection_pending: todayPending || [],
+      history_main: collData?.history_main || {},
+      history_pending: collData?.history_pending || {},
       last_reset_date: statsData?.last_reset_date || getKSTDate(),
       visitor_stats: statsData?.visitor_stats || defaultDB.visitor_stats,
       anniversary_collection: annivData?.anniversary_collection || [],
@@ -87,6 +102,13 @@ const getData = async () => {
   } else {
     if (!fs.existsSync(DB_FILE)) return defaultDB;
     const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
+    
+    // Local migration
+    if (!data.today_collection_main && data.today_collection) {
+      data.today_collection_main = data.today_collection;
+      delete data.today_collection;
+    }
+    
     return { ...defaultDB, ...data };
   }
 };
@@ -97,7 +119,10 @@ const saveData = async (data) => {
       redis.set(COLLECTION_KEY, {
         collection: data.collection,
         pending_collection: data.pending_collection,
-        today_collection: data.today_collection
+        today_collection_main: data.today_collection_main,
+        today_collection_pending: data.today_collection_pending,
+        history_main: data.history_main,
+        history_pending: data.history_pending
       }),
       redis.set(STATS_KEY, {
         last_reset_date: data.last_reset_date,
@@ -146,7 +171,19 @@ app.use(async (req, res, next) => {
 
   // Reset Today's Catch if date changed
   if (db.last_reset_date !== currentDate) {
-    db.today_collection = [];
+    // Archival to history
+    if (!db.history_main) db.history_main = {};
+    if (!db.history_pending) db.history_pending = {};
+    
+    if (db.today_collection_main && db.today_collection_main.length > 0) {
+      db.history_main[db.last_reset_date] = db.today_collection_main;
+    }
+    if (db.today_collection_pending && db.today_collection_pending.length > 0) {
+      db.history_pending[db.last_reset_date] = db.today_collection_pending;
+    }
+
+    db.today_collection_main = [];
+    db.today_collection_pending = [];
     db.last_reset_date = currentDate;
     changed = true;
   }
@@ -271,23 +308,33 @@ app.post('/api/pending/move-to-main', async (req, res) => {
 });
 
 app.post('/api/today/add', async (req, res) => {
-  const { key } = req.body;
-  if (!req.db.today_collection.includes(key)) {
-    req.db.today_collection.push(key);
+  const { key, isPending } = req.body;
+  const target = isPending ? 'today_collection_pending' : 'today_collection_main';
+  if (!req.db[target]) req.db[target] = [];
+  if (!req.db[target].includes(key)) {
+    req.db[target].push(key);
     await saveData(req.db);
   }
   res.json(req.db);
 });
 
 app.post('/api/today/remove', async (req, res) => {
-  const { key } = req.body;
-  req.db.today_collection = req.db.today_collection.filter(i => i !== key);
-  await saveData(req.db);
+  const { key, isPending } = req.body;
+  const target = isPending ? 'today_collection_pending' : 'today_collection_main';
+  if (req.db[target]) {
+    req.db[target] = req.db[target].filter(i => i !== key);
+    await saveData(req.db);
+  }
   res.json(req.db);
 });
 
 app.post('/api/today/clear', async (req, res) => {
-  req.db.today_collection = [];
+  const { isPending } = req.body;
+  if (isPending) {
+    req.db.today_collection_pending = [];
+  } else {
+    req.db.today_collection_main = [];
+  }
   await saveData(req.db);
   res.json(req.db);
 });

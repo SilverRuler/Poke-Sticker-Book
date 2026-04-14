@@ -713,11 +713,16 @@ function App() {
           <div className="modal-content">
             <div className="modal-message">{modal.message}</div>
             {modal.type === "prompt" && (
-              <input 
+              <input
                 className="modal-input"
                 type={modal.inputType || "text"}
                 value={modalInput}
                 onChange={(e) => setModalInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    modal.onConfirm(modalInput);
+                  }
+                }}
                 placeholder={modal.placeholder}
                 autoFocus
               />

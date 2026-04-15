@@ -829,7 +829,7 @@ function App() {
       
       {/* Custom Modal */}
       {modal && (
-        <div className="modal-overlay">
+        <div className="modal-overlay" style={{ zIndex: 1300 }}>
           <div className="modal-content">
             <div className="modal-message">{modal.message}</div>
             {modal.type === "prompt" && (
@@ -874,7 +874,7 @@ function App() {
 
       {/* Pokemon Detail Modal */}
       {detailKey && (
-        <div className="modal-overlay" onClick={closeDetail}>
+        <div className="modal-overlay" style={{ zIndex: 1100 }} onClick={closeDetail}>
           <div className="detail-modal" onClick={e => e.stopPropagation()}>
             <button className="close-detail-btn" onClick={closeDetail}>&times;</button>
             <div className="detail-scroll-container">
@@ -977,7 +977,7 @@ function App() {
 
       {/* Ability Description Modal */}
       {abilityModal && (
-        <div className="modal-overlay" style={{ zIndex: 1100 }} onClick={() => setAbilityModal(null)}>
+        <div className="modal-overlay" style={{ zIndex: 1200 }} onClick={() => setAbilityModal(null)}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <h3>{abilityModal.name}</h3>
             <p style={{ margin: "20px 0", lineHeight: "1.6" }}>{abilityModal.description}</p>

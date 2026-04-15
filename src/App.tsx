@@ -71,7 +71,8 @@ function App() {
 
   // History Modal State
   const [showHistoryModal, setShowHistoryModal] = useState(false);
-  const [historyItems, setHistoryItems] = useState<{ date: string, keys: string[] }[]>([]);
+  const [selectedHistoryDate, setSelectedHistoryDate] = useState<string | null>(null);
+  const [calendarViewDate, setCalendarViewDate] = useState(new Date());
 
   const showAlert = (message: React.ReactNode) => {
     return new Promise((resolve) => {
@@ -543,13 +544,30 @@ function App() {
       return;
     }
 
-    const items = sortedDates.map(date => ({
-      date,
-      keys: history[date]
-    }));
-    
-    setHistoryItems(items);
+    setCalendarViewDate(new Date());
+    setSelectedHistoryDate(null);
     setShowHistoryModal(true);
+  };
+
+  const getCalendarDays = (date: Date) => {
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+    
+    const days = [];
+    for (let i = 0; i < firstDay; i++) {
+      days.push(null);
+    }
+    for (let i = 1; i <= lastDate; i++) {
+      days.push(i);
+    }
+    return days;
+  };
+
+  const changeHistoryMonth = (offset: number) => {
+    const newDate = new Date(calendarViewDate.getFullYear(), calendarViewDate.getMonth() + offset, 1);
+    setCalendarViewDate(newDate);
   };
 
   const handleRegisterClick = async (isPending: boolean) => {
@@ -1115,26 +1133,65 @@ function App() {
           <div className="modal-content history-modal" onClick={e => e.stopPropagation()}>
             <button className="close-detail-btn" onClick={() => setShowHistoryModal(false)}>&times;</button>
             <h3>지난 획득 기록</h3>
-            <div className="history-list-scroll">
-              {historyItems.map((item, idx) => (
-                <div key={idx} className="history-date-item">
-                  <div className="history-date-header">
-                    <strong>20{item.date.slice(0, 2)}-{item.date.slice(2, 4)}-{item.date.slice(4, 6)}</strong>
-                  </div>
-                  <div className="history-pokemon-row">
-                    {item.keys.map(key => {
+            
+            <div className="calendar-container">
+              <div className="calendar-header">
+                <button onClick={() => changeHistoryMonth(-1)} className="btn-link">&lt;</button>
+                <span>{calendarViewDate.getFullYear()}년 {calendarViewDate.getMonth() + 1}월</span>
+                <button onClick={() => changeHistoryMonth(1)} className="btn-link">&gt;</button>
+              </div>
+              <div className="calendar-grid">
+                {["일", "월", "화", "수", "목", "금", "토"].map(d => (
+                  <div key={d} className="calendar-day-header">{d}</div>
+                ))}
+                {getCalendarDays(calendarViewDate).map((day, idx) => {
+                  if (day === null) return <div key={idx} className="calendar-day empty"></div>;
+                  
+                  const date = new Date(calendarViewDate.getFullYear(), calendarViewDate.getMonth(), day);
+                  const dateStr = formatYYMMDD(date);
+                  const isToday = dateStr === serverDate;
+                  const isPast = dateStr < serverDate;
+                  const isSelected = selectedHistoryDate === dateStr;
+                  const history = activeTab === "pending" ? historyPending : historyMain;
+                  const hasHistory = history[dateStr] && history[dateStr].length > 0;
+                  
+                  return (
+                    <button 
+                      key={idx} 
+                      className={`calendar-day ${isToday ? "today" : ""} ${isSelected ? "selected" : ""} ${hasHistory ? "has-history" : ""}`}
+                      disabled={!isPast}
+                      onClick={() => setSelectedHistoryDate(dateStr)}
+                    >
+                      {day}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {selectedHistoryDate && (
+              <div className="history-selected-content">
+                <div className="history-date-header">
+                  <strong>20{selectedHistoryDate.slice(0, 2)}-{selectedHistoryDate.slice(2, 4)}-{selectedHistoryDate.slice(4, 6)}</strong>
+                </div>
+                <div className="history-pokemon-row">
+                  {((activeTab === "pending" ? historyPending : historyMain)[selectedHistoryDate] || []).length > 0 ? (
+                    (activeTab === "pending" ? historyPending : historyMain)[selectedHistoryDate].map((key, idx) => {
                       const pokemon = getPokemonByKey(key);
                       if (!pokemon) return null;
                       return (
-                        <div key={key} className="history-poke-img" title={pokemon.name}>
+                        <div key={`${key}-${idx}`} className="history-poke-img" title={pokemon.name} onClick={() => handleCardClick(key)} style={{ cursor: "pointer" }}>
                           <img src={pokemon.image} alt={pokemon.name} />
                         </div>
                       );
-                    })}
-                  </div>
+                    })
+                  ) : (
+                    <div className="history-empty">기록된 획득이 없습니다.</div>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            )}
+
             <div className="modal-actions">
               <button className="btn btn-primary" onClick={() => setShowHistoryModal(false)}>닫기</button>
             </div>

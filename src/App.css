@@ -452,9 +452,16 @@ body {
 .pokemon-grid {
   clear: both;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  padding-top: 20px;
+  padding: 15px;
+  margin-top: 20px;
+  max-height: 950px; /* Approximately 3 rows with padding/gaps on desktop */
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  background: #fdfdfd;
+  scrollbar-width: thin;
 }
 
 .pokemon-card {

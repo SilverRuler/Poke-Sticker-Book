@@ -1081,6 +1081,20 @@ body {
   border-radius: 15px 15px 0 0;
 }
 
+.footer-link {
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+.footer-link a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.footer-link a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 800px) {
   .detail-layout {
     flex-direction: column;

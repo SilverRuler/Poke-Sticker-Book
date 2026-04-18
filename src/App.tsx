@@ -1212,6 +1212,11 @@ function App() {
 
       <footer className="footer">
         <p>© 2026 Pokemon Sticker Collector. All rights reserved.</p>
+        <p className="footer-link">
+          <a href="https://github.com/SilverRuler/Poke-Sticker-Book" target="_blank" rel="noopener noreferrer">
+            https://github.com/SilverRuler/Poke-Sticker-Book
+          </a>
+        </p>
       </footer>
     </div>
   );

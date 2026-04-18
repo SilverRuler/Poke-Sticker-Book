@@ -1086,9 +1086,17 @@ body {
   font-size: 0.8rem;
 }
 
-.footer-link a {
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--secondary-color);
   text-decoration: none;
+  font-weight: bold;
+}
+
+.github-icon {
+  fill: currentColor;
 }
 
 .footer-link a:hover {

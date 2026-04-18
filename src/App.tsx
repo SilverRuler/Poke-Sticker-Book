@@ -1015,6 +1015,17 @@ function App() {
           )}
         </div>
 
+        <div className="video-link-container">
+          <a 
+            href="https://lite.tiktok.com/t/ZS9LsJKuuxhS9-vlTKB/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-mini btn-video"
+          >
+            🎬 획득 동영상 보기
+          </a>
+        </div>
+
         <p className="subtitle">
           나만의 띠부띠부씰 수집 현황을 <br className="mobile-only" /> 관리해보세요!
         </p>

@@ -105,6 +105,27 @@ body {
   font-size: 0.8rem !important;
   background: var(--secondary-color) !important;
   color: white !important;
+  text-decoration: none; /* Added for anchor tag support */
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-video {
+  background: #ff0050 !important; /* TikTok red-ish */
+  border-radius: 20px !important;
+  padding: 8px 15px !important;
+  font-weight: bold !important;
+  transition: transform 0.2s;
+}
+
+.btn-video:hover {
+  transform: scale(1.05);
+  background: #00f2ea !important; /* TikTok cyan-ish */
+  color: #000 !important;
+}
+
+.video-link-container {
+  margin: 10px 0;
 }
 
 .btn-cancel {

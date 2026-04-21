@@ -1143,7 +1143,7 @@ function App() {
         <div className="modal-overlay" onClick={() => setShowHistoryModal(false)}>
           <div className="modal-content history-modal" onClick={e => e.stopPropagation()}>
             <button className="close-detail-btn" onClick={() => setShowHistoryModal(false)}>&times;</button>
-            <h3>지난 획득 기록</h3>
+            <h3>{activeTab === "pending" ? "예정 지난 획득 기록" : "지난 획득 기록"}</h3>
             
             <div className="calendar-container">
               <div className="calendar-header">

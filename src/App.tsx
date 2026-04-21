@@ -897,11 +897,14 @@ function App() {
                         </div>                      )}
                     </div>
                     <div className="detail-form-info">
-                      No.{detailKey.split("-")[0].padStart(4, "0")} {getPokemonByKey(detailKey)?.name}
+                      <div style={{ fontSize: "0.9rem", color: "#888", marginBottom: "2px" }}>
+                        No.{detailKey.split("-")[0].padStart(4, "0")}
+                      </div>
+                      <div>{getPokemonByKey(detailKey)?.name}</div>
                       {activeTab === "pending" && isLoggedIn && (
                         <div style={{ marginTop: "10px" }}>
                           <button 
-                            className="btn btn-mini btn-primary"
+                            className="btn btn-mini btn-primary btn-today-action"
                             onClick={() => moveToMain(detailKey)}
                           >
                             띠부씰 도감으로 이동

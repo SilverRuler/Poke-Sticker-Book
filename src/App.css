@@ -842,14 +842,21 @@ body {
 .version-tabs {
   display: flex;
   gap: 5px;
-  overflow-x: auto;
+  flex-wrap: wrap;
   margin-bottom: 15px;
   padding-bottom: 5px;
-  scrollbar-width: none;
 }
 
 .version-tabs::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width: 800px) {
+  .version-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
 }
 
 .version-tab {

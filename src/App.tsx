@@ -916,7 +916,7 @@ function App() {
                   <div className="detail-right">
                     <div className="detail-flavor-box">
                       <div className="version-tabs">
-                        {detailData.flavorTexts.slice(0, 6).map((f, i) => (
+                        {detailData.flavorTexts.map((f, i) => (
                           <button 
                             key={i} 
                             className={`version-tab ${activeFlavorIndex === i ? "active" : ""}`}

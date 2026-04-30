@@ -9622,7 +9622,7 @@ export const pokemonData: PokemonEntry[] = [
       },
       {
         "formId": "02",
-        "name": "히스이 Zoroark",
+        "name": "히스이 조로아크",
         "image": "/images/pokemon/571-02.png",
         "types": [
           "악"

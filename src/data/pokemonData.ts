@@ -15885,8 +15885,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "파밀리쥐",
+        "name": "파밀리쥐(4마리 가족)",
         "image": "/images/pokemon/925-01.png",
+        "types": [
+          "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "파밀리쥐(3마리 가족)",
+        "image": "/images/pokemon/925-02.png",
         "types": [
           "노말"
         ]
@@ -15972,8 +15980,35 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "시비꼬",
+        "name": "시비꼬(그린 페더)",
         "image": "/images/pokemon/931-01.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "시비꼬(블루 페더)",
+        "image": "/images/pokemon/931-02.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "시비꼬(옐로 페더)",
+        "image": "/images/pokemon/931-03.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "시비꼬(화이트 페더)",
+        "image": "/images/pokemon/931-04.png",
         "types": [
           "노말",
           "비행"
@@ -16785,8 +16820,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "노고고치",
+        "name": "노고고치(두마디 모습)",
         "image": "/images/pokemon/982-01.png",
+        "types": [
+          "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "노고고치(세마디 모습)",
+        "image": "/images/pokemon/982-02.png",
         "types": [
           "노말"
         ]
@@ -17250,8 +17293,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "차데스",
+        "name": "차데스(가품의 모습)",
         "image": "/images/pokemon/1012-01.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "차데스(진품의 모습)",
+        "image": "/images/pokemon/1012-02.png",
         "types": [
           "풀",
           "고스트"
@@ -17265,8 +17317,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "그우린차",
+        "name": "그우린차(범작의 모습)",
         "image": "/images/pokemon/1013-01.png",
+        "types": [
+          "풀",
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "그우린차(걸작의 모습)",
+        "image": "/images/pokemon/1013-02.png",
         "types": [
           "풀",
           "고스트"

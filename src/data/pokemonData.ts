@@ -11163,7 +11163,7 @@ export const pokemonData: PokemonEntry[] = [
       },
       {
         "formId": "02",
-        "name": "지우개굴닌자",
+        "name": "메가개굴닌자",
         "image": "/images/pokemon/658-02.png",
         "types": [
           "물",

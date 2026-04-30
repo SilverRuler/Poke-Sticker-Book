@@ -5942,6 +5942,30 @@ export const pokemonData: PokemonEntry[] = [
         "types": [
           "노말"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "캐스퐁(태양의 모습)",
+        "image": "/images/pokemon/351-02.png",
+        "types": [
+          "불꽃"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "캐스퐁(빗방울의 모습)",
+        "image": "/images/pokemon/351-03.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "캐스퐁(설운의 모습)",
+        "image": "/images/pokemon/351-04.png",
+        "types": [
+          "얼음"
+        ]
       }
     ]
   },
@@ -6518,8 +6542,32 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "테오키스",
+        "name": "테오키스(노말폼)",
         "image": "/images/pokemon/386-01.png",
+        "types": [
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "테오키스(어택폼)",
+        "image": "/images/pokemon/386-02.png",
+        "types": [
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "테오키스(디펜스폼)",
+        "image": "/images/pokemon/386-03.png",
+        "types": [
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "테오키스(스피드폼)",
+        "image": "/images/pokemon/386-04.png",
         "types": [
           "에스퍼"
         ]
@@ -6903,8 +6951,24 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "도롱충이",
+        "name": "도롱충이(초목도롱)",
         "image": "/images/pokemon/412-01.png",
+        "types": [
+          "벌레"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "도롱충이(모래땅도롱)",
+        "image": "/images/pokemon/412-02.png",
+        "types": [
+          "벌레"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "도롱충이(슈레도롱)",
+        "image": "/images/pokemon/412-03.png",
         "types": [
           "벌레"
         ]
@@ -6917,11 +6981,29 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "도롱마담",
+        "name": "도롱마담(초목도롱)",
         "image": "/images/pokemon/413-01.png",
         "types": [
           "벌레",
           "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "도롱마담(모래땅도롱)",
+        "image": "/images/pokemon/413-02.png",
+        "types": [
+          "벌레",
+          "땅"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "도롱마담(슈레도롱)",
+        "image": "/images/pokemon/413-03.png",
+        "types": [
+          "벌레",
+          "강철"
         ]
       }
     ]
@@ -7033,8 +7115,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "체리꼬",
+        "name": "체리꼬 네거폼",
         "image": "/images/pokemon/421-01.png",
+        "types": [
+          "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "체리꼬 포지폼",
+        "image": "/images/pokemon/421-02.png",
         "types": [
           "풀"
         ]
@@ -7047,8 +7137,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "깝질무",
+        "name": "깝질무(서쪽바다)",
         "image": "/images/pokemon/422-01.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "깝질무(동쪽바다)",
+        "image": "/images/pokemon/422-02.png",
         "types": [
           "물"
         ]
@@ -7061,8 +7159,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "트리토돈",
+        "name": "트리토돈(서쪽바다)",
         "image": "/images/pokemon/423-01.png",
+        "types": [
+          "물",
+          "땅"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "트리토돈(동쪽바다)",
+        "image": "/images/pokemon/423-02.png",
         "types": [
           "물",
           "땅"
@@ -7955,6 +8062,51 @@ export const pokemonData: PokemonEntry[] = [
           "전기",
           "고스트"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "히트로토무",
+        "image": "/images/pokemon/479-02.png",
+        "types": [
+          "전기",
+          "불꽃"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "워시로토무",
+        "image": "/images/pokemon/479-03.png",
+        "types": [
+          "전기",
+          "물"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "프로스트로토무",
+        "image": "/images/pokemon/479-04.png",
+        "types": [
+          "전기",
+          "얼음"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "스핀로토무",
+        "image": "/images/pokemon/479-05.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
+      },
+      {
+        "formId": "06",
+        "name": "커트로토무",
+        "image": "/images/pokemon/479-06.png",
+        "types": [
+          "전기",
+          "풀"
+        ]
       }
     ]
   },
@@ -8065,8 +8217,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "기라티나",
+        "name": "기라티나 어나더폼",
         "image": "/images/pokemon/487-01.png",
+        "types": [
+          "고스트",
+          "드래곤"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "기라티나 오리진폼",
+        "image": "/images/pokemon/487-02.png",
         "types": [
           "고스트",
           "드래곤"
@@ -8136,10 +8297,19 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "쉐이미",
+        "name": "쉐이미(랜드폼)",
         "image": "/images/pokemon/492-01.png",
         "types": [
           "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "쉐이미(스카이폼)",
+        "image": "/images/pokemon/492-02.png",
+        "types": [
+          "풀",
+          "비행"
         ]
       }
     ]
@@ -9020,8 +9190,24 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "배쓰나이",
+        "name": "배쓰나이(적색근의 모습)",
         "image": "/images/pokemon/550-01.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "배쓰나이(청색근의 모습)",
+        "image": "/images/pokemon/550-02.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "배쓰나이(백색근의 모습)",
+        "image": "/images/pokemon/550-03.png",
         "types": [
           "물"
         ]
@@ -9101,7 +9287,7 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "불비달마",
+        "name": "불비달마(노말모드)",
         "image": "/images/pokemon/555-01.png",
         "types": [
           "불꽃"
@@ -9109,10 +9295,28 @@ export const pokemonData: PokemonEntry[] = [
       },
       {
         "formId": "02",
-        "name": "가라르 불비달마",
+        "name": "불비달마(달마모드)",
         "image": "/images/pokemon/555-02.png",
         "types": [
+          "불꽃",
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "가라르 불비달마(노말모드)",
+        "image": "/images/pokemon/555-03.png",
+        "types": [
           "얼음"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "가라르 불비달마(달마모드)",
+        "image": "/images/pokemon/555-04.png",
+        "types": [
+          "얼음",
+          "불꽃"
         ]
       }
     ]
@@ -9583,8 +9787,35 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "사철록",
+        "name": "사철록(봄의 모습)",
         "image": "/images/pokemon/585-01.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "사철록(여름의 모습)",
+        "image": "/images/pokemon/585-02.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "사철록(가을의 모습)",
+        "image": "/images/pokemon/585-03.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "사철록(겨울의 모습)",
+        "image": "/images/pokemon/585-04.png",
         "types": [
           "노말",
           "풀"
@@ -9598,8 +9829,35 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "바라철록",
+        "name": "바라철록(봄의 모습)",
         "image": "/images/pokemon/586-01.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "바라철록(여름의 모습)",
+        "image": "/images/pokemon/586-02.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "바라철록(가을의 모습)",
+        "image": "/images/pokemon/586-03.png",
+        "types": [
+          "노말",
+          "풀"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "바라철록(겨울의 모습)",
+        "image": "/images/pokemon/586-04.png",
         "types": [
           "노말",
           "풀"
@@ -10435,8 +10693,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "토네로스",
+        "name": "토네로스(화신폼)",
         "image": "/images/pokemon/641-01.png",
+        "types": [
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "토네로스(영물폼)",
+        "image": "/images/pokemon/641-02.png",
         "types": [
           "비행"
         ]
@@ -10449,8 +10715,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "볼트로스",
+        "name": "볼트로스(화신폼)",
         "image": "/images/pokemon/642-01.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "볼트로스(영물폼)",
+        "image": "/images/pokemon/642-02.png",
         "types": [
           "전기",
           "비행"
@@ -10494,8 +10769,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "랜드로스",
+        "name": "랜드로스(화신폼)",
         "image": "/images/pokemon/645-01.png",
+        "types": [
+          "땅",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "랜드로스(영물폼)",
+        "image": "/images/pokemon/645-02.png",
         "types": [
           "땅",
           "비행"
@@ -10515,6 +10799,24 @@ export const pokemonData: PokemonEntry[] = [
           "드래곤",
           "얼음"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "화이트큐레무",
+        "image": "/images/pokemon/646-02.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "블랙큐레무",
+        "image": "/images/pokemon/646-03.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
       }
     ]
   },
@@ -10524,8 +10826,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "케르디오",
+        "name": "케르디오(평상시의 모습)",
         "image": "/images/pokemon/647-01.png",
+        "types": [
+          "물",
+          "격투"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "케르디오(각오의 모습)",
+        "image": "/images/pokemon/647-02.png",
         "types": [
           "물",
           "격투"
@@ -10539,11 +10850,20 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "메로엣타",
+        "name": "메로엣타(보이스폼)",
         "image": "/images/pokemon/648-01.png",
         "types": [
           "노말",
           "에스퍼"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메로엣타(스텝폼)",
+        "image": "/images/pokemon/648-02.png",
+        "types": [
+          "노말",
+          "격투"
         ]
       }
     ]
@@ -11682,7 +12002,7 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "지가르데",
+        "name": "지가르데(50%폼)",
         "image": "/images/pokemon/718-01.png",
         "types": [
           "드래곤",
@@ -11691,8 +12011,26 @@ export const pokemonData: PokemonEntry[] = [
       },
       {
         "formId": "02",
-        "name": "메가지가르데",
+        "name": "지가르데(10%폼)",
         "image": "/images/pokemon/718-02.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "지가르데(퍼펙트폼)",
+        "image": "/images/pokemon/718-03.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "메가지가르데",
+        "image": "/images/pokemon/718-04.png",
         "types": [
           "드래곤",
           "땅"
@@ -11730,11 +12068,20 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "후파",
+        "name": "굴레에 빠진 후파",
         "image": "/images/pokemon/720-01.png",
         "types": [
           "에스퍼",
           "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "굴레를 벗어난 후파",
+        "image": "/images/pokemon/720-02.png",
+        "types": [
+          "에스퍼",
+          "악"
         ]
       }
     ]
@@ -12114,8 +12461,24 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "루가루암",
+        "name": "루가루암(한낮의 모습)",
         "image": "/images/pokemon/745-01.png",
+        "types": [
+          "바위"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "루가루암(한밤중의 모습)",
+        "image": "/images/pokemon/745-02.png",
+        "types": [
+          "바위"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "루가루암(황혼의 모습)",
+        "image": "/images/pokemon/745-03.png",
         "types": [
           "바위"
         ]
@@ -12128,8 +12491,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "약어리",
+        "name": "약어리(단독의 모습)",
         "image": "/images/pokemon/746-01.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "약어리(군립의 모습)",
+        "image": "/images/pokemon/746-02.png",
         "types": [
           "물"
         ]
@@ -12544,8 +12915,71 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "메테노",
+        "name": "메테노(유성폼)",
         "image": "/images/pokemon/774-01.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메테노(레드코어)",
+        "image": "/images/pokemon/774-02.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "메테노(오렌지코어)",
+        "image": "/images/pokemon/774-03.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "메테노(옐로코어)",
+        "image": "/images/pokemon/774-04.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "메테노(그린코어)",
+        "image": "/images/pokemon/774-05.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "06",
+        "name": "메테노(블루코어)",
+        "image": "/images/pokemon/774-06.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "07",
+        "name": "메테노(인디고코어)",
+        "image": "/images/pokemon/774-07.png",
+        "types": [
+          "바위",
+          "비행"
+        ]
+      },
+      {
+        "formId": "08",
+        "name": "메테노(바이올렛코어)",
+        "image": "/images/pokemon/774-08.png",
         "types": [
           "바위",
           "비행"
@@ -12603,8 +13037,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "따라큐",
+        "name": "따라큐(가장한 모습)",
         "image": "/images/pokemon/778-01.png",
+        "types": [
+          "고스트",
+          "페어리"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "따라큐(탈이 벗겨진 모습)",
+        "image": "/images/pokemon/778-02.png",
         "types": [
           "고스트",
           "페어리"
@@ -12942,6 +13385,33 @@ export const pokemonData: PokemonEntry[] = [
         "image": "/images/pokemon/800-01.png",
         "types": [
           "에스퍼"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "네크로즈마(황혼의 갈기)",
+        "image": "/images/pokemon/800-02.png",
+        "types": [
+          "에스퍼",
+          "강철"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "네크로즈마(새벽의 날개)",
+        "image": "/images/pokemon/800-03.png",
+        "types": [
+          "에스퍼",
+          "고스트"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "울트라네크로즈마",
+        "image": "/images/pokemon/800-04.png",
+        "types": [
+          "에스퍼",
+          "드래곤"
         ]
       }
     ]
@@ -14455,11 +14925,20 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "우라오스",
+        "name": "우라오스(일격의 태세)",
         "image": "/images/pokemon/892-01.png",
         "types": [
           "격투",
           "악"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "우라오스(연격의 태세)",
+        "image": "/images/pokemon/892-02.png",
+        "types": [
+          "격투",
+          "물"
         ]
       },
       {
@@ -14477,7 +14956,7 @@ export const pokemonData: PokemonEntry[] = [
         "image": "/images/pokemon/892-04.png",
         "types": [
           "격투",
-          "악"
+          "물"
         ]
       }
     ]
@@ -14564,6 +15043,24 @@ export const pokemonData: PokemonEntry[] = [
         "types": [
           "에스퍼",
           "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "버드렉스(백마 탄 모습)",
+        "image": "/images/pokemon/898-02.png",
+        "types": [
+          "에스퍼",
+          "얼음"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "버드렉스(흑마 탄 모습)",
+        "image": "/images/pokemon/898-03.png",
+        "types": [
+          "에스퍼",
+          "고스트"
         ]
       }
     ]
@@ -14664,8 +15161,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "러브로스",
+        "name": "러브로스(화신폼)",
         "image": "/images/pokemon/905-01.png",
+        "types": [
+          "페어리",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "러브로스(영물폼)",
+        "image": "/images/pokemon/905-02.png",
         "types": [
           "페어리",
           "비행"
@@ -15526,8 +16032,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "돌핀맨",
+        "name": "돌핀맨(제로폼)",
         "image": "/images/pokemon/964-01.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "돌핀맨(히어로폼)",
+        "image": "/images/pokemon/964-02.png",
         "types": [
           "물"
         ]
@@ -16106,8 +16620,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "모으령",
+        "name": "모으령(상자폼)",
         "image": "/images/pokemon/999-01.png",
+        "types": [
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "모으령(도보폼)",
+        "image": "/images/pokemon/999-02.png",
         "types": [
           "고스트"
         ]
@@ -16375,10 +16897,37 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "오거폰",
+        "name": "오거폰(벽록의 가면)",
         "image": "/images/pokemon/1017-01.png",
         "types": [
           "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "오거폰(우물전의 가면)",
+        "image": "/images/pokemon/1017-02.png",
+        "types": [
+          "풀",
+          "물"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "오거폰(화덕의 가면)",
+        "image": "/images/pokemon/1017-03.png",
+        "types": [
+          "풀",
+          "불꽃"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "오거폰(주춧돌의 가면)",
+        "image": "/images/pokemon/1017-04.png",
+        "types": [
+          "풀",
+          "바위"
         ]
       }
     ]
@@ -16479,8 +17028,24 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "테라파고스",
+        "name": "테라파고스(노말폼)",
         "image": "/images/pokemon/1024-01.png",
+        "types": [
+          "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "테라파고스(테라스탈폼)",
+        "image": "/images/pokemon/1024-02.png",
+        "types": [
+          "노말"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "테라파고스(스텔라폼)",
+        "image": "/images/pokemon/1024-03.png",
         "types": [
           "노말"
         ]

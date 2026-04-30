@@ -12,17 +12,17 @@
     },
     {
       "name": "적응력",
-      "description": "타입이 같은 기술의 위력이 올라간다."
+      "description": "자신과 같은 타입 기술의 위력이 더 올라간다."
     },
     {
-      "name": "틀깨기",
-      "description": "특성에 관계없이 상대에게 기술을 쓸 수 있다."
+      "name": "배짱",
+      "description": "고스트 타입에게 노말, 격투 기술이 맞게 된다."
     }
   ],
   "flavorTexts": [
     {
-      "version": "레전즈-아르세우스",
-      "text": "Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout all Hisui's rivers is Basculegion's equal."
+      "version": "레전즈 아르세우스",
+      "text": "거슬러 올라가는 도중에 쓰러진 동료들의 영혼이 깃들었다. 영혼과 함께 헤엄치며 지치지 않고 계속 나아간다."
     }
   ]
 }

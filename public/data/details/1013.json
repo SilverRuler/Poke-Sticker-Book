@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "대접",
-      "description": ""
+      "description": "등장했을 때 아군의 HP를 회복시킨다."
     },
     {
       "name": "내열",
-      "description": "불꽃 기술의 위력을 약하게 한다."
+      "description": "불꽃 타입 기술의 대미지를 줄인다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful."
+      "text": "저명한 도공이 만든 훌륭한 찻잔에 깃들였다. 마니아들을 흥분하게 하는 포켓몬이다."
     },
     {
       "version": "바이올렛",
-      "text": "It prefers cool, dark places, such as the back of a shelf or the space beneath a home's floorboards. It wanders in search of prey after sunset."
+      "text": "머리의 차선을 휘저을수록 에너지가 충전된다. 싸움에 임할 준비를 하는 것이다."
     }
   ]
 }

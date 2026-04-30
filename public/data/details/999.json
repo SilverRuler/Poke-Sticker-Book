@@ -1,24 +1,24 @@
 {
   "id": 999,
   "name": "모으령",
-  "classification": "보물상자포켓몬",
+  "classification": "코인상자포켓몬",
   "height": 0.3,
   "weight": 5.0,
   "gender": "성별불명",
   "abilities": [
     {
       "name": "주눅",
-      "description": "주눅이 들어 스피드가 올라가는 타입이 있다."
+      "description": "벌레, 고스트, 악 타입 기술을 받으면 스피드가 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure."
+      "text": "보물상자 안에 숨어 코인을 모은다. 코인을 탐내는 사람의 정신을 조종하여 부려 먹는다."
     },
     {
       "version": "바이올렛",
-      "text": "It lives inside an old treasure chest. Sometimes it gets left in shop corners since no one realizes it’s actually a Pokémon."
+      "text": "1500년 전의 보물상자 안에서 태어났다. 코인을 999개 모으면 진화한다고 전해진다."
     }
   ]
 }

@@ -7,22 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "thermal-exchange",
-      "description": ""
+      "name": "열교환",
+      "description": "불꽃 타입 기술을 받으면 공격이 올라가며 화상 상태가 되지 않는다."
     },
     {
       "name": "아이스바디",
-      "description": "싸라기눈일 때 HP를 조금씩 회복한다."
+      "description": "날씨가 눈일 때 HP를 조금씩 회복한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava."
+      "text": "입에서 냉기를 뿜어 적을 순식간에 얼린다. 거대한 몸집과 힘으로 압도하는 얼음 드래곤이다."
     },
     {
       "version": "바이올렛",
-      "text": "It launches itself into battle by flipping upside down and spewing frigid air from its mouth. It finishes opponents off with its dorsal blade."
+      "text": "등의 지느러미를 얼음 칼날로 변형시켜 돌진한다. 거꾸로 매달려 낙하하며 상대를 베어 가른다."
     }
   ]
 }

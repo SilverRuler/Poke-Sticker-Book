@@ -7,26 +7,26 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "미끈미끈",
-      "description": "접촉한 상대의 스피드를 떨어뜨린다."
+      "name": "도주",
+      "description": "상대로부터 반드시 도망칠 수 있다."
     },
     {
-      "name": "주눅",
-      "description": "주눅이 들어 스피드가 올라가는 타입이 있다."
+      "name": "먹보",
+      "description": "HP가 절반일 때 나무열매를 먹는다."
     },
     {
-      "name": "모래숨기",
-      "description": "모래바람으로 회피율이 올라간다."
+      "name": "모래헤치기",
+      "description": "모래바람이 불 때 스피드가 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den."
+      "text": "3마리가 한 몸처럼 움직인다. 성질이 매우 거칠어 보이지만 실제로는 겁이 많다."
     },
     {
       "version": "바이올렛",
-      "text": "A variety of fish Pokémon, Wugtrio was once considered to be a regional form of Dugtrio."
+      "text": "긴 몸으로 먹잇감을 꽁꽁 묶어서 굴속으로 끌고 간다. 바닷속의 사냥꾼이다."
     }
   ]
 }

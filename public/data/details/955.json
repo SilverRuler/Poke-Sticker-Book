@@ -7,26 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "위험예지",
-      "description": "상대가 지닌 위험한 기술을 감지한다."
+      "name": "가속",
+      "description": "턴이 지날 때마다 스피드가 올라간다."
     },
     {
       "name": "통찰",
       "description": "상대가 지닌 물건을 알 수 있다."
-    },
-    {
-      "name": "가속",
-      "description": "조금씩 스피드가 높아진다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly."
+      "text": "배의 프릴에서 나오는 사이코 파워로 지면에서 살짝 떠서 이동한다. 바람을 타고 비행한다."
     },
     {
       "version": "바이올렛",
-      "text": "It spends its time running around wastelands. If anyone steals its beloved berries, it will chase them down and exact its revenge."
+      "text": "큰 눈에서 방출되는 사이코 파워는 상대의 움직임을 멈추게 한다. 성격은 매우 소심하다."
     }
   ]
 }

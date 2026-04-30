@@ -1,28 +1,28 @@
 {
   "id": 901,
   "name": "다투곰",
-  "classification": "이탄포켓몬",
+  "classification": "토탄포켓몬",
   "height": 2.4,
   "weight": 290.0,
   "gender": "성별불명",
   "abilities": [
     {
       "name": "근성",
-      "description": "상태 이상이 되면 공격이 올라간다."
+      "description": "상태 이상일 때 공격이 올라간다."
     },
     {
       "name": "방탄",
-      "description": "구슬이나 폭탄에 맞지 않는다."
+      "description": "상대의 탄환이나 폭탄 등의 기술을 무효화한다."
     },
     {
       "name": "긴장감",
-      "description": "상대를 긴장시켜 나무열매를 먹지 못하게 한다."
+      "description": "상대가 나무열매를 먹지 못하게 한다."
     }
   ],
   "flavorTexts": [
     {
-      "version": "레전즈-아르세우스",
-      "text": "I believe it was Hisui's swampy terrain that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will."
+      "version": "레전즈 아르세우스",
+      "text": "히스이지방의 습지에서 살아남기 위해 튼튼한 체구와 진흙을 다루는 능력을 얻었다. 새로운 땅을 찾아내어 토탄을 몸에 발랐다."
     }
   ]
 }

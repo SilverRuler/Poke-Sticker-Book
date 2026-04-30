@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "수의베일",
-      "description": "화상 상태가 되지 않는다."
+      "name": "자연회복",
+      "description": "배틀에서 물러나면 상태 이상이 회복된다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures."
+      "text": "꼬리의 물 고리로 동료와 노는 것을 좋아한다. 초음파로 상대의 기분을 감지한다."
     },
     {
       "version": "바이올렛",
-      "text": "Its water ring is made from seawater mixed with a sticky fluid that Finizen secretes from its blowhole."
+      "text": "매우 영리하고 다정한 성격이다. 바다에서 조난당한 사람을 돕기도 한다."
     }
   ]
 }

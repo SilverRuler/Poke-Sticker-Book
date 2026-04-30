@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It resembles a mysterious object introduced in a paranormal magazine as a cutting-edge weapon shaped like a Cobalion."
+      "text": "코바르온 형태의 최신 병기라며 오컬트 잡지에 소개됐던 정체불명의 물체를 닮았다."
     },
     {
       "version": "바이올렛",
-      "text": "There was supposedly an incident in which it launched shining blades to cut everything around it to pieces. Little else is known about it."
+      "text": "빛나는 칼날을 발사하며 주위의 모든 것을 베어 버렸다고 하나 그 밖의 정보는 전무하여 정체불명이다."
     }
   ]
 }

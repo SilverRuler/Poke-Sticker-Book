@@ -7,22 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "복안",
-      "description": "기술의 명중률이 올라간다."
+      "name": "벌레의알림",
+      "description": "위급할 때 벌레 타입 기술의 위력이 올라간다."
     },
     {
-      "name": "탈피",
-      "description": "상태 이상을 회복할 때가 있다."
+      "name": "동기화",
+      "description": "자신이 독, 마비, 화상 상태가 되면 상대도 똑같은 상태로 만든다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life."
+      "text": "진흙구슬을 목숨보다 소중히 여긴다. 이를 정성껏 굴려 진화에 필요한 에너지를 숙성시킨다."
     },
     {
       "version": "바이올렛",
-      "text": "It rolls its mud ball around while the energy it needs for evolution matures. Eventually the time comes for it to evolve."
+      "text": "머리의 프릴로 사이코 파워를 조종한다. 흙과 모래를 섞어 만든 경단을 항상 굴리고 다닌다."
     }
   ]
 }

@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "protosynthesis",
-      "description": ""
+      "name": "고대활성",
+      "description": "부스트에너지를 지니거나 날씨가 햇살이 강함일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This mysterious Pokémon has some similarities to a creature that an old book introduced as Slither Wing."
+      "text": "불카모스와 닮은 고대의 포켓몬. 날개로 땅을 기어 다니며 강력한 힘을 발휘한다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon somewhat resembles an ancient form of Volcarona that was introduced in a dubious magazine."
+      "text": "거대한 날개가 특징인 생물. 어느 탐험기에 '땅을기어가는날개'라고 기록되어 있다."
     }
   ]
 }

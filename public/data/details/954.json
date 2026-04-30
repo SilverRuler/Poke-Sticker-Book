@@ -7,22 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "싱크로",
-      "description": "독, 마비, 화상을 상대에게 옮긴다."
+      "name": "동기화",
+      "description": "자신이 독, 마비, 화상 상태가 되면 상대도 똑같은 상태로 만든다."
     },
     {
       "name": "텔레파시",
-      "description": "같은 편의 공격의 낌새를 읽고 기술을 받지 않는다."
+      "description": "아군의 공격을 읽고 대미지를 입지 않는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball."
+      "text": "경단 안에 본체가 잠들어 있다. 잠든 아이를 달래기 위해 뒷다리로 경단을 굴리며 이동한다."
     },
     {
       "version": "바이올렛",
-      "text": "An infant sleeps inside the ball. Rabsca rolls the ball soothingly with its legs to ensure the infant sleeps comfortably."
+      "text": "경단에서 방출되는 사이코 에너지는 매우 강력하다. 명상을 통해 예지 능력을 키운다."
     }
   ]
 }

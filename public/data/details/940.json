@@ -7,26 +7,26 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "wind-power",
-      "description": ""
+      "name": "풍력발전",
+      "description": "바람 기술을 받거나 순풍 상태가 되면 충전 상태가 된다."
     },
     {
       "name": "축전",
-      "description": "전기를 받으면 회복한다."
+      "description": "전기 기술을 받으면 HP를 회복한다."
     },
     {
       "name": "승기",
-      "description": "능력이 떨어지면 특수공격이 올라간다."
+      "description": "능력이 떨어지면 특공이 크게 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them."
+      "text": "날개의 뼈는 바람을 받으면 전기를 만들어 낸다. 바다에 뛰어들어 먹이를 감전시켜서 잡는다."
     },
     {
       "version": "바이올렛",
-      "text": "These Pokémon make their nests on coastal cliffs. The nests have a strange, crackling texture, and they’re a popular delicacy."
+      "text": "절벽에 둥지를 틀고 산다. 날개에 전기를 두르고 고속으로 비행한다."
     }
   ]
 }

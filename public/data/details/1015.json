@@ -8,7 +8,7 @@
   "abilities": [
     {
       "name": "독사슬",
-      "description": ""
+      "description": "공격을 맞히면 독 상태로 만들 때가 있다."
     },
     {
       "name": "통찰",
@@ -18,11 +18,11 @@
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom."
+      "text": "능력을 끌어올리는 독소로 된 사슬에 뇌가 자극을 받아 사이코 파워가 개화했다."
     },
     {
       "version": "바이올렛",
-      "text": "Munkidori keeps itself somewhere safe while it toys with its foes, using psychokinesis to induce intense dizziness."
+      "text": "안전한 장소에서 강한 현기증을 일으키는 염력을 사용해 적을 농락한다."
     }
   ]
 }

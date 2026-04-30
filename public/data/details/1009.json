@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "protosynthesis",
-      "description": ""
+      "name": "고대활성",
+      "description": "부스트에너지를 지니거나 날씨가 햇살이 강함일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal."
+      "text": "수수께끼에 둘러싸인 흉포한 생물. 오래된 탐험기에 기록된 물의 괴물의 이름을 따서 명명되었다."
     },
     {
       "version": "바이올렛",
-      "text": "It resembles an illustration published in a paranormal magazine, said to be a depiction of a super-ancient Suicune."
+      "text": "초고대의 스이쿤이라며 오컬트 잡지에 게재됐던 일러스트와 비슷한 모습을 하고 있다."
     }
   ]
 }

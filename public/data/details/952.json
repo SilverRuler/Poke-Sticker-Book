@@ -8,25 +8,25 @@
   "abilities": [
     {
       "name": "엽록소",
-      "description": "맑을 때 스피드가 올라간다."
+      "description": "날씨가 햇살이 강함일 때 스피드가 올라간다."
     },
     {
       "name": "불면",
       "description": "잠듦 상태가 되지 않는다."
     },
     {
-      "name": "변덕쟁이",
-      "description": "능력이 오르락내리락한다."
+      "name": "무드메이커",
+      "description": "주변에 있는 포켓몬들의 특수공격을 높인다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame."
+      "text": "빨간 머리는 불꽃 에너지를 뿜어낸다. 화가 나면 걷잡을 수 없이 흉포해진다."
     },
     {
       "version": "바이올렛",
-      "text": "The green head has turned vicious due to the spicy chemicals stimulating its brain. Once it goes on a rampage, there is no stopping it."
+      "text": "초록색 머리는 매운 성분으로 인해 성격이 거칠다. 두 머리가 서로 다른 생각을 하기도 한다."
     }
   ]
 }

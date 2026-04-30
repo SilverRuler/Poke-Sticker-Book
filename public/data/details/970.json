@@ -7,22 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "toxic-debris",
-      "description": ""
-    },
-    {
-      "name": "부식",
-      "description": "강철타입이나 독타입도 독 상태로 만들 수 있다."
+      "name": "독치장",
+      "description": "물리 공격을 받으면 상대 필드에 독압정을 깐다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body."
+      "text": "결정화된 독 에너지 꽃잎을 가졌으며, 위험을 느끼면 꽃잎을 일제히 발사하여 공격한다."
     },
     {
       "version": "바이올렛",
-      "text": "Glimmora’s petals are made of crystallized poison energy. It has recently become evident that these petals resemble Tera Jewels."
+      "text": "지하 깊은 곳에서 태어났다. 꽃잎처럼 보이는 결정은 매우 날카롭고 치명적인 독이 있다."
     }
   ]
 }

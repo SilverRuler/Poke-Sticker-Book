@@ -8,25 +8,25 @@
   "abilities": [
     {
       "name": "두꺼운지방",
-      "description": "불꽃과 얼음타입의 기술에 강하다."
+      "description": "불꽃, 얼음 타입 기술의 대미지를 줄인다."
     },
     {
-      "name": "눈치우기",
-      "description": "날씨가 싸라기눈일 때 스피드가 올라간다."
+      "name": "쓱쓱",
+      "description": "비가 올 때 스피드가 올라간다."
     },
     {
       "name": "우격다짐",
-      "description": "힘이 강해지지만 추가 효과가 없어진다."
+      "description": "기술의 추가 효과를 없애는 대신 위력을 올린다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin."
+      "text": "강인한 근육과 두꺼운 지방으로 몸을 보호한다. 5개의 뿔로 주위의 열을 흡수해 얼려버린다."
     },
     {
       "version": "바이올렛",
-      "text": "Ice energy builds up in the horn on its upper jaw, causing the horn to reach cryogenic temperatures that freeze its surroundings."
+      "text": "거대한 몸집으로 눈사태를 일으킨다. 뿔에서 나오는 냉기는 영하 50도에 이른다."
     }
   ]
 }

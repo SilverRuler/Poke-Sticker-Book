@@ -8,25 +8,25 @@
   "abilities": [
     {
       "name": "감미로운꿀",
-      "description": ""
+      "description": "상대의 회피율을 떨어뜨린다."
     },
     {
       "name": "재생력",
-      "description": "볼에 넣으면 HP가 조금 회복된다."
+      "description": "배틀에서 물러나면 HP를 조금 회복한다."
     },
     {
       "name": "점착",
-      "description": "달라붙어서 도구를 지킨다."
+      "description": "도구를 빼앗기지 않는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander."
+      "text": "7마리의 미드라가 꿀엿으로 만든 사과 안에서 지낸다. 가운데에 있는 미드라가 사령탑이다."
     },
     {
       "version": "바이올렛",
-      "text": "These capricious syrpents have banded together. On the rare occasion that their moods align, their true power is unleashed."
+      "text": "변덕이 심한 미드라들의 집합. 드물게 마음이 맞으면 본래의 힘을 발휘한다."
     }
   ]
 }

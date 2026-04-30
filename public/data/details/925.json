@@ -8,25 +8,25 @@
   "abilities": [
     {
       "name": "프렌드가드",
-      "description": "같은 편의 데미지를 줄일 수 있다."
+      "description": "아군이 받는 대미지를 줄인다."
     },
     {
       "name": "볼주머니",
-      "description": "어떤 나무열매라도 먹으면 HP도 회복한다."
+      "description": "나무열매를 먹으면 HP도 회복한다."
     },
     {
       "name": "테크니션",
-      "description": "약한 기술의 위력이 올라간다."
+      "description": "위력이 낮은 기술의 위력을 높인다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure."
+      "text": "어느새 아이가 늘었다. 가족같이 지내지만, 세 마리 또는 네 마리의 관계는 제대로 밝혀진 것이 없다."
     },
     {
       "version": "바이올렛",
-      "text": "The larger pair protects the little ones during battles. When facing strong opponents, the whole group will join the fight."
+      "text": "큰 두 마리가 아이들을 지키면서 싸운다. 강한 상대에게는 무리 전체가 덤벼든다."
     }
   ]
 }

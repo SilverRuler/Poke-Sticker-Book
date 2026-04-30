@@ -8,17 +8,17 @@
   "abilities": [
     {
       "name": "독조종",
-      "description": ""
+      "description": "기술에 의해 독 또는 맹독 상태가 된 상대를 혼란 상태로 만든다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt’s control, chained to its will."
+      "text": "욕망과 능력을 끌어올리는 독소로 된 떡을 먹이고 먹은 상대를 사슬로 조종한다."
     },
     {
       "version": "바이올렛",
-      "text": "Its peach-shaped shell serves as storage for a potent poison. It makes poisonous mochi and serves them to people and Pokémon."
+      "text": "복숭아처럼 생긴 껍질은 그야말로 맹독의 저장고다. 독이 든 떡을 만들어서 사람과 포켓몬에게 대접한다."
     }
   ]
 }

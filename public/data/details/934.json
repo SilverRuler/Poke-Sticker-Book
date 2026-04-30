@@ -7,26 +7,26 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "purifying-salt",
-      "description": ""
+      "name": "정화의소금",
+      "description": "상태 이상이 되지 않으며 고스트 타입 기술의 대미지를 줄인다."
     },
     {
       "name": "옹골참",
-      "description": "일격으로 쓰러지지 않는다."
+      "description": "일격에 쓰러지지 않는다."
     },
     {
       "name": "클리어바디",
-      "description": "상대가 능력을 떨어뜨릴 수 없다."
+      "description": "상대에 의해 능력이 떨어지지 않는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward."
+      "text": "손끝을 문질러서 나온 소금을 다친 포켓몬에게 뿌리면 심한 상처도 금방 낫는다."
     },
     {
       "version": "바이올렛",
-      "text": "Many Pokémon gather around Garganacl, hoping to lick at its mineral-rich salt."
+      "text": "많은 포켓몬이 미네랄을 보충하기 위해 콜로솔트의 주위로 모여든다."
     }
   ]
 }

@@ -7,22 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "earth-eater",
-      "description": ""
-    },
-    {
-      "name": "모래숨기",
-      "description": "모래바람으로 회피율이 올라간다."
+      "name": "제구하기",
+      "description": "땅 타입 기술을 받으면 대미지를 입지 않고 HP를 회복한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "When attacked, this Pokémon will wield the tendrils on its body like fists and pelt the opponent with a storm of punches."
+      "text": "땅속의 철분을 먹으며 금속 몸을 유지한다. 공격을 받으면 털을 주먹처럼 휘둘러 반격한다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon lives in arid deserts. It maintains its metal body by consuming iron from the soil."
+      "text": "땅속을 파고들며 생활한다. 몸의 마디를 신축시켜서 고속으로 이동한다."
     }
   ]
 }

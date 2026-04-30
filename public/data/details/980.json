@@ -7,12 +7,8 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "독가시",
-      "description": "접촉한 상대를 중독시킬 때가 있다."
-    },
-    {
       "name": "저수",
-      "description": "물을 받으면 회복한다."
+      "description": "물 타입 기술을 받으면 HP를 회복한다."
     },
     {
       "name": "천진",
@@ -22,11 +18,11 @@
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line."
+      "text": "공격을 받으면 몸에서 굵은 가시를 내지르며 반격한다. 진흙 속에 숨어 지내는 위험한 포켓몬이다."
     },
     {
       "version": "바이올렛",
-      "text": "It lives at the bottom of ponds and swamps. It will carry Wooper on its back and ferry them across water from one shore to the other."
+      "text": "우파들을 등에 태우고 호수를 가로지르기도 한다. 의외로 다정한 면이 있다."
     }
   ]
 }

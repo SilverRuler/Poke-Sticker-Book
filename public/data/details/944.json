@@ -12,21 +12,21 @@
     },
     {
       "name": "나쁜손버릇",
-      "description": "닿은 상대로부터 도구를 훔친다."
+      "description": "접촉한 상대의 도구를 훔친다."
     },
     {
       "name": "짓궂은마음",
-      "description": "변화 기술을 먼저 쓸 수 있다."
+      "description": "변화 기술을 우선적으로 쓸 수 있다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire."
+      "text": "온화하지만 화가 나게 하면 독이 밴 날카로운 앞니로 물어서 상대를 마비시킨다."
     },
     {
       "version": "바이올렛",
-      "text": "To keep enemies away from its territory, it paints markings around its nest using a poisonous liquid that has an acrid odor."
+      "text": "독액으로 나무에 무늬를 그려 영역을 표시한다. 먹이에 따라 독의 성분이 변한다."
     }
   ]
 }

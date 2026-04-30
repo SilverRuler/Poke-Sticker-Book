@@ -8,7 +8,7 @@
   "abilities": [
     {
       "name": "급류",
-      "description": "위급할 때 물타입의 위력이 올라간다."
+      "description": "위급할 때 물 타입 기술의 위력이 올라간다."
     },
     {
       "name": "자기과신",
@@ -18,11 +18,11 @@
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.\""
+      "text": "먼 옛날 머나먼 땅에서 팔데아로 찾아와 정착했다. 날개에서 나오는 젤이 물과 먼지를 튕겨 낸다."
     },
     {
       "version": "바이올렛",
-      "text": "Its strong legs let it easily swim around in even fast-flowing rivers. It likes to keep things tidy and is prone to overthinking things."
+      "text": "몸을 항상 깨끗하게 유지하고 싶어 하는 깔끔한 성격. 머리 장식은 강한 의지의 표현이다."
     }
   ]
 }

@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "protosynthesis",
-      "description": ""
+      "name": "고대활성",
+      "description": "부스트에너지를 지니거나 날씨가 햇살이 강함일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame."
+      "text": "목격 보고는 매우 드물다. 불기둥을 뿜어내며 날뛰는 모습이 담긴 짧은 영상이 존재한다."
     },
     {
       "version": "바이올렛",
-      "text": "It resembles an eerie Pokémon once shown in a paranormal magazine. That Pokémon was said to be an Entei regenerated from a fossil."
+      "text": "화석에서 복원된 앤테이라며 오컬트 잡지에 게재됐던 수상한 포켓몬을 닮았다."
     }
   ]
 }

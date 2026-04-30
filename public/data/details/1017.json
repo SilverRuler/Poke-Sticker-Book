@@ -8,17 +8,17 @@
   "abilities": [
     {
       "name": "오기",
-      "description": "능력이 떨어지면 공격이 올라간다."
+      "description": "능력이 떨어지면 공격이 크게 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks."
+      "text": "쓰고 있는 가면에 따라 타입이 변한다. 날렵한 움직임과 발차기 기술로 상대를 농락한다."
     },
     {
       "version": "바이올렛",
-      "text": "This mischief-loving Pokémon is full of curiosity. It battles by drawing out the type-based energy contained within its masks."
+      "text": "장난기가 많고 호기심이 왕성하다. 가면에 담긴 타입의 에너지를 끌어올려서 싸운다."
     }
   ]
 }

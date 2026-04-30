@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "protosynthesis",
-      "description": ""
+      "name": "고대활성",
+      "description": "부스트에너지를 지니거나 날씨가 햇살이 강함일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It is possible that this is the creature listed as Roaring Moon in an expedition journal that still holds many mysteries."
+      "text": "수수께끼로 가득한 탐험기에 '고동치는달'이라는 이름으로 기록된 생물일 가능성이 높다."
     },
     {
       "version": "바이올렛",
-      "text": "According to an article in a dubious magazine, this Pokémon has some connection to a phenomenon that occurs in a certain region."
+      "text": "보만다가 어떤 지방에서 일어나는 현상과 관련되어 변한 모습이라는 설이 있는 흉포한 포켓몬이다."
     }
   ]
 }

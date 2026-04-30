@@ -12,17 +12,21 @@
     },
     {
       "name": "서투름",
-      "description": "지니고 있는 도구를 쓸 수 없다."
+      "description": "지닌 도구의 효과를 발휘할 수 없다."
+    },
+    {
+      "name": "아로마베일",
+      "description": "멘탈 상태가 되는 것을 막는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity."
+      "text": "만지면 촉촉하고 매끈매끈하다. 숨결에 포함되어 있는 효모로 주위의 것들을 발효시킨다."
     },
     {
       "version": "바이올렛",
-      "text": "The yeast in Fidough’s breath is useful for cooking, so this Pokémon has been protected by people since long ago."
+      "text": "매끈매끈한 피부는 탄력이 있어서 화가 나면 몸을 부풀려 자신을 크게 보이게 하여 상대를 위협한다."
     }
   ]
 }

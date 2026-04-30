@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "orichalcum-pulse",
-      "description": ""
+      "name": "진동하는고동",
+      "description": "배틀에 나왔을 때 날씨를 햇살이 강함으로 만들고 공격이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists."
+      "text": "주먹으로 대지를 갈랐다고 오래된 탐험기에 기록된 '날개의왕'의 정체인 듯하다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon resembles Cyclizar, but it is far burlier and more ferocious. Nothing is known about its ecology or other features."
+      "text": "모토마를 닮았지만 그보다 훨씬 튼튼하고 흉포하다. 고대의 왕이라 불리는 포켓몬이다."
     }
   ]
 }

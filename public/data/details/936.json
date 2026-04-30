@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "타오르는불꽃",
-      "description": "불꽃을 받으면 불꽃 기술이 강해진다."
+      "description": "불꽃 타입 기술을 받으면 대미지를 입지 않고 불꽃 기술이 강해진다."
     },
     {
       "name": "깨어진갑옷",
-      "description": "물리 기술을 받으면 방어가 떨어지고 스피드가 올라간다."
+      "description": "물리 공격을 받으면 방어가 떨어지고 스피드가 크게 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal."
+      "text": "많은 무공을 세운 전사의 갑옷에 의해 진화한 모습. 충성심이 강한 포켓몬이다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon clads itself in armor that has been fortified by psychic and fire energy, and it shoots blazing fireballs."
+      "text": "에스퍼 에너지로 갑옷을 조종한다. 화염탄을 발사하여 상대를 제압한다."
     }
   ]
 }

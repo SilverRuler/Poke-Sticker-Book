@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "hadron-engine",
-      "description": ""
+      "name": "해당하는엔진",
+      "description": "배틀에 나왔을 때 필드를 일렉트릭필드로 만들고 특수공격이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Much remains unknown about this creature. It resembles Cyclizar, but it is far more ruthless and powerful."
+      "text": "오래된 서적에 '무쇠이무기'라는 이름으로 기록된 존재인 것 같다. 벼락으로 대지를 잿더미로 만든다."
     },
     {
       "version": "바이올렛",
-      "text": "This seems to be the Iron Serpent mentioned in an old book. The Iron Serpent is said to have turned the land to ash with its lightning."
+      "text": "모토마를 닮았지만 그보다 훨씬 강하고 냉혹하다. 미래의 왕이라 불리는 포켓몬이다."
     }
   ]
 }

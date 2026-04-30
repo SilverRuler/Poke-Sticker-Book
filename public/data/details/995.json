@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future."
+      "text": "어느 서적에 기록된 '무쇠가시'라는 이름의 정체불명의 물체인 듯하다."
     },
     {
       "version": "바이올렛",
-      "text": "Some of its notable features match those of an object named within a certain expedition journal as Iron Thorns."
+      "text": "미래의 마기라스. 금속 장갑으로 덮인 강력한 몸을 지닌 기계 포켓몬이다."
     }
   ]
 }

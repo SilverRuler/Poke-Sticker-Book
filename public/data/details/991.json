@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization."
+      "text": "오컬트 잡지에서 다뤘던 고대 문명의 유산이라 불리는 물체와 닮은 점이 많다."
     },
     {
       "version": "바이올렛",
-      "text": "It resembles a mysterious object mentioned in an old book. There are only two reported sightings of this Pokémon."
+      "text": "딜리버드와 닮은 로봇 같은 포켓몬. 꼬리에서 강력한 냉기를 뿜어내며 설원을 누빈다."
     }
   ]
 }

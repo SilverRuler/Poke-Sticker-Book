@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity."
+      "text": "오컬트 잡지에서 미래의 비행 물체라고 소개했던 수수께끼의 생물을 닮았다."
     },
     {
       "version": "바이올렛",
-      "text": "No records exist of this species being caught. Data is lacking, but the Pokémon’s traits match up with an object described in an old book."
+      "text": "미래의 불카모스. 태양 패널 같은 날개로 에너지를 모아 하늘을 비행한다."
     }
   ]
 }

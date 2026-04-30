@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "모래헤치기",
-      "description": "모래바람으로 스피드가 올라간다."
+      "description": "모래바람이 불 때 스피드가 올라간다."
     },
     {
-      "name": "복슬복슬",
-      "description": "상대로부터 받은 접촉하는 기술의 데미지를 반감시키지만 불꽃타입 기술의 데미지는 2배가 된다."
+      "name": "군견",
+      "description": "자신보다 먼저 행동한 아군의 위력을 이어받는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master."
+      "text": "주인에게 매우 충직하다. 정성스럽게 추모받은 포켓몬이 환생한 모습이라고 전해진다."
     },
     {
       "version": "바이올렛",
-      "text": "A lovingly mourned Pokémon was reborn as Houndstone. It doesn’t like anyone touching the protuberance atop its head."
+      "text": "묘지를 지키는 수호신이다. 땅속에 숨어 있다가 침입자가 나타나면 습격한다."
     }
   ]
 }

@@ -8,7 +8,7 @@
   "abilities": [
     {
       "name": "급류",
-      "description": "위급할 때 물타입의 위력이 올라간다."
+      "description": "위급할 때 물 타입 기술의 위력이 올라간다."
     },
     {
       "name": "자기과신",
@@ -18,11 +18,11 @@
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands."
+      "text": "이국적인 댄스를 선보이며 상대를 현혹한다. 물로 된 장식 깃털을 휘둘러서 상대를 벤다."
     },
     {
       "version": "바이올렛",
-      "text": "Dancing in ways that evoke far-away places, this Pokémon mesmerizes all that see it. Flourishes of its decorative water feathers slice into its foes."
+      "text": "강력한 다릿심을 가졌으며 트럭도 종잇장처럼 구길 정도다. 화려한 발차기로 적을 몰아붙인다."
     }
   ]
 }

@@ -11,18 +11,18 @@
       "description": "잠듦 상태가 되지 않는다."
     },
     {
-      "name": "잠복",
-      "description": "교체로 나온 상대에게 2배 데미지로 공격할 수 있다."
+      "name": "의욕",
+      "description": "공격이 올라가는 대신 명중률이 떨어진다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The ball of threads wrapped around its body is elastic enough to deflect the scythes of Scyther, this Pokémon’s natural enemy."
+      "text": "엉덩이에서 내뿜는 실은 와이어에 필적하는 강도를 가졌다. 실을 몸에 감아 방어력을 높인다."
     },
     {
       "version": "바이올렛",
-      "text": "The thread it secretes from its rear is as strong as wire. The secret behind the thread’s strength is the topic of ongoing research."
+      "text": "몸을 감싸고 있는 실타래는 스라크의 낫을 튕겨 낼 정도의 탄력이 있다. 실로 거미줄을 쳐서 함정을 만든다."
     }
   ]
 }

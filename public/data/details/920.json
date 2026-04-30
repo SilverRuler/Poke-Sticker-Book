@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "벌레의알림",
-      "description": "위급할 때 벌레타입의 위력이 올라간다."
+      "description": "위급할 때 벌레 타입 기술의 위력이 올라간다."
     },
     {
       "name": "색안경",
-      "description": "효과가 별로인 기술이 강해진다."
+      "description": "효과가 별로인 기술의 위력을 높인다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order."
+      "text": "접혀 있던 뒷다리를 펴서 결전 모드가 되면 강력한 킥으로 적을 분쇄한다."
     },
     {
       "version": "바이올렛",
-      "text": "It uses its normally folded third set of legs when in Showdown Mode. This places a huge burden on its body, so it can’t stay in this mode for long."
+      "text": "강력한 다리 근육을 가졌으며 100m를 단숨에 도약한다. 공중에서 내려찍는 발차기가 특기다."
     }
   ]
 }

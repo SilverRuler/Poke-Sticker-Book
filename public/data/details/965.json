@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "방진",
-      "description": "먼지나 가루를 막는다."
+      "description": "날씨 대미지나 가루 기술을 무효화한다."
     },
     {
-      "name": "슬로스타트",
-      "description": "공격과 스피드가 잠시 동안 절반이 된다."
+      "name": "독치장",
+      "description": "물리 공격을 받으면 상대 필드에 독압정을 깐다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory."
+      "text": "방치된 엔진에 독포켓몬이 들어가 탄생했다. 바위 성분을 에너지로 써서 가스를 내뿜는다."
     },
     {
       "version": "바이올렛",
-      "text": "The steel section is Varoom’s actual body. This Pokémon clings to rocks and converts the minerals within into energy to fuel its activities."
+      "text": "강철 몸체는 매우 견고하다. 엔진을 회전시켜서 강력한 파워를 낸다."
     }
   ]
 }

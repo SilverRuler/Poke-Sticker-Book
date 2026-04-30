@@ -8,11 +8,11 @@
   "abilities": [
     {
       "name": "도주",
-      "description": "야생 포켓몬으로부터 반드시 도망칠 수 있다."
+      "description": "상대로부터 반드시 도망칠 수 있다."
     },
     {
       "name": "픽업",
-      "description": "도구를 주워올 때가 있다."
+      "description": "다른 포켓몬이 사용한 도구를 주워 올 때가 있다."
     },
     {
       "name": "마이페이스",
@@ -22,11 +22,11 @@
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them."
+      "text": "호흡이 척척 맞는 콤비네이션으로 집의 재료가 될 만한 것을 앞니로 잘라 내어 가지고 간다."
     },
     {
       "version": "바이올렛",
-      "text": "The pair sticks together no matter what. They split any food they find exactly in half and then eat it together."
+      "text": "두 마리가 언제나 함께 행동한다. 먹이를 정확히 반으로 나눠서 사이좋게 나누어 먹는다."
     }
   ]
 }

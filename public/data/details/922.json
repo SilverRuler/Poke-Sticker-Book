@@ -8,25 +8,25 @@
   "abilities": [
     {
       "name": "축전",
-      "description": "전기를 받으면 회복한다."
+      "description": "전기 기술을 받으면 대미지를 입지 않고 HP를 회복한다."
     },
     {
       "name": "자연회복",
-      "description": "배틀에서 일단 물러나면 상태 이상이 회복된다."
+      "description": "배틀에서 물러나면 상태 이상이 회복된다."
     },
     {
       "name": "철주먹",
-      "description": "펀치를 사용하는 기술의 위력이 올라간다."
+      "description": "펀치 기술의 위력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks."
+      "text": "공격을 받으면 전격을 날리는 격투기로 먼저 싸움을 걸고 적을 쓰러뜨린다."
     },
     {
       "version": "바이올렛",
-      "text": "Pawmo uses a unique fighting technique in which it uses its forepaws to strike foes and zap them with electricity from its paw pads simultaneously."
+      "text": "앞발의 볼록살을 사용하여 전격을 퍼붓는다. 부드러운 털은 전기를 모으기에 적합하다."
     }
   ]
 }

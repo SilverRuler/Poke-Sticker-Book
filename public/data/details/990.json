@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens."
+      "text": "어느 탐험가에게 '무쇠바퀴'라는 이름으로 기록된 물체일 가능성이 있다."
     },
     {
       "version": "바이올렛",
-      "text": "Sightings of this Pokémon have occurred in recent years. It resembles a mysterious object described in an old expedition journal."
+      "text": "코리갑과 닮은 미래의 포켓몬. 몸을 구체로 변형시켜 고속으로 회전하며 이동한다."
     }
   ]
 }

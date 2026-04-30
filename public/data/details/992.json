@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete."
+      "text": "어느 탐험기에 기록된 '무쇠손'이라 불리는 생물일 가능성이 높다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon shares many similarities with Iron Hands, an object mentioned in a certain expedition journal."
+      "text": "하리뭉과 닮은 사이보그 포켓몬. 전기로 움직이는 거대한 손바닥으로 대형차도 날려버린다."
     }
   ]
 }

@@ -7,26 +7,26 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "purifying-salt",
-      "description": ""
+      "name": "정화의소금",
+      "description": "상태 이상이 되지 않으며 고스트 타입 기술의 대미지를 줄인다."
     },
     {
       "name": "옹골참",
-      "description": "일격으로 쓰러지지 않는다."
+      "description": "일격에 쓰러지지 않는다."
     },
     {
       "name": "클리어바디",
-      "description": "상대가 능력을 떨어뜨릴 수 없다."
+      "description": "상대에 의해 능력이 떨어지지 않는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body."
+      "text": "분출한 소금을 먹이에게 끼얹어서 소금절이로 만들어 버린다. 체내의 수분을 빼앗는 것이다."
     },
     {
       "version": "바이올렛",
-      "text": "It compresses rock salt inside its body and shoots out hardened salt pellets with enough force to perforate an iron sheet."
+      "text": "암염을 압축하여 다져진 몸은 매우 단단하다. 몸의 소금은 걸을 때마다 조금씩 깎여 나간다."
     }
   ]
 }

@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "픽업",
-      "description": "도구를 주워올 때가 있다."
+      "description": "다른 포켓몬이 사용한 도구를 주워 올 때가 있다."
     },
     {
-      "name": "복슬복슬",
-      "description": "상대로부터 받은 접촉하는 기술의 데미지를 반감시키지만 불꽃타입 기술의 데미지는 2배가 된다."
+      "name": "모래헤치기",
+      "description": "모래바람이 불 때 스피드가 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon."
+      "text": "사람을 잘 따르지만, 자신도 모르게 사람의 생기를 조금씩 빨아들여 잠들게 만든다."
     },
     {
       "version": "바이올렛",
-      "text": "This friendly Pokémon doesn’t like being alone. Pay it even the slightest bit of attention, and it will follow you forever."
+      "text": "머리의 촛불은 영혼의 불꽃이다. 추운 밤에 길을 잃은 사람의 길동무가 되어준다."
     }
   ]
 }

@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "대접",
-      "description": ""
+      "description": "등장했을 때 아군의 HP를 회복시킨다."
     },
     {
       "name": "내열",
-      "description": "불꽃 기술의 위력을 약하게 한다."
+      "description": "불꽃 타입 기술의 대미지를 줄인다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon."
+      "text": "다도의 길을 통달하지 못한 채 죽은 다도가의 원통함이 말차에 깃들어서 포켓몬이 되었다고 한다."
     },
     {
       "version": "바이올렛",
-      "text": "Poltchageist looks like a regional form of Sinistea, but it was recently discovered that the two Pokémon are entirely unrelated."
+      "text": "데인차의 리전폼처럼 보이지만 최근 전혀 상관없는 포켓몬이라고 밝혀졌다."
     }
   ]
 }

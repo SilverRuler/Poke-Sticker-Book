@@ -7,26 +7,26 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "cud-chew",
-      "description": ""
-    },
-    {
-      "name": "armor-tail",
-      "description": ""
+      "name": "되새김질",
+      "description": "나무열매를 먹으면 다음 턴 종료 시에 한 번 더 먹는다."
     },
     {
       "name": "초식",
-      "description": "풀 기술을 받으면 공격이 올라간다."
+      "description": "풀 타입 기술을 받으면 공격이 올라간다."
+    },
+    {
+      "name": "테일아머",
+      "description": "상대가 선제공격 기술을 쓰지 못하게 한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s."
+      "text": "본체와 꼬리의 뇌가 동기화되어 에스퍼 파워가 키링키의 10배로 강화되었다."
     },
     {
       "version": "바이올렛",
-      "text": "The hardened head from the tail protects the head of the main body as Farigiraf whips its long neck around to headbutt enemies."
+      "text": "머리의 꼬리가 본체와 일체화되었다. 두 개의 뇌가 동기화되어 초능력을 증폭시킨다."
     }
   ]
 }

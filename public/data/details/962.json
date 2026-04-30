@@ -7,26 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "부풀린가슴",
-      "description": "방어를 떨어뜨리는 공격을 받지 않는다."
+      "name": "비둘기가슴",
+      "description": "방어가 떨어지지 않는다."
     },
     {
-      "name": "날카로운눈",
-      "description": "명중률이 떨어지지 않는다."
-    },
-    {
-      "name": "rocky-payload",
-      "description": ""
+      "name": "운반주머니",
+      "description": "도구를 지니고 있지 않을 때 상대의 도구를 뺏어온다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun."
+      "text": "깃털 주머니에 물건을 넣고 운반한다. 높은 곳에서 물건을 떨어뜨려 놀기를 좋아한다."
     },
     {
       "version": "바이올렛",
-      "text": "Bombirdier uses the apron on its chest to bundle up food, which it carries back to its nest. It enjoys dropping things that make loud noises."
+      "text": "바닷가 근처에 서식한다. 강력한 바람을 이용해 높은 하늘까지 단숨에 날아오른다."
     }
   ]
 }

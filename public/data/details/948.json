@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "mycelium-might",
-      "description": ""
+      "name": "균사의힘",
+      "description": "변화 기술을 늦게 쓰는 대신 상대의 특성을 무시하고 기술을 쓴다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious."
+      "text": "왕눈해를 닮았지만 전혀 다른 종류다. 다리는 가늘지만 달리기 시작하면 시속 50km에 이르게 된다."
     },
     {
       "version": "바이올렛",
-      "text": "Though it looks like Tentacool, Toedscool is a completely different species. Its legs may be thin, but it can run at a speed of 30 mph."
+      "text": "촉수처럼 생긴 다리로 땅을 딛고 숲속을 걸어 다닌다. 나무의 수분을 흡수하여 살아간다."
     }
   ]
 }

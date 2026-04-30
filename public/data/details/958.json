@@ -8,25 +8,21 @@
   "abilities": [
     {
       "name": "틀깨기",
-      "description": "특성에 관계없이 상대에게 기술을 쓸 수 있다."
+      "description": "상대의 특성에 방해받지 않고 기술을 쓴다."
     },
     {
       "name": "마이페이스",
       "description": "혼란 상태가 되지 않는다."
-    },
-    {
-      "name": "나쁜손버릇",
-      "description": "닿은 상대로부터 도구를 훔친다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer."
+      "text": "더 크고 튼튼한 해머를 만들기 위해 절각참 무리를 습격해 금속을 모은다."
     },
     {
       "version": "바이올렛",
-      "text": "These Pokémon make their homes in piles of scrap metal. They test the strength of each other’s hammers by smashing them together."
+      "text": "금속을 두드리는 소리가 숲속에 울려 퍼진다. 해머의 상태를 항상 체크한다."
     }
   ]
 }

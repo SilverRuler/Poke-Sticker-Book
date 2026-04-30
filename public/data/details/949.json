@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "mycelium-might",
-      "description": ""
+      "name": "균사의힘",
+      "description": "변화 기술을 늦게 쓰는 대신 상대의 특성을 무시하고 기술을 쓴다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach."
+      "text": "깊은 숲속에 집단으로 살며 군체를 형성한다. 외부인이 접근하는 것을 극도로 싫어한다."
     },
     {
       "version": "바이올렛",
-      "text": "It coils its 10 tentacles around prey and sucks out their nutrients, causing the prey pain. The folds along the rim of its head are a popular delicacy."
+      "text": "수많은 다리로 상대를 휘감아서 독 포자를 뿌린다. 버섯 포켓몬 중에서도 손꼽히는 흉포함을 가졌다."
     }
   ]
 }

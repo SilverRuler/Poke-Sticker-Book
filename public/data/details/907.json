@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "심록",
-      "description": "위급할 때 풀타입의 위력이 올라간다."
+      "description": "위급할 때 풀 타입 기술의 위력이 올라간다."
     },
     {
       "name": "변환자재",
-      "description": "사용한 기술과 같은 타입으로 변화한다."
+      "description": "기술을 쓰기 직전에 자신의 타입을 기술과 같은 타입으로 바꾼다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Floragato deftly wields the vine hidden beneath its long fur, slamming the hard flower bud against its opponents."
+      "text": "긴 털 속에 숨긴 덩굴을 능숙하게 휘둘러서 단단한 꽃봉오리를 상대에게 때려박는다."
     },
     {
       "version": "바이올렛",
-      "text": "The hardness of Floragato’s fur depends on the Pokémon’s mood. When Floragato is prepared to battle, its fur becomes pointed and needle sharp."
+      "text": "털의 단단함은 기분에 따라 변한다. 싸울 준비가 되면 가시처럼 날카로워져 상대를 찌른다."
     }
   ]
 }

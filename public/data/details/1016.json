@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "독사슬",
-      "description": ""
+      "description": "공격을 맞히면 독 상태로 만들 때가 있다."
     },
     {
       "name": "테크니션",
-      "description": "약한 기술의 위력이 올라간다."
+      "description": "위력이 낮은 기술의 위력을 높인다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body."
+      "text": "몸을 휘감고 있는 사슬에서 나오는 독소에 자극을 받아 아름다운 모습과 소리를 손에 넣었다."
     },
     {
       "version": "바이올렛",
-      "text": "Fezandipiti beats its glossy wings to scatter pheromones that captivate people and Pokémon."
+      "text": "윤기가 흐르는 날개를 펄럭이며 페로몬을 흩뿌리는 것으로 사람과 포켓몬을 매료시킨다."
     }
   ]
 }

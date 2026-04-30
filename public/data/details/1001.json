@@ -1,24 +1,24 @@
 {
   "id": 1001,
   "name": "총지엔",
-  "classification": "재액포켓몬",
+  "classification": "재앙포켓몬",
   "height": 1.5,
   "weight": 74.2,
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "tablets-of-ruin",
-      "description": ""
+      "name": "재액의목간",
+      "description": "자신 이외의 포켓몬의 공격을 떨어뜨린다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon."
+      "text": "목간에 깃든 원념이 마른 잎을 두르고 포켓몬이 되었다. 주위의 생명력을 흡수하여 대지를 말린다."
     },
     {
       "version": "바이올렛",
-      "text": "It drains the life-force from vegetation, causing nearby forests to instantly wither and fields to turn barren."
+      "text": "왕의 악행을 기록한 목간에 깃든 원한이 실체화된 존재. 숲의 에너지를 흡수하여 황폐화시킨다."
     }
   ]
 }

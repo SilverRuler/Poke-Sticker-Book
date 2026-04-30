@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "quark-drive",
-      "description": ""
+      "name": "쿼크차지",
+      "description": "부스트에너지를 지니거나 필드가 일렉트릭필드일 때 가장 높은 능력이 올라간다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It resembles a Pokémon described in a dubious magazine as a Terrakion that had been modified by an evil organization."
+      "text": "악의 조직에 개조당한 테라키온이라며 괴상한 잡지에서 다뤘던 포켓몬을 닮았다."
     },
     {
       "version": "바이올렛",
-      "text": "It was named after a mysterious object recorded in an old book. Its body seems to be metallic."
+      "text": "몸은 금속질로 되어 있다고 한다. 이름은 오래된 책에 기록된 정체불명의 물체에서 유래됐다."
     }
   ]
 }

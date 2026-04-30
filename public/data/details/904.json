@@ -1,14 +1,14 @@
 {
   "id": 904,
   "name": "장침바루",
-  "classification": "침붕포켓몬몬",
+  "classification": "가시포켓몬",
   "height": 2.5,
   "weight": 60.5,
   "gender": "성별불명",
   "abilities": [
     {
       "name": "독가시",
-      "description": "접촉한 상대를 중독시킬 때가 있다."
+      "description": "상대와 접촉하면 독 상태로 만들 때가 있다."
     },
     {
       "name": "쓱쓱",
@@ -21,8 +21,8 @@
   ],
   "flavorTexts": [
     {
-      "version": "레전즈-아르세우스",
-      "text": "Its lancelike spikes and savage temperament have earned it the nickname ”sea fiend.” It slurps up poison to nourish itself."
+      "version": "레전즈 아르세우스",
+      "text": "독침이 빽빽하게 돋아난 몸은 '바다의 침봉'이라 불리며 두려움의 대상이다. 독을 마시고 양분으로 삼는 성질을 가졌다."
     }
   ]
 }

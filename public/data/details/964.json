@@ -7,18 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "zero-to-hero",
-      "description": ""
+      "name": "마이티체인지",
+      "description": "배틀에서 물러나면 히어로폼으로 변신한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation."
+      "text": "평소에는 맨돌핀과 다를 바 없지만, 동료가 위기에 처하면 히어로의 모습으로 변신한다."
     },
     {
       "version": "바이올렛",
-      "text": "Its physical capabilities are no different than a Finizen’s, but when its allies are in danger, it transforms and powers itself up."
+      "text": "바다의 영웅이라 불린다. 초인적인 힘을 발휘하여 거대한 배도 들어 올릴 수 있다."
     }
   ]
 }

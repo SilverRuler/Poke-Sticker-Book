@@ -8,21 +8,21 @@
   "abilities": [
     {
       "name": "맹화",
-      "description": "위급할 때 불꽃타입의 위력이 올라간다."
+      "description": "위급할 때 불꽃 타입 기술의 위력이 올라간다."
     },
     {
       "name": "천진",
-      "description": "상대의 능력 변화를 무시한다."
+      "description": "상대의 능력 변화를 무시하고 공격한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul."
+      "text": "노래할 때마다 불꽃 새의 모습이 변한다. 머리 위의 불덩어리에 영혼이 깃들었다는 소문이 있다."
     },
     {
       "version": "바이올렛",
-      "text": "Skeledirge’s gentle singing soothes the souls of all that hear it. It burns its enemies to a crisp with flames of over 5,400 degrees Fahrenheit."
+      "text": "풍부한 성량을 가진 싱어. 고운 노랫소리로 상대를 불태우고 마음을 따뜻하게 치유한다."
     }
   ]
 }

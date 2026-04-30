@@ -7,22 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "thermal-exchange",
-      "description": ""
+      "name": "열교환",
+      "description": "불꽃 타입 기술을 받으면 공격이 올라가며 화상 상태가 되지 않는다."
     },
     {
       "name": "아이스바디",
-      "description": "싸라기눈일 때 HP를 조금씩 회복한다."
+      "description": "날씨가 눈일 때 HP를 조금씩 회복한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice."
+      "text": "몸 주위에 얼음 갑옷을 두르고 있다. 강력한 냉기를 내뿜어 사냥감을 꼼짝 못 하게 만든다."
     },
     {
       "version": "바이올렛",
-      "text": "It attacks with the blade of its frozen dorsal fin by doing a front flip in the air. Arctibax’s strong back and legs allow it to pull off this technique."
+      "text": "영하의 냉기를 내뿜는다. 등의 지느러미는 얼음 칼날처럼 날카로워 스치기만 해도 위험하다."
     }
   ]
 }

@@ -7,22 +7,18 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "toxic-debris",
-      "description": ""
-    },
-    {
-      "name": "부식",
-      "description": "강철타입이나 독타입도 독 상태로 만들 수 있다."
+      "name": "독치장",
+      "description": "물리 공격을 받으면 상대 필드에 독압정을 깐다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison."
+      "text": "동굴 벽에 붙어 영양분을 흡수한다. 독 결정으로 된 꽃잎을 두르고 있는 광석 포켓몬이다."
     },
     {
       "version": "바이올렛",
-      "text": "Glimmet’s toxic mineral crystals look just like flower petals. This Pokémon scatters poisonous powder like pollen to protect itself."
+      "text": "꽃처럼 보이지만 사실은 돌이다. 위험을 느끼면 독 가스를 내뿜어 몸을 지킨다."
     }
   ]
 }

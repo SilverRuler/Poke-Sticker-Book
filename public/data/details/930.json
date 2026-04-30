@@ -7,22 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "seed-sower",
-      "description": ""
+      "name": "넘치는씨",
+      "description": "공격을 받으면 필드를 그래스필드로 만든다."
     },
     {
       "name": "수확",
-      "description": "사용한 나무열매를 몇 번이고 만들어 낸다."
+      "description": "사용한 나무열매를 다시 만들어 낼 때가 있다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon."
+      "text": "온화하면서도 매우 자비롭다. 영양이 풍부한 맛있는 오일을 약해진 포켓몬에게 나눠 준다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon drives back enemies by launching its rich, aromatic oil at them with enough force to smash a boulder."
+      "text": "영리하고 온순한 포켓몬이지만 적에게는 머리의 열매를 발사하여 대미지를 준다."
     }
   ]
 }

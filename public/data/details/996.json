@@ -7,22 +7,22 @@
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "thermal-exchange",
-      "description": ""
+      "name": "열교환",
+      "description": "불꽃 타입 기술을 받으면 공격이 올라가며 화상 상태가 되지 않는다."
     },
     {
       "name": "아이스바디",
-      "description": "싸라기눈일 때 HP를 조금씩 회복한다."
+      "description": "날씨가 눈일 때 HP를 조금씩 회복한다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores."
+      "text": "등의 지느러미로 열을 흡수해 얼음 에너지로 바꾼다. 눈 속에서 헤엄치듯 이동한다."
     },
     {
       "version": "바이올렛",
-      "text": "This Pokémon lives in forests and craggy areas. Using the power of its dorsal fin, it cools the inside of its nest like a refrigerator."
+      "text": "차가운 땅속에서 자란다. 등의 지느러미에 냉기를 저장하여 주변을 얼린다."
     }
   ]
 }

@@ -1,24 +1,24 @@
 {
   "id": 1000,
   "name": "타부자고",
-  "classification": "보물생명체포켓몬",
+  "classification": "보물포켓몬",
   "height": 1.2,
   "weight": 30.0,
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "good-as-gold",
-      "description": ""
+      "name": "황금몸",
+      "description": "상대의 변화 기술을 받지 않는다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody."
+      "text": "1000개의 코인이 모여 태어났다. 몸이 금속으로 되어 있어 방어력이 매우 높고 인간에게 우호적이다."
     },
     {
       "version": "바이올렛",
-      "text": "It has a sturdy body made up of stacked coins. Gholdengo overwhelms its enemies by firing coin after coin at them in quick succession."
+      "text": "황금으로 된 튼튼한 몸을 가졌다. 손가락 끝에서 코인을 탄환처럼 발사하여 공격한다."
     }
   ]
 }

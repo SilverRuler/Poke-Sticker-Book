@@ -8,25 +8,25 @@
   "abilities": [
     {
       "name": "엽록소",
-      "description": "맑을 때 스피드가 올라간다."
+      "description": "날씨가 햇살이 강함일 때 스피드가 올라간다."
     },
     {
       "name": "불면",
       "description": "잠듦 상태가 되지 않는다."
     },
     {
-      "name": "서투름",
-      "description": "지니고 있는 도구를 쓸 수 없다."
+      "name": "의욕",
+      "description": "공격이 올라가지만 명중률이 떨어진다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become."
+      "text": "태양 빛을 쬐면 매운 성분이 늘어난다. 앞니는 향토 요리의 재료로 인기가 많다."
     },
     {
       "version": "바이올렛",
-      "text": "Traditional Paldean dishes can be extremely spicy because they include the shed front teeth of Capsakid among their ingredients."
+      "text": "매운맛을 좋아하는 포켓몬이다. 입에서 내뿜는 화염으로 나무열매를 구워 먹는다."
     }
   ]
 }

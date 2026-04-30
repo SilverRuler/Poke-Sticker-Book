@@ -1,24 +1,24 @@
 {
   "id": 1004,
   "name": "위유이",
-  "classification": "재액포켓몬",
+  "classification": "재앙포켓몬",
   "height": 0.4,
   "weight": 4.9,
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "beads-of-ruin",
-      "description": ""
+      "name": "재액의곡옥",
+      "description": "자신 이외의 포켓몬의 특수방어를 떨어뜨린다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand."
+      "text": "곡옥에 모여든 질투가 불꽃을 두르고 포켓몬이 되었다. 3000도의 불꽃을 자유자재로 조종한다."
     },
     {
       "version": "바이올렛",
-      "text": "The envy accumulated within curved beads that sparked multiple conflicts has clad itself in fire and become a Pokémon."
+      "text": "바위와 자갈을 녹여서 만든 마그마의 바다를 유유히 헤엄친다. 모든 것을 불태우는 재앙이다."
     }
   ]
 }

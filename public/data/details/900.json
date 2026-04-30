@@ -1,28 +1,28 @@
 {
   "id": 900,
   "name": "사마자르",
-  "classification": "큰도끼포켓몬",
+  "classification": "도끼포켓몬",
   "height": 1.8,
   "weight": 89.0,
   "gender": "성별불명",
   "abilities": [
     {
       "name": "벌레의알림",
-      "description": "위급할 때 벌레타입의 위력이 올라간다."
+      "description": "위급할 때 벌레 타입 기술의 위력이 올라간다."
     },
     {
       "name": "우격다짐",
-      "description": "힘이 강해지지만 추가 효과가 없어진다."
+      "description": "기술의 추가 효과를 없애는 대신 위력을 올린다."
     },
     {
-      "name": "sharpness",
-      "description": ""
+      "name": "날카로운눈",
+      "description": "상대가 명중률을 떨어뜨리지 못하며 회피율을 무시한다."
     }
   ],
   "flavorTexts": [
     {
-      "version": "레전즈-아르세우스",
-      "text": "A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee."
+      "version": "레전즈 아르세우스",
+      "text": "몸의 일부가 바위로 변화했다. 거친 바위로 된 도끼는 휘두를 때마다 이가 빠지지만, 이가 빠질수록 예리해진다."
     }
   ]
 }

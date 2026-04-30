@@ -8,7 +8,7 @@
   "abilities": [
     {
       "name": "급류",
-      "description": "위급할 때 물타입의 위력이 올라간다."
+      "description": "위급할 때 물 타입 기술의 위력이 올라간다."
     },
     {
       "name": "자기과신",
@@ -18,11 +18,11 @@
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully."
+      "text": "흐르는 물의 움직임을 관찰하며 다리 기술을 연마한다. 동료들끼리 발 기술의 화려함을 겨룬다."
     },
     {
       "version": "바이올렛",
-      "text": "The hardworking Quaxwell observes people and Pokémon from various regions and incorporates their movements into its own dance routines."
+      "text": "얕은 여울을 쉬지 않고 달리며 하반신을 단련한다. 성실한 성격으로 기술의 완성도를 높인다."
     }
   ]
 }

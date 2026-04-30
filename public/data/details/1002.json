@@ -1,24 +1,24 @@
 {
   "id": 1002,
   "name": "파오젠",
-  "classification": "재액포켓몬",
+  "classification": "재앙포켓몬",
   "height": 1.9,
   "weight": 152.2,
   "gender": "성별불명",
   "abilities": [
     {
-      "name": "sword-of-ruin",
-      "description": ""
+      "name": "재액의검",
+      "description": "자신 이외의 포켓몬의 방어를 떨어뜨린다."
     }
   ],
   "flavorTexts": [
     {
       "version": "스칼렛",
-      "text": "This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused."
+      "text": "검에 깃든 증오가 눈을 두르고 포켓몬이 되었다. 100t의 눈을 조종하여 눈사태를 일으킨다."
     },
     {
       "version": "바이올렛",
-      "text": "The hatred of those who perished by the sword long ago has clad itself in snow and become a Pokémon."
+      "text": "먼 옛날 검에 의해 희생된 자들의 원한이 실체화된 존재. 눈사태를 일으키고 그 안을 유유히 누빈다."
     }
   ]
 }

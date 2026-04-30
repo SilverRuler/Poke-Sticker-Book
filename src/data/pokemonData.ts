@@ -11692,8 +11692,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "냐오닉스",
+        "name": "냐오닉스(수컷의 모습)",
         "image": "/images/pokemon/678-01.png",
+        "types": [
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "냐오닉스(암컷의 모습)",
+        "image": "/images/pokemon/678-03.png",
         "types": [
           "에스퍼"
         ]
@@ -15943,8 +15951,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "퍼퓨돈",
+        "name": "퍼퓨돈(수컷의 모습)",
         "image": "/images/pokemon/916-01.png",
+        "types": [
+          "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "퍼퓨돈(암컷의 모습)",
+        "image": "/images/pokemon/916-02.png",
         "types": [
           "노말"
         ]
@@ -17788,6 +17804,12 @@ png",
   }
 ];
   }
+    ]
+  }
+];
+ ]
+  }
+];
     ]
   }
 ];

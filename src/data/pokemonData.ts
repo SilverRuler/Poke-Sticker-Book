@@ -486,6 +486,70 @@ export const pokemonData: PokemonEntry[] = [
         "types": [
           "전기"
         ]
+      },
+      {
+        "formId": "03",
+        "name": "피카츄(오리지널캡)",
+        "image": "/images/pokemon/25-03.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "피카츄(호연캡)",
+        "image": "/images/pokemon/25-04.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "피카츄(신오캡)",
+        "image": "/images/pokemon/25-05.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "06",
+        "name": "피카츄(하나캡)",
+        "image": "/images/pokemon/25-06.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "07",
+        "name": "피카츄(칼로스캡)",
+        "image": "/images/pokemon/25-07.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "08",
+        "name": "피카츄(알로라캡)",
+        "image": "/images/pokemon/25-08.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "09",
+        "name": "피카츄(너로정했다캡)",
+        "image": "/images/pokemon/25-09.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "10",
+        "name": "피카츄(월드캡)",
+        "image": "/images/pokemon/25-10.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -8188,6 +8252,15 @@ export const pokemonData: PokemonEntry[] = [
           "강철",
           "드래곤"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "디아루가(오리진폼)",
+        "image": "/images/pokemon/483-02.png",
+        "types": [
+          "강철",
+          "드래곤"
+        ]
       }
     ]
   },
@@ -8199,6 +8272,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "펄기아",
         "image": "/images/pokemon/484-01.png",
+        "types": [
+          "물",
+          "드래곤"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "펄기아(오리진폼)",
+        "image": "/images/pokemon/484-02.png",
         "types": [
           "물",
           "드래곤"

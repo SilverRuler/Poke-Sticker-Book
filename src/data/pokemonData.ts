@@ -11169,15 +11169,6 @@ export const pokemonData: PokemonEntry[] = [
           "물",
           "악"
         ]
-      },
-      {
-        "formId": "03",
-        "name": "메가개굴닌자",
-        "image": "/images/pokemon/658-03.png",
-        "types": [
-          "물",
-          "악"
-        ]
       }
     ]
   },

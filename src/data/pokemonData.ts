@@ -14750,8 +14750,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "데인차",
+        "name": "데인차(가품의 모습)",
         "image": "/images/pokemon/854-01.png",
+        "types": [
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "데인차(진품의 모습)",
+        "image": "/images/pokemon/854-02.png",
         "types": [
           "고스트"
         ]
@@ -14764,8 +14772,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "포트데스",
+        "name": "포트데스(가품의 모습)",
         "image": "/images/pokemon/855-01.png",
+        "types": [
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "포트데스(진품의 모습)",
+        "image": "/images/pokemon/855-02.png",
         "types": [
           "고스트"
         ]

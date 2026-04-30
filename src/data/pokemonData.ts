@@ -3919,6 +3919,14 @@ export const pokemonData: PokemonEntry[] = [
           "물",
           "바위"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "가라르 코산호",
+        "image": "/images/pokemon/222-02.png",
+        "types": [
+          "고스트"
+        ]
       }
     ]
   },
@@ -7592,8 +7600,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "히포포타스",
+        "name": "히포포타스(수컷의 모습)",
         "image": "/images/pokemon/449-01.png",
+        "types": [
+          "땅"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "히포포타스(암컷의 모습)",
+        "image": "/images/pokemon/449-02.png",
         "types": [
           "땅"
         ]
@@ -7606,8 +7622,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "하마돈",
+        "name": "하마돈(수컷의 모습)",
         "image": "/images/pokemon/450-01.png",
+        "types": [
+          "땅"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "하마돈(암컷의 모습)",
+        "image": "/images/pokemon/450-02.png",
         "types": [
           "땅"
         ]
@@ -8735,8 +8759,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "켄호로우",
+        "name": "켄호로우(수컷의 모습)",
         "image": "/images/pokemon/521-01.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "켄호로우(암컷의 모습)",
+        "image": "/images/pokemon/521-02.png",
         "types": [
           "노말",
           "비행"
@@ -9945,8 +9978,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "탱그릴",
+        "name": "탱그릴(수컷의 모습)",
         "image": "/images/pokemon/592-01.png",
+        "types": [
+          "물",
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "탱그릴(암컷의 모습)",
+        "image": "/images/pokemon/592-02.png",
         "types": [
           "물",
           "고스트"
@@ -9960,8 +10002,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "탱탱겔",
+        "name": "탱탱겔(수컷의 모습)",
         "image": "/images/pokemon/593-01.png",
+        "types": [
+          "물",
+          "고스트"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "탱탱겔(암컷의 모습)",
+        "image": "/images/pokemon/593-02.png",
         "types": [
           "물",
           "고스트"
@@ -11357,8 +11408,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "화염레오",
+        "name": "화염레오(수컷의 모습)",
         "image": "/images/pokemon/668-01.png",
+        "types": [
+          "불꽃",
+          "노말"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "화염레오(암컷의 모습)",
+        "image": "/images/pokemon/668-03.png",
         "types": [
           "불꽃",
           "노말"
@@ -15726,6 +15786,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "다투곰",
         "image": "/images/pokemon/901-01.png",
+        "types": [
+          "땅",
+          "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "다투곰(붉은 달)",
+        "image": "/images/pokemon/901-02.png",
         "types": [
           "땅",
           "노말"

@@ -4,7 +4,7 @@
   "classification": "쥐포켓몬",
   "height": 0.4,
   "weight": 6.5,
-  "gender": "성별불명",
+  "gender": "수컷, 암컷",
   "abilities": [
     {
       "name": "축전",

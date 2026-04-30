@@ -4,7 +4,7 @@
   "classification": "댄서포켓몬",
   "height": 1.8,
   "weight": 61.9,
-  "gender": "성별불명",
+  "gender": "수컷, 암컷",
   "abilities": [
     {
       "name": "급류",

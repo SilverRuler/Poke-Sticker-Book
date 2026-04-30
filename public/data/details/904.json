@@ -4,7 +4,7 @@
   "classification": "가시포켓몬",
   "height": 2.5,
   "weight": 60.5,
-  "gender": "성별불명",
+  "gender": "수컷, 암컷",
   "abilities": [
     {
       "name": "독가시",

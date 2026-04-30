@@ -4,7 +4,7 @@
   "classification": "탈것포켓몬",
   "height": 1.6,
   "weight": 63.0,
-  "gender": "성별불명",
+  "gender": "수컷, 암컷",
   "abilities": [
     {
       "name": "탈피",

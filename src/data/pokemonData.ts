@@ -11381,8 +11381,40 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "플라베베",
+        "name": "플라베베(빨간 꽃)",
         "image": "/images/pokemon/669-01.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "플라베베(노란 꽃)",
+        "image": "/images/pokemon/669-02.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "플라베베(오렌지색 꽃)",
+        "image": "/images/pokemon/669-03.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "플라베베(파란 꽃)",
+        "image": "/images/pokemon/669-04.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "플라베베(하얀 꽃)",
+        "image": "/images/pokemon/669-05.png",
         "types": [
           "페어리"
         ]
@@ -11395,7 +11427,7 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "플라엣테",
+        "name": "플라엣테(빨간 꽃)",
         "image": "/images/pokemon/670-01.png",
         "types": [
           "페어리"
@@ -11403,8 +11435,48 @@ export const pokemonData: PokemonEntry[] = [
       },
       {
         "formId": "02",
-        "name": "메가플라엣테",
+        "name": "플라엣테(노란 꽃)",
         "image": "/images/pokemon/670-02.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "플라엣테(오렌지색 꽃)",
+        "image": "/images/pokemon/670-03.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "플라엣테(파란 꽃)",
+        "image": "/images/pokemon/670-04.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "플라엣테(하얀 꽃)",
+        "image": "/images/pokemon/670-05.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "06",
+        "name": "플라엣테(영원의 꽃)",
+        "image": "/images/pokemon/670-06.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "07",
+        "name": "메가플라엣테",
+        "image": "/images/pokemon/670-07.png",
         "types": [
           "페어리"
         ]
@@ -11417,8 +11489,40 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "플라제스",
+        "name": "플라제스(빨간 꽃)",
         "image": "/images/pokemon/671-01.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "플라제스(노란 꽃)",
+        "image": "/images/pokemon/671-02.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "플라제스(오렌지색 꽃)",
+        "image": "/images/pokemon/671-03.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "플라제스(파란 꽃)",
+        "image": "/images/pokemon/671-04.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "플라제스(하얀 꽃)",
+        "image": "/images/pokemon/671-05.png",
         "types": [
           "페어리"
         ]

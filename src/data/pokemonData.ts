@@ -13329,10 +13329,146 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "실버디",
+        "name": "실버디(노말타입)",
         "image": "/images/pokemon/773-01.png",
         "types": [
           "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "실버디(불꽃타입)",
+        "image": "/images/pokemon/773-02.png",
+        "types": [
+          "불꽃"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "실버디(물타입)",
+        "image": "/images/pokemon/773-03.png",
+        "types": [
+          "물"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "실버디(풀타입)",
+        "image": "/images/pokemon/773-04.png",
+        "types": [
+          "풀"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "실버디(전기타입)",
+        "image": "/images/pokemon/773-05.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "06",
+        "name": "실버디(얼음타입)",
+        "image": "/images/pokemon/773-06.png",
+        "types": [
+          "얼음"
+        ]
+      },
+      {
+        "formId": "07",
+        "name": "실버디(격투타입)",
+        "image": "/images/pokemon/773-07.png",
+        "types": [
+          "격투"
+        ]
+      },
+      {
+        "formId": "08",
+        "name": "실버디(독타입)",
+        "image": "/images/pokemon/773-08.png",
+        "types": [
+          "독"
+        ]
+      },
+      {
+        "formId": "09",
+        "name": "실버디(땅타입)",
+        "image": "/images/pokemon/773-09.png",
+        "types": [
+          "땅"
+        ]
+      },
+      {
+        "formId": "10",
+        "name": "실버디(비행타입)",
+        "image": "/images/pokemon/773-10.png",
+        "types": [
+          "비행"
+        ]
+      },
+      {
+        "formId": "11",
+        "name": "실버디(에스퍼타입)",
+        "image": "/images/pokemon/773-11.png",
+        "types": [
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "12",
+        "name": "실버디(벌레타입)",
+        "image": "/images/pokemon/773-12.png",
+        "types": [
+          "벌레"
+        ]
+      },
+      {
+        "formId": "13",
+        "name": "실버디(바위타입)",
+        "image": "/images/pokemon/773-13.png",
+        "types": [
+          "바위"
+        ]
+      },
+      {
+        "formId": "14",
+        "name": "실버디(고스트타입)",
+        "image": "/images/pokemon/773-14.png",
+        "types": [
+          "고스트"
+        ]
+      },
+      {
+        "formId": "15",
+        "name": "실버디(드래곤타입)",
+        "image": "/images/pokemon/773-15.png",
+        "types": [
+          "드래곤"
+        ]
+      },
+      {
+        "formId": "16",
+        "name": "실버디(강철타입)",
+        "image": "/images/pokemon/773-16.png",
+        "types": [
+          "강철"
+        ]
+      },
+      {
+        "formId": "17",
+        "name": "실버디(악타입)",
+        "image": "/images/pokemon/773-17.png",
+        "types": [
+          "악"
+        ]
+      },
+      {
+        "formId": "18",
+        "name": "실버디(페어리타입)",
+        "image": "/images/pokemon/773-18.png",
+        "types": [
+          "페어리"
         ]
       }
     ]
@@ -15103,8 +15239,16 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "빙큐보",
+        "name": "빙큐보(아이스페이스)",
         "image": "/images/pokemon/875-01.png",
+        "types": [
+          "얼음"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "빙큐보(나이스페이스)",
+        "image": "/images/pokemon/875-02.png",
         "types": [
           "얼음"
         ]
@@ -15117,8 +15261,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "에써르",
+        "name": "에써르(수컷의 모습)",
         "image": "/images/pokemon/876-01.png",
+        "types": [
+          "에스퍼",
+          "노말"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "에써르(암컷의 모습)",
+        "image": "/images/pokemon/876-02.png",
         "types": [
           "에스퍼",
           "노말"
@@ -15132,8 +15285,17 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "모르페코",
+        "name": "모르페코(배부른 모양)",
         "image": "/images/pokemon/877-01.png",
+        "types": [
+          "전기",
+          "악"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "모르페코(배고픈 모양)",
+        "image": "/images/pokemon/877-02.png",
         "types": [
           "전기",
           "악"
@@ -15413,6 +15575,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "자루도",
         "image": "/images/pokemon/893-01.png",
+        "types": [
+          "악",
+          "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "자루도(아빠 모습)",
+        "image": "/images/pokemon/893-02.png",
         "types": [
           "악",
           "풀"
@@ -17599,5 +17770,27 @@ export const pokemonData: PokemonEntry[] = [
         ]
       }
     ]
+  }
+];
+  }
+    ]
+  }
+];
+ ]
+  }
+];
+png",
+        "types": [
+          "특별"
+        ]
+      }
+    ]
+  }
+];
+  }
+    ]
+  }
+];
+ ]
   }
 ];

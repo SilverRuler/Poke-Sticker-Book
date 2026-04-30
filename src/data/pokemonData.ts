@@ -12223,8 +12223,35 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "호바귀",
+        "name": "호바귀(보통 크기)",
         "image": "/images/pokemon/710-01.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "호바귀(작은 크기)",
+        "image": "/images/pokemon/710-02.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "호바귀(대형 크기)",
+        "image": "/images/pokemon/710-03.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "호바귀(특대형 크기)",
+        "image": "/images/pokemon/710-04.png",
         "types": [
           "고스트",
           "풀"
@@ -12238,8 +12265,35 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "펌킨인",
+        "name": "펌킨인(보통 크기)",
         "image": "/images/pokemon/711-01.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "펌킨인(작은 크기)",
+        "image": "/images/pokemon/711-02.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "펌킨인(대형 크기)",
+        "image": "/images/pokemon/711-03.png",
+        "types": [
+          "고스트",
+          "풀"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "펌킨인(특대형 크기)",
+        "image": "/images/pokemon/711-04.png",
         "types": [
           "고스트",
           "풀"
@@ -12749,10 +12803,37 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "춤추새",
+        "name": "춤추새(이글이글스타일)",
         "image": "/images/pokemon/741-01.png",
         "types": [
           "불꽃",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "춤추새(파칙파칙스타일)",
+        "image": "/images/pokemon/741-02.png",
+        "types": [
+          "전기",
+          "비행"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "춤추새(훌라훌라스타일)",
+        "image": "/images/pokemon/741-03.png",
+        "types": [
+          "에스퍼",
+          "비행"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "춤추새(하늘하늘스타일)",
+        "image": "/images/pokemon/741-04.png",
+        "types": [
+          "고스트",
           "비행"
         ]
       }

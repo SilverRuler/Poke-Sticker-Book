@@ -509,6 +509,22 @@ export const pokemonData: PokemonEntry[] = [
           "전기",
           "에스퍼"
         ]
+      },
+      {
+        "formId": "03",
+        "name": "메가라이츄X",
+        "image": "/images/pokemon/26-03.png",
+        "types": [
+          "전기"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "메가라이츄Y",
+        "image": "/images/pokemon/26-04.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -668,6 +684,15 @@ export const pokemonData: PokemonEntry[] = [
         "image": "/images/pokemon/36-01.png",
         "types": [
           "페어리"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가픽시",
+        "image": "/images/pokemon/36-02.png",
+        "types": [
+          "페어리",
+          "비행"
         ]
       }
     ]
@@ -1271,6 +1296,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "우츠보트",
         "image": "/images/pokemon/71-01.png",
+        "types": [
+          "풀",
+          "독"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가우츠보트",
+        "image": "/images/pokemon/71-02.png",
         "types": [
           "풀",
           "독"
@@ -2173,6 +2207,15 @@ export const pokemonData: PokemonEntry[] = [
           "물",
           "에스퍼"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가아쿠스타",
+        "image": "/images/pokemon/121-02.png",
+        "types": [
+          "물",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -2693,6 +2736,15 @@ export const pokemonData: PokemonEntry[] = [
           "드래곤",
           "비행"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가망나뇽",
+        "image": "/images/pokemon/149-02.png",
+        "types": [
+          "드래곤",
+          "비행"
+        ]
       }
     ]
   },
@@ -2779,6 +2831,15 @@ export const pokemonData: PokemonEntry[] = [
         "image": "/images/pokemon/154-01.png",
         "types": [
           "풀"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가메가니움",
+        "image": "/images/pokemon/154-02.png",
+        "types": [
+          "풀",
+          "페어리"
         ]
       }
     ]
@@ -2872,6 +2933,15 @@ export const pokemonData: PokemonEntry[] = [
         "image": "/images/pokemon/160-01.png",
         "types": [
           "물"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가장크로다일",
+        "image": "/images/pokemon/160-02.png",
+        "types": [
+          "물",
+          "드래곤"
         ]
       }
     ]
@@ -3922,6 +3992,15 @@ export const pokemonData: PokemonEntry[] = [
           "강철",
           "비행"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가무장조",
+        "image": "/images/pokemon/227-02.png",
+        "types": [
+          "강철",
+          "비행"
+        ]
       }
     ]
   },
@@ -4779,6 +4858,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "가디안",
         "image": "/images/pokemon/282-01.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가가디안",
+        "image": "/images/pokemon/282-02.png",
         "types": [
           "에스퍼",
           "페어리"
@@ -5961,6 +6049,15 @@ export const pokemonData: PokemonEntry[] = [
         "types": [
           "에스퍼"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가치렁",
+        "image": "/images/pokemon/358-02.png",
+        "types": [
+          "에스퍼",
+          "페어리"
+        ]
       }
     ]
   },
@@ -6597,6 +6694,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "찌르호크",
         "image": "/images/pokemon/398-01.png",
+        "types": [
+          "노말",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가찌르호크",
+        "image": "/images/pokemon/398-02.png",
         "types": [
           "노말",
           "비행"
@@ -7300,6 +7406,15 @@ export const pokemonData: PokemonEntry[] = [
           "드래곤",
           "땅"
         ]
+      },
+      {
+        "formId": "03",
+        "name": "메가한카리아스Z",
+        "image": "/images/pokemon/445-03.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
       }
     ]
   },
@@ -7348,6 +7463,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "02",
         "name": "메가루카리오",
         "image": "/images/pokemon/448-02.png",
+        "types": [
+          "격투",
+          "강철"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "메가루카리오Z",
+        "image": "/images/pokemon/448-03.png",
         "types": [
           "격투",
           "강철"
@@ -7807,6 +7931,15 @@ export const pokemonData: PokemonEntry[] = [
           "얼음",
           "고스트"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가눈여아",
+        "image": "/images/pokemon/478-02.png",
+        "types": [
+          "얼음",
+          "고스트"
+        ]
       }
     ]
   },
@@ -8119,6 +8252,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "염무왕",
         "image": "/images/pokemon/500-01.png",
+        "types": [
+          "불꽃",
+          "격투"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가염무왕",
+        "image": "/images/pokemon/500-02.png",
         "types": [
           "불꽃",
           "격투"
@@ -8558,6 +8700,15 @@ export const pokemonData: PokemonEntry[] = [
           "땅",
           "강철"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가몰드류",
+        "image": "/images/pokemon/530-02.png",
+        "types": [
+          "땅",
+          "강철"
+        ]
       }
     ]
   },
@@ -8780,6 +8931,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "펜드라",
         "image": "/images/pokemon/545-01.png",
+        "types": [
+          "벌레",
+          "독"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가펜드라",
+        "image": "/images/pokemon/545-02.png",
         "types": [
           "벌레",
           "독"
@@ -9024,6 +9184,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "곤율거니",
         "image": "/images/pokemon/560-01.png",
+        "types": [
+          "악",
+          "격투"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가곤율거니",
+        "image": "/images/pokemon/560-02.png",
         "types": [
           "악",
           "격투"
@@ -9697,6 +9866,14 @@ export const pokemonData: PokemonEntry[] = [
         "types": [
           "전기"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가저리더프",
+        "image": "/images/pokemon/604-02.png",
+        "types": [
+          "전기"
+        ]
       }
     ]
   },
@@ -9766,6 +9943,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "샹델라",
         "image": "/images/pokemon/609-01.png",
+        "types": [
+          "고스트",
+          "불꽃"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가샹델라",
+        "image": "/images/pokemon/609-02.png",
         "types": [
           "고스트",
           "불꽃"
@@ -10417,6 +10603,15 @@ export const pokemonData: PokemonEntry[] = [
           "풀",
           "격투"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가브리가론",
+        "image": "/images/pokemon/652-02.png",
+        "types": [
+          "풀",
+          "격투"
+        ]
       }
     ]
   },
@@ -10460,6 +10655,15 @@ export const pokemonData: PokemonEntry[] = [
           "불꽃",
           "에스퍼"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가마폭시",
+        "image": "/images/pokemon/655-02.png",
+        "types": [
+          "불꽃",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10499,6 +10703,24 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "개굴닌자",
         "image": "/images/pokemon/658-01.png",
+        "types": [
+          "물",
+          "악"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "지우개굴닌자",
+        "image": "/images/pokemon/658-02.png",
+        "types": [
+          "물",
+          "악"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "메가개굴닌자",
+        "image": "/images/pokemon/658-03.png",
         "types": [
           "물",
           "악"
@@ -10650,6 +10872,15 @@ export const pokemonData: PokemonEntry[] = [
           "불꽃",
           "노말"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가화염레오",
+        "image": "/images/pokemon/668-02.png",
+        "types": [
+          "불꽃",
+          "노말"
+        ]
       }
     ]
   },
@@ -10675,6 +10906,14 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "플라엣테",
         "image": "/images/pokemon/670-01.png",
+        "types": [
+          "페어리"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가플라엣테",
+        "image": "/images/pokemon/670-02.png",
         "types": [
           "페어리"
         ]
@@ -10788,6 +11027,14 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "냐오닉스",
         "image": "/images/pokemon/678-01.png",
+        "types": [
+          "에스퍼"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가냐오닉스",
+        "image": "/images/pokemon/678-02.png",
         "types": [
           "에스퍼"
         ]
@@ -10922,6 +11169,15 @@ export const pokemonData: PokemonEntry[] = [
           "악",
           "에스퍼"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가칼라마네로",
+        "image": "/images/pokemon/687-02.png",
+        "types": [
+          "악",
+          "에스퍼"
+        ]
       }
     ]
   },
@@ -10952,6 +11208,15 @@ export const pokemonData: PokemonEntry[] = [
           "바위",
           "물"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가거북손데스",
+        "image": "/images/pokemon/689-02.png",
+        "types": [
+          "바위",
+          "격투"
+        ]
       }
     ]
   },
@@ -10978,6 +11243,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "드래캄",
         "image": "/images/pokemon/691-01.png",
+        "types": [
+          "독",
+          "드래곤"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가드래캄",
+        "image": "/images/pokemon/691-02.png",
         "types": [
           "독",
           "드래곤"
@@ -11125,6 +11399,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "루차불",
         "image": "/images/pokemon/701-01.png",
+        "types": [
+          "격투",
+          "비행"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가루차불",
+        "image": "/images/pokemon/701-02.png",
         "types": [
           "격투",
           "비행"
@@ -11401,6 +11684,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "지가르데",
         "image": "/images/pokemon/718-01.png",
+        "types": [
+          "드래곤",
+          "땅"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가지가르데",
+        "image": "/images/pokemon/718-02.png",
         "types": [
           "드래곤",
           "땅"
@@ -11741,6 +12033,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "모단단게",
         "image": "/images/pokemon/740-01.png",
+        "types": [
+          "격투",
+          "얼음"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가모단단게",
+        "image": "/images/pokemon/740-02.png",
         "types": [
           "격투",
           "얼음"
@@ -12153,6 +12454,15 @@ export const pokemonData: PokemonEntry[] = [
           "벌레",
           "물"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가갑주무사",
+        "image": "/images/pokemon/768-02.png",
+        "types": [
+          "벌레",
+          "물"
+        ]
       }
     ]
   },
@@ -12325,6 +12635,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "할비롱",
         "image": "/images/pokemon/780-01.png",
+        "types": [
+          "노말",
+          "드래곤"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가할비롱",
+        "image": "/images/pokemon/780-02.png",
         "types": [
           "노말",
           "드래곤"
@@ -12639,6 +12958,24 @@ export const pokemonData: PokemonEntry[] = [
           "강철",
           "페어리"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "마기아나(500년 전의 색)",
+        "image": "/images/pokemon/801-02.png",
+        "types": [
+          "강철",
+          "페어리"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "메가마기아나",
+        "image": "/images/pokemon/801-03.png",
+        "types": [
+          "강철",
+          "페어리"
+        ]
       }
     ]
   },
@@ -12726,6 +13063,15 @@ export const pokemonData: PokemonEntry[] = [
         "image": "/images/pokemon/807-01.png",
         "types": [
           "전기"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가제라오라",
+        "image": "/images/pokemon/807-02.png",
+        "types": [
+          "전기",
+          "격투"
         ]
       }
     ]
@@ -13765,6 +14111,14 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "대여르",
         "image": "/images/pokemon/870-01.png",
+        "types": [
+          "격투"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가대여르",
+        "image": "/images/pokemon/870-02.png",
         "types": [
           "격투"
         ]
@@ -14995,6 +15349,15 @@ export const pokemonData: PokemonEntry[] = [
           "풀",
           "불꽃"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가스코빌런",
+        "image": "/images/pokemon/952-02.png",
+        "types": [
+          "풀",
+          "불꽃"
+        ]
       }
     ]
   },
@@ -15257,6 +15620,15 @@ export const pokemonData: PokemonEntry[] = [
           "바위",
           "독"
         ]
+      },
+      {
+        "formId": "02",
+        "name": "메가킬라플로르",
+        "image": "/images/pokemon/970-02.png",
+        "types": [
+          "바위",
+          "독"
+        ]
       }
     ]
   },
@@ -15366,8 +15738,53 @@ export const pokemonData: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "싸리용",
+        "name": "싸리용(젖힌 모습)",
         "image": "/images/pokemon/978-01.png",
+        "types": [
+          "드래곤",
+          "물"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "싸리용(늘어진 모습)",
+        "image": "/images/pokemon/978-02.png",
+        "types": [
+          "드래곤",
+          "물"
+        ]
+      },
+      {
+        "formId": "03",
+        "name": "싸리용(뻗은 모습)",
+        "image": "/images/pokemon/978-03.png",
+        "types": [
+          "드래곤",
+          "물"
+        ]
+      },
+      {
+        "formId": "04",
+        "name": "메가싸리용(젖힌 모습)",
+        "image": "/images/pokemon/978-04.png",
+        "types": [
+          "드래곤",
+          "물"
+        ]
+      },
+      {
+        "formId": "05",
+        "name": "메가싸리용(늘어진 모습)",
+        "image": "/images/pokemon/978-05.png",
+        "types": [
+          "드래곤",
+          "물"
+        ]
+      },
+      {
+        "formId": "06",
+        "name": "메가싸리용(뻗은 모습)",
+        "image": "/images/pokemon/978-06.png",
         "types": [
           "드래곤",
           "물"
@@ -15667,6 +16084,15 @@ export const pokemonData: PokemonEntry[] = [
         "formId": "01",
         "name": "드닐레이브",
         "image": "/images/pokemon/998-01.png",
+        "types": [
+          "드래곤",
+          "얼음"
+        ]
+      },
+      {
+        "formId": "02",
+        "name": "메가드닐레이브",
+        "image": "/images/pokemon/998-02.png",
         "types": [
           "드래곤",
           "얼음"

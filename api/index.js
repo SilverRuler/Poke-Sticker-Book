@@ -169,18 +169,6 @@ app.use(async (req, res, next) => {
   const currentDate = getKSTDate();
   let changed = false;
 
-  // --- SELF-HEALING: Convert Anniversary Objects back to Arrays if found ---
-  const fixArr = (data) => {
-    if (data && typeof data === 'object' && !Array.isArray(data)) {
-      changed = true;
-      return Object.keys(data);
-    }
-    return data;
-  };
-  db.anniversary_collection = fixArr(db.anniversary_collection);
-  db.pending_anniversary_collection = fixArr(db.pending_anniversary_collection);
-  // ------------------------------------------------------------------------
-
   // Reset Today's Catch if date changed
   if (db.last_reset_date !== currentDate) {
     // Archival to history

@@ -169,6 +169,18 @@ app.use(async (req, res, next) => {
   const currentDate = getKSTDate();
   let changed = false;
 
+  // --- SELF-HEALING: Convert Anniversary Objects back to Arrays if found ---
+  const fixArr = (data) => {
+    if (data && typeof data === 'object' && !Array.isArray(data)) {
+      changed = true;
+      return Object.keys(data);
+    }
+    return data;
+  };
+  db.anniversary_collection = fixArr(db.anniversary_collection);
+  db.pending_anniversary_collection = fixArr(db.pending_anniversary_collection);
+  // ------------------------------------------------------------------------
+
   // Reset Today's Catch if date changed
   if (db.last_reset_date !== currentDate) {
     // Archival to history
@@ -359,34 +371,6 @@ app.post('/api/anniversary/toggle', async (req, res) => {
   }
   await saveData(req.db);
   res.json(req.db);
-});
-
-// Recovery Endpoint: Convert Anniversary Objects back to Arrays
-app.get('/api/recovery/restore-arrays', async (req, res) => {
-  try {
-    const db = await getData();
-    let changed = false;
-
-    const convertToArr = (data) => {
-      if (data && typeof data === 'object' && !Array.isArray(data)) {
-        changed = true;
-        return Object.keys(data);
-      }
-      return data;
-    };
-
-    db.anniversary_collection = convertToArr(db.anniversary_collection);
-    db.pending_anniversary_collection = convertToArr(db.pending_anniversary_collection);
-
-    if (changed) {
-      await saveData(db);
-      return res.json({ success: true, message: "Data restored to array format.", data: db });
-    } else {
-      return res.json({ success: false, message: "Data was already in array format or empty.", data: db });
-    }
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
 });
 
 export default app;

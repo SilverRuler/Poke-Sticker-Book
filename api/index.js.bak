@@ -48,8 +48,8 @@ const getData = async () => {
     today_collection_pending: [],
     history_main: {},
     history_pending: {},
-    anniversary_collection: {}, 
-    pending_anniversary_collection: {},
+    anniversary_collection: [], 
+    pending_anniversary_collection: [],
     last_reset_date: getKSTDate(),
     visitor_stats: { total: 0, today: 0, last_date: getKSTDate(), today_ips: [] }
   };
@@ -62,16 +62,6 @@ const getData = async () => {
       redis.get(ANNIVERSARY_KEY)
     ]);
 
-    // Migration logic for anniversary collections (from Array to Object)
-    const migrateAnniv = (data) => {
-      if (Array.isArray(data)) {
-        const obj = {};
-        data.forEach(key => { obj[key] = 1; });
-        return obj;
-      }
-      return data || {};
-    };
-
     // Migration logic: If new keys don't exist, check old key
     if (!collData && !statsData && !annivData) {
       const oldData = await redis.get(OLD_REDIS_KEY);
@@ -82,8 +72,8 @@ const getData = async () => {
           collection: oldData.collection || {},
           pending_collection: oldData.pending_collection || {},
           today_collection_main: oldData.today_collection || [],
-          anniversary_collection: migrateAnniv(oldData.anniversary_collection),
-          pending_anniversary_collection: migrateAnniv(oldData.pending_anniversary_collection),
+          anniversary_collection: oldData.anniversary_collection || [],
+          pending_anniversary_collection: oldData.pending_anniversary_collection || [],
           last_reset_date: oldData.last_reset_date || getKSTDate(),
           visitor_stats: oldData.visitor_stats || defaultDB.visitor_stats
         };
@@ -106,8 +96,8 @@ const getData = async () => {
       history_pending: collData?.history_pending || {},
       last_reset_date: statsData?.last_reset_date || getKSTDate(),
       visitor_stats: statsData?.visitor_stats || defaultDB.visitor_stats,
-      anniversary_collection: migrateAnniv(annivData?.anniversary_collection),
-      pending_anniversary_collection: migrateAnniv(annivData?.pending_anniversary_collection)
+      anniversary_collection: annivData?.anniversary_collection || [],
+      pending_anniversary_collection: annivData?.pending_anniversary_collection || []
     };
   } else {
     if (!fs.existsSync(DB_FILE)) return defaultDB;
@@ -117,17 +107,6 @@ const getData = async () => {
     if (!data.today_collection_main && data.today_collection) {
       data.today_collection_main = data.today_collection;
       delete data.today_collection;
-    }
-
-    if (data.anniversary_collection && Array.isArray(data.anniversary_collection)) {
-      const obj = {};
-      data.anniversary_collection.forEach(k => { obj[k] = 1; });
-      data.anniversary_collection = obj;
-    }
-    if (data.pending_anniversary_collection && Array.isArray(data.pending_anniversary_collection)) {
-      const obj = {};
-      data.pending_anniversary_collection.forEach(k => { obj[k] = 1; });
-      data.pending_anniversary_collection = obj;
     }
     
     return { ...defaultDB, ...data };
@@ -276,13 +255,10 @@ app.post('/api/collection/remove', async (req, res) => {
   if (val) {
     if (count === null || count === undefined || count >= val) {
       delete req.db.collection[key];
-      delete req.db.anniversary_collection[key];
+      // Also remove anniversary mark if fully deleted
+      req.db.anniversary_collection = req.db.anniversary_collection.filter(k => k !== key);
     } else {
       req.db.collection[key] -= count;
-      // Ensure anniversary count doesn't exceed total count
-      if (req.db.anniversary_collection[key] > req.db.collection[key]) {
-        req.db.anniversary_collection[key] = req.db.collection[key];
-      }
     }
   }
   await saveData(req.db);
@@ -295,13 +271,10 @@ app.post('/api/pending/remove', async (req, res) => {
   if (val) {
     if (count === null || count === undefined || count >= val) {
       delete req.db.pending_collection[key];
-      delete req.db.pending_anniversary_collection[key];
+      // Also remove anniversary mark if fully deleted
+      req.db.pending_anniversary_collection = req.db.pending_anniversary_collection.filter(k => k !== key);
     } else {
       req.db.pending_collection[key] -= count;
-      // Ensure anniversary count doesn't exceed total count
-      if (req.db.pending_anniversary_collection[key] > req.db.pending_collection[key]) {
-        req.db.pending_anniversary_collection[key] = req.db.pending_collection[key];
-      }
     }
   }
   await saveData(req.db);
@@ -320,14 +293,11 @@ app.post('/api/pending/move-to-main', async (req, res) => {
     delete req.db.pending_collection[key];
 
     // Move anniversary status if exists
-    const pendingAnnivCount = req.db.pending_anniversary_collection[key];
-    if (pendingAnnivCount) {
-      req.db.anniversary_collection[key] = (req.db.anniversary_collection[key] || 0) + pendingAnnivCount;
-      // Ensure it doesn't exceed total main collection count
-      if (req.db.anniversary_collection[key] > req.db.collection[key]) {
-        req.db.anniversary_collection[key] = req.db.collection[key];
+    if (req.db.pending_anniversary_collection.includes(key)) {
+      req.db.pending_anniversary_collection = req.db.pending_anniversary_collection.filter(k => k !== key);
+      if (!req.db.anniversary_collection.includes(key)) {
+        req.db.anniversary_collection.push(key);
       }
-      delete req.db.pending_anniversary_collection[key];
     }
     
     await saveData(req.db);
@@ -369,32 +339,24 @@ app.post('/api/today/clear', async (req, res) => {
   res.json(req.db);
 });
 
-// 30th Anniversary Toggle & Count Management
+// 30th Anniversary Toggle
 app.post('/api/anniversary/toggle', async (req, res) => {
-  const { key, isPending, anniversaryCount } = req.body;
+  const { key, isPending } = req.body;
   if (!key) return res.status(400).json({ error: 'Key required' });
   
-  const targetColl = isPending ? req.db.pending_collection : req.db.collection;
-  const targetAnniv = isPending ? req.db.pending_anniversary_collection : req.db.anniversary_collection;
-  
-  const totalCount = targetColl[key] || 0;
-  if (totalCount === 0) return res.status(400).json({ error: 'Pokemon not in collection' });
-
-  // If anniversaryCount is provided (from +/- UI), use it. 
-  // Otherwise, behave as a toggle (0 -> 1 or 1 -> 0)
-  if (anniversaryCount !== undefined) {
-    const newCount = Math.max(0, Math.min(anniversaryCount, totalCount));
-    if (newCount === 0) delete targetAnniv[key];
-    else targetAnniv[key] = newCount;
-  } else {
-    // Legacy toggle behavior
-    if (targetAnniv[key]) {
-      delete targetAnniv[key];
+  if (isPending) {
+    if (req.db.pending_anniversary_collection.includes(key)) {
+      req.db.pending_anniversary_collection = req.db.pending_anniversary_collection.filter(k => k !== key);
     } else {
-      targetAnniv[key] = 1;
+      req.db.pending_anniversary_collection.push(key);
+    }
+  } else {
+    if (req.db.anniversary_collection.includes(key)) {
+      req.db.anniversary_collection = req.db.anniversary_collection.filter(k => k !== key);
+    } else {
+      req.db.anniversary_collection.push(key);
     }
   }
-
   await saveData(req.db);
   res.json(req.db);
 });

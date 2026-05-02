@@ -36,8 +36,8 @@ function App() {
 
   const [collection, setCollection] = useState<CollectionMap>({});
   const [pendingCollection, setPendingCollection] = useState<CollectionMap>({});
-  const [anniversaryCollection, setAnniversaryCollection] = useState<CollectionMap>({});
-  const [pendingAnniversaryCollection, setPendingAnniversaryCollection] = useState<CollectionMap>({});
+  const [anniversaryCollection, setAnniversaryCollection] = useState<string[]>([]);
+  const [pendingAnniversaryCollection, setPendingAnniversaryCollection] = useState<string[]>([]);
   const [todayCollectionMain, setTodayCollectionMain] = useState<string[]>([]);
   const [todayCollectionPending, setTodayCollectionPending] = useState<string[]>([]);
   const [historyMain, setHistoryMain] = useState<{ [date: string]: string[] }>({});
@@ -124,8 +124,8 @@ function App() {
       const data = await response.json();
       setCollection(data.collection || {});
       setPendingCollection(data.pending_collection || {});
-      setAnniversaryCollection(data.anniversary_collection || {});
-      setPendingAnniversaryCollection(data.pending_anniversary_collection || {});
+      setAnniversaryCollection(data.anniversary_collection || []);
+      setPendingAnniversaryCollection(data.pending_anniversary_collection || []);
       setTodayCollectionMain(data.today_collection_main || []);
       setTodayCollectionPending(data.today_collection_pending || []);
       setHistoryMain(data.history_main || {});
@@ -138,19 +138,8 @@ function App() {
       const localPending = JSON.parse(localStorage.getItem("pending_collection") || "{}");
       const localTodayMain = JSON.parse(localStorage.getItem("today_collection_main") || "[]");
       const localTodayPending = JSON.parse(localStorage.getItem("today_collection_pending") || "[]");
-
-      const migrateAnniv = (val: any) => {
-        if (Array.isArray(val)) {
-          const obj: CollectionMap = {};
-          val.forEach(k => { obj[k] = 1; });
-          return obj;
-        }
-        return val || {};
-      };
-
-      const localAnniv = migrateAnniv(JSON.parse(localStorage.getItem("anniversary_collection") || "[]"));
-      const localPendingAnniv = migrateAnniv(JSON.parse(localStorage.getItem("pending_anniversary_collection") || "[]"));
-      
+      const localAnniv = JSON.parse(localStorage.getItem("anniversary_collection") || "[]");
+      const localPendingAnniv = JSON.parse(localStorage.getItem("pending_anniversary_collection") || "[]");
       setCollection(localColl);
       setPendingCollection(localPending);
       setTodayCollectionMain(localTodayMain);
@@ -233,12 +222,12 @@ function App() {
     setDetailData(null);
   };
 
-  const toggleAnniversary = async (key: string, isPending: boolean, anniversaryCount?: number) => {
+  const toggleAnniversary = async (key: string, isPending: boolean) => {
     try {
       const response = await fetch("/api/anniversary/toggle", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ key, isPending, anniversaryCount }),
+        body: JSON.stringify({ key, isPending }),
       });
       const data = await response.json();
       setAnniversaryCollection(data.anniversary_collection);
@@ -247,26 +236,13 @@ function App() {
       localStorage.setItem("pending_anniversary_collection", JSON.stringify(data.pending_anniversary_collection));
     } catch (error) {
       const storageKey = isPending ? "pending_anniversary_collection" : "anniversary_collection";
-      const collKey = isPending ? "pending_collection" : "collection";
-      const localAnniv = JSON.parse(localStorage.getItem(storageKey) || "{}");
-      const localColl = JSON.parse(localStorage.getItem(collKey) || "{}");
-      
-      const totalCount = localColl[key] || 0;
-      if (totalCount === 0) return;
-
-      const updatedAnniv = { ...localAnniv };
-      if (anniversaryCount !== undefined) {
-        const newCount = Math.max(0, Math.min(anniversaryCount, totalCount));
-        if (newCount === 0) delete updatedAnniv[key];
-        else updatedAnniv[key] = newCount;
+      const localAnniv = JSON.parse(localStorage.getItem(storageKey) || "[]");
+      let updatedAnniv;
+      if (localAnniv.includes(key)) {
+        updatedAnniv = localAnniv.filter((k: string) => k !== key);
       } else {
-        if (updatedAnniv[key]) {
-          delete updatedAnniv[key];
-        } else {
-          updatedAnniv[key] = 1;
-        }
+        updatedAnniv = [...localAnniv, key];
       }
-
       if (isPending) {
         setPendingAnniversaryCollection(updatedAnniv);
       } else {
@@ -746,8 +722,7 @@ function App() {
           const pokemon = getPokemonByKey(key);
           if (!pokemon) return null;
           const count = target[key];
-          const annivCount = (isPending ? pendingAnniversaryCollection[key] : anniversaryCollection[key]) || 0;
-          const isAnniversary = annivCount > 0;
+          const isAnniversary = isPending ? pendingAnniversaryCollection.includes(key) : anniversaryCollection.includes(key);
           return (
             <div key={key} className="pokemon-card" onClick={() => handleCardClick(key)}>
               <div className="card-header">
@@ -776,9 +751,7 @@ function App() {
                   <span key={i} className={`type-badge type-${t}`}>{t}</span>
                 ))}
               </div>
-              <div className="pokemon-count">
-                보유: {count}개 {annivCount > 0 && <span style={{ fontSize: '0.8rem', color: '#ff4d4f' }}>(30th: {annivCount})</span>}
-              </div>
+              <div className="pokemon-count">보유: {count}개</div>
             </div>
           );
         })}
@@ -913,41 +886,15 @@ function App() {
                     <div className="detail-img-box">
                       <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
                       {activeTab !== "gallery" && (activeTab === "pending" || isLoggedIn) && (
-                        <div className="anniversary-toggle-container">
-                          <label className="anniversary-toggle-label">
+                        <div className="anniversary-toggle">
+                          <label>
                             <input
                               type="checkbox"
-                              checked={!!(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey])}
+                              checked={activeTab === "pending" ? pendingAnniversaryCollection.includes(detailKey) : anniversaryCollection.includes(detailKey)}
                               onChange={() => toggleAnniversary(detailKey, activeTab === "pending")}
                             /> <span className="red">30</span>th
                           </label>
-                          {(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) > 0 && (
-                            <div className="anniversary-count-controls">
-                              <button 
-                                className="btn-count" 
-                                onClick={() => {
-                                  const cur = (activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) || 0;
-                                  toggleAnniversary(detailKey, activeTab === "pending", cur - 1);
-                                }}
-                              >
-                                -
-                              </button>
-                              <span className="anniv-count-display">
-                                {(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey])}
-                              </span>
-                              <button 
-                                className="btn-count"
-                                onClick={() => {
-                                  const cur = (activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) || 0;
-                                  toggleAnniversary(detailKey, activeTab === "pending", cur + 1);
-                                }}
-                              >
-                                +
-                              </button>
-                            </div>
-                          )}
-                        </div>
-                      )}
+                        </div>                      )}
                     </div>
                     <div className="detail-form-info">
                       <div style={{ fontSize: "0.9rem", color: "#888", marginBottom: "2px" }}>

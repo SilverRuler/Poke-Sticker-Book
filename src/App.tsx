@@ -777,7 +777,7 @@ function App() {
                 ))}
               </div>
               <div className="pokemon-count">
-                보유: {count}개 {annivCount > 0 && <span style={{ fontSize: '0.8rem', color: '#ff4d4f' }}>(30th: {annivCount})</span>}
+                보유: {count}개 {annivCount > 0 && <span style={{ fontSize: '0.8rem', color: '#333' }}>(<span style={{ color: '#ff4d4f' }}>30</span>th: {annivCount})</span>}
               </div>
             </div>
           );
@@ -913,14 +913,16 @@ function App() {
                     <div className="detail-img-box">
                       <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
                       {activeTab !== "gallery" && (activeTab === "pending" || isLoggedIn) && (
-                        <div className="anniversary-toggle-overlay">
-                          <label className="anniversary-toggle-label">
-                            <input
-                              type="checkbox"
-                              checked={!!(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey])}
-                              onChange={() => toggleAnniversary(detailKey, activeTab === "pending")}
-                            /> <span className="red">30</span>th
-                          </label>
+                        <div className="anniversary-ui-overlay">
+                          <div className="anniversary-checkbox-box">
+                            <label className="anniversary-toggle-label">
+                              <input
+                                type="checkbox"
+                                checked={!!(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey])}
+                                onChange={() => toggleAnniversary(detailKey, activeTab === "pending")}
+                              /> <span className="red">30</span>th
+                            </label>
+                          </div>
                           {(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) > 0 && (
                             <div className="anniversary-count-controls">
                               <button 

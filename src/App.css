@@ -679,6 +679,7 @@ body {
   background: #eef2ff;
   padding: 2px 10px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .search-result-box {

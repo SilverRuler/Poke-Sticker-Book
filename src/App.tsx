@@ -777,7 +777,12 @@ function App() {
                 ))}
               </div>
               <div className="pokemon-count">
-                보유: {count}개 {annivCount > 0 && <span style={{ fontSize: '0.8rem', color: '#333' }}>(<span style={{ color: '#ff4d4f' }}>30</span>th: {annivCount})</span>}
+                <div>보유: {count}개</div>
+                {annivCount > 0 && (
+                  <div style={{ fontSize: '0.8rem', color: '#333', marginTop: '2px' }}>
+                    (<span style={{ color: '#ff4d4f' }}>30</span>th: {annivCount})
+                  </div>
+                )}
               </div>
             </div>
           );

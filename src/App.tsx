@@ -913,7 +913,7 @@ function App() {
                     <div className="detail-img-box">
                       <img src={getPokemonByKey(detailKey)?.image} alt={detailData.name} />
                       {activeTab !== "gallery" && (activeTab === "pending" || isLoggedIn) && (
-                        <div className="anniversary-toggle-container">
+                        <div className="anniversary-toggle-overlay">
                           <label className="anniversary-toggle-label">
                             <input
                               type="checkbox"
@@ -925,7 +925,8 @@ function App() {
                             <div className="anniversary-count-controls">
                               <button 
                                 className="btn-count" 
-                                onClick={() => {
+                                onClick={(e) => {
+                                  e.stopPropagation();
                                   const cur = (activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) || 0;
                                   toggleAnniversary(detailKey, activeTab === "pending", cur - 1);
                                 }}
@@ -937,7 +938,8 @@ function App() {
                               </span>
                               <button 
                                 className="btn-count"
-                                onClick={() => {
+                                onClick={(e) => {
+                                  e.stopPropagation();
                                   const cur = (activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) || 0;
                                   toggleAnniversary(detailKey, activeTab === "pending", cur + 1);
                                 }}

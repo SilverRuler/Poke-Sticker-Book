@@ -55,6 +55,7 @@ function App() {
   // BGM State
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
   const isBgmMutedManually = useRef(true); // Default to muted manually to prevent auto-play
+  const hasAttemptedAutoPlay = useRef(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // Detail Modal State
@@ -165,6 +166,7 @@ function App() {
 
   const toggleBgm = (e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
+    hasAttemptedAutoPlay.current = true; // User manually interacted with BGM control
     if (audioRef.current) {
       if (isBgmPlaying) {
         audioRef.current.pause();
@@ -187,7 +189,36 @@ function App() {
     fetchCollections();
     const auth = localStorage.getItem("is-logged-in");
     if (auth === "true") setIsLoggedIn(true);
-  }, []);
+
+    // Auto-play BGM on first interaction (excluding scroll)
+    const startBgmOnInteraction = () => {
+      if (hasAttemptedAutoPlay.current) return;
+      
+      if (audioRef.current && !isBgmPlaying) {
+        audioRef.current.play().then(() => {
+          setIsBgmPlaying(true);
+          isBgmMutedManually.current = false;
+          hasAttemptedAutoPlay.current = true;
+          removeInteractionListeners();
+        }).catch(() => {
+          // If browser still blocks, we'll try again on next interaction
+          // unless user manually interacted.
+        });
+      }
+    };
+
+    const removeInteractionListeners = () => {
+      window.removeEventListener("click", startBgmOnInteraction);
+      window.removeEventListener("keydown", startBgmOnInteraction);
+      window.removeEventListener("touchstart", startBgmOnInteraction);
+    };
+
+    window.addEventListener("click", startBgmOnInteraction);
+    window.addEventListener("keydown", startBgmOnInteraction);
+    window.addEventListener("touchstart", startBgmOnInteraction);
+
+    return () => removeInteractionListeners();
+  }, [isBgmPlaying]);
 
   // Separate Effect for Keyboard listener to use latest state
   useEffect(() => {

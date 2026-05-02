@@ -641,20 +641,21 @@ body {
 }
 
 .btn-count {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  color: #333;
   transition: all 0.2s;
   padding: 0;
-  line-height: 1;
+  line-height: 0;
 }
 
 .btn-count:hover {

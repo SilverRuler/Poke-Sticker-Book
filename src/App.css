@@ -610,19 +610,19 @@ body {
 
 .anniversary-checkbox-box {
   background: rgba(255, 255, 255, 0.9);
-  padding: 2px 6px;
-  border-radius: 6px;
+  padding: 2px 8px;
+  border-radius: 10px;
   border: 1px solid #ddd;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .anniversary-toggle-label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   font-weight: bold;
   cursor: pointer;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   white-space: nowrap;
 }
 

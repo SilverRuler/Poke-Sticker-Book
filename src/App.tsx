@@ -375,15 +375,22 @@ function App() {
   };
 
   const findPokemonEntries = (input: string): PokemonEntry[] => {
-    const id = parseInt(input);
+    const term = input.trim().toLowerCase();
+    if (!term) return [];
+
+    const id = parseInt(term);
     if (!isNaN(id)) {
       const found = pokemonData.find(p => p.id === id);
       return found ? [found] : [];
     }
-    const search = input.trim().toLowerCase();
+
+    if (term === "특별") {
+      return pokemonData.filter(p => p.id >= 9000);
+    }
+
     return pokemonData.filter(p => 
-      p.name.toLowerCase().includes(search) || 
-      p.forms.some(f => f.name.toLowerCase().includes(search))
+      p.name.toLowerCase().includes(term) || 
+      p.forms.some(f => f.name.toLowerCase().includes(term))
     );
   };
 

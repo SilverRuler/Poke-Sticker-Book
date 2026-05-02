@@ -920,7 +920,8 @@ function App() {
                                 type="checkbox"
                                 checked={!!(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey])}
                                 onChange={() => toggleAnniversary(detailKey, activeTab === "pending")}
-                              /> <span className="red">30</span>th
+                              />
+                              <span><span className="red">30</span>th</span>
                             </label>
                           </div>
                           {(activeTab === "pending" ? pendingAnniversaryCollection[detailKey] : anniversaryCollection[detailKey]) > 0 && (

@@ -1178,7 +1178,7 @@ function App() {
       </div>
 
       <nav className="nav-bar">
-        {activeTab === "gallery" ? (
+        {activeTab === "gallery" || activeTab === "duplicate" ? (
           <>
             <div className="nav-group">
               <button

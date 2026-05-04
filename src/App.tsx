@@ -46,12 +46,11 @@ function App() {
   const [serverDate, setServerDate] = useState(formatYYMMDD(new Date()));
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
-  const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery">("main");
-  
+  const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery" | "duplicate">("main");
+
   const [loginId, setLoginId] = useState("");
   const [loginPw, setLoginPw] = useState("");
   const [showLoginForm, setShowLoginForm] = useState(false);
-  
   // BGM State
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
   const isBgmMutedManually = useRef(true); // Default to muted manually to prevent auto-play
@@ -1173,8 +1172,9 @@ function App() {
 
       <div className="tab-menu">
         <button className={`tab-btn ${activeTab === "main" ? "active" : ""}`} onClick={() => { setActiveTab("main"); setGallerySearchTerm(""); }}>띠부씰 도감</button>
-        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => { setActiveTab("pending"); setGallerySearchTerm(""); }}>띠부씰 예정 도감</button>
-        <button className={`tab-btn ${activeTab === "gallery" ? "active" : ""}`} onClick={() => { setActiveTab("gallery"); setGallerySearchTerm(""); }}>전체 포켓몬 확인</button>
+        <button className={`tab-btn ${activeTab === "duplicate" ? "active" : ""}`} onClick={() => { setActiveTab("duplicate"); setGallerySearchTerm(""); }}>중복 도감</button>
+        <button className={`tab-btn ${activeTab === "pending" ? "active" : ""}`} onClick={() => { setActiveTab("pending"); setGallerySearchTerm(""); }}>예정 도감</button>
+        <button className={`tab-btn ${activeTab === "gallery" ? "active" : ""}`} onClick={() => { setActiveTab("gallery"); setGallerySearchTerm(""); }}>전체 포켓몬 조회</button>
       </div>
 
       <nav className="nav-bar">
@@ -1236,10 +1236,18 @@ function App() {
       </nav>
       <main className="content">
         <div className="stats">
-          {activeTab === "main" ? "현재 수집(종류)" : activeTab === "pending" ? "예정 수집(종류)" : "전체 포켓몬"} : 
-          <strong> {activeTab === "main" ? Object.keys(collection).length : activeTab === "pending" ? Object.keys(pendingCollection).length : pokemonData.reduce((acc, p) => acc + p.forms.length, 0)}</strong> / 1025
+          {activeTab === "main" ? "현재 수집(종류)" : activeTab === "duplicate" ? "중복 수집(종류)" : activeTab === "pending" ? "예정 수집(종류)" : "전체 포켓몬"} : 
+          <strong> {
+            activeTab === "main" ? Object.keys(collection).length : 
+            activeTab === "duplicate" ? Object.values(collection).filter(count => count >= 2).length :
+            activeTab === "pending" ? Object.keys(pendingCollection).length : 
+            pokemonData.reduce((acc, p) => acc + p.forms.length, 0)
+          }</strong> / 1025
         </div>
-        {activeTab === "main" ? renderGrid(collection, false) : activeTab === "pending" ? renderGrid(pendingCollection, true) : renderGallery()}
+        {activeTab === "main" ? renderGrid(collection, false) : 
+         activeTab === "duplicate" ? renderGrid(Object.fromEntries(Object.entries(collection).filter(([_, count]) => count >= 2)), false) :
+         activeTab === "pending" ? renderGrid(pendingCollection, true) : 
+         renderGallery()}
       </main>
 
       {/* History Modal */}

@@ -1185,7 +1185,7 @@ function App() {
                 onClick={handleGallerySearch}
                 className="btn btn-primary"
               >
-                포켓몬 검색
+                {activeTab === "duplicate" ? "중복 포켓몬 검색" : "포켓몬 검색"}
               </button>
             </div>
             {gallerySearchTerm && (

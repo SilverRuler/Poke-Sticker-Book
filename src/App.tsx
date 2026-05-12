@@ -259,6 +259,35 @@ function App() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isBgmPlaying]);
 
+  // Global KeyDown listener for Modals
+  useEffect(() => {
+    const handleGlobalKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        if (modal) {
+          if (modal.type === "alert") {
+            e.preventDefault();
+            modal.onConfirm();
+          } else if (modal.type === "confirm") {
+            // Optional: Confirm on Enter
+            // e.preventDefault();
+            // modal.onConfirm();
+          }
+        }
+      } else if (e.key === "Escape") {
+        if (modal && modal.onCancel) {
+          e.preventDefault();
+          modal.onCancel();
+        } else if (modal && modal.type === "alert") {
+          e.preventDefault();
+          modal.onConfirm();
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleGlobalKeyDown);
+    return () => window.removeEventListener("keydown", handleGlobalKeyDown);
+  }, [modal]);
+
   const fetchPokemonDetail = async (key: string) => {
     const [idStr] = key.split("-");
     const id = parseInt(idStr);
@@ -916,14 +945,11 @@ function App() {
         <div 
           className="modal-overlay" 
           style={{ zIndex: 1300 }}
-          tabIndex={-1}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" && modal.type === "alert") {
-              modal.onConfirm();
-            }
+          onClick={() => {
+            if (modal.type === "alert") modal.onConfirm();
           }}
         >
-          <div className="modal-content">
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
             <div className="modal-message">{modal.message}</div>
 
             {modal.type === "prompt" && (

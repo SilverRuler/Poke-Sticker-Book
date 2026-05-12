@@ -913,9 +913,19 @@ function App() {
       
       {/* Custom Modal */}
       {modal && (
-        <div className="modal-overlay" style={{ zIndex: 1300 }}>
+        <div 
+          className="modal-overlay" 
+          style={{ zIndex: 1300 }}
+          tabIndex={-1}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && modal.type === "alert") {
+              modal.onConfirm();
+            }
+          }}
+        >
           <div className="modal-content">
             <div className="modal-message">{modal.message}</div>
+
             {modal.type === "prompt" && (
               <input
                 className="modal-input"

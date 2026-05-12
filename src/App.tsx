@@ -1127,7 +1127,7 @@ function App() {
                   <button type="button" className="btn btn-mini btn-cancel" onClick={() => setShowLoginForm(false)}>취소</button>
                 </form>
               ) : (
-                <button onClick={() => setShowLoginForm(true)} className="btn-link">관리자 로그인</button>
+                <button onClick={() => setShowLoginForm(true)} className="btn-link">사용자 로그인</button>
               )}
             </>
           )}

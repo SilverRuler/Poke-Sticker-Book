@@ -23,9 +23,15 @@ if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) 
 }
 
 // REDIS_KEYS: Separated for different purposes
-const COLLECTION_KEY = 'poke_collection_db';
-const STATS_KEY = 'poke_stats_db';
-const ANNIVERSARY_KEY = 'poke_anniversary_db';
+const getKeys = (userId = 'aa') => ({
+  COLLECTION_KEY: `poke_collection_db_${userId}`,
+  STATS_KEY: `poke_stats_db_${userId}`,
+  ANNIVERSARY_KEY: `poke_anniversary_db_${userId}`
+});
+
+const OLD_COLLECTION_KEY = 'poke_collection_db';
+const OLD_STATS_KEY = 'poke_stats_db';
+const OLD_ANNIVERSARY_KEY = 'poke_anniversary_db';
 const OLD_REDIS_KEY = 'poke_pokedex_db';
 
 const DB_FILE = path.join(__dirname, '../server/data.json');
@@ -39,11 +45,10 @@ const getKSTDate = () => {
 };
 
 // Unified Data Access Layer
-const getData = async () => {
+const getData = async (userId = 'aa') => {
   const defaultDB = { 
     collection: {}, 
     pending_collection: {}, 
-    today_collection: [], // Legacy, for migration
     today_collection_main: [],
     today_collection_pending: [],
     history_main: {},
@@ -55,12 +60,44 @@ const getData = async () => {
   };
 
   if (redis) {
+    const keys = getKeys(userId);
     // Fetch all three keys in parallel
-    const [collData, statsData, annivData] = await Promise.all([
-      redis.get(COLLECTION_KEY),
-      redis.get(STATS_KEY),
-      redis.get(ANNIVERSARY_KEY)
+    let [collData, statsData, annivData] = await Promise.all([
+      redis.get(keys.COLLECTION_KEY),
+      redis.get(keys.STATS_KEY),
+      redis.get(keys.ANNIVERSARY_KEY)
     ]);
+
+    // Migration logic for 'aa' account or first-time user
+    if (!collData && !statsData && !annivData && userId === 'aa') {
+      console.log("Checking for legacy data to migrate for 'aa'...");
+      [collData, statsData, annivData] = await Promise.all([
+        redis.get(OLD_COLLECTION_KEY),
+        redis.get(OLD_STATS_KEY),
+        redis.get(OLD_ANNIVERSARY_KEY)
+      ]);
+
+      if (!collData && !statsData && !annivData) {
+        const oldData = await redis.get(OLD_REDIS_KEY);
+        if (oldData) {
+          console.log("Migrating from very old poke_pokedex_db...");
+          collData = {
+            collection: oldData.collection || {},
+            pending_collection: oldData.pending_collection || {},
+            today_collection_main: oldData.today_collection || [],
+            today_collection_pending: []
+          };
+          statsData = {
+            last_reset_date: oldData.last_reset_date || getKSTDate(),
+            visitor_stats: oldData.visitor_stats || defaultDB.visitor_stats
+          };
+          annivData = {
+            anniversary_collection: oldData.anniversary_collection || {},
+            pending_anniversary_collection: oldData.pending_anniversary_collection || {}
+          };
+        }
+      }
+    }
 
     // Migration logic for anniversary collections (from Array to Object)
     const migrateAnniv = (data) => {
@@ -71,24 +108,6 @@ const getData = async () => {
       }
       return data || {};
     };
-
-    // Migration logic: If new keys don't exist, check old key
-    if (!collData && !statsData && !annivData) {
-      const oldData = await redis.get(OLD_REDIS_KEY);
-      if (oldData) {
-        console.log("Migrating from old poke_pokedex_db...");
-        return {
-          ...defaultDB,
-          collection: oldData.collection || {},
-          pending_collection: oldData.pending_collection || {},
-          today_collection_main: oldData.today_collection || [],
-          anniversary_collection: migrateAnniv(oldData.anniversary_collection),
-          pending_anniversary_collection: migrateAnniv(oldData.pending_anniversary_collection),
-          last_reset_date: oldData.last_reset_date || getKSTDate(),
-          visitor_stats: oldData.visitor_stats || defaultDB.visitor_stats
-        };
-      }
-    }
 
     // Secondary migration: move shared today_collection to today_collection_main
     let todayMain = collData?.today_collection_main;
@@ -110,8 +129,10 @@ const getData = async () => {
       pending_anniversary_collection: migrateAnniv(annivData?.pending_anniversary_collection)
     };
   } else {
-    if (!fs.existsSync(DB_FILE)) return defaultDB;
-    const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf8'));
+    // Local file storage (mostly for dev)
+    const LOCAL_DB_FILE = userId === 'aa' ? DB_FILE : path.join(__dirname, `../server/data_${userId}.json`);
+    if (!fs.existsSync(LOCAL_DB_FILE)) return defaultDB;
+    const data = JSON.parse(fs.readFileSync(LOCAL_DB_FILE, 'utf8'));
     
     // Local migration
     if (!data.today_collection_main && data.today_collection) {
@@ -134,10 +155,11 @@ const getData = async () => {
   }
 };
 
-const saveData = async (data) => {
+const saveData = async (userId = 'aa', data) => {
   if (redis) {
+    const keys = getKeys(userId);
     await Promise.all([
-      redis.set(COLLECTION_KEY, {
+      redis.set(keys.COLLECTION_KEY, {
         collection: data.collection,
         pending_collection: data.pending_collection,
         today_collection_main: data.today_collection_main,
@@ -145,17 +167,18 @@ const saveData = async (data) => {
         history_main: data.history_main,
         history_pending: data.history_pending
       }),
-      redis.set(STATS_KEY, {
+      redis.set(keys.STATS_KEY, {
         last_reset_date: data.last_reset_date,
         visitor_stats: data.visitor_stats
       }),
-      redis.set(ANNIVERSARY_KEY, {
+      redis.set(keys.ANNIVERSARY_KEY, {
         anniversary_collection: data.anniversary_collection,
         pending_anniversary_collection: data.pending_anniversary_collection
       })
     ]);
   } else {
-    fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
+    const LOCAL_DB_FILE = userId === 'aa' ? DB_FILE : path.join(__dirname, `../server/data_${userId}.json`);
+    fs.writeFileSync(LOCAL_DB_FILE, JSON.stringify(data, null, 2));
   }
 };
 
@@ -186,7 +209,8 @@ app.use(async (req, res, next) => {
   // Only process for /api requests
   if (!req.path.startsWith('/api')) return next();
   
-  const db = await getData();
+  const userId = req.headers['x-user-id'] || 'aa';
+  const db = await getData(userId);
   const currentDate = getKSTDate();
   let changed = false;
 
@@ -232,8 +256,9 @@ app.use(async (req, res, next) => {
     }
   }
 
-  if (changed) await saveData(db);
+  if (changed) await saveData(userId, db);
   req.db = db; // Pass db to handlers
+  req.userId = userId;
   next();
 });
 
@@ -252,21 +277,21 @@ app.post('/api/login', (req, res) => {
   const { id, pw } = req.body;
   const users = getUsers();
   const user = users.find(u => u.id === id && u.pw === pw);
-  if (user) res.json({ success: true });
+  if (user) res.json({ success: true, userId: user.id });
   else res.status(401).json({ success: false });
 });
 
 app.post('/api/collection/add', async (req, res) => {
   const { key, count } = req.body;
   req.db.collection[key] = (req.db.collection[key] || 0) + (count || 1);
-  await saveData(req.db);
+  await saveData(req.userId, req.db);
   res.json(req.db);
 });
 
 app.post('/api/pending/add', async (req, res) => {
   const { key, count } = req.body;
   req.db.pending_collection[key] = (req.db.pending_collection[key] || 0) + (count || 1);
-  await saveData(req.db);
+  await saveData(req.userId, req.db);
   res.json(req.db);
 });
 
@@ -285,7 +310,7 @@ app.post('/api/collection/remove', async (req, res) => {
       }
     }
   }
-  await saveData(req.db);
+  await saveData(req.userId, req.db);
   res.json(req.db);
 });
 
@@ -304,7 +329,7 @@ app.post('/api/pending/remove', async (req, res) => {
       }
     }
   }
-  await saveData(req.db);
+  await saveData(req.userId, req.db);
   res.json(req.db);
 });
 
@@ -330,7 +355,7 @@ app.post('/api/pending/move-to-main', async (req, res) => {
       delete req.db.pending_anniversary_collection[key];
     }
     
-    await saveData(req.db);
+    await saveData(req.userId, req.db);
     res.json(req.db);
   } else {
     res.status(400).json({ error: 'Not in pending collection' });
@@ -343,7 +368,7 @@ app.post('/api/today/add', async (req, res) => {
   if (!req.db[target]) req.db[target] = [];
   if (!req.db[target].includes(key)) {
     req.db[target].push(key);
-    await saveData(req.db);
+    await saveData(req.userId, req.db);
   }
   res.json(req.db);
 });
@@ -353,7 +378,7 @@ app.post('/api/today/remove', async (req, res) => {
   const target = isPending ? 'today_collection_pending' : 'today_collection_main';
   if (req.db[target]) {
     req.db[target] = req.db[target].filter(i => i !== key);
-    await saveData(req.db);
+    await saveData(req.userId, req.db);
   }
   res.json(req.db);
 });
@@ -365,7 +390,7 @@ app.post('/api/today/clear', async (req, res) => {
   } else {
     req.db.today_collection_main = [];
   }
-  await saveData(req.db);
+  await saveData(req.userId, req.db);
   res.json(req.db);
 });
 
@@ -395,7 +420,7 @@ app.post('/api/anniversary/toggle', async (req, res) => {
     }
   }
 
-  await saveData(req.db);
+  await saveData(req.userId, req.db);
   res.json(req.db);
 });
 

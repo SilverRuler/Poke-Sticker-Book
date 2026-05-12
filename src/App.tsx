@@ -45,12 +45,28 @@ function App() {
   const [visitorStats, setVisitorStats] = useState({ total: 0, today: 0 });
   const [serverDate, setServerDate] = useState(formatYYMMDD(new Date()));
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [loggedInUserId, setLoggedInUserId] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [activeTab, setActiveTab] = useState<"main" | "pending" | "gallery" | "duplicate">("main");
 
   const [loginId, setLoginId] = useState("");
   const [loginPw, setLoginPw] = useState("");
   const [showLoginForm, setShowLoginForm] = useState(false);
+
+  // Helper for API calls with user ID header
+  const apiFetch = async (url: string, options: RequestInit = {}) => {
+    const userId = loggedInUserId || 'aa';
+    const headers = {
+      ...(options.headers || {}),
+      'x-user-id': userId,
+      'Content-Type': options.body ? 'application/json' : undefined
+    } as any;
+    
+    // Remove undefined Content-Type
+    if (headers['Content-Type'] === undefined) delete headers['Content-Type'];
+
+    return fetch(url, { ...options, headers });
+  };
   // BGM State
   const [isBgmPlaying, setIsBgmPlaying] = useState(false);
   const isBgmMutedManually = useRef(true); // Default to muted manually to prevent auto-play
@@ -119,7 +135,7 @@ function App() {
 
   const fetchCollections = async () => {
     try {
-      const response = await fetch("/api/collection");
+      const response = await apiFetch("/api/collection");
       if (!response.ok) throw new Error("API failed");
       const data = await response.json();
       setCollection(data.collection || {});
@@ -185,9 +201,16 @@ function App() {
 
   // Initial load and listeners
   useEffect(() => {
-    fetchCollections();
     const auth = localStorage.getItem("is-logged-in");
-    if (auth === "true") setIsLoggedIn(true);
+    const storedUserId = localStorage.getItem("logged-in-user-id");
+    
+    if (auth === "true") {
+      setIsLoggedIn(true);
+      setLoggedInUserId(storedUserId);
+    } else {
+      setIsLoggedIn(false);
+      setLoggedInUserId(null);
+    }
 
     // Auto-play BGM on first interaction (excluding scroll)
     const startBgmOnInteraction = () => {
@@ -218,6 +241,11 @@ function App() {
 
     return () => removeInteractionListeners();
   }, [isBgmPlaying]);
+
+  // Fetch collections when login state changes
+  useEffect(() => {
+    fetchCollections();
+  }, [loggedInUserId]);
 
   // Separate Effect for Keyboard listener to use latest state
   useEffect(() => {
@@ -265,9 +293,8 @@ function App() {
 
   const toggleAnniversary = async (key: string, isPending: boolean, anniversaryCount?: number) => {
     try {
-      const response = await fetch("/api/anniversary/toggle", {
+      const response = await apiFetch("/api/anniversary/toggle", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ key, isPending, anniversaryCount }),
       });
       const data = await response.json();
@@ -311,9 +338,8 @@ function App() {
     if (!(await showConfirm("이 띠부씰을 띠부씰 도감으로 이동하시겠습니까?"))) return;
 
     try {
-      const response = await fetch("/api/pending/move-to-main", {
+      const response = await apiFetch("/api/pending/move-to-main", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ key }),
       });
       const data = await response.json();
@@ -336,25 +362,17 @@ function App() {
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (loginId === "aa" && loginPw === "bb") {
-      setIsLoggedIn(true);
-      localStorage.setItem("is-logged-in", "true");
-      setShowLoginForm(false);
-      setLoginId("");
-      setLoginPw("");
-      showAlert("관리자 로그인 성공!");
-      return;
-    }
-
     try {
-      const response = await fetch("/api/login", {
+      const response = await apiFetch("/api/login", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id: loginId, pw: loginPw }),
       });
       if (response.ok) {
+        const data = await response.json();
         setIsLoggedIn(true);
+        setLoggedInUserId(data.userId);
         localStorage.setItem("is-logged-in", "true");
+        localStorage.setItem("logged-in-user-id", data.userId);
         setShowLoginForm(false);
         setLoginId("");
         setLoginPw("");
@@ -369,7 +387,9 @@ function App() {
 
   const logout = () => {
     setIsLoggedIn(false);
+    setLoggedInUserId(null);
     localStorage.removeItem("is-logged-in");
+    localStorage.removeItem("logged-in-user-id");
     showAlert("로그아웃 되었습니다.");
   };
 
@@ -408,9 +428,8 @@ function App() {
     
     const endpoint = isPending ? "/api/pending/add" : "/api/collection/add";
     try {
-      const response = await fetch(endpoint, {
+      const response = await apiFetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ key, count: 1 }),
       });
       const data = await response.json();
@@ -426,12 +445,11 @@ function App() {
         updatedCount = data.collection[key];
       }
 
-      await fetch("/api/today/add", {
+      await apiFetch("/api/today/add", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ key, isPending }),
       });
-      const updatedRes = await fetch("/api/collection");
+      const updatedRes = await apiFetch("/api/collection");
       const updatedData = await updatedRes.json();
       setTodayCollectionMain(updatedData.today_collection_main);
       setTodayCollectionPending(updatedData.today_collection_pending);
@@ -497,9 +515,8 @@ function App() {
 
     const endpoint = isPending ? "/api/pending/remove" : "/api/collection/remove";
     try {
-      const response = await fetch(endpoint, {
+      const response = await apiFetch(endpoint, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ key, count: deleteCount }),
       });
       const data = await response.json();
@@ -547,9 +564,8 @@ function App() {
     // Let's keep it consistent: if it's pending tab, allow removal if the button is there.
     
     try {
-      const response = await fetch("/api/today/remove", {
+      const response = await apiFetch("/api/today/remove", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ key, isPending }),
       });
       const data = await response.json();
@@ -573,9 +589,8 @@ function App() {
     if (!isLoggedIn && !isPending) return;
     if (!(await showConfirm(`${isPending ? "예정 " : ""}오늘의 획득 목록을 초기화하시겠습니까?`))) return;
     try {
-      const response = await fetch("/api/today/clear", { 
+      const response = await apiFetch("/api/today/clear", { 
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ isPending })
       });
       const data = await response.json();

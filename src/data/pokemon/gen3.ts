@@ -1575,30 +1575,6 @@ export const gen3: PokemonEntry[] = [
         "types": [
           "노말"
         ]
-      },
-      {
-        "formId": "02",
-        "name": "캐스퐁(태양의 모습)",
-        "image": "/images/pokemon/351-02.png",
-        "types": [
-          "불꽃"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "캐스퐁(빗방울의 모습)",
-        "image": "/images/pokemon/351-03.png",
-        "types": [
-          "물"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "캐스퐁(설운의 모습)",
-        "image": "/images/pokemon/351-04.png",
-        "types": [
-          "얼음"
-        ]
       }
     ]
   },

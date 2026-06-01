@@ -1100,17 +1100,8 @@ export const gen7: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "따라큐(가장한 모습)",
+        "name": "따라큐(둔갑한 모습)",
         "image": "/images/pokemon/778-01.png",
-        "types": [
-          "고스트",
-          "페어리"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "따라큐(탈이 벗겨진 모습)",
-        "image": "/images/pokemon/778-02.png",
         "types": [
           "고스트",
           "페어리"

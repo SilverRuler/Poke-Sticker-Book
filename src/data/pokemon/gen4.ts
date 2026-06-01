@@ -1019,16 +1019,8 @@ export const gen4: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "히포포타스(수컷의 모습)",
+        "name": "히포포타스",
         "image": "/images/pokemon/449-01.png",
-        "types": [
-          "땅"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "히포포타스(암컷의 모습)",
-        "image": "/images/pokemon/449-02.png",
         "types": [
           "땅"
         ]
@@ -1041,16 +1033,8 @@ export const gen4: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "하마돈(수컷의 모습)",
+        "name": "하마돈",
         "image": "/images/pokemon/450-01.png",
-        "types": [
-          "땅"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "하마돈(암컷의 모습)",
-        "image": "/images/pokemon/450-02.png",
         "types": [
           "땅"
         ]

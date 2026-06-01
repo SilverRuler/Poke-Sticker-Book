@@ -1434,15 +1434,6 @@ export const gen8: PokemonEntry[] = [
           "악",
           "풀"
         ]
-      },
-      {
-        "formId": "02",
-        "name": "자루도(아빠 모습)",
-        "image": "/images/pokemon/893-02.png",
-        "types": [
-          "악",
-          "풀"
-        ]
       }
     ]
   },

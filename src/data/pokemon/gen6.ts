@@ -271,177 +271,6 @@ export const gen6: PokemonEntry[] = [
           "벌레",
           "비행"
         ]
-      },
-      {
-        "formId": "02",
-        "name": "비비용(대륙의 모양)",
-        "image": "/images/pokemon/666-02.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "비비용(정원의 모양)",
-        "image": "/images/pokemon/666-03.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "비비용(우아한 모양)",
-        "image": "/images/pokemon/666-04.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "05",
-        "name": "비비용(화원의 모양)",
-        "image": "/images/pokemon/666-05.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "06",
-        "name": "비비용(현대의 모양)",
-        "image": "/images/pokemon/666-06.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "07",
-        "name": "비비용(해양의 모양)",
-        "image": "/images/pokemon/666-07.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "08",
-        "name": "비비용(군도의 모양)",
-        "image": "/images/pokemon/666-08.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "09",
-        "name": "비비용(고원의 모양)",
-        "image": "/images/pokemon/666-09.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "10",
-        "name": "비비용(사막의 모양)",
-        "image": "/images/pokemon/666-10.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "11",
-        "name": "비비용(대하의 모양)",
-        "image": "/images/pokemon/666-11.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "12",
-        "name": "비비용(설원의 모양)",
-        "image": "/images/pokemon/666-12.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "13",
-        "name": "비비용(설국의 모양)",
-        "image": "/images/pokemon/666-13.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "14",
-        "name": "비비용(정글의 모양)",
-        "image": "/images/pokemon/666-14.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "15",
-        "name": "비비용(태양의 모양)",
-        "image": "/images/pokemon/666-15.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "16",
-        "name": "비비용(오아시스의 모양)",
-        "image": "/images/pokemon/666-16.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "17",
-        "name": "비비용(대양의 모양)",
-        "image": "/images/pokemon/666-17.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "18",
-        "name": "비비용(설산의 모양)",
-        "image": "/images/pokemon/666-18.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "19",
-        "name": "비비용(몬스터볼의 모양)",
-        "image": "/images/pokemon/666-19.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
-      },
-      {
-        "formId": "20",
-        "name": "비비용(팬시한 모양)",
-        "image": "/images/pokemon/666-20.png",
-        "types": [
-          "벌레",
-          "비행"
-        ]
       }
     ]
   },
@@ -504,38 +333,6 @@ export const gen6: PokemonEntry[] = [
         "types": [
           "페어리"
         ]
-      },
-      {
-        "formId": "02",
-        "name": "플라베베(노란 꽃)",
-        "image": "/images/pokemon/669-02.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "플라베베(오렌지색 꽃)",
-        "image": "/images/pokemon/669-03.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "플라베베(파란 꽃)",
-        "image": "/images/pokemon/669-04.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "05",
-        "name": "플라베베(하얀 꽃)",
-        "image": "/images/pokemon/669-05.png",
-        "types": [
-          "페어리"
-        ]
       }
     ]
   },
@@ -545,7 +342,7 @@ export const gen6: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "플라엣테(빨간 꽃)",
+        "name": "플라엣테",
         "image": "/images/pokemon/670-01.png",
         "types": [
           "페어리"
@@ -553,7 +350,7 @@ export const gen6: PokemonEntry[] = [
       },
       {
         "formId": "02",
-        "name": "플라엣테(노란 꽃)",
+        "name": "플라엣테(영원의 꽃)",
         "image": "/images/pokemon/670-02.png",
         "types": [
           "페어리"
@@ -561,40 +358,8 @@ export const gen6: PokemonEntry[] = [
       },
       {
         "formId": "03",
-        "name": "플라엣테(오렌지색 꽃)",
-        "image": "/images/pokemon/670-03.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "플라엣테(파란 꽃)",
-        "image": "/images/pokemon/670-04.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "05",
-        "name": "플라엣테(하얀 꽃)",
-        "image": "/images/pokemon/670-05.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "06",
-        "name": "플라엣테(영원의 꽃)",
-        "image": "/images/pokemon/670-06.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "07",
         "name": "메가플라엣테",
-        "image": "/images/pokemon/670-07.png",
+        "image": "/images/pokemon/670-03.png",
         "types": [
           "페어리"
         ]
@@ -607,40 +372,8 @@ export const gen6: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "플라제스(빨간 꽃)",
+        "name": "플라제스",
         "image": "/images/pokemon/671-01.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "플라제스(노란 꽃)",
-        "image": "/images/pokemon/671-02.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "플라제스(오렌지색 꽃)",
-        "image": "/images/pokemon/671-03.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "플라제스(파란 꽃)",
-        "image": "/images/pokemon/671-04.png",
-        "types": [
-          "페어리"
-        ]
-      },
-      {
-        "formId": "05",
-        "name": "플라제스(하얀 꽃)",
-        "image": "/images/pokemon/671-05.png",
         "types": [
           "페어리"
         ]
@@ -710,80 +443,8 @@ export const gen6: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "트리미앙(야생의 모습)",
+        "name": "트리미앙",
         "image": "/images/pokemon/676-01.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "트리미앙(하트컷)",
-        "image": "/images/pokemon/676-02.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "트리미앙(스타컷)",
-        "image": "/images/pokemon/676-03.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "트리미앙(다이아컷)",
-        "image": "/images/pokemon/676-04.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "05",
-        "name": "트리미앙(레이디컷)",
-        "image": "/images/pokemon/676-05.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "06",
-        "name": "트리미앙(마담컷)",
-        "image": "/images/pokemon/676-06.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "07",
-        "name": "트리미앙(젠틀컷)",
-        "image": "/images/pokemon/676-07.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "08",
-        "name": "트리미앙(퀸컷)",
-        "image": "/images/pokemon/676-08.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "09",
-        "name": "트리미앙(가부키컷)",
-        "image": "/images/pokemon/676-09.png",
-        "types": [
-          "노말"
-        ]
-      },
-      {
-        "formId": "10",
-        "name": "트리미앙(킹덤컷)",
-        "image": "/images/pokemon/676-10.png",
         "types": [
           "노말"
         ]
@@ -1349,35 +1010,8 @@ export const gen6: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "호바귀(보통 크기)",
+        "name": "호바귀",
         "image": "/images/pokemon/710-01.png",
-        "types": [
-          "고스트",
-          "풀"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "호바귀(작은 크기)",
-        "image": "/images/pokemon/710-02.png",
-        "types": [
-          "고스트",
-          "풀"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "호바귀(대형 크기)",
-        "image": "/images/pokemon/710-03.png",
-        "types": [
-          "고스트",
-          "풀"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "호바귀(특대형 크기)",
-        "image": "/images/pokemon/710-04.png",
         "types": [
           "고스트",
           "풀"
@@ -1391,35 +1025,8 @@ export const gen6: PokemonEntry[] = [
     "forms": [
       {
         "formId": "01",
-        "name": "펌킨인(보통 크기)",
+        "name": "펌킨인",
         "image": "/images/pokemon/711-01.png",
-        "types": [
-          "고스트",
-          "풀"
-        ]
-      },
-      {
-        "formId": "02",
-        "name": "펌킨인(작은 크기)",
-        "image": "/images/pokemon/711-02.png",
-        "types": [
-          "고스트",
-          "풀"
-        ]
-      },
-      {
-        "formId": "03",
-        "name": "펌킨인(대형 크기)",
-        "image": "/images/pokemon/711-03.png",
-        "types": [
-          "고스트",
-          "풀"
-        ]
-      },
-      {
-        "formId": "04",
-        "name": "펌킨인(특대형 크기)",
-        "image": "/images/pokemon/711-04.png",
         "types": [
           "고스트",
           "풀"

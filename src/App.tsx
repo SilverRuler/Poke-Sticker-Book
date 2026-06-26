@@ -679,7 +679,10 @@ function App() {
     const input = await showPrompt(`${isPending ? "예정 " : ""}등록할 포켓몬 번호 또는 이름 또는 '특별'을 입력하세요:`);
     if (!input) return;
 
-    if (input.trim() === "특별") {
+    const trimmedInput = input.trim();
+    if (trimmedInput === "") return;
+
+    if (trimmedInput === "특별") {
       const choice = await showChoice("특별 스티커 선택", [
         { label: "피카츄로 변신한 메타몽", value: "1" },
         { label: "기타", value: "2" }
@@ -692,9 +695,17 @@ function App() {
       return;
     }
 
-    const entries = findPokemonEntries(input);
+    const num = Number(trimmedInput);
+    if (!isNaN(num)) {
+      if (num < 1 || num > 1025 || !Number.isInteger(num)) {
+        showAlert("1부터 1025까지의 숫자를 입력하세요");
+        return;
+      }
+    }
+
+    const entries = findPokemonEntries(trimmedInput);
     if (entries.length === 0) {
-      showAlert("검색 결과가 없습니다.");
+      showAlert("존재하지 않는 포켓몬입니다");
       return;
     }
 

@@ -92,7 +92,14 @@ function App() {
 
   const showAlert = (message: React.ReactNode) => {
     return new Promise((resolve) => {
-      setModal({ type: "alert", message, onConfirm: () => { setModal(null); resolve(true); } });
+      setModal({ 
+        type: "alert", 
+        message, 
+        onConfirm: () => { 
+          setModal(null); 
+          setTimeout(() => resolve(true), 0); 
+        } 
+      });
     });
   };
 
@@ -101,8 +108,14 @@ function App() {
       setModal({ 
         type: "confirm", 
         message, 
-        onConfirm: () => { setModal(null); resolve(true); },
-        onCancel: () => { setModal(null); resolve(false); }
+        onConfirm: () => { 
+          setModal(null); 
+          setTimeout(() => resolve(true), 0); 
+        },
+        onCancel: () => { 
+          setModal(null); 
+          setTimeout(() => resolve(false), 0); 
+        }
       });
     });
   };
@@ -115,8 +128,14 @@ function App() {
         message, 
         placeholder,
         inputType,
-        onConfirm: (val) => { setModal(null); resolve(val); },
-        onCancel: () => { setModal(null); resolve(null); }
+        onConfirm: (val) => { 
+          setModal(null); 
+          setTimeout(() => resolve(val), 0); 
+        },
+        onCancel: () => { 
+          setModal(null); 
+          setTimeout(() => resolve(null), 0); 
+        }
       });
     });
   };
@@ -127,8 +146,14 @@ function App() {
         type: "choice",
         message,
         choices,
-        onConfirm: (val) => { setModal(null); resolve(val); },
-        onCancel: () => { setModal(null); resolve(null); }
+        onConfirm: (val) => { 
+          setModal(null); 
+          setTimeout(() => resolve(val), 0); 
+        },
+        onCancel: () => { 
+          setModal(null); 
+          setTimeout(() => resolve(null), 0); 
+        }
       });
     });
   };

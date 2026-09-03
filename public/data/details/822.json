@@ -1,0 +1,32 @@
+{
+  "id": 822,
+  "name": "corvisquire",
+  "classification": "까마귀포켓몬",
+  "height": 0.8,
+  "weight": 16,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "발로 돌멩이를 쥐어서 던지거나 로프를 상대에게 휘감는 등 도구를 다루는 지혜를 가졌다."
+    },
+    {
+      "version": "실드",
+      "text": "혹독한 싸움을 헤쳐 나와 상대의 역량을 정확히 판단하는 힘을 습득했다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "날카로운눈",
+      "description": "명중률이\n떨어지지 않는다."
+    },
+    {
+      "name": "긴장감",
+      "description": "상대를 긴장시켜 나무열매를\n먹지 못하게 한다."
+    },
+    {
+      "name": "부풀린가슴",
+      "description": "방어를 떨어뜨리는\n공격을 받지 않는다."
+    }
+  ]
+}

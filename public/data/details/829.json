@@ -1,0 +1,32 @@
+{
+  "id": 829,
+  "name": "gossifleur",
+  "classification": "꽃장식포켓몬",
+  "height": 0.4,
+  "weight": 2.2,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "다리 하나를 땅에 꽂은 채 햇빛을 잔뜩 받으면 꽃잎이 선명한 색을 띠게 된다."
+    },
+    {
+      "version": "실드",
+      "text": "산들바람에 빙글빙글 돌면서 즐겁게 노래하는 귀여운 모습에 반해서 키우는 사람이 많다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "솜털",
+      "description": "공격을 받으면 솜털을 흩뿌려서\n자신을 제외한 모든 포켓몬의\n스피드를 떨어뜨린다."
+    },
+    {
+      "name": "재생력",
+      "description": "볼에 넣으면 HP가\n조금 회복된다."
+    },
+    {
+      "name": "포자",
+      "description": "스치면 독, 마비, 잠듦\n상태가 될 때가 있다."
+    }
+  ]
+}

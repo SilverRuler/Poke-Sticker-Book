@@ -1,0 +1,32 @@
+{
+  "id": 881,
+  "name": "arctozolt",
+  "classification": "화석포켓몬",
+  "height": 2.3,
+  "weight": 150,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "꽁꽁 언 상반신이 진동하면 전기가 만들어진다. 걷는 것이 매우 서툴다."
+    },
+    {
+      "version": "실드",
+      "text": "고대의 해변에 살며 먹이를 몸의 얼음으로 보존시켰지만 움직임이 둔해 멸종하였다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "축전",
+      "description": "전기를 받으면\n회복한다."
+    },
+    {
+      "name": "정전기",
+      "description": "접촉한 상대를\n마비시킬 때가 있다."
+    },
+    {
+      "name": "눈치우기",
+      "description": "날씨가 싸라기눈일 때\n스피드가 올라간다."
+    }
+  ]
+}

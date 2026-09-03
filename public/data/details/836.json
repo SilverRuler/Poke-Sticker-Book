@@ -1,0 +1,28 @@
+{
+  "id": 836,
+  "name": "boltund",
+  "classification": "개포켓몬",
+  "height": 1,
+  "weight": 34,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "만든 전기를 다리로 보내서 달리는 것을 돕는다. 삼 일 밤낮을 쉬지 않고 달릴 수 있다."
+    },
+    {
+      "version": "실드",
+      "text": "전기의 힘으로 다릿심을 강하게 키운다. 최고 속도는 시속 90km를 가볍게 넘긴다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "옹골찬턱",
+      "description": "턱이 튼튼하여\n무는 힘이 강하다."
+    },
+    {
+      "name": "승기",
+      "description": "능력이 떨어지면\n특수공격이 올라간다."
+    }
+  ]
+}

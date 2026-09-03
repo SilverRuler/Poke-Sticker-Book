@@ -1,0 +1,28 @@
+{
+  "id": 816,
+  "name": "sobble",
+  "classification": "물도마뱀포켓몬",
+  "height": 0.3,
+  "weight": 4,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "겁을 먹으면 양파 100개와 맞먹는 최루 성분의 눈물을 흘려서 상대도 덩달아 울게 만든다."
+    },
+    {
+      "version": "실드",
+      "text": "젖으면 피부색이 변한다. 위장한 것처럼 모습이 보이지 않게 된다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "급류",
+      "description": "위급할 때 물타입의\n위력이 올라간다."
+    },
+    {
+      "name": "스나이퍼",
+      "description": "급소에 맞혔을 때\n위력이 올라간다."
+    }
+  ]
+}

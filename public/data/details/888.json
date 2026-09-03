@@ -1,0 +1,24 @@
+{
+  "id": 888,
+  "name": "zacian",
+  "classification": "강자포켓몬",
+  "height": 2.8,
+  "weight": 110,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "전설의 영웅이라고 불리는 포켓몬. 금속을 흡수한 뒤 무기로 변화시켜서 싸운다."
+    },
+    {
+      "version": "실드",
+      "text": "오랜 세월 잠들어 있던 자마젠타의 형제자매 또는 라이벌로 불리는 포켓몬이다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "불요의검",
+      "description": "등장했을 때\n공격이 올라간다."
+    }
+  ]
+}

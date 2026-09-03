@@ -1,0 +1,28 @@
+{
+  "id": 868,
+  "name": "milcery",
+  "classification": "크림포켓몬",
+  "height": 0.2,
+  "weight": 0.3,
+  "gender": "암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "크림으로 이루어진 몸을 가졌다. 공기 중을 떠도는 달콤한 향기의 성분이 모여서 태어났다."
+    },
+    {
+      "version": "실드",
+      "text": "마빌크가 모습을 보인 디저트 가게는 크게 번창한다고 전해지고 있다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "스위트베일",
+      "description": "같은 편의 포켓몬이\n잠들지 않게 된다."
+    },
+    {
+      "name": "아로마베일",
+      "description": "같은 편으로 향하는\n멘탈 공격을 막는다."
+    }
+  ]
+}

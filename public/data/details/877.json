@@ -1,0 +1,24 @@
+{
+  "id": 877,
+  "name": "morpeko-full-belly",
+  "classification": "양면포켓몬",
+  "height": 0.3,
+  "weight": 3,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "항상 배가 고프다. 호주머니같이 생긴 주머니에 넣어둔 씨앗을 먹어서 전기를 만든다."
+    },
+    {
+      "version": "실드",
+      "text": "아무리 먹어도 금방 배가 고프다. 전기로 구운 씨앗을 소중히 갖고 다닌다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "꼬르륵스위치",
+      "description": "턴이 끝날 때마다 배부른 모양,\n배고픈 모양, 배부른 모양...으로\n번갈아서 모습을 바꾼다."
+    }
+  ]
+}

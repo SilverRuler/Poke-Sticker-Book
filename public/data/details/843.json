@@ -1,0 +1,32 @@
+{
+  "id": 843,
+  "name": "silicobra",
+  "classification": "모래뱀포켓몬",
+  "height": 2.2,
+  "weight": 7.6,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "굴을 파면서 먹은 모래를 목에 있는 주머니에 저장하는데 8kg이나 되는 모래가 들어간다."
+    },
+    {
+      "version": "실드",
+      "text": "콧구멍으로 모래를 분사한다. 적의 눈을 속이고 그 틈에 땅속으로 숨어들어 몸을 숨긴다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "모래뿜기",
+      "description": "공격을 받으면\n모래바람을 일으킨다."
+    },
+    {
+      "name": "탈피",
+      "description": "상태 이상을\n회복할 때가 있다."
+    },
+    {
+      "name": "모래숨기",
+      "description": "모래바람으로\n회피율이 올라간다."
+    }
+  ]
+}

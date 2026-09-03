@@ -1,0 +1,24 @@
+{
+  "id": 874,
+  "name": "stonjourner",
+  "classification": "거석포켓몬",
+  "height": 2.5,
+  "weight": 520,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "넓은 초원 한복판에 우뚝 서서 해가 기우는 것을 바라보며 지낸다. 다이내믹한 발차기 기술이 특기다."
+    },
+    {
+      "version": "실드",
+      "text": "1년에 1번 정해진 일시에 어디선가 모여 둥글게 늘어서는 습성이 있다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "파워스폿",
+      "description": "옆에 있기만 해도\n기술의 위력이 올라간다."
+    }
+  ]
+}

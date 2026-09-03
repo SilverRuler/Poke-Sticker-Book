@@ -1,0 +1,24 @@
+{
+  "id": 804,
+  "name": "naganadel",
+  "classification": "독침포켓몬",
+  "height": 3.6,
+  "weight": 150,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "울트라썬",
+      "text": "체내에 수백 리터의 독액을 갖고 있다. UB라고 불리는 생물의 일종이다."
+    },
+    {
+      "version": "울트라문",
+      "text": "울트라비스트의 일종. 독침에서 점도가 높고 빛나는 독액을 발사한다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "비스트부스트",
+      "description": "상대를 기절시켰을 때\n자신의 가장 높은\n능력이 올라간다."
+    }
+  ]
+}

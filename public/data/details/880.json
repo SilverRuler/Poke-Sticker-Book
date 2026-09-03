@@ -1,0 +1,32 @@
+{
+  "id": 880,
+  "name": "dracozolt",
+  "classification": "화석포켓몬",
+  "height": 1.8,
+  "weight": 190,
+  "gender": "성별없음",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "고대에는 튼튼한 하반신 덕분에 무적이었으나 먹이인 식물을 모두 먹어버려서 멸종했다."
+    },
+    {
+      "version": "실드",
+      "text": "꼬리의 억센 근육으로 발전한다. 하반신에 비해 상반신이 너무 작다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "축전",
+      "description": "전기를 받으면\n회복한다."
+    },
+    {
+      "name": "의욕",
+      "description": "공격은 높지만\n빗나가기 쉽다."
+    },
+    {
+      "name": "모래헤치기",
+      "description": "모래바람으로\n스피드가 올라간다."
+    }
+  ]
+}

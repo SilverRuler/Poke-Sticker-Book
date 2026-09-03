@@ -1,0 +1,24 @@
+{
+  "id": 867,
+  "name": "runerigus",
+  "classification": "원념포켓몬",
+  "height": 1.6,
+  "weight": 66.6,
+  "gender": "수컷, 암컷",
+  "flavorTexts": [
+    {
+      "version": "소드",
+      "text": "강한 저주를 담아 그린 고대의 그림이 데스마스의 영혼을 흡수해서 움직이기 시작했다."
+    },
+    {
+      "version": "실드",
+      "text": "그림자 같은 몸을 만지면 안 된다. 그림에 새겨진 무서운 기억을 보게 되기 때문이다."
+    }
+  ],
+  "abilities": [
+    {
+      "name": "떠도는영혼",
+      "description": "접촉하는 기술로\n공격해온 포켓몬과\n특성을 바꾼다."
+    }
+  ]
+}
